@@ -1,0 +1,83 @@
+# Тесты OpenHub по уровням прогона (уровни и теги — CLAUDE.md, «Общие правила»).
+#
+#   смоук     — на каждое событие: минимум, доказывающий, что хаб работает по назначению,
+#               включая полный цикл `opm push` → `opm install` против живого хаба;
+#   регрессия — только на push в main: всё дерево, кроме наборов, которым нужна внешняя
+#               система (MinIO/S3, PostgreSQL, живой hub.oscript.io).
+#
+# Reusable workflow autumn-library/workflows здесь не подходит: он умеет отбирать наборы
+# по тегу (`-t`), а нам нужно исключение (`-T внешние`), и не умеет запускать
+# scripts/смоук.sh. Шаги повторяют его один в один — те же actions и те же версии.
+name: Тестирование
+
+# push только на main + pull_request — без двойных прогонов для веток с PR
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # локальный файловый хаб из opm.cfg на раннере недоступен —
+  # принудительно используем публичный хаб
+  OPM_HUB_MIRROR: oscript-hub
+
+jobs:
+
+  smoke:
+    name: Смоук
+    runs-on: ubuntu-latest
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v7.0.1
+
+      - name: Установка OneScript
+        uses: otymko/setup-onescript@v1.5.1
+        with:
+          version: stable
+
+      - name: Установка зависимостей
+        # Порядок пинов держит packagedef.
+        run: |
+          opm install opm
+          opm install -l --dev
+
+      - name: Установка OneUnit
+        # Глобально, а не `-l`: scripts/смоук.sh зовёт oneunit из PATH.
+        run: opm install oneunit@0.4.1
+
+      - name: Сборка пакета
+        run: opm build .
+
+      - name: Смоук OneUnit
+        # Скриптом, а не `oneunit execute -t смоук`: прямая команда не отбирает наборы
+        # с &Изолированный(Уровень = "Процесс") — см. scripts/смоук.sh
+        run: scripts/смоук.sh
+
+  regression:
+    name: Регрессия
+    # Только post-merge в main: полный объём, кроме наборов, которым нужна внешняя
+    # система. Реальный opm на раннере ставит setup-onescript; хаб поднимается тестом
+    # на localhost, БД — КоннекторJSON (файловый, переносимо: без нативной
+    # SQLite.Interop, делится между процессами засевщика и хаба).
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v7.0.1
+
+      - name: Установка OneScript
+        uses: otymko/setup-onescript@v1.5.1
+        with:
+          version: stable
+
+      - name: Установка зависимостей
+        run: |
+          opm install opm
+          opm install -l --dev
+
+      - name: Установка OneUnit
+        run: opm install oneunit@0.4.1
+
+      - name: Регрессия OneUnit (без наборов, требующих внешних систем)
+        run: oneunit execute -T внешние

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OpenHub">
+  <circle cx="32" cy="32" r="30" fill="#3F7ACC"/>
+  <path d="M24 2.7A30 30 0 0 1 40 2.7L38.2 9.2A23.4 23.4 0 0 0 25.8 9.2Z" fill="#FFB81C"/>
+  <g fill="none" stroke="#fff" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M17 25.5 32 18l15 7.5-15 7.6-15-7.6Z"/>
+    <path d="M17 25.5v14.2L32 47l15-7.3V25.5"/>
+    <path d="M32 33.1V47"/>
+    <path d="M17 25.5 25.2 31l6.8 2.1 6.8-2.1 8.2-5.5" opacity=".92"/>
+  </g>
+</svg>

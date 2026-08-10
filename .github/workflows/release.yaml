@@ -1,0 +1,17 @@
+# Публикация openhub на hub.oscript.io при публикации GitHub-релиза.
+# Версия пакета берётся из packagedef — тег релиза на неё не влияет, но обязан совпадать.
+name: Публикация релиза
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: autumn-library/workflows/.github/workflows/release.yml@main
+    with:
+      package_mask: "openhub-*.ospx"
+    secrets:
+      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}

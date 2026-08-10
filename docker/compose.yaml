@@ -1,0 +1,83 @@
+# Тестовый стенд OpenHub c S3: хаб + MinIO. Из каталога docker/:
+#
+#   docker compose up            # хаб на http://localhost:3333, консоль MinIO :9001
+#   docker compose down -v       # снести стенд вместе с данными
+#
+# Стенд именно тестовый: пароли лежат в открытую, том MinIO одноразовый, W^X отключён
+# ради запуска amd64-образа под qemu. Для продового развёртывания см. docker/README.md.
+#
+# Без этого файла контейнер самодостаточен: `docker run -p 3333:3333 segateekb/openhub`
+# поднимает хаб с файловым хранилищем и SQLite на томе, без единой внешней системы.
+
+name: openhub
+
+services:
+
+  minio:
+    image: minio/minio:latest
+    # Порт 80, а не 9000, сознательно: SigV4 в oint 2.3.0 подписывает заголовок Host БЕЗ
+    # порта, и на нестандартном порту MinIO отвечает 403 SignatureDoesNotMatch
+    # Наружу порт S3 не публикуется вовсе.
+    command: server /data --address ":80" --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-openhub}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-openhub-secret}
+    ports:
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+
+  # Разовая задача: дождаться MinIO и завести бакет. Хаб бакеты не создаёт.
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      - minio
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-openhub}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-openhub-secret}
+      OSHUB_BUCKET: ${OSHUB_BUCKET:-openhub}
+    entrypoint:
+      - sh
+      - -c
+      - |
+        until mc alias set local http://minio "$$MINIO_ROOT_USER" "$$MINIO_ROOT_PASSWORD"; do
+          echo "жду MinIO..."; sleep 1
+        done
+        mc mb --ignore-existing "local/$$OSHUB_BUCKET"
+    restart: "no"
+
+  openhub:
+    image: segateekb/openhub:latest
+    # Базовый образ OneScript собран только под amd64; на Apple Silicon идёт эмуляция.
+    platform: linux/amd64
+    depends_on:
+      minio-init:
+        condition: service_completed_successfully
+    ports:
+      - "3333:3333"
+    environment:
+      # S3 включается ровно этими переменными — в образе бэкенд по умолчанию файловый.
+      OSHUB_STORAGE_BACKEND: s3
+      OSHUB_STORAGE_S3_ENDPOINT: http://minio
+      OSHUB_STORAGE_S3_BUCKET: ${OSHUB_BUCKET:-openhub}
+      OSHUB_STORAGE_S3_REGION: us-east-1
+      # Двойное подчёркивание — конвенция configor: `__` -> `_`. С одинарными значение
+      # молча уедет в несуществующую детальку.
+      OSHUB_STORAGE_S3_FORCE__PATH__STYLE: "true"
+      OSHUB_STORAGE_S3_ACCESS_KEY: ${MINIO_ROOT_USER:-openhub}
+      OSHUB_STORAGE_S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-openhub-secret}
+      OSHUB_INSTANCE_URL: http://localhost:3333
+      # Эмуляция amd64 через qemu ломает JIT .NET — без этого любая библиотека падает
+      # NullReferenceException. На настоящем amd64 переменная не нужна; здесь она стоит
+      # безусловно, потому что стенд одноразовый.
+      DOTNET_EnableWriteXorExecute: "0"
+    volumes:
+      # БД и журнал аудита — на томе; артефакты при backend=s3 уходят в MinIO.
+      - openhub-data:/var/lib/openhub
+      # Демонстрация второго способа конфигурации: файл поверх приехавшего в пакете.
+      # Переменные окружения выше перебивают всё, что задано здесь.
+      - ../autumn-properties.json:/opt/openhub/autumn-properties.json:ro
+
+volumes:
+  minio-data:
+  openhub-data:

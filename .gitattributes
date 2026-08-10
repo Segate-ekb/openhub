@@ -1,0 +1,8 @@
+spikes/0c-push-contract/captures/** -text
+spikes/0c-push-contract/fixtures/*.raw -text
+spikes/0c-push-contract/fixtures/*.ospx -text
+
+# Статика интерфейса (шаг 5.A): содержимое сверяется с SHA-256 в АктивыСтатики,
+# поэтому окончания строк не должны нормализоваться при checkout под Windows.
+src/статика/*.css -text
+src/статика/*.js -text

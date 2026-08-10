@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# Пересобирает docs/требования/ОБЗОР.md из файлов каталога.
+# Руками обзор не правят: он производный, и любая ручная правка теряется здесь же.
+# Имена переменных латиницей — bash кириллицу в именах не понимает.
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$root/docs/требования"
+
+# Поле шапки. Пустой ответ — норма (поле может отсутствовать), поэтому «|| true»:
+# без него set -e обрывает сборку на первом же файле без «Полноты».
+field() { # field <имя поля> <файл>
+	{ grep -m1 -o "$1:\*\* [^·—]*" "$2" 2>/dev/null || true; } \
+		| sed "s/$1:\*\* //" | tr -d '\n' | cut -c1-70
+}
+
+{
+	echo "# Обзор каталога требований"
+	echo
+	echo "Сводка для вычитки: одна строка на требование, полный текст — по ссылке."
+	echo "Файл производный: пересобирается \`scripts/обзор-требований.sh\`, руками не правится."
+	echo
+	echo "## Что обещано, но не сделано"
+	echo
+	echo "Список собирается из поля «Полнота» — это и есть очередь работ по каталогу."
+	echo
+	echo "| ID | Одной строкой | Полнота |"
+	echo "| --- | --- | --- |"
+	for kind in функциональные нефункциональные; do
+		[ -d "$kind" ] || continue
+		for topic in $(ls "$kind"); do
+			for file in $(ls "$kind/$topic"/*.md 2>/dev/null | sort); do
+				state="$(field Полнота "$file")"
+				case "$state" in
+					выполнено|"") continue ;;
+				esac
+				head_line="$(head -1 "$file")"
+				id="${head_line#\# }"; id="${id%% —*}"
+				echo "| [$id]($file) | ${head_line#*— } | $state |"
+			done
+		done
+	done
+	echo
+	for kind in функциональные нефункциональные; do
+		[ -d "$kind" ] || continue
+		echo "## $kind"
+		echo
+		for topic in $(ls "$kind"); do
+			echo "### $topic"
+			echo
+			echo "| ID | Одной строкой | Полнота | Статус |"
+			echo "| --- | --- | --- | --- |"
+			for file in $(ls "$kind/$topic"/*.md 2>/dev/null | sort); do
+				head_line="$(head -1 "$file")"
+				id="${head_line#\# }"; id="${id%% —*}"
+				name="${head_line#*— }"
+				done_="$(field Полнота "$file")"; [ -n "$done_" ] || done_="—"
+				state="$(field Статус "$file")"; [ -n "$state" ] || state="—"
+				echo "| [$id]($file) | $name | $done_ | $state |"
+			done
+			echo
+		done
+	done
+} > ОБЗОР.md
+
+# Считаем по файлам, а не по строкам обзора: в нём то же требование встречается
+# дважды — в сводке невыполненного и в таблице своей темы.
+total="$(find функциональные нефункциональные -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+pending="$(sed -n '/## Что обещано/,/^## функциональные/p' ОБЗОР.md | grep -c '^| \[' || true)"
+echo "ОБЗОР.md пересобран: $total требований, из них не доделано $pending"

@@ -1,0 +1,78 @@
+# Сборка образа хаба и публикация в Docker Hub.
+#
+# Собирается всегда (это проверка того, что образ вообще собирается и версии сходятся),
+# публикуется только на релиз и по ручному запуску: пуш в реестр — решение владельца.
+#
+# Сборку выполняет тот же docker/образ.sh, что и на машине разработчика — второй раскладки
+# команд, способной разъехаться с локальной, здесь нет.
+#
+# Секреты: DOCKERHUB_USERNAME и DOCKERHUB_TOKEN (access token, не пароль).
+name: Образ
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      push:
+        description: Опубликовать образ в реестр
+        type: boolean
+        default: false
+
+env:
+  IMAGE_REPO: segateekb/openhub
+  OPM_HUB_MIRROR: oscript-hub
+
+jobs:
+  image:
+    name: Сборка образа
+    runs-on: ubuntu-latest
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v7.0.1
+
+      - name: Установка OneScript
+        uses: otymko/setup-onescript@v1.5.1
+        with:
+          version: stable
+
+      - name: Установка зависимостей
+        # Образ несёт oscript_modules внутри .ospx, поэтому зависимости нужны до сборки
+        # пакета, а не внутри Dockerfile: ни opm, ни хаб на стадиях сборки не поднимаются.
+        run: |
+          opm install opm
+          opm install -l
+
+      - name: Настройка buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Вход в Docker Hub
+        if: github.event_name == 'release' || inputs.push
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Сборка образа
+        if: github.event_name != 'release' && !inputs.push
+        run: docker/образ.sh "$IMAGE_REPO"
+
+      - name: Сборка и публикация образа
+        if: github.event_name == 'release' || inputs.push
+        run: docker/образ.sh --push "$IMAGE_REPO"
+
+      - name: Итог
+        run: |
+          version="$(sed -n 's/^[[:space:]]*\.Версия("\([^"]*\)").*/\1/p' packagedef | head -n1)"
+          {
+            echo "### Образ \`$IMAGE_REPO:$version\`"
+            if [ "${{ github.event_name }}" = "release" ] || [ "${{ inputs.push }}" = "true" ]; then
+              echo "Опубликован в Docker Hub вместе с тегом \`latest\`."
+            else
+              echo "Собран без публикации."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
