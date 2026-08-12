@@ -1117,7 +1117,8 @@
 
 	Ожидаемые = СтрРазделить("/groups,/groups/{group},/groups/{group}/members,"
 		+ "/groups/{group}/members/{login},/groups/{group}/grants,/groups/{group}/oidc-mappings,"
-		+ "/oidc-mappings,/users/{login}/grants,/pools/{pool}/grants,/pools/{pool}/upstreams,"
+		+ "/oidc-mappings,/users/{login}/grants,/hub/settings,/hub/settings/{key},"
+		+ "/pools/{pool}/grants,/pools/{pool}/upstreams,"
 		+ "/pools/{pool}/settings,/pools/{pool}/mirrors,/pools/{pool}/mirrors/{id},"
 		+ "/pools/{pool}/mirrors/{id}/sync,/inbox,/pools/{pool}/inbox,"
 		+ "/pools/{pool}/inbox/{id}/approve,/pools/{pool}/inbox/{id}/reject,"
@@ -1147,6 +1148,10 @@
 		"у подписки пула описан DELETE").ЭтоИстина();
 	Ожидаем.Что(Пути.Получить("/webhooks/{id}").Получить("patch") <> Неопределено,
 		"у подписки хаба описан PATCH").ЭтоИстина();
+	Ожидаем.Что(Пути.Получить("/hub/settings/{key}").Получить("delete") <> Неопределено,
+		"у настройки хаба описан DELETE").ЭтоИстина();
+	Ожидаем.Что(Пути.Получить("/hub/settings/{key}").Получить("patch") <> Неопределено,
+		"и PATCH").ЭтоИстина();
 
 	// коды успеха описаны ЧЕСТНО: POST-действие ничего не создаёт и отвечает 200,
 	// а заведение отвечает и 201, и 200 (идемпотентный повтор)
