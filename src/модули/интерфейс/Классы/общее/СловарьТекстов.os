@@ -451,6 +451,11 @@
 	Добавить("settings.pool.upstreams.state.unknown", "ещё не проверялся");
 	Добавить("settings.pool.upstreams.state.alive", "жив, проверен %1");
 	Добавить("settings.pool.upstreams.state.down", "лежит с %1: %2");
+	Добавить("settings.pool.upstreams.col.access", "Доступ");
+	Добавить("settings.pool.upstreams.access.token", "по токену");
+	Добавить("settings.pool.upstreams.access.anonymous", "анонимно");
+	Добавить("settings.pool.upstreams.button.token-off", "Снять токен");
+	Добавить("settings.pool.upstreams.state.denied", "не пустил, проверен %1: %2");
 
 	Добавить("settings.pool.upstream-new.title", "Добавить апстрим");
 	Добавить("settings.pool.upstream-new.lead",
@@ -471,6 +476,11 @@
 		+ " oshub.upstream.probe.enabled): адрес сохранится, даже если по нему никто"
 		+ " не отвечает, и живость источников хаб не проверяет вовсе.");
 	Добавить("settings.pool.upstream-new.button", "Добавить");
+	Добавить("settings.pool.upstream-new.token.label", "Токен доступа");
+	Добавить("settings.pool.upstream-new.token.hint",
+		"Нужен, только если выдача источника закрыта. Токен предъявляется каждому запросу"
+		+ " к нему и обратно не показывается: пустое поле у заведённого источника означает"
+		+ " «оставить прежний», а вернуть анонимное чтение — кнопкой «Снять токен» в списке.");
 
 	Добавить("settings.pool.mirrors.title", "Зеркала пула");
 	Добавить("settings.pool.mirrors.lead",
@@ -510,6 +520,10 @@
 		"Заявка не нужна: зеркало уже стоит в очереди и ждёт свободного рабочего.");
 	Добавить("settings.pool.mirrors.sync.rejected",
 		"Заявка не принята: очередь синхронизации её не взяла.");
+	Добавить("settings.pool.mirrors.col.access", "Доступ");
+	Добавить("settings.pool.mirrors.access.token", "по токену");
+	Добавить("settings.pool.mirrors.access.anonymous", "анонимно");
+	Добавить("settings.pool.mirrors.button.token-off", "Снять токен");
 
 	Добавить("settings.pool.mirror-new.title", "Новое зеркало");
 	Добавить("settings.pool.mirror-new.lead",
@@ -533,6 +547,11 @@
 		+ " не отвечает, а о недоступности апстрима скажет только первый прогон"
 		+ " синхронизации.");
 	Добавить("settings.pool.mirror-new.button", "Создать зеркало");
+	Добавить("settings.pool.mirror-new.token.label", "Токен доступа");
+	Добавить("settings.pool.mirror-new.token.hint",
+		"Нужен, только если выдача апстрима закрыта. Токен предъявляется каждому запросу"
+		+ " к нему и обратно не показывается; вернуть анонимное чтение — кнопкой"
+		+ " «Снять токен» в списке.");
 
 	Добавить("settings.pool.quota.title", "Квота");
 	Добавить("settings.pool.quota.lead", "Сколько места пул может занять.");
