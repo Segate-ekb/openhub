@@ -5,8 +5,8 @@
 # S3 включается по требованию (см. docker/README.md и docker/compose.yaml).
 #
 # ВЕРСИЯ ХАБА В ЭТОМ ФАЙЛЕ НЕ ПИШЕТСЯ. Она вычитывается на стадии сборки из packagedef и
-# сверяется с двумя другими её носителями — именем файла .ospx и
-# src/модули/запуск/Классы/ОписаниеПриложения.os (её отдаёт GET /health). Разъехались —
+# сверяется с двумя её носителями — именем файла .ospx и тем packagedef, что уехал внутрь
+# пакета: из него хаб читает версию в рантайме и отдаёт её в GET /health. Разъехались —
 # сборка падает здесь же. Тот же инвариант держит сторож tests/ОбразХаба_Тесты.os.
 #
 # Собирать только через docker/образ.sh: он собирает .ospx из packagedef, ставит тег и
@@ -44,9 +44,11 @@ RUN set -eu; \
     test "$version_ospx" = "$version_pkgdef" || { \
         echo "Версия .ospx ($version_ospx) не равна версии packagedef ($version_pkgdef): пересоберите пакет через docker/образ.sh"; exit 1; }; \
     oscript /build/РаспаковатьПакет.os "$ospx" /opt/openhub; \
-    version_app="$(sed -n 's/.*Возврат "\([0-9][^"]*\)";.*/\1/p' '/opt/openhub/src/модули/запуск/Классы/ОписаниеПриложения.os' | head -n1)"; \
+    test -f /opt/openhub/packagedef || { \
+        echo "В пакете нет packagedef: хабу нечем ответить о своей версии — верните .ВключитьФайл(\"packagedef\")"; exit 1; }; \
+    version_app="$(sed -n 's/^[[:space:]]*\.Версия("\([^"]*\)").*/\1/p' /opt/openhub/packagedef | head -n1)"; \
     test "$version_app" = "$version_pkgdef" || { \
-        echo "ОписаниеПриложения.Версия() ($version_app) не равна версии packagedef ($version_pkgdef)"; exit 1; }; \
+        echo "packagedef внутри пакета ($version_app) не равен собранному ($version_pkgdef): пересоберите пакет через docker/образ.sh"; exit 1; }; \
     printf '%s\n' "$version_pkgdef" > /opt/openhub/ВЕРСИЯ; \
     rm -rf /build
 
