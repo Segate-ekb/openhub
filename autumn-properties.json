@@ -34,6 +34,7 @@
         "jobs": {
             "enabled": true,
             "tick_interval_ms": 1000,
+            "readme_reindex_hour": 3,
             "stats_flush_interval_sec": 60,
             "proxy_gc_interval_sec": 3600,
             "mirror_sync_interval_sec": 3600,

@@ -421,7 +421,7 @@
 		КонецЕсли;
 	КонецЦикла;
 
-	Ожидаем.Что(ЧислаИнсталляции().Количество(), "список владельца прочитан целиком").Равно(46);
+	Ожидаем.Что(ЧислаИнсталляции().Количество(), "список владельца прочитан целиком").Равно(47);
 	Ожидаем.Что(СтрСоединить(Правимые, ", "),
 		"числа инсталляции, которые всё ещё правятся из интерфейса").Равно("");
 	Ожидаем.Что(СтрСоединить(Показанные, ", "),
@@ -1145,7 +1145,7 @@
 		+ "oshub.webhooks.max_queue,oshub.webhooks.max_attempts,"
 		+ "oshub.webhooks.backoff_base_sec,oshub.webhooks.delivery_interval_sec,"
 		+ "oshub.webhooks.delivery_timeout_sec,oshub.webhooks.test_max_per_hour,"
-		+ "oshub.jobs.enabled,oshub.jobs.tick_interval_ms,"
+		+ "oshub.jobs.enabled,oshub.jobs.tick_interval_ms,oshub.jobs.readme_reindex_hour,"
 		+ "oshub.jobs.mirror_sync_interval_sec,oshub.jobs.proxy_gc_interval_sec,"
 		+ "oshub.jobs.cli_device_gc_interval_sec,oshub.jobs.invite_gc_interval_sec,"
 		+ "oshub.jobs.pool_volume_audit_interval_sec";
@@ -1158,8 +1158,7 @@
 Функция СнятыеКлючи()
 
 	Возврат СтрРазделить("oshub.auth.email.confirm.max.per.day,"
-		+ "oshub.auth.email.confirm.max.per.day.ip,oshub.webhooks.max_per_pool,"
-		+ "oshub.jobs.readme_reindex_hour", ",", Ложь);
+		+ "oshub.auth.email.confirm.max.per.day.ip,oshub.webhooks.max_per_pool", ",", Ложь);
 
 КонецФункции
 

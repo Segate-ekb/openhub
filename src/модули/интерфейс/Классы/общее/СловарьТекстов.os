@@ -1695,6 +1695,10 @@
 	Добавить("settings.key.oshub-jobs-tick-interval-ms.label", "Период тика планировщика, мс");
 	Добавить("settings.key.oshub-jobs-tick-interval-ms.hint",
 		"Как часто планировщик проверяет, не пора ли запускать задачу.");
+	Добавить("settings.key.oshub-jobs-readme-reindex-hour.label", "Час актуализации описаний");
+	Добавить("settings.key.oshub-jobs-readme-reindex-hour.hint",
+		"В какой час суток (0–23) хаб обходит пакеты и обновляет на диске README тех версий,"
+		+ " которые отдаёт установка без версии.");
 	Добавить("settings.key.oshub-jobs-mirror-sync-interval-sec.label",
 		"Побудка синхронизации зеркал, секунд");
 	Добавить("settings.key.oshub-jobs-mirror-sync-interval-sec.hint",
