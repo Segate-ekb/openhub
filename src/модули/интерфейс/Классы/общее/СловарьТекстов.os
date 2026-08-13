@@ -672,6 +672,43 @@
 
 КонецПроцедуры
 
+// Лента личных уведомлений кабинета (КонтроллерУведомлений, ВитринаУведомлений).
+Процедура КлючиУведомлений()
+
+	Добавить("office.notifications.crumb", "Уведомления");
+	Добавить("office.notifications.page.title", "Уведомления");
+	Добавить("office.notifications.page.lead", "Всё, что хаб адресовал лично вам:"
+		+ " исход ваших заявок и события вашей учётной записи.");
+
+	Добавить("office.notifications.title", "Ваши события");
+	Добавить("office.notifications.lead", "Свежие сверху. Непрочитанные помечены.");
+	Добавить("office.notifications.empty", "Хаб вам пока ничего не сообщал.");
+
+	Добавить("office.notifications.col.state", "");
+	Добавить("office.notifications.col.event", "Событие");
+	Добавить("office.notifications.col.when", "Когда");
+
+	Добавить("office.notifications.new", "новое");
+	Добавить("office.notifications.read.button", "Отметить всё прочитанным");
+	Добавить("office.notifications.read.done", "Лента отмечена прочитанной.");
+
+	Добавить("office.notifications.card.title", "Уведомления");
+	Добавить("office.notifications.card.lead", "Всё, что хаб адресовал лично вам:"
+		+ " исход ваших заявок и события учётной записи.");
+	Добавить("office.notifications.card.open", "Открыть ленту");
+
+	Добавить("office.notifications.widget.title", "Новые уведомления: %1");
+	Добавить("office.notifications.widget.lead", "События, адресованные лично вам.");
+	Добавить("office.notifications.widget.open", "Открыть ленту");
+	Добавить("office.notifications.widget.rest", "И ещё %1 — в полной ленте.");
+
+	Добавить("office.notifications.nav.unread", "Уведомления (%1)");
+
+	Добавить("office.notifications.error.csrf", "Форма устарела: обновите страницу"
+		+ " и повторите действие.");
+
+КонецПроцедуры
+
 // Дом «Пакет» — карта разделов (ДомПакета).
 Процедура КлючиДомаПакета()
 
@@ -1848,6 +1885,7 @@
 
 	Добавить("chrome.office.nav.title", "Разделы кабинета");
 	Добавить("chrome.office.nav.packages", "Мои пакеты");
+	Добавить("chrome.office.nav.notifications", "Уведомления");
 	Добавить("chrome.office.nav.account", "Настройки аккаунта");
 	Добавить("chrome.office.nav.hub", "Настройки хаба");
 
@@ -2484,5 +2522,6 @@
 	КлючиНастроекПодсистем();
 	КлючиЗеркал();
 	КлючиПочты();
+	КлючиУведомлений();
 
 КонецПроцедуры
