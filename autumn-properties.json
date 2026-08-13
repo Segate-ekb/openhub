@@ -36,7 +36,6 @@
             "tick_interval_ms": 1000,
             "stats_flush_interval_sec": 60,
             "proxy_gc_interval_sec": 3600,
-            "readme_reindex_hour": 3,
             "mirror_sync_interval_sec": 3600,
             "cli_device_gc_interval_sec": 300
         },
