@@ -68,7 +68,7 @@
 	Схемы.Вставить("Error", СхемаОшибки());
 	Схемы.Вставить("Page", СхемаСтраницы());
 	Схемы.Вставить("Pool", ОбъектСоСвойствами("id,name,type,visibility,owner_id,created"));
-	Схемы.Вставить("Package", ОбъектСоСвойствами("id,name,pool,description,keywords,license,repository,deprecated,downloads,versions_total,latest_version,channels,maintainers"));
+	Схемы.Вставить("Package", СхемаПакета());
 	Схемы.Вставить("Version", ОбъектСоСвойствами("version,sha256,size,yanked,published,semver,labels"));
 	Компоненты.Вставить("schemas", Схемы);
 
@@ -106,6 +106,24 @@
 	Схема.Вставить("type", "object");
 	Схема.Вставить("properties", Свойства);
 	Возврат Схема;
+КонецФункции
+
+// Единственное поле карточки, чьё имя не совпадает со смыслом, описано словами:
+// latest_version — это версия установки по умолчанию, а не старшая публикация.
+Функция СхемаПакета()
+
+	Схема = ОбъектСоСвойствами("id,name,pool,description,keywords,license,repository,"
+		+ "deprecated,downloads,versions_total,latest_version,channels,maintainers");
+
+	ВерсияУстановки = ТипСтрока();
+	ВерсияУстановки.Вставить("description",
+		"Версия, которую отдаёт установка без тега и версии: версия тега «по умолчанию»,"
+		+ " а если такого тега у пакета нет — старшая действующая версия."
+		+ " Имя поля историческое. Пусто, когда отдавать нечего.");
+	Схема.Получить("properties").Вставить("latest_version", ВерсияУстановки);
+
+	Возврат Схема;
+
 КонецФункции
 
 Функция СхемаСтраницы()
