@@ -697,8 +697,6 @@
 	Добавить("office.notifications.widget.open", "Открыть ленту");
 	Добавить("office.notifications.widget.rest", "И ещё %1 — в полной ленте.");
 
-	Добавить("office.notifications.nav.unread", "Уведомления (%1)");
-
 	Добавить("office.notifications.error.csrf", "Форма устарела: обновите страницу"
 		+ " и повторите действие.");
 
@@ -1937,16 +1935,28 @@
 	Добавить("chrome.top.nav.catalog", "Каталог");
 	Добавить("chrome.top.login", "Войти");
 	Добавить("chrome.top.logout", "Выйти");
-	Добавить("chrome.top.office", "Кабинет");
 	Добавить("chrome.top.theme.toggle", "Переключить тему");
 	Добавить("chrome.top.theme.to-dark", "Включить тёмную тему");
 	Добавить("chrome.top.theme.to-light", "Включить светлую тему");
 
+	// ⛔ Следующие два ключа не запрашивает ни один экран хаба, и мёртвыми они не являются:
+	// своего словаря у кита нет, а спрашивает он их сам — на ряде разделов кабинета
+	// и на учётке тремя ходами. Обеими ветками хаб больше не ходит (ряда нет, учётка —
+	// меню), но снести ключи нельзя: кит напечатает на их месте «[?ключ]».
+	Добавить("chrome.top.office", "Кабинет");
 	Добавить("chrome.office.nav.title", "Разделы кабинета");
-	Добавить("chrome.office.nav.packages", "Мои пакеты");
-	Добавить("chrome.office.nav.notifications", "Уведомления");
-	Добавить("chrome.office.nav.account", "Настройки аккаунта");
-	Добавить("chrome.office.nav.hub", "Настройки хаба");
+
+	Добавить("chrome.account.menu.title", "Меню учётки");
+	Добавить("chrome.account.menu.waiting", "Ждут вашего внимания: %1");
+	Добавить("chrome.account.menu.office", "Кабинет");
+	Добавить("chrome.account.menu.space", "Личное пространство");
+	Добавить("chrome.account.menu.packages", "Мои пакеты");
+	Добавить("chrome.account.menu.notifications", "Уведомления");
+	Добавить("chrome.account.menu.notifications.unread", "Уведомления (%1)");
+	Добавить("chrome.account.menu.inbox", "Входящие заявки");
+	Добавить("chrome.account.menu.inbox.waiting", "Входящие заявки (%1)");
+	Добавить("chrome.account.menu.account", "Настройки аккаунта");
+	Добавить("chrome.account.menu.hub", "Настройки хаба");
 
 КонецПроцедуры
 
