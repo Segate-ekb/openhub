@@ -2247,6 +2247,9 @@
 	Добавить("settings.pool.mirror-status.field.started", "Прогон начат");
 	Добавить("settings.pool.mirror-status.field.updated", "Последняя запись прогресса");
 	Добавить("settings.pool.mirror-status.field.cursor", "Обход дошёл до пакета");
+	Добавить("settings.pool.mirror-status.field.crawl", "Способ обхода");
+	Добавить("settings.pool.mirror-status.crawl.full", "полный обход");
+	Добавить("settings.pool.mirror-status.crawl.increment", "инкремент с %1");
 	Добавить("settings.pool.mirror-status.field.by", "Запустил");
 	Добавить("settings.pool.mirror-status.field.by-schedule", "по расписанию");
 	Добавить("settings.pool.mirror-status.field.upstream", "Апстрим");
