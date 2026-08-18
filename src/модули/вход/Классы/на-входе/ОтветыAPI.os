@@ -1,6 +1,5 @@
 // Помощник HTTP-ответов auth-контроллеров: единый JSON-формат ошибок
 // {error:{code,message}} и разбор тела из json / x-www-form-urlencoded.
-// Content-Length ставится вручную — native-режим winow сам его не ставит.
 
 Перем Заголовки;   // ЗаголовкиHTTP (основа)
 
