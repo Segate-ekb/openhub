@@ -154,7 +154,6 @@
 	Добавить("settings.account.nav.appearance", "Вид и язык");
 
 	Добавить("settings.account.error.section", "Раздел настроек не найден");
-	Добавить("settings.account.error.csrf", "Неверный или отсутствующий CSRF-токен");
 	Добавить("settings.account.error.save", "Не удалось сохранить: %1");
 	Добавить("settings.account.error.password.current", "Текущий пароль неверен");
 	Добавить("settings.account.error.password.policy", "Новый пароль не соответствует требованиям: %1");
@@ -231,7 +230,6 @@
 	Добавить("settings.group.crumb", "группы");
 
 	Добавить("settings.group.error.section", "Раздел настроек не найден");
-	Добавить("settings.group.error.csrf", "Неверный или отсутствующий CSRF-токен");
 	Добавить("settings.group.error.save", "Не удалось сохранить: %1");
 	Добавить("settings.group.error.operation", "Неизвестная операция раздела");
 	Добавить("settings.group.readonly", "Вы видите группу как участник:"
@@ -329,7 +327,6 @@
 	Добавить("settings.pool.crumb", "настройки");
 
 	Добавить("settings.pool.error.section", "Раздел настроек не найден");
-	Добавить("settings.pool.error.csrf", "Неверный или отсутствующий CSRF-токен");
 	Добавить("settings.pool.error.save", "Не удалось сохранить: %1");
 	Добавить("settings.pool.error.visibility",
 		"Видимость должна быть «public» или «private». Ничего не изменено.");
@@ -784,7 +781,6 @@
 	Добавить("settings.package.tab", "Настройки: %1");
 
 	Добавить("settings.package.error.section", "Раздел настроек не найден");
-	Добавить("settings.package.error.csrf", "Неверный или отсутствующий CSRF-токен");
 	Добавить("settings.package.error.save", "Не удалось сохранить: %1");
 
 	Добавить("settings.package.card.title", "Карточка пакета");
