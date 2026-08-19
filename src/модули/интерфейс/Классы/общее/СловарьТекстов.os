@@ -41,6 +41,7 @@
 
 	Добавить("settings.frame.crumbs.label", "Путь");
 	Добавить("settings.frame.nav.title", "Разделы настроек");
+	Добавить("settings.frame.nav.toggle", "Разделы");
 	Добавить("settings.frame.empty", "В этом разделе пока нечего настраивать.");
 	Добавить("settings.frame.save", "Сохранить");
 	Добавить("settings.frame.cancel", "Отмена");
