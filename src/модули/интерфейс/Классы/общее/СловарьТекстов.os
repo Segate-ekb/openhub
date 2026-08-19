@@ -1,4 +1,4 @@
-// Единственное место, где живут пользовательские строки экранов; резолвер ключей —
+﻿// Единственное место, где живут пользовательские строки экранов; резолвер ключей —
 // ТекстыИнтерфейса кита. Формат ключа: <область>.<экран>.<узел>[.<узел>…].
 
 Перем Тексты; // Соответствие: ключ (Строка) -> текст (Строка)
@@ -1675,10 +1675,10 @@
 
 	Добавить("settings.key.oshub-jobs-enabled.label", "Фоновые задачи");
 	Добавить("settings.key.oshub-jobs-enabled.hint", "Планировщик обслуживания хаба.");
-	Добавить("settings.key.oshub-otel-enabled.label", "Телеметрия");
-	Добавить("settings.key.oshub-otel-enabled.hint", "Экспорт метрик и трасс OpenTelemetry.");
-	Добавить("settings.key.oshub-otel-endpoint.label", "Адрес коллектора");
-	Добавить("settings.key.oshub-otel-endpoint.hint",
+	Добавить("settings.key.otel-enabled.label", "Телеметрия");
+	Добавить("settings.key.otel-enabled.hint", "Экспорт метрик и трасс OpenTelemetry.");
+	Добавить("settings.key.otel-exporter-otlp-endpoint.label", "Адрес коллектора");
+	Добавить("settings.key.otel-exporter-otlp-endpoint.hint",
 		"Куда хаб отправляет телеметрию (OTLP over HTTP).");
 
 КонецПроцедуры
@@ -1803,26 +1803,31 @@
 	Добавить("settings.key.oshub-jobs-pool-volume-audit-interval-sec.hint",
 		"Как часто хаб сверяет учтённый объём пулов с фактическим.");
 
-	Добавить("settings.key.oshub-otel-protocol.label", "Протокол выгрузки");
-	Добавить("settings.key.oshub-otel-protocol.hint",
-		"Каким протоколом хаб отдаёт телеметрию сборщику.");
-	Добавить("settings.key.oshub-otel-service-name.label", "Имя службы в трассах");
-	Добавить("settings.key.oshub-otel-service-name.hint",
+	Добавить("settings.key.otel-exporter-otlp-protocol.label", "Протокол выгрузки");
+	Добавить("settings.key.otel-exporter-otlp-protocol.hint",
+		"Каким протоколом хаб отдаёт телеметрию сборщику: http/protobuf, http/json или grpc.");
+	Добавить("settings.key.otel-service-name.label", "Имя службы в трассах");
+	Добавить("settings.key.otel-service-name.hint",
 		"Под этим именем инсталляция видна в трассах сборщика.");
-	Добавить("settings.key.oshub-otel-sampling-ratio.label", "Доля отбираемых трасс");
-	Добавить("settings.key.oshub-otel-sampling-ratio.hint",
-		"Какая доля запросов попадает в трассы: 1.0 — все, 0.1 — каждый десятый.");
-	Добавить("settings.key.oshub-otel-export-interval-sec.label", "Период выгрузки, секунд");
-	Добавить("settings.key.oshub-otel-export-interval-sec.hint",
+	Добавить("settings.key.otel-traces-sampler.label", "Правило отбора трасс");
+	Добавить("settings.key.otel-traces-sampler.hint",
+		"Чем хаб решает, какие трассы оставить. Долю ниже учитывают только"
+		+ " traceidratio и parentbased_traceidratio.");
+	Добавить("settings.key.otel-traces-sampler-arg.label", "Доля отбираемых трасс");
+	Добавить("settings.key.otel-traces-sampler-arg.hint",
+		"Какая доля запросов попадает в трассы: 1.0 — все, 0.1 — каждый десятый."
+		+ " Работает при правиле отбора traceidratio или parentbased_traceidratio.");
+	Добавить("settings.key.otel-bsp-schedule-delay.label", "Период выгрузки, миллисекунд");
+	Добавить("settings.key.otel-bsp-schedule-delay.hint",
 		"Как часто накопленные спаны уезжают сборщику.");
-	Добавить("settings.key.oshub-otel-max-queue.label", "Потолок буфера спанов");
-	Добавить("settings.key.oshub-otel-max-queue.hint",
+	Добавить("settings.key.otel-bsp-max-queue-size.label", "Потолок буфера спанов");
+	Добавить("settings.key.otel-bsp-max-queue-size.hint",
 		"Сколько спанов хаб держит в памяти до выгрузки; лишние отбрасываются.");
-	Добавить("settings.key.oshub-otel-timeout-sec.label", "Таймаут выгрузки, секунд");
-	Добавить("settings.key.oshub-otel-timeout-sec.hint",
+	Добавить("settings.key.otel-exporter-otlp-timeout.label", "Таймаут выгрузки, миллисекунд");
+	Добавить("settings.key.otel-exporter-otlp-timeout.hint",
 		"Сколько хаб ждёт ответа сборщика телеметрии.");
-	Добавить("settings.key.oshub-otel-insecure-skip-verify.label", "Не проверять сертификат сборщика");
-	Добавить("settings.key.oshub-otel-insecure-skip-verify.hint",
+	Добавить("settings.key.otel-exporter-otlp-insecure.label", "Не проверять сертификат сборщика");
+	Добавить("settings.key.otel-exporter-otlp-insecure.hint",
 		"Ослабление безопасности: телеметрия уедет и на узел с неподтверждённым сертификатом.");
 
 	Добавить("settings.key.oshub-storage-s3-endpoint.label", "Адрес хранилища S3");

@@ -2,6 +2,12 @@
     "winow": {
         "Порт": 3333
     },
+    "otel": {
+        "enabled": false,
+        "service": {
+            "name": "openhub"
+        }
+    },
     "logos": {
         "logger": {
             "rootLogger": "INFO"
@@ -19,17 +25,6 @@
         },
         "pools": {
             "default": "public"
-        },
-        "otel": {
-            "enabled": false,
-            "endpoint": "http://localhost:4318",
-            "protocol": "http/json",
-            "service_name": "openhub",
-            "sampling_ratio": 1.0,
-            "export_interval_sec": 5,
-            "max_queue": 2048,
-            "timeout_sec": 10,
-            "insecure_skip_verify": false
         },
         "jobs": {
             "enabled": true,

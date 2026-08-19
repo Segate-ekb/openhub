@@ -91,7 +91,9 @@ ENV OSHUB_STORAGE_ROOT=/var/lib/openhub \
 #   OSHUB_STORAGE_S3_REGION, OSHUB_STORAGE_S3_ACCESS_KEY(_FILE),
 #   OSHUB_STORAGE_S3_SECRET_KEY(_FILE),
 #   OSHUB_STORAGE_S3_FORCE__PATH__STYLE (двойное подчёркивание — конвенция configor);
-#   OSHUB_INSTANCE_URL, OSHUB_OIDC_*, OSHUB_OTEL_*.
+#   OSHUB_INSTANCE_URL, OSHUB_OIDC_*;
+#   телеметрия — стандартными именами OpenTelemetry: OTEL_ENABLED, OTEL_SERVICE_NAME,
+#   OTEL_EXPORTER_OTLP_ENDPOINT и OTEL_EXPORTER_OTLP_HEADERS (секрет коллектора — только сюда).
 # АДМИН ПРИ СТАРТЕ НЕ СОЗДАЁТСЯ: OSHUB_ADMIN_LOGIN/OSHUB_ADMIN_PASSWORD намеренно пусты,
 # первого администратора заводит мастер онбординга на /setup.
 
