@@ -41,7 +41,6 @@
 
 	Добавить("settings.frame.crumbs.label", "Путь");
 	Добавить("settings.frame.nav.title", "Разделы настроек");
-	Добавить("settings.frame.nav.toggle", "Разделы");
 	Добавить("settings.frame.empty", "В этом разделе пока нечего настраивать.");
 	Добавить("settings.frame.save", "Сохранить");
 	Добавить("settings.frame.cancel", "Отмена");
@@ -1976,22 +1975,30 @@
 
 	// ⛔ Следующие два ключа не запрашивает ни один экран хаба, и мёртвыми они не являются:
 	// своего словаря у кита нет, а спрашивает он их сам — на ряде разделов кабинета
-	// и на учётке тремя ходами. Обеими ветками хаб больше не ходит (ряда нет, учётка —
-	// меню), но снести ключи нельзя: кит напечатает на их месте «[?ключ]».
+	// и на прежней шапке. Ни той, ни другой веткой хаб больше не ходит (вся навигация
+	// уехала в единое меню), но снести ключи нельзя: кит напечатает «[?ключ]».
 	Добавить("chrome.top.office", "Кабинет");
 	Добавить("chrome.office.nav.title", "Разделы кабинета");
 
-	Добавить("chrome.account.menu.title", "Меню учётки");
-	Добавить("chrome.account.menu.waiting", "Ждут вашего внимания: %1");
-	Добавить("chrome.account.menu.office", "Кабинет");
-	Добавить("chrome.account.menu.space", "Личное пространство");
-	Добавить("chrome.account.menu.packages", "Мои пакеты");
-	Добавить("chrome.account.menu.notifications", "Уведомления");
-	Добавить("chrome.account.menu.notifications.unread", "Уведомления (%1)");
-	Добавить("chrome.account.menu.inbox", "Входящие заявки");
-	Добавить("chrome.account.menu.inbox.waiting", "Входящие заявки (%1)");
-	Добавить("chrome.account.menu.account", "Настройки аккаунта");
-	Добавить("chrome.account.menu.hub", "Настройки хаба");
+	// Единое меню хаба: бургер, рейка и панель. Первые шесть ключей спрашивает сам кит.
+	Добавить("chrome.menu.open", "Меню");
+	Добавить("chrome.menu.close", "Закрыть меню");
+	Добавить("chrome.menu.section.deeds", "Мои дела");
+	Добавить("chrome.menu.section.nav", "Хаб");
+	Добавить("chrome.menu.section.screen", "Разделы экрана");
+
+	Добавить("chrome.menu.role.admin", "администратор хаба");
+	Добавить("chrome.menu.deed.notifications.count", "Непрочитанных уведомлений: %1");
+	Добавить("chrome.menu.deed.inbox.count", "Заявок ждут решения: %1");
+
+	Добавить("chrome.menu.badge.waiting", "Ждут вашего внимания: %1");
+	Добавить("chrome.menu.deed.office", "Кабинет");
+	Добавить("chrome.menu.deed.space", "Личное пространство");
+	Добавить("chrome.menu.deed.packages", "Мои пакеты");
+	Добавить("chrome.menu.deed.notifications", "Уведомления");
+	Добавить("chrome.menu.deed.inbox", "Входящие заявки");
+	Добавить("chrome.menu.deed.account", "Настройки аккаунта");
+	Добавить("chrome.menu.deed.hub", "Настройки хаба");
 
 КонецПроцедуры
 
