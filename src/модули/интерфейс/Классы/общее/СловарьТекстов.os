@@ -1828,6 +1828,22 @@
 	Добавить("settings.key.otel-exporter-otlp-insecure.label", "Не проверять сертификат сборщика");
 	Добавить("settings.key.otel-exporter-otlp-insecure.hint",
 		"Ослабление безопасности: телеметрия уедет и на узел с неподтверждённым сертификатом.");
+	Добавить("settings.key.otel-traces-exporter.label", "Выгрузка трасс");
+	Добавить("settings.key.otel-traces-exporter.hint",
+		"otlp — трассы уезжают сборщику, none — не уезжают. Остальные два сигнала"
+		+ " продолжают работать.");
+	Добавить("settings.key.otel-metrics-exporter.label", "Выгрузка метрик");
+	Добавить("settings.key.otel-metrics-exporter.hint",
+		"otlp — метрики уезжают сборщику, none — не уезжают. Остальные два сигнала"
+		+ " продолжают работать.");
+	Добавить("settings.key.otel-logs-exporter.label", "Выгрузка журнала");
+	Добавить("settings.key.otel-logs-exporter.hint",
+		"otlp — строки журнала уезжают сборщику, none — не уезжают. В консоль инсталляции"
+		+ " журнал пишется в любом случае.");
+	Добавить("settings.key.otel-metric-export-interval.label", "Период среза метрик, миллисекунд");
+	Добавить("settings.key.otel-metric-export-interval.hint",
+		"Как часто снимаются и уезжают показания приборов: метрики уходят срезом"
+		+ " по расписанию, а не партией по событию.");
 
 	Добавить("settings.key.oshub-storage-s3-endpoint.label", "Адрес хранилища S3");
 	Добавить("settings.key.oshub-storage-s3-endpoint.hint",
