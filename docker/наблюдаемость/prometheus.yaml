@@ -1,0 +1,20 @@
+# Prometheus — хранилище метрик. Ничего не опрашивает: и метрики хаба (через коллектор),
+# и RED-метрики из трасс (генератор Tempo) приезжают сами, приёмником remote-write.
+# Флаги приёмника и хранения экземпляров — в command сервиса compose.yaml.
+
+# Кольцевой буфер экземпляров. Само хранилище включает флаг --enable-feature=exemplar-storage,
+# а размер задаётся только отсюда: одноимённого ключа командной строки у Prometheus нет.
+storage:
+  exemplars:
+    max_exemplars: 100000
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Единственная цель — сам Prometheus: по ней видно, что стенд жив, даже когда
+  # хаб ещё не запускали.
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']

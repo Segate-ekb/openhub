@@ -1,13 +1,19 @@
-# Тестовый стенд OpenHub c S3: хаб + MinIO. Из каталога docker/:
+# Тестовый стенд OpenHub: хаб + MinIO + конвейер наблюдаемости. Из каталога docker/:
 #
-#   docker compose up            # хаб на http://localhost:3333, консоль MinIO :9001
+#   docker compose up            # хаб на http://localhost:3333, Grafana :3000, консоль MinIO :9001
 #   docker compose down -v       # снести стенд вместе с данными
 #
-# Стенд именно тестовый: пароли лежат в открытую, том MinIO одноразовый, W^X отключён
-# ради запуска amd64-образа под qemu. Для продового развёртывания см. docker/README.md.
+# Стенд именно тестовый: пароли лежат в открытую, том MinIO одноразовый, Grafana пускает
+# анонимов администраторами, W^X отключён ради запуска amd64-образа под qemu.
+# Для продового развёртывания см. docker/README.md.
 #
 # Без этого файла контейнер самодостаточен: `docker run -p 3333:3333 segateekb/openhub`
 # поднимает хаб с файловым хранилищем и SQLite на томе, без единой внешней системы.
+#
+# Конвейер наблюдаемости самодостаточен в другую сторону: он работает и без сервиса
+# openhub. На Apple Silicon образ хаба идёт под qemu и заводится не везде, поэтому
+# порт коллектора опубликован на localhost — хаб, запущенный нативно на хосте, шлёт
+# телеметрию туда же. Как именно — docker/README.md, раздел «Наблюдаемость».
 
 name: openhub
 
@@ -53,6 +59,8 @@ services:
     depends_on:
       minio-init:
         condition: service_completed_successfully
+      otel-collector:
+        condition: service_started
     ports:
       - "3333:3333"
     environment:
@@ -67,6 +75,15 @@ services:
       OSHUB_STORAGE_S3_ACCESS_KEY: ${MINIO_ROOT_USER:-openhub}
       OSHUB_STORAGE_S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-openhub-secret}
       OSHUB_INSTANCE_URL: http://localhost:3333
+      # Телеметрия: один адрес на все три сигнала, разводит их коллектор.
+      # Имена переменных — стандартные OTEL_*, их ждут и SDK, и напильник winow.
+      OTEL_ENABLED: "true"
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_SERVICE_NAME: openhub
+      # Метрики уезжают раз в десять секунд, а не раз в минуту: на стенде смотрят
+      # результат сразу, а не через минуту после запроса.
+      OTEL_METRIC_EXPORT_INTERVAL: "10000"
       # Эмуляция amd64 через qemu ломает JIT .NET — без этого любая библиотека падает
       # NullReferenceException. На настоящем amd64 переменная не нужна; здесь она стоит
       # безусловно, потому что стенд одноразовый.
@@ -78,6 +95,96 @@ services:
       # Переменные окружения выше перебивают всё, что задано здесь.
       - ../autumn-properties.json:/opt/openhub/autumn-properties.json:ro
 
+  # --- Наблюдаемость: одна дверь, три хранилища, одно окно ------------------------
+  #
+  #   хаб ──OTLP──> otel-collector ──┬── трассы ──> tempo ──спан-метрики──> prometheus
+  #                                  ├── метрики ─> prometheus
+  #                                  └── логи ────> loki
+  #                                                     └── всё вместе ──> grafana
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.115.1
+    command: ["--config=/etc/otelcol/config.yaml"]
+    depends_on:
+      - tempo
+      - loki
+      - prometheus
+    ports:
+      # Порт наружу — ради хаба, запущенного на хосте нативно. Только localhost:
+      # приёмник OTLP не аутентифицирует никого.
+      - "127.0.0.1:4318:4318"
+      - "127.0.0.1:4317:4317"
+      # Проба готовности: 200 значит «конвейер собран, приёмники слушают».
+      - "127.0.0.1:13133:13133"
+    volumes:
+      - ./наблюдаемость/otel-collector.yaml:/etc/otelcol/config.yaml:ro
+
+  tempo:
+    image: grafana/tempo:2.7.1
+    command: ["-config.file=/etc/tempo.yaml"]
+    ports:
+      - "127.0.0.1:3200:3200"
+    volumes:
+      - ./наблюдаемость/tempo.yaml:/etc/tempo.yaml:ro
+      - tempo-data:/var/tempo
+
+  loki:
+    image: grafana/loki:3.4.2
+    command: ["-config.file=/etc/loki/loki.yaml"]
+    ports:
+      - "127.0.0.1:3100:3100"
+    volumes:
+      - ./наблюдаемость/loki.yaml:/etc/loki/loki.yaml:ro
+      - loki-data:/loki
+
+  prometheus:
+    image: prom/prometheus:v3.1.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yaml
+      - --storage.tsdb.path=/prometheus
+      # Приёмник remote-write: им пишут и коллектор, и генератор метрик Tempo.
+      - --web.enable-remote-write-receiver
+      # Экземпляры (exemplars) — то, чем клик из графика попадает в трассу.
+      # Флаг только включает хранилище; его объём задаётся в prometheus.yaml.
+      - --enable-feature=exemplar-storage
+    ports:
+      - "127.0.0.1:9090:9090"
+    volumes:
+      - ./наблюдаемость/prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+      - prometheus-data:/prometheus
+
+  grafana:
+    image: grafana/grafana:11.6.0
+    depends_on:
+      - prometheus
+      - tempo
+      - loki
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      # Стенд тестовый: логина нет вовсе, аноним заходит администратором.
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+      GF_AUTH_BASIC_ENABLED: "false"
+      GF_USERS_DEFAULT_THEME: dark
+      # Дашборд стенда открывается сразу, без блуждания по папкам.
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/хаб.json
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_NEWS_NEWS_FEED_ENABLED: "false"
+    volumes:
+      # Подкаталогами, а не всем провижнингом сразу: подмена корня прячет от Grafana
+      # её собственные пустые каталоги plugins/ и alerting/, и та пишет ошибку на старте.
+      - ./наблюдаемость/grafana/провижнинг/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./наблюдаемость/grafana/провижнинг/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./наблюдаемость/grafana/дашборды:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+
 volumes:
   minio-data:
   openhub-data:
+  tempo-data:
+  loki-data:
+  prometheus-data:
+  grafana-data:

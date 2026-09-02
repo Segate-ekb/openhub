@@ -1,0 +1,102 @@
+# Источники данных Grafana и переходы между ними.
+#
+# Ценность стенда не в трёх отдельных окнах, а в том, что из любого сигнала виден
+# соседний: из спана — его логи и его RED-метрики, из строки лога — трасса,
+# из точки графика — трасса того самого запроса.
+#
+# ⚠ Доллар в значениях удвоен: файлы провижнинга Grafana проходит через подстановку
+# переменных окружения, и одиночный $ она съедает. `$${__span.traceId}` доезжает
+# до конфигурации источника как `${__span.traceId}`.
+
+apiVersion: 1
+
+datasources:
+
+  - name: Prometheus
+    uid: prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    jsonData:
+      httpMethod: POST
+      timeInterval: 15s
+      prometheusType: Prometheus
+      prometheusVersion: 3.1.0
+      # Экземпляр (exemplar) — точка гистограммы, к которой прицеплен идентификатор
+      # трассы. Их шлёт генератор метрик Tempo; отсюда клик из графика попадает
+      # в трассу. Метка называется traceID, а не trace_id: так её пишет Tempo,
+      # и это НЕ то же имя, под которым trace_id лежит в логах Loki.
+      exemplarTraceIdDestinations:
+        - name: traceID
+          datasourceUid: tempo
+          urlDisplayLabel: Открыть трассу
+
+  - name: Tempo
+    uid: tempo
+    type: tempo
+    access: proxy
+    url: http://tempo:3200
+    jsonData:
+      # Из спана — в его логи. Окно шире спана: строку пишут и до, и после него.
+      tracesToLogsV2:
+        datasourceUid: loki
+        spanStartTimeShift: -5m
+        spanEndTimeShift: 5m
+        filterByTraceID: false
+        filterBySpanID: false
+        customQuery: true
+        # trace_id живёт в structured metadata, поэтому это фильтр по метке,
+        # а не поиск подстроки в теле строки.
+        query: '{service_name=~".+"} | trace_id="$${__span.traceId}"'
+      # Из спана — в RED-метрики его маршрута. Отображения tags превращаются в отбор
+      # `$__tags`: без http.route отбор сузился бы только до службы, и панель под
+      # подписью «маршрута» показывала бы весь хаб (замер: 0.0526 против 0.0035 rps).
+      # span_kind отсекает внутренние спаны методов: маршрут — это серверный спан.
+      tracesToMetrics:
+        datasourceUid: prometheus
+        spanStartTimeShift: -5m
+        spanEndTimeShift: 5m
+        tags:
+          - key: service.name
+            value: service
+          - key: http.route
+            value: http_route
+        queries:
+          - name: Темп запросов маршрута
+            query: 'sum(rate(traces_spanmetrics_calls_total{$$__tags, span_kind="SPAN_KIND_SERVER"}[5m]))'
+          - name: Задержка p95 маршрута
+            query: 'histogram_quantile(0.95, sum(rate(traces_spanmetrics_latency_bucket{$$__tags, span_kind="SPAN_KIND_SERVER"}[5m])) by (le))'
+      # Карта сервисов строится по метрикам service-graph из того же Prometheus.
+      serviceMap:
+        datasourceUid: prometheus
+      nodeGraph:
+        enabled: true
+      # Поиск трасс по логам: вкладка Loki Search внутри Tempo.
+      lokiSearch:
+        datasourceUid: loki
+      search:
+        hide: false
+      streamingEnabled:
+        search: true
+      traceQuery:
+        timeShiftEnabled: true
+        spanStartTimeShift: -5m
+        spanEndTimeShift: 5m
+
+  - name: Loki
+    uid: loki
+    type: loki
+    access: proxy
+    url: http://loki:3100
+    jsonData:
+      maxLines: 1000
+      # Обратный переход: из строки лога — в трассу. Матчер по метке, а не по регулярке
+      # тела: OTLP-логи Loki 3.x кладёт trace_id в structured metadata.
+      derivedFields:
+        - name: trace_id
+          matcherType: label
+          matcherRegex: trace_id
+          url: '$${__value.raw}'
+          datasourceUid: tempo
+          urlDisplayLabel: Открыть трассу

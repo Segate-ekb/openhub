@@ -1,0 +1,80 @@
+# Коллектор OpenTelemetry: единственная дверь, в которую стучится хаб.
+#
+# Хаб знает один адрес (OTEL_EXPORTER_OTLP_ENDPOINT) и шлёт в него все три сигнала.
+# Разводит их по хранилищам коллектор: трассы — в Tempo, метрики — в Prometheus,
+# логи — в Loki. Хаб про Tempo, Prometheus и Loki не знает ничего.
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        # Хаб шлёт http/protobuf; тем же портом принимается http/json — им проверяют
+        # конвейер руками через curl.
+        endpoint: 0.0.0.0:4318
+
+processors:
+  # Штатный батчинг: пачка уезжает по таймауту или по размеру, что случится раньше.
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+    send_batch_max_size: 2048
+
+  # Стенд одноразовый и однопользовательский, но лимит памяти нужен и здесь: без него
+  # коллектор под наплывом уносит с собой контейнер, а не отбрасывает пачку.
+  memory_limiter:
+    check_interval: 2s
+    limit_mib: 512
+    spike_limit_mib: 128
+
+exporters:
+  # Трассы уходят в Tempo нативным OTLP по gRPC.
+  otlp/tempo:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+
+  # Логи уходят в Loki его OTLP-приёмником (/otlp/v1/logs). Экспортёра loki в коллекторе
+  # больше нет — начиная с 3.0 Loki принимает OTLP сам, и trace_id кладёт в structured
+  # metadata, а не в тело строки.
+  otlphttp/loki:
+    endpoint: http://loki:3100/otlp
+    tls:
+      insecure: true
+
+  # Метрики уходят в Prometheus его приёмником remote-write. Тем же приёмником пишет
+  # генератор метрик Tempo, поэтому источник у RED-метрик и у метрик хаба один.
+  prometheusremotewrite:
+    endpoint: http://prometheus:9090/api/v1/write
+    tls:
+      insecure: true
+    # Атрибуты ресурса (service.name и прочие) едут метками: без этого у метрик хаба
+    # нет метки service_name, по которой их отбирает дашборд. Плата — process.pid
+    # в метках: каждый перезапуск хаба заводит новые ряды. Для стенда это терпимо
+    # и даже полезно; в проде атрибуты пришлось бы отбирать поимённо.
+    resource_to_telemetry_conversion:
+      enabled: true
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlp/tempo]
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [prometheusremotewrite]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlphttp/loki]
+  telemetry:
+    logs:
+      level: info
