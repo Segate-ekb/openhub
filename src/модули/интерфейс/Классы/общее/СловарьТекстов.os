@@ -1387,6 +1387,10 @@
 	Добавить("settings.hub.audit.filter.who.placeholder", "Логин или префикс токена");
 	Добавить("settings.hub.audit.filter.from", "С даты (UTC)");
 	Добавить("settings.hub.audit.filter.to", "По дату (UTC)");
+	Добавить("settings.hub.audit.filter.ip", "Адрес");
+	Добавить("settings.hub.audit.filter.ip.placeholder", "Адрес или сеть, например 10.0.0.0/8");
+	Добавить("settings.hub.audit.filter.ip.unread",
+		"Адрес «%1» не прочитан: это не IP-адрес и не сеть в записи CIDR. Отбор по адресу не применён — журнал ниже показан без него.");
 	Добавить("settings.hub.audit.filter.button", "Показать");
 
 	Добавить("settings.hub.groups.title", "Группы хаба");
@@ -1488,6 +1492,12 @@
 
 	Добавить("settings.key.oshub-port.label", "Порт");
 	Добавить("settings.key.oshub-port.hint", "Порт HTTP-сервера хаба.");
+	Добавить("settings.key.oshub-instance-trusted-proxies.label", "Доверенные прокси");
+	Добавить("settings.key.oshub-instance-trusted-proxies.hint",
+		"Сети обратных прокси этой инсталляции в записи CIDR через запятую"
+		+ " (10.0.0.0/8, 2001:db8::/32). Только с этих адресов хаб читает заголовки"
+		+ " пересылки и считает клиентом адрес человека, а не адрес прокси."
+		+ " Пусто — заголовки не читаются вовсе: написать в них чужой адрес может кто угодно.");
 	Добавить("settings.key.oshub-instance-url.label", "URL инстанса");
 	Добавить("settings.key.oshub-instance-url.hint",
 		"Внешний адрес хаба вида https://hub.example.com — только схема, хост и порт,"
