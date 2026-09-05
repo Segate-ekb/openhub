@@ -1777,6 +1777,14 @@
 	Добавить("settings.key.oshub-ui-audit-page-size.label", "Записей на странице журнала");
 	Добавить("settings.key.oshub-ui-audit-page-size.hint",
 		"Сколько записей аудита показывается на одной странице журнала.");
+	Добавить("settings.key.oshub-api-page-size.label", "Размер страницы API");
+	Добавить("settings.key.oshub-api-page-size.hint",
+		"Сколько элементов отдаёт списковая ручка API, когда клиент не назвал размер"
+		+ " страницы сам.");
+	Добавить("settings.key.oshub-api-page-max.label", "Потолок страницы API");
+	Добавить("settings.key.oshub-api-page-max.hint",
+		"Сколько элементов списковая ручка API отдаёт в одном ответе максимум, каким бы"
+		+ " большим ни был запрошенный размер страницы.");
 	Добавить("settings.key.oshub-stats-flush-interval-sec.label", "Сброс счётчиков, секунд");
 	Добавить("settings.key.oshub-stats-flush-interval-sec.hint",
 		"Как часто накопленные счётчики скачиваний уезжают в базу.");
