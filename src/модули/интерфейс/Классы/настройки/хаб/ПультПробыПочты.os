@@ -53,7 +53,7 @@
 	Итог = Почта.Отправить(Получатель, Тексты.Текст("settings.hub.mail.test.subject"),
 		Тексты.Шаблон("settings.hub.mail.test.body", Адрес.Базовый()));
 
-	Если НЕ Итог.Отправлено Тогда
+	Если НЕ Итог.Успех Тогда
 		Возврат Отказ(?(Итог.Причина = Почта.ПричинаАдрес(),
 			Тексты.Текст("settings.hub.mail.test.error.address"),
 			Тексты.Текст("settings.hub.mail.test.error.send")));
