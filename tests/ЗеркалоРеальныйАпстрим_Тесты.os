@@ -127,7 +127,6 @@
 	// адрес КАТАЛОГА ВЫДАЧИ по контракту opm, а не главной страницы: на голом хосте
 	// апстрим отвечает сплошными 404 (СервисПрокси.ПодсказкаОПутиВыдачи)
 	Хаб.Среда("OSHUB_SEED_UPSTREAM_URL", "http://hub.oscript.io/download/");
-	Хаб.Среда("OSHUB_SEED_UPSTREAM_ALLOW_PRIVATE", "");
 	Хаб.Среда("OSHUB_SEED_UPSTREAM_TTL_SEC", "60");
 
 КонецПроцедуры
@@ -166,7 +165,7 @@
 
 	Перем_ = "OSHUB_PORT,OSHUB_STORAGE_ROOT,OSHUB_DB_CONNECTOR,OSHUB_DB_CONNECTION,OSHUB_SEED_FIXTURE,"
 		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_DEFAULT_POOL,"
-		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_ALLOW_PRIVATE,OSHUB_SEED_UPSTREAM_TTL_SEC";
+		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC";
 	Для Каждого Имя Из СтрРазделить(Перем_, ",") Цикл
 		УстановитьПеременнуюСреды(Имя, "");
 	КонецЦикла;

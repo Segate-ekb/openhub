@@ -280,9 +280,6 @@
 	ХабПрокси.Среда("OSHUB_SEED_YANKED", "");
 	ХабПрокси.Среда("OSHUB_SEED_UPSTREAM_URL",
 		СтрШаблон("http://localhost:%1/download/", Формат(ПортАпстрима, "ЧГ=0; ЧН=0")));
-	// апстрим здесь — наш второй хаб на localhost, то есть заведомо приватный адрес:
-	// SSRF-гейт пропускает такой только по явному разрешению, как у интранет-зеркала
-	ХабПрокси.Среда("OSHUB_SEED_UPSTREAM_ALLOW_PRIVATE", "1");
 	ХабПрокси.Среда("OSHUB_SEED_UPSTREAM_TTL_SEC", "2");
 	// ENV-провайдер configor превращает "_" в ".", а "__" — в "_":
 	// oshub.proxy.negative.ttl.sec задаётся ровно так
@@ -313,7 +310,7 @@
 
 Процедура СнятьПеременныеАпстримаЗасева()
 	Для Каждого Имя Из СтрРазделить(
-		"OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_ALLOW_PRIVATE,OSHUB_SEED_UPSTREAM_TTL_SEC,OSHUB_DEFAULT_POOL", ",") Цикл
+		"OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC,OSHUB_DEFAULT_POOL", ",") Цикл
 		УстановитьПеременнуюСреды(Имя, "");
 	КонецЦикла;
 КонецПроцедуры
@@ -321,7 +318,7 @@
 Процедура ОчиститьОкружение()
 	Перем_ = "OSHUB_PORT,OSHUB_STORAGE_ROOT,OSHUB_DB_CONNECTOR,OSHUB_DB_CONNECTION,OSHUB_SEED_FIXTURE,"
 		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_DEFAULT_POOL,"
-		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_ALLOW_PRIVATE,OSHUB_SEED_UPSTREAM_TTL_SEC,"
+		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC,"
 		+ "OSHUB_PROXY_NEGATIVE_TTL_SEC";
 	Для Каждого Имя Из СтрРазделить(Перем_, ",") Цикл
 		УстановитьПеременнуюСреды(Имя, "");
