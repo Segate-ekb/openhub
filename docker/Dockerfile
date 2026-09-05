@@ -13,17 +13,57 @@
 # метки OCI по той же единственной версии и включает кросс-платформу linux/amd64.
 #
 # Пакет самодостаточен: .ospx несёт src, autumn-properties.json и oscript_modules, поэтому
-# ни opm, ни hub.oscript.io при сборке образа не нужны.
+# ни opm, ни hub.oscript.io при сборке образа не нужны. Сеть при сборке всё же нужна, но
+# в две стороны и только: `github.com` — за архивом релиза OneScript, `deb.debian.org` —
+# за curl и unzip для стадии скачивания.
+#
+# РАНТАЙМ ОБРАЗ СТАВИТ СЕБЕ САМ — из официального релиза OneScript, а не берёт готовым
+# образом чужого тега. Тег обещает меньше, чем кажется: под номером выпуска у публикатора
+# встречалась предрелизная сборка без функций, на которые хаб опирается через свои
+# библиотеки, и собранный так контейнер падал «Неизвестный символ» на первом обращении
+# к БД — уже у оператора. Здесь версия названа явно (ONESCRIPT_VERSION), архив сверяется
+# по SHA-256, а стадия распаковки вдобавок спрашивает версию у самого `oscript` и падает
+# на предрелизной сборке или на выпуске старее .ВерсияСреды из packagedef. Тот же рубеж
+# со стороны объявления стережёт tests/ОбразХаба_Тесты.os.
+#
+# База — runtime-deps .NET: сборка OneScript самодостаточна (несёт свой .NET), базе остаётся
+# дать ей нативные зависимости — ICU, OpenSSL, корневые сертификаты.
 #
 # ⚠ Проверка образа на Apple Silicon: эмуляция amd64 через qemu ломает JIT .NET, и ЛЮБАЯ
 # библиотека падает NullReferenceException на инициализации модуля (а иногда segfault-ом).
 # Запускать локально только с -e DOTNET_EnableWriteXorExecute=0. В образ эта переменная НЕ
 # зашита: на настоящем amd64 она не нужна, а W^X — защита рантайма.
 
-ARG BASE_IMAGE=evilbeaver/onescript:2.1.0
+ARG BASE_IMAGE=mcr.microsoft.com/dotnet/runtime-deps:8.0
+ARG DOWNLOADER_IMAGE=debian:bookworm-slim
+ARG ONESCRIPT_VERSION=2.2.0
+ARG ONESCRIPT_SHA256=3b3b0a96e141d6758b74cbf492d5e5c11823bfd92318caff1aaa19bd500f1df7
 
 # ---------------------------------------------------------------------------
-# Стадия 1: распаковка пакета и сверка версий
+# Стадия 1: рантайм OneScript из официального релиза
+# ---------------------------------------------------------------------------
+FROM ${DOWNLOADER_IMAGE} AS onescript
+
+ARG ONESCRIPT_VERSION
+ARG ONESCRIPT_SHA256
+
+# Скачивание отделено от рантайма намеренно: curl и unzip нужны только здесь и в готовый
+# образ не едут. Несовпадение контрольной суммы роняет сборку — подменённый или битый
+# архив до образа не доходит.
+RUN set -eu; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends ca-certificates curl unzip; \
+    rm -rf /var/lib/apt/lists/*; \
+    curl -fsSL -o /tmp/onescript.zip \
+        "https://github.com/EvilBeaver/OneScript/releases/download/v${ONESCRIPT_VERSION}/OneScript-${ONESCRIPT_VERSION}-linux-x64.zip"; \
+    printf '%s  %s\n' "${ONESCRIPT_SHA256}" /tmp/onescript.zip | sha256sum -c -; \
+    mkdir -p /opt/onescript; \
+    unzip -q /tmp/onescript.zip -d /opt/onescript; \
+    chmod +x /opt/onescript/bin/oscript /opt/onescript/bin/opm; \
+    rm -f /tmp/onescript.zip
+
+# ---------------------------------------------------------------------------
+# Стадия 2: распаковка пакета и сверка версий
 # ---------------------------------------------------------------------------
 FROM ${BASE_IMAGE} AS unpack
 
@@ -32,11 +72,22 @@ FROM ${BASE_IMAGE} AS unpack
 # на настоящем amd64 аргумент пустой и W^X остаётся включённым.
 ARG DOTNET_EnableWriteXorExecute
 
+COPY --from=onescript /opt/onescript /opt/onescript
+ENV PATH=/opt/onescript/bin:$PATH
+
 COPY openhub-*.ospx /build/
 COPY packagedef /build/packagedef
 COPY scripts/РаспаковатьПакет.os /build/РаспаковатьПакет.os
 
 RUN set -eu; \
+    version_engine="$(sed -n 's/^[[:space:]]*\.ВерсияСреды("\([^"]*\)").*/\1/p' /build/packagedef | head -n1)"; \
+    test -n "$version_engine" || { echo "packagedef: не найдена строка .ВерсияСреды(\"…\")"; exit 1; }; \
+    version_runtime="$(oscript -version | tr -d '\r' | head -n1)"; \
+    case "$version_runtime" in *-*) \
+        echo "Распакованный архив несёт предрелизную сборку OneScript ($version_runtime): в ней нет того, что есть в выпуске, и хаб упадёт на первом обращении к БД. Укажите в ARG ONESCRIPT_VERSION номер выпуска"; exit 1;; \
+    esac; \
+    test "$(printf '%s\n%s\n' "$version_engine" "$version_runtime" | sort -V | head -n1)" = "$version_engine" || { \
+        echo "Установленный рантайм ($version_runtime) старее .ВерсияСреды из packagedef ($version_engine): зависимости хаба его не поддерживают. Поднимите ARG ONESCRIPT_VERSION и ARG ONESCRIPT_SHA256"; exit 1; }; \
     ospx="$(ls /build/openhub-*.ospx)"; \
     version_pkgdef="$(sed -n 's/^[[:space:]]*\.Версия("\([^"]*\)").*/\1/p' /build/packagedef | head -n1)"; \
     test -n "$version_pkgdef" || { echo "packagedef: не найдена строка .Версия(\"…\")"; exit 1; }; \
@@ -53,12 +104,23 @@ RUN set -eu; \
     rm -rf /build
 
 # ---------------------------------------------------------------------------
-# Стадия 2: рантайм
+# Стадия 3: рантайм
 # ---------------------------------------------------------------------------
 FROM ${BASE_IMAGE}
 
-# /opt/openhub — только чтение (владелец root): хаб туда не пишет.
+# Рантайм OneScript и сам хаб — оба только на чтение (владелец root): хаб туда не пишет.
+COPY --from=onescript /opt/onescript /opt/onescript
 COPY --from=unpack /opt/openhub /opt/openhub
+
+ENV PATH=/opt/onescript/bin:$PATH
+
+# База .NET рассчитана на приложение ASP.NET, которое слушает 8080 под пользователем 1654;
+# у нас ни того, ни другого. Пока ASPNETCORE_HTTP_PORTS оставался унаследованным, Kestrel
+# на КАЖДОМ старте писал `warn: Overriding address(es) 'http://*:8080'` — порт хабу задаёт
+# winow. Гасим обе: пустое значение ничего не задаёт, но и не даёт чужому умолчанию
+# дожить до рантайма.
+ENV ASPNETCORE_HTTP_PORTS= \
+    APP_UID=
 
 # Данные инсталляции: файл SQLite, артефакты пакетов и журнал аудита
 # (<oshub.storage.root>/аудит.log). Всё лежит в одном каталоге и обязано быть на томе —

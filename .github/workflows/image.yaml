@@ -36,9 +36,13 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Установка OneScript
+        # Версия пином, а не каналом stable: образ ставит себе ровно этот выпуск
+        # (docker/Dockerfile, ARG ONESCRIPT_VERSION), и конвейер обязан проверять хаб
+        # на том же. Ниже .ВерсияСреды из packagedef опускаться нельзя — зависимости
+        # такой рантайм не поддерживают.
         uses: otymko/setup-onescript@v1.5.1
         with:
-          version: stable
+          version: 2.2.0
 
       - name: Установка зависимостей
         # Образ несёт oscript_modules внутри .ospx, поэтому зависимости нужны до сборки
