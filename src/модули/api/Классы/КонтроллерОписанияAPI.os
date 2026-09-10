@@ -74,7 +74,8 @@
 	Схемы.Вставить("Page", СхемаСтраницы());
 	Схемы.Вставить("Pool", ОбъектСоСвойствами("id,name,type,visibility,owner_id,created"));
 	Схемы.Вставить("Package", СхемаПакета());
-	Схемы.Вставить("Version", ОбъектСоСвойствами("version,sha256,size,yanked,published,semver,labels"));
+	Схемы.Вставить("Version",
+		ОбъектСоСвойствами("version,manifest_version,sha256,size,yanked,published,semver,labels"));
 	Компоненты.Вставить("schemas", Схемы);
 
 	Безопасность = Новый Соответствие();
