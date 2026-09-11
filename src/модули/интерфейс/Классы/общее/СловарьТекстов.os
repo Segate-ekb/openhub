@@ -1942,6 +1942,13 @@
 		+ " в кабинете и подставьте его значение в поле «Авторизация».");
 	Добавить("public.package.channel.hint", "Канал обновления: %1");
 
+	Добавить("public.package.download.label", "Скачать %1");
+	Добавить("public.package.download.default.hint",
+		"Скачать %1 — версию, которую ставит установка без указания версии");
+	Добавить("public.package.download.channel.hint", "Скачать %1 — версию канала «%2»");
+	Добавить("public.package.download.offline",
+		"Скачанный файл ставится командой %1 — сеть для этого уже не нужна.");
+
 	Добавить("public.package.version.upstream", "с апстрима");
 	Добавить("public.package.version.upstream.hint",
 		"Версия получена с апстрима, а не опубликована здесь");
