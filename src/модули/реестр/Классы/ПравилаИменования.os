@@ -64,7 +64,7 @@
 Функция ЗарезервированныеИменаПулов() Экспорт
 	Возврат СтрРазделить(
 		"health,ready,packages,package,api,login,register,setup,office,download,static,assets,"
-		+ "me,hub,groups,logout,push,pools,dev-channel,oidc,settings,"
+		+ "me,hub,groups,logout,push,pools,dev-channel,changes,oidc,settings,"
 		+ "tour,invite,confirm-email,forgot-password,cli,"
 		+ "ui,brand", ",");
 КонецФункции

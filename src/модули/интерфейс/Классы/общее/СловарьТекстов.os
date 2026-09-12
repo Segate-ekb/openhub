@@ -482,7 +482,7 @@
 		"Плановая репликация: хаб по расписанию скачивает пакеты другого хаба и складывает"
 		+ " их копию в этот пул.");
 	Добавить("settings.pool.mirrors.col.upstream", "Апстрим");
-	Добавить("settings.pool.mirrors.col.mode", "Режим");
+	Добавить("settings.pool.mirrors.col.protocol", "Протокол");
 	Добавить("settings.pool.mirrors.col.interval", "Интервал, сек");
 	Добавить("settings.pool.mirrors.col.state", "Состояние");
 	Добавить("settings.pool.mirrors.col.run", "Прогон");
@@ -519,7 +519,10 @@
 	Добавить("settings.pool.mirrors.access.token", "по токену");
 	Добавить("settings.pool.mirrors.access.anonymous", "анонимно");
 	Добавить("settings.pool.mirrors.button.token-off", "Снять токен");
-	Добавить("settings.pool.mirrors.mode.migrate", "перенос");
+	Добавить("settings.pool.mirrors.protocol.migrate", "перенос");
+	Добавить("settings.pool.mirrors.protocol.openhub", "OpenHub");
+	Добавить("settings.pool.mirrors.protocol.legacy", "opm");
+	Добавить("settings.pool.mirrors.protocol.unknown", "ещё не определён");
 
 	Добавить("settings.pool.mirror-new.title", "Новое зеркало");
 	Добавить("settings.pool.mirror-new.lead",
@@ -527,8 +530,6 @@
 		+ " она закрывает пул для людей, а не для хаба.");
 	Добавить("settings.pool.mirror-new.url.label", "Адрес апстрима");
 	Добавить("settings.pool.mirror-new.url.hint", "Базовый URL хаба-источника, только http/https");
-	Добавить("settings.pool.mirror-new.mode.label", "Режим");
-	Добавить("settings.pool.mirror-new.mode.hint", "Протокол хаба-источника");
 	Добавить("settings.pool.mirror-new.filter.label", "Фильтр имён");
 	Добавить("settings.pool.mirror-new.filter.hint",
 		"JSON-массив масок имён пакетов; пусто — забирать всё");
@@ -2411,7 +2412,7 @@
 	Добавить("settings.pool.mirror-status.field.by", "Запустил");
 	Добавить("settings.pool.mirror-status.field.by-schedule", "по расписанию");
 	Добавить("settings.pool.mirror-status.field.upstream", "Апстрим");
-	Добавить("settings.pool.mirror-status.field.mode", "Режим");
+	Добавить("settings.pool.mirror-status.field.protocol", "Протокол источника");
 	Добавить("settings.pool.mirror-status.field.interval", "Интервал синхронизации, сек");
 	Добавить("settings.pool.mirror-status.field.enabled", "Зеркало");
 	Добавить("settings.pool.mirror-status.field.last-sync", "Последняя синхронизация");
@@ -2447,7 +2448,7 @@
 		+ " хаб не судит.");
 	Добавить("office.mirrors.list.title", "Зеркала пула");
 	Добавить("office.mirrors.col.upstream", "Апстрим");
-	Добавить("office.mirrors.col.mode", "Режим");
+	Добавить("office.mirrors.col.protocol", "Протокол");
 	Добавить("office.mirrors.col.state", "Состояние");
 	Добавить("office.mirrors.col.run", "Прогон");
 	Добавить("office.mirrors.col.sync", "Последний синк");
@@ -2462,7 +2463,6 @@
 	Добавить("office.mirrors.button.delete", "Удалить");
 	Добавить("office.mirrors.new.title", "Новое зеркало");
 	Добавить("office.mirrors.new.url", "URL апстрима (http/https)");
-	Добавить("office.mirrors.new.mode", "Режим");
 	Добавить("office.mirrors.new.filter", "Фильтр имён (JSON-массив масок; пусто — всё)");
 	Добавить("office.mirrors.new.interval", "Интервал синка, сек (пусто — по умолчанию)");
 	Добавить("office.mirrors.new.button", "Создать зеркало");
