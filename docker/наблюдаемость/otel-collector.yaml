@@ -55,6 +55,10 @@ exporters:
     # и даже полезно; в проде атрибуты пришлось бы отбирать поимённо.
     resource_to_telemetry_conversion:
       enabled: true
+    # Единица метрики приписывается к её имени: гистограмма `*.duration` с единицей `s`
+    # приезжает в Prometheus как `*_duration_seconds_bucket`. Значение умолчательное,
+    # но выписано явно: от него зависят имена в панелях дашборда и в docker/README.
+    add_metric_suffixes: true
 
 extensions:
   health_check:

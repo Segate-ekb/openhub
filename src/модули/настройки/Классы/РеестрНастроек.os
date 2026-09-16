@@ -354,5 +354,6 @@
 	ИсключенияEnv.Вставить("winow.порт", "OSHUB_PORT");
 	ИсключенияEnv.Вставить("oshub.admin.password_file", "OSHUB_ADMIN_PASSWORD_FILE");
 	ИсключенияEnv.Вставить("oshub.instance.trusted_proxies", "OSHUB_INSTANCE_TRUSTED_PROXIES");
+	ИсключенияEnv.Вставить("otel.entity.query-text", "OTEL_ENTITY_QUERY_TEXT");
 
 КонецПроцедуры

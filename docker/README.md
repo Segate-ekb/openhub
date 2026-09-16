@@ -186,15 +186,42 @@ curl -s http://localhost:3200/api/traces/<trace_id>
 (в Prometheus).
 
 **Метрика.** На каждую точку маршрута хаб пишет гистограмму `*.duration` и счётчик
-`*.counted`. В Prometheus имя приезжает транслитерированным и в snake_case:
-`КонтроллерПуловAPI.Пулы` → `kontroller_pulov_api_puly_duration_bucket` и
-`…_counted_total`. Метки — `code_namespace`, `code_function_name`, `result`, `service_name`.
+`*.counted`. В Prometheus имя приезжает транслитерированным и в snake_case, а к гистограмме
+длительности коллектор приписывает её единицу: `КонтроллерПуловAPI.Пулы` →
+`kontroller_pulov_api_puly_duration_seconds_bucket` и `…_counted_total`. Метки —
+`code_namespace`, `code_function_name`, `result`, `service_name`.
+
+> ⚠ Суффикс `_seconds` появился с `autumn-opentelemetry 1.1.0`: длительность пишется
+> в СЕКУНДАХ с единицей `s`, а не в миллисекундах без единицы (единицу приписывает
+> коллектор, `add_metric_suffixes: true`). Запросы и панели, написанные по старому имени
+> `…_duration_bucket`, молча возвращают пусто.
+>
+> ⚠ **Квантиль по этой гистограмме врёт.** Границы корзин библиотека не задаёт, SDK ставит
+> умолчательные миллисекундные `[0, 5, 10 … 10000]`, и все секундные значения падают
+> в первую корзину: `histogram_quantile(0.95, …)` вернёт ≈4 «секунды» при ответе в 6 мс.
+> Панель «Задержка методов» показывает поэтому среднее —
+> `rate(…_seconds_sum) / rate(…_seconds_count)`. Гистограмм базы данных это не касается:
+> `opentelemetry-instrumentation-entity` передаёт секундные границы сам.
 
 ```bash
 curl -s -G http://localhost:9090/api/v1/label/__name__/values \
-  --data-urlencode 'match[]={__name__=~".+_duration_bucket"}'
+  --data-urlencode 'match[]={__name__=~".+_duration_seconds_bucket"}'
 curl -s -G http://localhost:9090/api/v1/query \
   --data-urlencode 'query=kontroller_pulov_api_puly_counted_total'
+```
+
+**Метрика базы.** Обращения к СУБД инструментирует entity, без единой строки кода хаба:
+спаны операций (`ПолучитьОдно Пакет`) и запросов (`SELECT Пакеты`), гистограммы
+`db.client.operation.duration` и `entity.operation.duration`, счётчики `entity.entities`
+и `entity.transactions`, датчики пула `db.client.connection.*`, а на вызовах хранилищ —
+`entity.repository.invocation.duration`. В Prometheus это
+`db_client_operation_duration_seconds_bucket`, `entity_operation_duration_seconds_bucket`,
+`entity_repository_invocation_duration_seconds_bucket`; метки — `db_operation_name`,
+`entity_operation`, `entity_type`, `entity_repository`, `code_function_name`.
+
+```bash
+curl -s -G http://localhost:9090/api/v1/query \
+  --data-urlencode 'query=sum by (db_operation_name) (rate(db_client_operation_duration_seconds_count[5m]))'
 ```
 
 RED-метрики маршрутов считает не хаб, а генератор метрик Tempo:

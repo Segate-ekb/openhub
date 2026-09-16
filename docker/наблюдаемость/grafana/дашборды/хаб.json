@@ -9,7 +9,7 @@
   "timezone": "browser",
   "editable": true,
   "schemaVersion": 39,
-  "version": 1,
+  "version": 3,
   "refresh": "10s",
   "time": {
     "from": "now-30m",
@@ -437,8 +437,8 @@
     {
       "type": "timeseries",
       "id": 7,
-      "title": "Задержка методов, p95",
-      "description": "Гистограммы *.duration, которые хаб пишет сам на каждой точке маршрута. Разбивка по классу и методу. Окно rate — 5 мин фиксировано: метрики хаба экспортируются раз в 60 с, и авто-интервал Grafana на коротких диапазонах пустеет.",
+      "title": "Задержка методов, среднее",
+      "description": "Среднее время вызова точки маршрута: сумма длительностей, делённая на число вызовов. Не p95: autumn-opentelemetry 1.1.0 пишет длительность в секундах, но границы корзин гистограмме не задаёт, и SDK ставит умолчательные миллисекундные ([0, 5, 10 … 10000]) — все секундные значения падают в первую корзину, и histogram_quantile вернул бы не задержку, а границу корзины. Среднее от границ не зависит; p95 вернётся, когда библиотека передаст секундные границы (issues/ЧЕРНОВИК-AUTUMN-OTEL-секунды-при-миллисекундных-границах.md). Отбор code_namespace!=\"\" оставляет метрики точек маршрута: под ту же маску имён попали гистограммы базы данных, у которых этой метки нет. Окно rate — 5 мин фиксировано: метрики хаба экспортируются раз в 60 с, и авто-интервал Grafana на коротких диапазонах пустеет.",
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -451,7 +451,7 @@
       },
       "fieldConfig": {
         "defaults": {
-          "unit": "ms",
+          "unit": "s",
           "custom": {
             "drawStyle": "line",
             "lineWidth": 2,
@@ -483,7 +483,7 @@
             "uid": "prometheus"
           },
           "editorMode": "code",
-          "expr": "histogram_quantile(0.95, sum by (le, code_namespace, code_function_name) (rate({__name__=~\".+_duration_bucket\", service_name=\"$service\"}[5m])))",
+          "expr": "sum by (code_namespace, code_function_name) (rate({__name__=~\".+_duration_seconds_sum\", service_name=\"$service\", code_namespace!=\"\"}[5m])) / sum by (code_namespace, code_function_name) (rate({__name__=~\".+_duration_seconds_count\", service_name=\"$service\", code_namespace!=\"\"}[5m]))",
           "legendFormat": "{{code_namespace}}.{{code_function_name}}",
           "range": true
         }
@@ -546,13 +546,136 @@
     },
     {
       "type": "row",
+      "id": 250,
+      "title": "База данных: операции и хранилища",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 29
+      },
+      "collapsed": false,
+      "panels": []
+    },
+    {
+      "type": "timeseries",
+      "id": 11,
+      "title": "Задержка обращений к СУБД, p95",
+      "description": "Гистограмма db.client.operation.duration наблюдателя источника данных entity (opentelemetry-instrumentation-entity). Разбивка по операции СУБД: SELECT, INSERT, COMMIT. Пусто — значит отключено otel.entity.enabled=false.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 30
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 0,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "calcs": [
+            "max"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "histogram_quantile(0.95, sum by (le, db_operation_name) (rate(db_client_operation_duration_seconds_bucket{service_name=\"$service\"}[5m])))",
+          "legendFormat": "{{db_operation_name}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 12,
+      "title": "Вызовы хранилищ сущностей, p95",
+      "description": "Гистограмма entity.repository.invocation.duration напильника слоя хранилищ. Разбивка по хранилищу и методу; метка entity_repository_state отделяет отказ от успеха. Пусто — значит отключено otel.entity.repository.enabled=false.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 30
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 0,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "calcs": [
+            "max"
+          ]
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "histogram_quantile(0.95, sum by (le, entity_repository, code_function_name) (rate(entity_repository_invocation_duration_seconds_bucket{service_name=\"$service\"}[5m])))",
+          "legendFormat": "{{entity_repository}}.{{code_function_name}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "row",
       "id": 300,
       "title": "Логи и карта сервисов",
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 38
       },
       "collapsed": false,
       "panels": []
@@ -570,7 +693,7 @@
         "h": 10,
         "w": 16,
         "x": 0,
-        "y": 30
+        "y": 39
       },
       "options": {
         "showTime": true,
@@ -608,7 +731,7 @@
         "h": 10,
         "w": 8,
         "x": 16,
-        "y": 30
+        "y": 39
       },
       "options": {},
       "targets": [
