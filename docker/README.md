@@ -37,8 +37,9 @@ docker/образ.sh --push my/openhub  # другой репозиторий
 в `ARG ONESCRIPT_SHA256` (`shasum -a 256 OneScript-<версия>-linux-x64.zip`).
 
 Сборке нужна сеть, но в две стороны и только: `github.com` — за архивом релиза,
-`deb.debian.org` — за `curl` и `unzip` для стадии скачивания. Ни `opm`, ни `hub.oscript.io`
-не участвуют. Размер образа — 395 МБ против 418 МБ на прежней базе; мерка одна:
+`deb.debian.org` — за `curl` и `unzip` для стадии скачивания и за `curl` для пробы здоровья
+в рантайме. Ни `opm`, ни `hub.oscript.io` не участвуют. Размер образа — 401 МБ (из них 6 МБ —
+`curl` для пробы здоровья) против 418 МБ на прежней базе; мерка одна:
 `docker run --rm --entrypoint /bin/sh <образ> -c 'du -sxm /'` (`docker images` показывает
 разное для загруженного и вытянутого образа и для сравнения не годится).
 
@@ -59,6 +60,10 @@ docker run --rm -p 3333:3333 -v openhub-data:/var/lib/openhub segateekb/openhub
 *Так выглядит свежий хаб сразу после `docker run`.*
 
 Стенд с MinIO целиком — `docker compose -f docker/compose.yaml up`.
+
+Комплект для сервера — [`../deploy/`](../deploy): хаб и PostgreSQL одним `compose.yaml`.
+Хранилище пакетов (том или S3), адрес своего OTLP-коллектора и сети обратных прокси задаются
+в `autumn-properties.json` рядом; в секции `environment` остаются только база и секреты.
 
 > **На Apple Silicon нужны два флага.** Без `--platform linux/amd64` образ не скачается
 > (`no matching manifest for linux/arm64/v8`), без `-e DOTNET_EnableWriteXorExecute=0`
@@ -358,3 +363,7 @@ services:
 | --- | --- |
 | `GET /health` | живость; отдаёт версию хаба |
 | `GET /ready` | готовность; до конца старта отвечает 503 |
+
+Docker и compose отдельной настройки не требуют: проба готовности зашита в образ
+(`HEALTHCHECK`, `curl` на `/ready` раз в 30 с, первые две минуты старта в счёт не идут),
+и `docker ps` показывает `healthy` сам.

@@ -15,7 +15,7 @@
 # Пакет самодостаточен: .ospx несёт src, autumn-properties.json и oscript_modules, поэтому
 # ни opm, ни hub.oscript.io при сборке образа не нужны. Сеть при сборке всё же нужна, но
 # в две стороны и только: `github.com` — за архивом релиза OneScript, `deb.debian.org` —
-# за curl и unzip для стадии скачивания.
+# за curl и unzip для стадии скачивания и за curl для пробы здоровья в рантайме.
 #
 # РАНТАЙМ ОБРАЗ СТАВИТ СЕБЕ САМ — из официального релиза OneScript, а не берёт готовым
 # образом чужого тега. Тег обещает меньше, чем кажется: под номером выпуска у публикатора
@@ -47,9 +47,9 @@ FROM ${DOWNLOADER_IMAGE} AS onescript
 ARG ONESCRIPT_VERSION
 ARG ONESCRIPT_SHA256
 
-# Скачивание отделено от рантайма намеренно: curl и unzip нужны только здесь и в готовый
-# образ не едут. Несовпадение контрольной суммы роняет сборку — подменённый или битый
-# архив до образа не доходит.
+# Скачивание отделено от рантайма намеренно: unzip нужен только здесь и в готовый образ
+# не едет. Несовпадение контрольной суммы роняет сборку — подменённый или битый архив
+# до образа не доходит.
 RUN set -eu; \
     apt-get update; \
     apt-get install -y --no-install-recommends ca-certificates curl unzip; \
@@ -122,6 +122,12 @@ ENV PATH=/opt/onescript/bin:$PATH
 ENV ASPNETCORE_HTTP_PORTS= \
     APP_UID=
 
+# curl — единственное, чем проба здоровья спрашивает хаб: в базе .NET нет ни его, ни wget.
+RUN set -eu; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends curl; \
+    rm -rf /var/lib/apt/lists/*
+
 # Данные инсталляции: файл SQLite, артефакты пакетов и журнал аудита
 # (<oshub.storage.root>/аудит.log). Всё лежит в одном каталоге и обязано быть на томе —
 # в слое образа оно не переживёт ни рестарт пода, ни обновление образа.
@@ -168,4 +174,9 @@ USER 10001:10001
 EXPOSE 3333
 
 # Пробы оркестратора: GET /health — живость, GET /ready — готовность (503 до конца старта).
+# Docker и compose спрашивают готовность сами: порт открывается последним шагом старта,
+# поэтому отказы первых двух минут в счёт не идут.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=120s --retries=3 \
+    CMD curl -fsS "http://localhost:${OSHUB_PORT:-3333}/ready" || exit 1
+
 ENTRYPOINT ["oscript", "/opt/openhub/src/main.os"]

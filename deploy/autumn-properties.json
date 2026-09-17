@@ -1,0 +1,38 @@
+{
+    "winow": {
+        "Порт": 3333
+    },
+    "otel": {
+        "enabled": true,
+        "service": {
+            "name": "openhub"
+        },
+        "exporter": {
+            "otlp": {
+                "endpoint": "http://otel-collector:4318",
+                "protocol": "http/protobuf"
+            }
+        },
+        "entity": {
+            "query-text": true
+        }
+    },
+    "oshub": {
+        "instance": {
+            "trusted_proxies": ""
+        },
+        "storage": {
+            "backend": "fs", // Если s3 - то пиши s3
+            // Надо только если s3
+            "s3": {
+                "endpoint": "",
+                "bucket": "",
+                "region": "us-east-1",
+                "force_path_style": true
+            }
+        },
+        "pools": {
+            "default": "public"
+        }
+    }
+}
