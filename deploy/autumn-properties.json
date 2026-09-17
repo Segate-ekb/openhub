@@ -1,7 +1,4 @@
 {
-    "winow": {
-        "Порт": 3333
-    },
     "otel": {
         "enabled": true,
         "service": {
@@ -9,7 +6,7 @@
         },
         "exporter": {
             "otlp": {
-                "endpoint": "http://otel-collector:4318",
+                "endpoint": "http://otel-collector:4318", // Адрес своего OTLP-коллектора
                 "protocol": "http/protobuf"
             }
         },
@@ -19,10 +16,10 @@
     },
     "oshub": {
         "instance": {
-            "trusted_proxies": ""
+            "trusted_proxies": "" // Сети обратного прокси через запятую, например 172.16.0.0/12
         },
         "storage": {
-            "backend": "fs", // Если s3 - то пиши s3
+            "backend": "file", // Если s3 - то пиши s3
             // Надо только если s3
             "s3": {
                 "endpoint": "",

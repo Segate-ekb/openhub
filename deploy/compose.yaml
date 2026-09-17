@@ -1,8 +1,8 @@
-# OpenHub на одном сервере: docker compose up -d.
+# OpenHub на одном сервере (linux/amd64): docker compose up -d, затем http://127.0.0.1:3333/setup.
 # Настройки — в autumn-properties.json рядом; здесь только база и секреты.
 # Наружу хаб выставляется только за обратным прокси с TLS.
 
-name: openhub
+name: openhub-server
 
 services:
   openhub:
@@ -16,7 +16,8 @@ services:
     environment:
       TZ: UTC
       OSHUB_DB_CONNECTOR: КоннекторPostgreSQL
-      # Пароль тот же, что у сервиса postgres; без точки с запятой.
+      # Пароль тот же, что у сервиса postgres, и без «;» внутри. Меняется до первого запуска:
+      # после инициализации тома базы правка здесь пароль в ней уже не сменит.
       OSHUB_DB_CONNECTION: Host=postgres;Username=openhub;Password=change-me;Database=openhub
       # Ключи S3 — при oshub.storage.backend = s3.
       #OSHUB_STORAGE_S3_ACCESS_KEY:
@@ -24,7 +25,7 @@ services:
       # Если коллектор требует авторизацию.
       #OTEL_EXPORTER_OTLP_HEADERS: Authorization=Bearer ...
     volumes:
-      # Журнал аудита и, при backend = fs, файлы пакетов.
+      # Журнал аудита и, при backend = file, файлы пакетов.
       - openhub-data:/var/lib/openhub
       - ./autumn-properties.json:/opt/openhub/autumn-properties.json:ro
     healthcheck:
