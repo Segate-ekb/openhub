@@ -181,6 +181,13 @@
 	Ярус("oshub.webhooks.delivery_enabled", 1);
 	Ярус("oshub.webhooks.allow_insecure", 1);
 
+	// Прокси Telegram — координата сервера и учётка к нему, как у SMTP: заполненный сервер
+	// разворачивает весь поход в Bot API, поэтому блок стоит целиком над катом
+	Ярус("oshub.webhooks.telegram.proxy.host", 1);
+	Ярус("oshub.webhooks.telegram.proxy.port", 1);
+	Ярус("oshub.webhooks.telegram.proxy.user", 1);
+	Ярус("oshub.webhooks.telegram.proxy.password", 1);
+
 	// офлайн закрывает походы наружу целиком: включают его как раз тогда, когда рестарт некстати
 	Ярус("oshub.proxy.offline", 1);
 	Ярус("oshub.proxy.timeout.sec", 2);

@@ -1755,6 +1755,24 @@
 		"Потолок кнопки «Проверить»: сколько раз в час одну подписку разрешено дёргать"
 		+ " вручную. Считается в памяти процесса, перезапуск потолок отпускает.");
 
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-host.label", "Прокси Telegram: сервер");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-host.hint",
+		"Имя или адрес HTTP-прокси, через который хаб обращается к api.telegram.org."
+		+ " Пусто — хаб ходит в Bot API напрямую. Прокси действует только на уведомления"
+		+ " Telegram: вебхуки, зеркала, почта и хранилище ходят как ходили. SOCKS платформа"
+		+ " не поддерживает — нужен именно HTTP-прокси с методом CONNECT.");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-port.label", "Прокси Telegram: порт");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-port.hint",
+		"Порт прокси-сервера. Пока сервер не задан, значение ни на что не влияет.");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-user.label", "Прокси Telegram: пользователь");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-user.hint",
+		"Имя пользователя для входа на прокси. Пусто — прокси без аутентификации.");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-password.label", "Прокси Telegram: пароль");
+	Добавить("settings.key.oshub-webhooks-telegram-proxy-password.hint",
+		"Секрет: поле открывается пустым, значение не показывается ни здесь, ни в API,"
+		+ " ни в журнале, ни в тексте отказа доставки. Пустое поле оставляет сохранённый"
+		+ " пароль как есть, стирает его кнопка сброса.");
+
 	Добавить("settings.key.oshub-proxy-offline.label", "Офлайн");
 	Добавить("settings.key.oshub-proxy-offline.hint",
 		"Хаб обслуживает запросы только из своего кэша и наружу не ходит вовсе. Пакет,"
