@@ -1,9 +1,6 @@
 {
     "otel": {
         "enabled": true,
-        "service": {
-            "name": "openhub"
-        },
         "exporter": {
             "otlp": {
                 "endpoint": "http://otel-collector:4318", // Адрес своего OTLP-коллектора

@@ -12,7 +12,7 @@
 # Собирать только через docker/образ.sh: он собирает .ospx из packagedef, ставит тег и
 # метки OCI по той же единственной версии и включает кросс-платформу linux/amd64.
 #
-# Пакет самодостаточен: .ospx несёт src, autumn-properties.json и oscript_modules, поэтому
+# Пакет самодостаточен: .ospx несёт src и oscript_modules, поэтому
 # ни opm, ни hub.oscript.io при сборке образа не нужны. Сеть при сборке всё же нужна, но
 # в две стороны и только: `github.com` — за архивом релиза OneScript, `deb.debian.org` —
 # за curl и unzip для стадии скачивания и за curl для пробы здоровья в рантайме.
@@ -95,6 +95,7 @@ RUN set -eu; \
     test "$version_ospx" = "$version_pkgdef" || { \
         echo "Версия .ospx ($version_ospx) не равна версии packagedef ($version_pkgdef): пересоберите пакет через docker/образ.sh"; exit 1; }; \
     oscript /build/РаспаковатьПакет.os "$ospx" /opt/openhub; \
+    rm -f /opt/openhub/autumn-properties.json; \
     test -f /opt/openhub/packagedef || { \
         echo "В пакете нет packagedef: хабу нечем ответить о своей версии — верните .ВключитьФайл(\"packagedef\")"; exit 1; }; \
     version_app="$(sed -n 's/^[[:space:]]*\.Версия("\([^"]*\)").*/\1/p' /opt/openhub/packagedef | head -n1)"; \
@@ -142,8 +143,10 @@ VOLUME ["/var/lib/openhub"]
 
 # Приоритет источников конфигурации (сверху вниз):
 #   1. переменные OSHUB_* при запуске контейнера;
-#   2. autumn-properties.json в /opt/openhub — приезжает в пакете, монтируется поверх своим:
-#      `-v ./autumn-properties.json:/opt/openhub/autumn-properties.json:ro`;
+#   2. autumn-properties.json в /opt/openhub, если оператор его смонтировал:
+#      `-v ./autumn-properties.json:/opt/openhub/autumn-properties.json:ro`.
+#      Своего файла в образе нет: поставочный из пакета удаляется при сборке — он повторял
+#      умолчания кода, а его блоки базы и хранилища всё равно перебивались ENV ниже;
 #   3. значения по умолчанию в коде.
 #
 # Здесь зашит только тот минимум, который является фактом контейнера, а не выбором
