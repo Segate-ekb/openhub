@@ -1320,6 +1320,29 @@
 	Добавить("settings.hub.storage.meter.free",
 		"Занято %1. Общего потолка объёма у хаба нет — место ограничивает только диск"
 		+ " и квоты отдельных пулов.");
+	Добавить("settings.hub.storage.meter.counted",
+		"Занятое — по учёту самого хаба: он складывает счётчики пулов и раз в час сверяет"
+		+ " их с хранилищем. Диск при отрисовке экрана не опрашивается.");
+	Добавить("settings.hub.storage.meter.unknown",
+		"Занято — неизвестно: хранилище не отвечает, и сверить с ним занятое место нечем.");
+	Добавить("settings.hub.storage.health.lead",
+		"Состояние хаб снимает сам, каждые %1 с. Экран показывает последний ответ хранилища"
+		+ " и своей проверки не заказывает.");
+	Добавить("settings.hub.storage.health.alive", "Отвечает");
+	Добавить("settings.hub.storage.health.down", "Не отвечает");
+	Добавить("settings.hub.storage.health.denied", "Ответило, но не пустило");
+	Добавить("settings.hub.storage.health.unknown", "Ещё не проверялось");
+	Добавить("settings.hub.storage.health.never",
+		"Первая проверка ещё не проходила — состояние появится после неё.");
+	Добавить("settings.hub.storage.health.checked", "Последний ответ — %1.");
+	Добавить("settings.hub.storage.health.since.down",
+		"Не отвечает с %1: %2. Поднявшееся хранилище вернётся в работу само,"
+		+ " не позже следующей проверки.");
+	Добавить("settings.hub.storage.health.since.denied",
+		"Не пускает хаб с %1: %2. Чинить надо доступ, а не адрес: хранилище на месте"
+		+ " и отвечает.");
+	Добавить("settings.hub.storage.row.occupied", "Занято места");
+	Добавить("settings.hub.storage.occupied.unknown", "неизвестно");
 	Добавить("settings.hub.storage.col.what", "Что");
 	Добавить("settings.hub.storage.col.how", "Как настроено");
 	Добавить("settings.hub.storage.row.backend", "На чём хранится");
