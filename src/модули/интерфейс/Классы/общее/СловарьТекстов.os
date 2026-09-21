@@ -1900,6 +1900,31 @@
 	Добавить("settings.key.oshub-incidents-ttl-sec.hint",
 		"Сколько живёт запись о неудаче с момента последнего повтора.");
 
+	Добавить("settings.key.oshub-jobs-geo-update-interval-sec.label",
+		"Заход за базой стран, секунд");
+	Добавить("settings.key.oshub-jobs-geo-update-interval-sec.hint",
+		"Как часто хаб проверяет базу стран посетителей: замечает положенный руками файл"
+		+ " и, если обновление разрешено, идёт за новым выпуском.");
+	Добавить("settings.key.oshub-geo-db-path.label", "Файл базы стран");
+	Добавить("settings.key.oshub-geo-db-path.hint",
+		"Где лежит база диапазонов адресов по странам. Пусто — каталог «гео» в корне данных"
+		+ " инсталляции.");
+	Добавить("settings.key.oshub-geo-header.label", "Заголовок страны от прокси");
+	Добавить("settings.key.oshub-geo-header.hint",
+		"Каким заголовком обратный прокси называет страну посетителя. Заголовку верят только"
+		+ " с доверенных сетей; пусто — не читать его вовсе.");
+	Добавить("settings.key.oshub-geo-source-order.label", "Порядок источников страны");
+	Добавить("settings.key.oshub-geo-source-order.hint",
+		"Кого хаб спрашивает первым: «база-прокси» — сначала встроенную базу,"
+		+ " «прокси-база» — сначала заголовок доверенного прокси.");
+	Добавить("settings.key.oshub-geo-update-enabled.label", "Обновлять базу стран из сети");
+	Добавить("settings.key.oshub-geo-update-enabled.hint",
+		"Разрешает хабу ходить за новым выпуском базы. Выключено — базу кладут файлом,"
+		+ " и хаб подхватывает её сам.");
+	Добавить("settings.key.oshub-geo-update-url.label", "Адрес выпуска базы стран");
+	Добавить("settings.key.oshub-geo-update-url.hint",
+		"Шаблон адреса, откуда берётся выпуск: {ГОД} и {МЕСЯЦ} подставляет хаб.");
+
 	Добавить("settings.key.otel-exporter-otlp-protocol.label", "Протокол выгрузки");
 	Добавить("settings.key.otel-exporter-otlp-protocol.hint",
 		"Каким протоколом хаб отдаёт телеметрию сборщику: http/protobuf, http/json или grpc.");

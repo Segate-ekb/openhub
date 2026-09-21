@@ -1,0 +1,14 @@
+1.0.0.0,1.0.0.255,AU
+10.0.0.0,10.255.255.255,ZZ
+95.213.0.0,95.213.255.255,RU
+95.214.0.0,95.214.255.255,DE
+203.0.113.0,203.0.113.255,FR
+2001::,2001:1ff:ffff:ffff:ffff:ffff:ffff:ffff,US
+2001:470:180f::,2001:470:180f:ffff:ffff:ffff:ffff:ffff,RU
+2a02:6b8::,2a02:6b8:ffff:ffff:ffff:ffff:ffff:ffff,RU
+3fff::,3fff:ffff:ffff:ffff:ffff:ffff:ffff:ffff,CH
+5f00::,5f00:ffff:ffff:ffff:ffff:ffff:ffff:ffff,CH
+fc00::,fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff,ZZ
+fe00::,fe7f:ffff:ffff:ffff:ffff:ffff:ffff:ffff,CH
+fe80::,febf:ffff:ffff:ffff:ffff:ffff:ffff:ffff,ZZ
+fec0::,ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff,CH
