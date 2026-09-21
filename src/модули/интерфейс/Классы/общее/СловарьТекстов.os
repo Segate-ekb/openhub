@@ -1884,7 +1884,7 @@
 	Добавить("settings.key.oshub-jobs-pool-volume-audit-interval-sec.hint",
 		"Как часто хаб сверяет учтённый объём пулов с фактическим.");
 	Добавить("settings.key.oshub-jobs-incidents-gc-interval-sec.label",
-		"Уборка помех, секунд");
+		"Уборка происшествий, секунд");
 	Добавить("settings.key.oshub-jobs-incidents-gc-interval-sec.hint",
 		"Как часто хаб удаляет записи о неудачах, у которых вышел срок жизни.");
 	Добавить("settings.key.oshub-jobs-storage-health-interval-sec.label",
@@ -2476,7 +2476,8 @@
 		"Обход апстрима идёт по списку пакетов; курсор помнит, с какого имени продолжить.");
 	Добавить("settings.pool.mirror-status.counters.title", "Счётчики прогона");
 	Добавить("settings.pool.mirror-status.counters.lead",
-		"Сколько пакетов апстрима уже разобрано и с каким исходом.");
+		"Сколько пакетов апстрима уже разобрано и с каким исходом."
+		+ " Если ниже нет раздела с причинами — обход не потерял ни одной версии.");
 	Добавить("settings.pool.mirror-status.mirror.title", "Зеркало");
 	Добавить("settings.pool.mirror-status.mirror.lead",
 		"Настройки, с которыми идёт синхронизация, и итог прошлого прогона.");
@@ -2504,9 +2505,28 @@
 	Добавить("settings.pool.mirror-status.count.names-done", "Пакетов пройдено обходом");
 	Добавить("settings.pool.mirror-status.count.total", "Версий перечислено за обход");
 	Добавить("settings.pool.mirror-status.count.downloaded", "Скачано");
-	Добавить("settings.pool.mirror-status.count.skipped", "Пропущено");
+	Добавить("settings.pool.mirror-status.count.skipped",
+		"Пропущено (включая версии, которые уже лежат в пуле)");
 	Добавить("settings.pool.mirror-status.count.errors", "Ошибок");
 	Добавить("settings.pool.mirror-status.count.unavailable", "Недоступно");
+
+	Добавить("settings.pool.mirror-status.reasons.title", "Почему версии не приехали");
+	Добавить("settings.pool.mirror-status.reasons.lead",
+		"Здесь только то, что НЕ приехало: что именно не взято в текущем обходе и почему."
+		+ " Одинаковые причины по одному пакету собраны в строку со счётчиком.");
+	Добавить("settings.pool.mirror-status.reasons.col.subject", "Пакет");
+	Добавить("settings.pool.mirror-status.reasons.col.reason", "Причина");
+	Добавить("settings.pool.mirror-status.reasons.col.outcome", "Исход");
+	Добавить("settings.pool.mirror-status.reasons.col.count", "Повторов");
+	Добавить("settings.pool.mirror-status.reasons.col.last", "Последний раз");
+	Добавить("settings.pool.mirror-status.reasons.retry", "пройдёт следующим заходом");
+	Добавить("settings.pool.mirror-status.reasons.final", "пропущено насовсем");
+	Добавить("settings.pool.mirror-status.reasons.unclear", "причина не разобрана — см. текст");
+	Добавить("settings.pool.mirror-status.reasons.more", "Ещё причин: %1");
+	Добавить("settings.pool.mirror-status.reasons.whole-run", "весь обход");
+	Добавить("settings.pool.mirror-status.reasons.unreadable",
+		"Причины прочитать не удалось: хаб их запомнил, но сейчас они недоступны."
+		+ " Счётчики выше верны.");
 
 	Добавить("settings.pool.mirror-status.progress.label", "Обход апстрима");
 	Добавить("settings.pool.mirror-status.progress.caption", "пакетов пройдено %1 из %2");
