@@ -451,6 +451,10 @@
 	Добавить("settings.pool.upstreams.access.anonymous", "анонимно");
 	Добавить("settings.pool.upstreams.button.token-off", "Снять токен");
 	Добавить("settings.pool.upstreams.state.denied", "не пустил, проверен %1: %2");
+	Добавить("settings.pool.upstreams.state.unknown.restart", "ещё не проверялся после перезапуска");
+	Добавить("settings.pool.upstreams.last-failure.down", "в последний раз не отвечал %1: %2");
+	Добавить("settings.pool.upstreams.last-failure.denied", "в последний раз не пустил %1: %2");
+	Добавить("settings.pool.upstreams.state.join", "; ");
 
 	Добавить("settings.pool.upstream-new.title", "Добавить апстрим");
 	Добавить("settings.pool.upstream-new.lead",
