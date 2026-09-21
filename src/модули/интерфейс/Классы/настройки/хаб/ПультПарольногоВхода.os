@@ -144,6 +144,8 @@
 
 	Если Вердикт.Причина = Страж.ПричинаНетПровайдеров() Тогда
 		Чего = Тексты.Текст("settings.hub.passwordlogin.lockout.providers");
+	ИначеЕсли Вердикт.Причина = Страж.ПричинаВсеПодГеоправилом() Тогда
+		Чего = Тексты.Текст("providers.geo.lockout");
 	Иначе
 		Чего = Тексты.Текст("settings.hub.passwordlogin.lockout.identities");
 	КонецЕсли;
