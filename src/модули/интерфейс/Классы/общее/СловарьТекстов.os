@@ -1588,6 +1588,13 @@
 	Добавить("settings.key.oshub-storage-quota-bytes.label", "Общая квота хранилища, байт");
 	Добавить("settings.key.oshub-storage-quota-bytes.hint",
 		"Сколько места суммарно занимают артефакты хаба; 0 означает «без общего лимита».");
+	Добавить("settings.key.oshub-storage-health-ttl-sec.label", "Свежесть пробы хранилища, секунд");
+	Добавить("settings.key.oshub-storage-health-ttl-sec.hint",
+		"Сколько хаб считает результат проверки доступности хранилища свежим, прежде чем"
+		+ " спросить хранилище снова.");
+	Добавить("settings.key.oshub-storage-health-timeout-sec.label", "Таймаут пробы хранилища, секунд");
+	Добавить("settings.key.oshub-storage-health-timeout-sec.hint",
+		"Сколько хаб ждёт ответа хранилища, прежде чем счесть его недоступным.");
 
 	Добавить("settings.key.oshub-publish-max-upload-bytes.label",
 		"Максимальный размер загрузки, байт");
@@ -1849,6 +1856,22 @@
 		"Пересчёт объёма пулов, секунд");
 	Добавить("settings.key.oshub-jobs-pool-volume-audit-interval-sec.hint",
 		"Как часто хаб сверяет учтённый объём пулов с фактическим.");
+	Добавить("settings.key.oshub-jobs-incidents-gc-interval-sec.label",
+		"Уборка помех, секунд");
+	Добавить("settings.key.oshub-jobs-incidents-gc-interval-sec.hint",
+		"Как часто хаб удаляет записи о неудачах, у которых вышел срок жизни.");
+	Добавить("settings.key.oshub-jobs-storage-health-interval-sec.label",
+		"Проверка доступности хранилища, секунд");
+	Добавить("settings.key.oshub-jobs-storage-health-interval-sec.hint",
+		"Как часто хаб сам спрашивает хранилище артефактов, отвечает ли оно.");
+
+	Добавить("settings.key.oshub-incidents-max-per-object.label", "Причин на один объект");
+	Добавить("settings.key.oshub-incidents-max-per-object.hint",
+		"Сколько разных причин неудач хаб помнит по одному объекту; всё сверх этого"
+		+ " сводится в одну строку «прочее» со счётчиком.");
+	Добавить("settings.key.oshub-incidents-ttl-sec.label", "Срок жизни причины, секунд");
+	Добавить("settings.key.oshub-incidents-ttl-sec.hint",
+		"Сколько живёт запись о неудаче с момента последнего повтора.");
 
 	Добавить("settings.key.otel-exporter-otlp-protocol.label", "Протокол выгрузки");
 	Добавить("settings.key.otel-exporter-otlp-protocol.hint",
