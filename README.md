@@ -167,7 +167,7 @@ IdP раскладываются в группы хаба и сверяются 
 ```bash
 opm login hub.example.ru/public --browser   # токен через подтверждение в браузере
 opm build .
-opm push hub.example.ru/public мойпакет-1.0.0.ospx
+opm push --hub hub.example.ru/public мойпакет-1.0.0.ospx
 opm install hub.example.ru/public/мойпакет
 ```
 

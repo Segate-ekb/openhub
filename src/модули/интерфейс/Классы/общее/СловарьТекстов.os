@@ -2128,6 +2128,9 @@
 	Добавить("public.landing.empty.lead",
 		"Пропишите хаб сервером пакетов в opm.cfg и выполните opm push —"
 		+ " первый пакет появится здесь.");
+	Добавить("public.landing.empty.lead.default-hub",
+		"Опубликуйте первый пакет командой opm push --token <токен> -c stable <файл>.ospx —"
+		+ " он появится здесь.");
 	Добавить("public.landing.empty.login", "Войти");
 	Добавить("public.landing.empty.tour", "Как опубликовать первый пакет");
 
