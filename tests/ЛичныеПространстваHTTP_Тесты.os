@@ -40,7 +40,6 @@
 	Хаб.Среда("OSHUB_ADMIN_LOGIN", "");
 	Хаб.Среда("OSHUB_ADMIN_PASSWORD", "");
 	Хаб.Среда("OSHUB_WEBHOOKS_DELIVERY__ENABLED", "false");
-	Хаб.Среда("OSHUB_WEBHOOKS_RESOLVE__ENABLED", "false");
 	// почты на стенде нет, а регистрация нужна живая: подтверждение адреса выключено
 	// (одна из двух развилок инсталляции без почты, ИСТ-ПОЧТ-007)
 	Хаб.Среда("OSHUB_AUTH_EMAIL_CONFIRM_ENABLED", "false");

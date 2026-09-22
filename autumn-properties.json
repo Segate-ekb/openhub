@@ -30,10 +30,6 @@
             "mirror_sync_interval_sec": 3600,
             "cli_device_gc_interval_sec": 300
         },
-        "webhooks": {
-            "resolve_enabled": true,
-            "resolve_timeout_sec": 3
-        },
         "publish": {
             "github": {
                 "api": "api.github.com"

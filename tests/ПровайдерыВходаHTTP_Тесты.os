@@ -33,7 +33,6 @@
 	Хаб.Среда("OSHUB_ADMIN_LOGIN", "");
 	Хаб.Среда("OSHUB_ADMIN_PASSWORD", "");
 	Хаб.Среда("OSHUB_WEBHOOKS_DELIVERY__ENABLED", "false");
-	Хаб.Среда("OSHUB_WEBHOOKS_RESOLVE__ENABLED", "false");
 
 	// провайдер, объявленный ТОЛЬКО окружением: строки базы у него нет, и в списке
 	// инсталляций он обязан быть виден — на чтение

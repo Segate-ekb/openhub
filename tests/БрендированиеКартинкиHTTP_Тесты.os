@@ -37,7 +37,6 @@
 	// выключенное подтверждение адреса, иначе регистрация закрыта
 	Хаб.Среда("OSHUB_AUTH_EMAIL_CONFIRM_ENABLED", "false");
 	Хаб.Среда("OSHUB_WEBHOOKS_DELIVERY__ENABLED", "false");
-	Хаб.Среда("OSHUB_WEBHOOKS_RESOLVE__ENABLED", "false");
 	Хаб.Запустить();
 
 	КукаАдмина = ЗавестиАдмина();

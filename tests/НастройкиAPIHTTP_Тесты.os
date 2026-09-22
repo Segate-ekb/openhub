@@ -45,7 +45,6 @@
 	Хаб.Среда("OSHUB_ADMIN_LOGIN", "");
 	Хаб.Среда("OSHUB_ADMIN_PASSWORD", "");
 	Хаб.Среда("OSHUB_WEBHOOKS_DELIVERY__ENABLED", "false");
-	Хаб.Среда("OSHUB_WEBHOOKS_RESOLVE__ENABLED", "false");
 	// подпись инсталляции занята конфигурацией: на ней проверяется отказ 409
 	Хаб.Среда("OSHUB_UI_TAGLINE", ПодписьИзКонфига);
 	// деталька этого ключа пишется через дефис, а конвенция моста дефиса не даёт:

@@ -35,7 +35,6 @@
 	Хаб.Среда("OSHUB_ADMIN_LOGIN", "");
 	Хаб.Среда("OSHUB_ADMIN_PASSWORD", "");
 	Хаб.Среда("OSHUB_WEBHOOKS_DELIVERY__ENABLED", "false");
-	Хаб.Среда("OSHUB_WEBHOOKS_RESOLVE__ENABLED", "false");
 
 	Хаб.ЗапуститьСидер(Сидер);
 
