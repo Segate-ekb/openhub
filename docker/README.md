@@ -203,7 +203,7 @@ curl -s http://localhost:3200/api/traces/<trace_id>
 
 ```text
 GET /api/v1/pools/{Пул}/download/{ИмяПакета}/{ИмяФайла}  SERVER    http.route, http.response.status_code
-└─ КонтроллерВыдачиAPI.ФайлПула                          INTERNAL  oshub.pool, oshub.package, oshub.channel, oshub.found
+└─ КонтроллерВыдачиAPI.ФайлПула                          INTERNAL
    ├─ СервисПулов.НайтиПул                               INTERNAL  oshub.pool   ← гейт «пул читаем»
    │  └─ ПолучитьОдно Пул                                INTERNAL  entity.type, entity.result.count
    │     └─ SELECT Пулы                                  CLIENT    db.system.name, db.collection.name
@@ -219,12 +219,14 @@ GET /api/v1/pools/{Пул}/download/{ИмяПакета}/{ИмяФайла}  SER
    │     └─ СервисВерсий.НайтиВерсию → ПолучитьОдно ВерсияПакета → SELECT ВерсииПакетов
    ├─ СервисПулов.НайтиПул                               INTERNAL  oshub.pool   ← и третий, на фиксации скачивания
    │  └─ ПолучитьОдно Пул → SELECT Пулы
-   └─ events.publish                                     PRODUCER  oshub.event.type, oshub.event.subscribers
+   └─ events.publish                                     PRODUCER  oshub.event.type
 ```
 
 По этому дереву видно не только, что запрос ходил в базу, но и чья работа его туда послала:
 средний уровень отвечает на вопрос «какая служба это спросила», а `oshub.pool`,
-`oshub.package` и `oshub.channel` — на вопрос «о чём именно».
+`oshub.package` и `oshub.channel` — на вопрос «о чём именно». Имена приезжают с параметров
+вызова (`&АтрибутСпана`), поэтому висят на спане той службы, которую о них спросили, а не
+на корне трассы.
 
 Оно же показывает повторы, которых со стороны кода не видно: `СервисПулов.НайтиПул`
 в одной выдаче зовётся **трижды** — гейт доступа, резолв артефакта и фиксация скачивания
