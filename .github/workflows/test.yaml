@@ -66,6 +66,23 @@ jobs:
     # SQLite.Interop, делится между процессами засевщика и хаба).
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    services:
+      # SQL-ветку агрегатов исполняет только PostgreSQL: SQLite без нативной SQLite.Interop
+      # не поднимается, а КоннекторJSON SQL не исполняет вовсе. Без этой службы сторож
+      # SQL-ветки не запускался бы нигде, кроме прода.
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: openhub
+          POSTGRES_PASSWORD: openhub
+          POSTGRES_DB: openhub
+        ports:
+          - 15432:5432
+        options: >-
+          --health-cmd "pg_isready -U openhub"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Актуализация
         uses: actions/checkout@v7.0.1
@@ -89,3 +106,12 @@ jobs:
 
       - name: Регрессия OneUnit (без наборов, требующих внешних систем)
         run: oneunit execute -T внешние
+
+      - name: Наборы на живом PostgreSQL
+        # Отдельным шагом и поимённо, потому что тег `внешние` до них не доезжает: оба
+        # набора изолированы по процессу, а OneUnit 0.4.1 фильтр тегов в такие наборы
+        # не передаёт — на шаге регрессии они запускаются и сами пропускают себя,
+        # не увидев DSN. Здесь DSN задан, и они наконец исполняют SQL-ветку.
+        env:
+          OSHUB_TEST_PG_DSN: Host=localhost;Port=15432;Username=openhub;Password=openhub;Database=openhub
+        run: oneunit execute -f tests/АгрегатыPostgreSQL_Тесты.os -f tests/СмокБэкендов_Тесты.os
