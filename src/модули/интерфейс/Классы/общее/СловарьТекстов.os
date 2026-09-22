@@ -1891,6 +1891,11 @@
 		"Проверка доступности хранилища, секунд");
 	Добавить("settings.key.oshub-jobs-storage-health-interval-sec.hint",
 		"Как часто хаб сам спрашивает хранилище артефактов, отвечает ли оно.");
+	Добавить("settings.key.oshub-jobs-registry-gc-interval-sec.label",
+		"Уборка реестра фоновых заданий, секунд");
+	Добавить("settings.key.oshub-jobs-registry-gc-interval-sec.hint",
+		"Как часто хаб снимает записи отработавших фоновых заданий: сами они реестр"
+		+ " не покидают и занимают память процесса до перезапуска.");
 
 	Добавить("settings.key.oshub-incidents-max-per-object.label", "Причин на один объект");
 	Добавить("settings.key.oshub-incidents-max-per-object.hint",
