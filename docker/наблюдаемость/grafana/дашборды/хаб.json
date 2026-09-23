@@ -1,7 +1,7 @@
 {
   "uid": "openhub",
   "title": "OpenHub — наблюдаемость",
-  "description": "Что хаб делает прямо сейчас: темп запросов, задержка и ошибки по маршрутам, методы контроллеров, логи и карта сервисов. Из любой панели есть переход в трассу.",
+  "description": "Что хаб делает прямо сейчас: темп запросов, задержка и ошибки по маршрутам, методы контроллеров, бизнес-числа хаба (скачивания, публикации, реестр, хранилище, очереди), логи и карта сервисов. Из любой панели есть переход в трассу.",
   "tags": [
     "openhub",
     "стенд"
@@ -9,7 +9,7 @@
   "timezone": "browser",
   "editable": true,
   "schemaVersion": 39,
-  "version": 4,
+  "version": 5,
   "refresh": "10s",
   "time": {
     "from": "now-30m",
@@ -839,6 +839,686 @@
             "uid": "tempo"
           },
           "queryType": "serviceMap"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "id": 400,
+      "title": "Бизнес хаба: что он делает и чем занят",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 49
+      },
+      "collapsed": false,
+      "panels": []
+    },
+    {
+      "type": "timeseries",
+      "id": 401,
+      "title": "Скачивания по пулам, в минуту",
+      "description": "Счётчик oshub.downloads растёт на событии «скачивание.зафиксировано»; измерение одно — имя пула.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 50
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "cpm",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (oshub_pool) (rate(oshub_downloads_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "{{oshub_pool}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 402,
+      "title": "Реестр пополняется: публикации, зеркало, отзывы",
+      "description": "Три способа, которыми реестр меняется: публикация, приезд версии зеркалом и смена состояния (yanked/restored).",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 50
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "cpm",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (oshub_pool) (rate(oshub_publications_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "{{oshub_pool}} — публикации",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (oshub_pool) (rate(oshub_mirror_versions_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "{{oshub_pool}} — зеркалом",
+          "range": true
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (oshub_version_action) (rate(oshub_versions_state_changes_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "{{oshub_version_action}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "id": 403,
+      "title": "Скачиваний всего",
+      "description": "Наблюдаемый счётчик oshub.downloads.all_time: агрегаты в базе плюс ещё не слитое из памяти. max, а не sum: число хабовое, и каждая реплика отдаёт его целиком.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 0,
+        "y": 58
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "graphMode": "none",
+        "colorMode": "value"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_downloads_all_time_total{service_name=\"$service\"})",
+          "legendFormat": "за всё время",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "id": 404,
+      "title": "Пулы и пакеты",
+      "description": "Публичная часть реестра — те же числа, что отдаёт GET /api/v1/metrics.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 4,
+        "y": 58
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "graphMode": "none",
+        "colorMode": "value"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_pools{service_name=\"$service\"})",
+          "legendFormat": "пулов",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_packages{service_name=\"$service\"})",
+          "legendFormat": "пакетов",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "id": 405,
+      "title": "Версии и учётки",
+      "description": "Версии считаются по всему реестру, учётки — по всему хабу: это числа оператора, а не гостя.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 9,
+        "y": 58
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "graphMode": "none",
+        "colorMode": "value"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_versions{service_name=\"$service\"})",
+          "legendFormat": "версий",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_users{service_name=\"$service\"})",
+          "legendFormat": "учёток",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "id": 406,
+      "title": "Уронено доставок событий",
+      "description": "Обязательный ноль: любое другое значение означает, что подписчик упал и событие до него не доехало.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 14,
+        "y": 58
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "graphMode": "none",
+        "colorMode": "value"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_events_dropped_total{service_name=\"$service\"})",
+          "legendFormat": "пропущено",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 407,
+      "title": "Занято в хранилище по пулам",
+      "description": "Счётчики хаба, а не замер бэкенда: к замеру их приводит плановая сверка объёмов.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 58
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max by (oshub_pool) (oshub_storage_used_bytes{service_name=\"$service\"})",
+          "legendFormat": "{{oshub_pool}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 408,
+      "title": "Очереди фона",
+      "description": "Растущая очередь значит, что фон не успевает разбирать заказанное.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 63
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_webhooks_queue{service_name=\"$service\"})",
+          "legendFormat": "доставки подписок",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_mirror_queue{service_name=\"$service\"})",
+          "legendFormat": "обходы зеркал",
+          "range": true
+        },
+        {
+          "refId": "C",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "max(oshub_background_jobs{service_name=\"$service\"})",
+          "legendFormat": "реестр фоновых заданий",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 409,
+      "title": "Попытки доставки в минуту",
+      "description": "result отвечает на «вылетело ли исключение», а не «получилось ли»: исход читается строкой журнала внутри того же спана.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 63
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "cpm",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (result) (rate(oshub_webhook_attempts_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "вебхук — {{result}}",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum by (result) (rate(oshub_telegram_attempts_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "telegram — {{result}}",
+          "range": true
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "id": 410,
+      "title": "Обход зеркал: порции и средняя длительность",
+      "description": "Среднее, а не квантиль: границы корзин у этой гистограммы миллисекундные, и квантиль по ним бесполезен.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 63
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "min": 0,
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 8,
+            "showPoints": "never"
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "cpm"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "right"
+              }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "rate(oshub_mirror_sync_cycle_duration_seconds_sum{service_name=\"$service\"}[5m]) / rate(oshub_mirror_sync_cycle_duration_seconds_count{service_name=\"$service\"}[5m])",
+          "legendFormat": "средняя длительность порции",
+          "range": true
+        },
+        {
+          "refId": "B",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "editorMode": "code",
+          "expr": "sum(rate(oshub_mirror_sync_cycles_total{service_name=\"$service\"}[5m])) * 60",
+          "legendFormat": "порций в минуту",
+          "range": true
         }
       ]
     }
