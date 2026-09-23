@@ -91,7 +91,7 @@ if [ -n "$stale" ]; then
 	exit 1
 fi
 
-# Кросс-сборка с Apple Silicon: qemu ломает JIT .NET, и распаковщик на oscript падает
+# Кросс-сборка с Apple Silicon: qemu ломает JIT .NET, и opm при распаковке пакета падает
 # прямо на стадии сборки. На настоящем amd64 аргумент не передаётся.
 build_args=()
 if [ "$(uname -m)" != "x86_64" ]; then

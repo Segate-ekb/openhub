@@ -1,6 +1,3 @@
-# Контекст сборки образа: только пакет, packagedef и распаковщик (см. Dockerfile).
-# Всё остальное — включая oscript_modules на 138 МБ — в образ едет ВНУТРИ .ospx.
+# Контекст сборки образа: только пакет; oscript_modules едет внутри .ospx.
 *
 !openhub-*.ospx
-!packagedef
-!scripts/РаспаковатьПакет.os
