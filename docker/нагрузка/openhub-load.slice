@@ -1,0 +1,11 @@
+# Общий котёл памяти нагрузочного стенда: хаб и PostgreSQL вместе — не более 2 ГиБ.
+# Ставится в /etc/systemd/system/openhub-load.slice, включается `systemctl start openhub-load.slice`.
+# Оба контейнера кладутся сюда ключом `cgroup_parent` в compose.yaml.
+
+[Unit]
+Description=Нагрузочный стенд OpenHub: хаб и PostgreSQL в общем лимите памяти
+
+[Slice]
+MemoryAccounting=yes
+MemoryMax=2G
+MemorySwapMax=0

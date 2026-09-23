@@ -1,0 +1,59 @@
+# Коллектор нагрузочного стенда — измерительный прибор, а не испытуемый.
+# Полного конвейера (Tempo, Loki, Prometheus, Grafana) здесь нет: на сервере стенда
+# нет места, а от коллектора нужно ровно одно — чтобы хаб реально экспортировал
+# телеметрию и было видно, что она доезжает.
+
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+    send_batch_max_size: 2048
+
+  # Без лимита коллектор под наплывом уносит с собой контейнер, а не отбрасывает пачку.
+  memory_limiter:
+    check_interval: 2s
+    limit_mib: 192
+    spike_limit_mib: 48
+
+exporters:
+  # Счётчики принятого — по ним видно, что телеметрия доехала, без хранилищ.
+  debug:
+    verbosity: basic
+
+  # Метрики хаба читаются с самого коллектора: curl 127.0.0.1:8889/metrics.
+  prometheus:
+    endpoint: 0.0.0.0:8889
+    resource_to_telemetry_conversion:
+      enabled: true
+    add_metric_suffixes: true
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [debug]
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [debug, prometheus]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [debug]
+  telemetry:
+    logs:
+      level: info
+    metrics:
+      level: basic

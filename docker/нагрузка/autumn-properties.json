@@ -1,0 +1,22 @@
+{
+    "otel": {
+        "enabled": true,
+        "exporter": {
+            "otlp": {
+                "endpoint": "http://otel-collector:4318",
+                "protocol": "http/protobuf"
+            }
+        },
+        "entity": {
+            "query-text": true
+        }
+    },
+    "oshub": {
+        "storage": {
+            "backend": "file"
+        },
+        "pools": {
+            "default": "public"
+        }
+    }
+}

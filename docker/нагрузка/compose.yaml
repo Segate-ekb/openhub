@@ -1,0 +1,82 @@
+# Нагрузочный стенд OpenHub: хаб + PostgreSQL в общем лимите 2 ГиБ, рядом лёгкий
+# коллектор OTLP. Поднимается скриптом `поднять.sh` — он же заводит systemd-слайс.
+#
+# Лимит памяти — общий на двоих, systemd-слайсом openhub-load.slice (MemoryMax=2G,
+# MemorySwapMax=0). Именно «на всё про всё»: кто съел, тот и съел, вытесняться
+# в swap некуда, переполнение котла = OOM-kill того, кто в нём крупнее.
+# Коллектор в котёл НЕ входит: он измеряет, а не испытывается, и ограничен сам по себе.
+
+name: openhub-load
+
+services:
+
+  openhub:
+    image: segateekb/openhub:${HUB_IMAGE:-0.7.33}
+    cgroup_parent: openhub-load.slice
+    restart: "no"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      otel-collector:
+        condition: service_started
+    # Наружу: генератор нагрузки живёт на другой машине, иначе замер испорчен
+    # дележом двух ядер с испытуемым.
+    ports:
+      - "3333:3333"
+    environment:
+      TZ: UTC
+      OSHUB_DB_CONNECTOR: КоннекторPostgreSQL
+      OSHUB_DB_CONNECTION: Host=postgres;Username=openhub;Password=${DB_PASS:-openhub-load};Database=openhub
+      # Свой публичный адрес хаб печатает в сниппетах opm.cfg. Умолчание — локальное:
+      # адрес конкретного стенда задаётся HUB_URL, а не зашивается в файл.
+      OSHUB_INSTANCE_URL: ${HUB_URL:-http://localhost:3333}
+      OSHUB_LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      OTEL_ENABLED: "true"
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_SERVICE_NAME: openhub-load
+      OTEL_METRIC_EXPORT_INTERVAL: ${METRIC_INTERVAL:-30000}
+    volumes:
+      - openhub-data:/var/lib/openhub
+      - ./autumn-properties.json:/opt/openhub/autumn-properties.json:ro
+    # Проба намеренно частая и терпеливая: «жив, но не отвечает» — отдельный режим
+    # падения, и его надо увидеть в истории состояний контейнера.
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-m", "5", "http://localhost:3333/ready"]
+      interval: 15s
+      timeout: 6s
+      start_period: 180s
+      retries: 4
+
+  postgres:
+    image: postgres:17-alpine
+    cgroup_parent: openhub-load.slice
+    restart: "no"
+    environment:
+      POSTGRES_USER: openhub
+      POSTGRES_DB: openhub
+      POSTGRES_PASSWORD: ${DB_PASS:-openhub-load}
+      TZ: UTC
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U openhub -d openhub"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Прибор, а не испытуемый: вне общего котла, со своим лимитом.
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.115.1
+    restart: "no"
+    command: ["--config=/etc/otelcol/config.yaml"]
+    mem_limit: 256m
+    ports:
+      - "127.0.0.1:8889:8889"
+      - "127.0.0.1:13133:13133"
+    volumes:
+      - ./otel-collector.yaml:/etc/otelcol/config.yaml:ro
+
+volumes:
+  openhub-data:
+  postgres-data:
