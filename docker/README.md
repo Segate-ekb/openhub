@@ -54,6 +54,10 @@ docker run --rm -p 3333:3333 -v openhub-data:/var/lib/openhub segateekb/openhub
 Артефакты, база SQLite и журнал аудита лежат в `/var/lib/openhub`; том обязателен — без него
 данные не переживут пересоздание контейнера.
 
+В шелле контейнера (`docker exec -it <контейнер> bash`) работает `opm install`: пользователь
+хаба владеет `/var/oscript/lib` и `/usr/local/bin`, поэтому библиотеки и приложения с лаунчером
+ставятся глобально, `opm update opm` — тоже. Сам рантайм в `/var/oscript/bin` остаётся у root.
+
 ![Мастер первого запуска](../docs/screenshots/setup.png)
 
 *Так выглядит свежий хаб сразу после `docker run`.*

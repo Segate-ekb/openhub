@@ -27,12 +27,15 @@ RUN set -eu; \
     apt-get install -y --no-install-recommends curl; \
     rm -rf /var/lib/apt/lists/*
 
+# Пользователь хаба владеет библиотеками рантайма и каталогом лаунчеров, чтобы в шелле
+# контейнера работал opm install; сам рантайм в /var/oscript/bin остаётся у root.
 RUN set -eu; \
     groupadd --gid 10001 openhub; \
-    useradd --uid 10001 --gid 10001 --no-create-home --home-dir /opt/openhub \
-        --shell /usr/sbin/nologin openhub; \
+    useradd --uid 10001 --gid 10001 --create-home --home-dir /home/openhub \
+        --shell /bin/bash openhub; \
     mkdir -p /var/lib/openhub; \
-    chown 10001:10001 /var/lib/openhub
+    chown 10001:10001 /var/lib/openhub; \
+    chown -R 10001:10001 /var/oscript/lib /usr/local/bin
 
 VOLUME ["/var/lib/openhub"]
 
