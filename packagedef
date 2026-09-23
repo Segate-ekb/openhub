@@ -16,7 +16,7 @@
 	.ЗависитОт("oint", "2.3.0")
 	.ЗависитОт("fzy", "1.0.3")
 	.ЗависитОт("opentelemetry", "1.1.0")
-	.ЗависитОт("autumn-opentelemetry", "1.1.0")
+	.ЗависитОт("autumn-opentelemetry", "1.1.1")
 	.ЗависитОт("InternetMail", "1.0.10")
 	.ЗависитОт("ospx-tools", "0.2.0")
 	.ЗависитОт("pwhash", "0.3.0")
