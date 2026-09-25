@@ -68,7 +68,7 @@
 
 	КаталогКэша = ОбъединитьПути(КореньДанных, "кэш-выдачи");
 	Хаб.Среда("OSHUB_CACHE_ARTIFACTS_DIR", КаталогКэша);
-	Хаб.Среда("OSHUB_CACHE_ARTIFACTS_LIMIT__BYTES", "7340032");
+	Хаб.Среда("OSHUB_CACHE_ARTIFACTS_LIMIT_BYTES", "7340032");
 
 	Хаб.Запустить();
 
