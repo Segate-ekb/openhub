@@ -126,7 +126,8 @@ docker run --rm -p 3333:3333 -v openhub-data:/var/lib/openhub \
 окружением — `OSHUB_CACHE_ARTIFACTS_DIR` и `OSHUB_CACHE_ARTIFACTS_LIMIT_BYTES` (байты); ключи
 `cache.*` в `autumn-properties.json` их не перебивают. Кэш не переживает перезапуск, поэтому его
 каталог можно держать на временном томе — с запасом над пределом. Файловому хранилищу кэш
-не нужен: каталог создаётся, но остаётся пустым.
+не нужен: каталог создаётся, но остаётся пустым. Промахи, попадания и решения кэша видны на
+`OSHUB_LOG_LEVEL=DEBUG`, точечно — `OSHUB_LOG_LEVELS=КэшАртефактов=DEBUG,РезолверВыдачи=DEBUG,oscript.lib.autumn-cache=DEBUG`.
 
 ## Наблюдаемость
 
