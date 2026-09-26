@@ -38,9 +38,9 @@
 	// инсталляций он обязан быть виден — на чтение
 	Хаб.Среда("OSHUB_OIDC_PROVIDERS", "envonly");
 	Хаб.Среда("OSHUB_OIDC_ENVONLY_ISSUER", "https://idp.example.com");
-	Хаб.Среда("OSHUB_OIDC_ENVONLY_CLIENT_ID", "env-client-id");
-	Хаб.Среда("OSHUB_OIDC_ENVONLY_CLIENT_SECRET", "env-secret-value-42");
-	Хаб.Среда("OSHUB_OIDC_ENVONLY_REDIRECT_URI", "https://hub.example.com/oidc/callback");
+	Хаб.Среда("OSHUB_OIDC_ENVONLY_CLIENT__ID", "env-client-id");
+	Хаб.Среда("OSHUB_OIDC_ENVONLY_CLIENT__SECRET", "env-secret-value-42");
+	Хаб.Среда("OSHUB_OIDC_ENVONLY_REDIRECT__URI", "https://hub.example.com/oidc/callback");
 
 	Хаб.ЗапуститьСидер(Сидер);
 

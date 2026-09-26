@@ -301,7 +301,7 @@
 Процедура ЗадатьОкружениеПрокси()
 	ХабПрокси.Среда("OSHUB_STORAGE_ROOT", КореньПрокси);
 	ХабПрокси.Среда("OSHUB_DB_CONNECTION", ОбъединитьПути(КореньПрокси, "jsondb"));
-	ХабПрокси.Среда("OSHUB_DEFAULT_POOL", "");
+	ХабПрокси.Среда("OSHUB_POOLS_DEFAULT", "");
 	ХабПрокси.Среда("OSHUB_SEED_FIXTURE", ПутьФикстурыПакета());
 	ХабПрокси.Среда("OSHUB_SEED_POOL", Пул);
 	ХабПрокси.Среда("OSHUB_SEED_PACKAGE", "proxy-own-pkg"); // своё имя пула рядом с проксируемыми
@@ -339,14 +339,14 @@
 
 Процедура СнятьПеременныеАпстримаЗасева()
 	Для Каждого Имя Из СтрРазделить(
-		"OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC,OSHUB_DEFAULT_POOL", ",") Цикл
+		"OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC,OSHUB_POOLS_DEFAULT", ",") Цикл
 		УстановитьПеременнуюСреды(Имя, "");
 	КонецЦикла;
 КонецПроцедуры
 
 Процедура ОчиститьОкружение()
 	Перем_ = "OSHUB_PORT,OSHUB_STORAGE_ROOT,OSHUB_DB_CONNECTOR,OSHUB_DB_CONNECTION,OSHUB_SEED_FIXTURE,"
-		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_DEFAULT_POOL,"
+		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_POOLS_DEFAULT,"
 		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC,"
 		+ "OSHUB_PROXY_NEGATIVE_TTL_SEC";
 	Для Каждого Имя Из СтрРазделить(Перем_, ",") Цикл

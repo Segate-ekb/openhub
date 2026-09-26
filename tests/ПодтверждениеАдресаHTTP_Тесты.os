@@ -561,11 +561,11 @@
 	Хаб_.Среда("OSHUB_OIDC_PROVIDERS", ИмяПровайдера);
 	Хаб_.Среда("OSHUB_OIDC_FAKE_LABEL", "Фейковый IdP");
 	Хаб_.Среда("OSHUB_OIDC_FAKE_ISSUER", IdP_.Издатель());
-	Хаб_.Среда("OSHUB_OIDC_FAKE_CLIENT_ID", "хаб-клиент");
-	Хаб_.Среда("OSHUB_OIDC_FAKE_CLIENT_SECRET", "секрет-хаб-клиента");
+	Хаб_.Среда("OSHUB_OIDC_FAKE_CLIENT__ID", "хаб-клиент");
+	Хаб_.Среда("OSHUB_OIDC_FAKE_CLIENT__SECRET", "секрет-хаб-клиента");
 	// порт хаба выдаётся только в Запустить(), поэтому адрес возврата здесь условный:
 	// браузер в тесте берёт из ответа IdP путь и запрос, а идёт на реальный порт хаба
-	Хаб_.Среда("OSHUB_OIDC_FAKE_REDIRECT_URI", "http://localhost/oidc/callback");
+	Хаб_.Среда("OSHUB_OIDC_FAKE_REDIRECT__URI", "http://localhost/oidc/callback");
 	Хаб_.Среда("OSHUB_OIDC_FAKE_AUTOPROVISION", "true");
 
 КонецПроцедуры

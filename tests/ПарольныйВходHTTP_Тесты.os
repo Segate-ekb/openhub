@@ -422,9 +422,9 @@
 	Хаб.Среда("OSHUB_OIDC_PROVIDERS", ИмяПровайдера);
 	Хаб.Среда("OSHUB_OIDC_FAKE_LABEL", "Фейковый IdP");
 	Хаб.Среда("OSHUB_OIDC_FAKE_ISSUER", IdP.Издатель());
-	Хаб.Среда("OSHUB_OIDC_FAKE_CLIENT_ID", "хаб-клиент");
-	Хаб.Среда("OSHUB_OIDC_FAKE_CLIENT_SECRET", "секрет-хаб-клиента");
-	Хаб.Среда("OSHUB_OIDC_FAKE_REDIRECT_URI", "http://localhost/oidc/callback");
+	Хаб.Среда("OSHUB_OIDC_FAKE_CLIENT__ID", "хаб-клиент");
+	Хаб.Среда("OSHUB_OIDC_FAKE_CLIENT__SECRET", "секрет-хаб-клиента");
+	Хаб.Среда("OSHUB_OIDC_FAKE_REDIRECT__URI", "http://localhost/oidc/callback");
 
 	Хаб.Запустить();
 	Порт = Хаб.Порт();

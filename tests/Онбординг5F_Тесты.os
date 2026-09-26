@@ -168,11 +168,11 @@
 	ХабOIDC.Среда("OSHUB_ADMIN_PASSWORD", "");
 	ХабOIDC.Среда("OSHUB_OIDC_PROVIDERS", "keycloak");
 	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_ISSUER", "https://kc.example/realms/main");
-	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_CLIENT_ID", "openhub");
-	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_REDIRECT_URI", "http://localhost/oidc/callback");
+	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_CLIENT__ID", "openhub");
+	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_REDIRECT__URI", "http://localhost/oidc/callback");
 	// связка по имени включена, префикс НЕ задан — заряженное ружьё обязано щёлкнуть
-	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_LINK_GROUPS_BY_NAME", "true");
-	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_GROUP_PREFIX", "");
+	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_LINK__GROUPS__BY__NAME", "true");
+	ХабOIDC.Среда("OSHUB_OIDC_KEYCLOAK_GROUP__PREFIX", "");
 
 	Попытка
 		ХабOIDC.Запустить();
