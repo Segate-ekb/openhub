@@ -1350,7 +1350,7 @@
 	Добавить("settings.hub.storage.row.where", "Где лежат артефакты");
 	Добавить("settings.hub.storage.row.quota", "Потолок объёма");
 	Добавить("settings.hub.storage.row.upload", "Предельный размер одной публикации");
-	Добавить("settings.hub.storage.backend.fs", "Файловая система сервера");
+	Добавить("settings.hub.storage.backend.file", "Файловая система сервера");
 	Добавить("settings.hub.storage.backend.s3", "Объектное хранилище S3");
 	Добавить("settings.hub.storage.where.s3", "корзина «%1» на %2");
 	Добавить("settings.hub.storage.where.prefix", "под префиксом «%1»");
