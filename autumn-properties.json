@@ -1,6 +1,9 @@
 {
     "winow": {
-        "Порт": 3333
+        "Порт": 3333,
+        "openapi": {
+            "Включено": true
+        }
     },
     "otel": {
         "enabled": false,
