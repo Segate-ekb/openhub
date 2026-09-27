@@ -206,7 +206,7 @@
 	Если ЭтоS3() Тогда
 		Возврат Тексты.Текст("settings.hub.storage.backend.s3");
 	КонецЕсли;
-	Возврат Тексты.Текст("settings.hub.storage.backend.fs");
+	Возврат Тексты.Текст("settings.hub.storage.backend.file");
 
 КонецФункции
 

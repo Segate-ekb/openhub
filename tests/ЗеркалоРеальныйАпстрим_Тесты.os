@@ -117,7 +117,7 @@
 
 	Хаб.Среда("OSHUB_STORAGE_ROOT", Корень);
 	Хаб.Среда("OSHUB_DB_CONNECTION", ОбъединитьПути(Корень, "jsondb"));
-	Хаб.Среда("OSHUB_DEFAULT_POOL", "");
+	Хаб.Среда("OSHUB_POOLS_DEFAULT", "");
 	Хаб.Среда("OSHUB_SEED_FIXTURE", ПутьФикстурыПакета());
 	Хаб.Среда("OSHUB_SEED_POOL", "public");
 	Хаб.Среда("OSHUB_SEED_PACKAGE", "mirror-local-pkg");
@@ -163,7 +163,7 @@
 Процедура ОчиститьОкружение()
 
 	Перем_ = "OSHUB_PORT,OSHUB_STORAGE_ROOT,OSHUB_DB_CONNECTOR,OSHUB_DB_CONNECTION,OSHUB_SEED_FIXTURE,"
-		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_DEFAULT_POOL,"
+		+ "OSHUB_SEED_POOL,OSHUB_SEED_PACKAGE,OSHUB_SEED_VERSIONS,OSHUB_SEED_YANKED,OSHUB_POOLS_DEFAULT,"
 		+ "OSHUB_SEED_UPSTREAM_URL,OSHUB_SEED_UPSTREAM_TTL_SEC";
 	Для Каждого Имя Из СтрРазделить(Перем_, ",") Цикл
 		УстановитьПеременнуюСреды(Имя, "");

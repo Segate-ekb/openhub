@@ -6,7 +6,7 @@ name: openhub-server
 
 services:
   openhub:
-    image: segateekb/openhub:0.7.40
+    image: segateekb/openhub:0.8.0
     restart: unless-stopped
     depends_on:
       postgres:
@@ -19,9 +19,10 @@ services:
       # Пароль тот же, что у сервиса postgres, и без «;» внутри. Меняется до первого запуска:
       # после инициализации тома базы правка здесь пароль в ней уже не сменит.
       OSHUB_DB_CONNECTION: Host=postgres;Username=openhub;Password=change-me;Database=openhub
-      # Ключи S3 — при oshub.storage.backend = s3.
-      #OSHUB_STORAGE_S3_ACCESS_KEY:
-      #OSHUB_STORAGE_S3_SECRET_KEY:
+      # Ключи S3 — при oshub.storage.backend = s3: значением либо путём к файлу секрета
+      # (OSHUB_STORAGE_S3_ACCESS__KEY__FILE, OSHUB_STORAGE_S3_SECRET__KEY__FILE).
+      #OSHUB_STORAGE_S3_ACCESS__KEY:
+      #OSHUB_STORAGE_S3_SECRET__KEY:
       # Если коллектор требует авторизацию.
       #OTEL_EXPORTER_OTLP_HEADERS: Authorization=Bearer ...
     volumes:
