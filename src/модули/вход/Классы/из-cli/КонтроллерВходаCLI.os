@@ -23,14 +23,11 @@
 //
 &ТочкаМаршрута("cli/auth/device", Метод = "post")
 &Операция(Сводка = "Заявка входа CLI",
-	Описание = "Вход с кодом устройства по RFC 8628. Анонимно: разрешение даёт человек в
-	|браузере по `verification_uri`. Тело: `client_name | имя_клиента`, `scopes | права` (`read` по умолчанию; `write`,
-	|`read,write`). Ответ `{device_code, user_code, verification_uri, verification_uri_complete, expires_in, interval}`. Отказы — в форме RFC
-	|8628 `{error, error_description}`, не в конверте API.")
-&Возвращает(Код = 201, Описание = "`{device_code, user_code, verification_uri, verification_uri_complete,
-	|expires_in, interval}`")
-&Возвращает(Код = 400, Описание = "`{error: invalid_scope | invalid_request}`")
-&Возвращает(Код = 405, Описание = "`{error: invalid_request}`")
+	Описание = "Вход CLI по коду устройства (RFC 8628): разрешение даёт человек в браузере по
+	|`verification_uri`. Вход не нужен; отказы — в форме RFC 8628 `{error, error_description}`.")
+&Возвращает(Код = 201, Описание = "Код устройства и адрес для браузера")
+&Возвращает(Код = 400, Описание = "`invalid_scope`, `invalid_request`")
+&Возвращает(Код = 405, Описание = "`invalid_request` — чужой глагол")
 Процедура НачалоВхода(Ответ, ТелоЗапроса, ЗаголовкиЗапроса, МетодЗапроса) Экспорт
 
 	Ответы.БезСессионнойКуки(Ответ, ПустыеКуки);
@@ -85,14 +82,12 @@
 //
 &ТочкаМаршрута("cli/auth/device/token", Метод = "post")
 &Операция(Сводка = "Опрос заявки входа CLI",
-	Описание = "Тело: `device_code | код_устройства`. Пока человек не решил — 400 `authorization_pending`;
-	|опрос чаще `interval` — `slow_down`. После разрешения ответ `{access_token, token_type: Bearer,
-	|scope, token_id}`: ключ доступа выдаётся один раз.")
-&Возвращает(Код = 200, Описание = "`{access_token, token_type, scope, token_id}`")
-&Возвращает(Код = 400, Описание = "`{error: authorization_pending | slow_down | access_denied | expired_token}`")
-&Возвращает(Код = 405, Описание = "`{error: invalid_request}`")
-&Возвращает(Код = 500, Описание = "`server.error` в конверте API — ключ по разрешённой заявке не
-	|выпущен")
+	Описание = "Опрос заявки по `device_code`; отказы — в форме RFC 8628. После разрешения выдаёт
+	|ключ доступа, один раз.")
+&Возвращает(Код = 200, Описание = "Ключ доступа")
+&Возвращает(Код = 400, Описание = "`authorization_pending`, `slow_down`, `access_denied`, `expired_token`")
+&Возвращает(Код = 405, Описание = "`invalid_request` — чужой глагол")
+&Возвращает(Код = 500, Описание = "`server.error` в конверте API — ключ не выпущен")
 Процедура ОпросТокена(Ответ, ТелоЗапроса, ЗаголовкиЗапроса, МетодЗапроса) Экспорт
 
 	Ответы.БезСессионнойКуки(Ответ, ПустыеКуки);
