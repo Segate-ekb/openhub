@@ -55,7 +55,7 @@
 
 	Кука = Клиент.Войти("owner1", "Owner1Passw0rd");
 	Токен = ВыпуститьPAT(Кука);
-	Раздел = "/owned/settings/upstreams";
+	Раздел = "/pools/owned/settings/upstreams";
 
 	Заведение = СтрШаблон("{""url"":""%1"",""ttl"":300}", МёртвыйАдрес);
 	Ожидаем.Что(Клиент.ЗапросJSONСТокеном("POST", "/api/v1/pools/owned/upstreams",
