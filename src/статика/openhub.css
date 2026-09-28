@@ -37,3 +37,136 @@
    с тем, кто его ставит. */
 
 .savebar--dirty { box-shadow: var(--shadow-lg); }
+
+/* --- экран «Логи»: кандидаты в кит ------------------------------------------------
+   Блоки собраны элементами кита и помечены признаками — так же, как требования к паролю
+   выше, — потому что у кита пока нет таких родов. Переедут в кит вместе с родами:
+   «лента записей» ([data-feed]) — плотный список событий со временем, важностью,
+   источником и текстом; «машинное имя с переносами» ([data-wrap]) — код, который рвётся
+   после точки и на горбах CamelCase, а не посреди слова; «поле в ячейке»
+   ([data-logs-level], [data-logs-otel]) — выбор и тумблер в строке таблицы, чья подпись
+   есть у скринридера, но не занимает места; «строка по центру с переносом»
+   ([data-logs-inline]) — подпись, поле и кнопка в одну строку, которая на телефоне
+   переносится, а не теснится; «ветка дерева» ([data-logs-branch] раскрытая и
+   [data-logs-closed] свёрнутая — кнопкой формы). */
+
+[data-feed] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-mono);
+	font-size: var(--font-size-small);
+	border: 1px solid var(--color-divider);
+	border-radius: var(--radius-md);
+}
+[data-feed] > li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0 var(--space-2);
+	padding: var(--space-1) var(--space-3);
+	border-left: 3px solid transparent;
+}
+[data-feed] > li + li { border-top: 1px solid var(--color-divider); }
+[data-feed-severity="detail"] { border-left-color: var(--color-accent); }
+[data-feed-severity="warn"] { border-left-color: var(--color-warning); }
+[data-feed-severity="error"] { border-left-color: var(--color-danger); }
+[data-feed-level] { min-width: 3.5em; font-weight: 600; color: var(--color-text-muted); }
+[data-feed-severity="detail"] [data-feed-level] { color: var(--color-accent); }
+[data-feed-severity="warn"] [data-feed-level] { color: var(--color-warning); }
+[data-feed-severity="error"] [data-feed-level] { color: var(--color-danger); }
+[data-feed-source] { color: var(--color-text-muted); overflow-wrap: anywhere; }
+[data-feed-text] { flex: 1 1 22rem; min-width: 0; overflow-wrap: anywhere; color: var(--color-text); }
+[data-feed-mark] { margin-left: auto; }
+
+/* куски имени — неразрывные блоки строки: перенос встаёт только между ними */
+code[data-wrap] { white-space: normal; }
+[data-wrap-part] { display: inline-block; }
+[data-logs-name] code { font-size: var(--font-size-small); }
+
+[data-logs-level] .field__label,
+[data-logs-otel] .toggle__label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* строки отбора переносятся, а не ужимают поля до обрезков — и на половине «Строки», и у поиска дерева на телефоне */
+[data-logs-filters] .filters { flex-wrap: wrap; }
+[data-logs-filters] .filters > .field { flex: 1 1 11rem; }
+
+/* строки для закрепления переносятся, а не раздвигают страницу: их копируют целиком */
+[data-logs-pin] .code { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+[data-logs-inline] { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+[data-logs-inline] .field { flex-direction: row; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-2); }
+[data-logs-inline] .field__control { width: auto; min-width: 10rem; max-width: 100%; }
+[data-logs-level] .field__control { min-width: 11rem; }
+
+/* колонки таблиц соседних веток стоят в одних местах: глаз не прыгает от ветки к ветке. Доля
+   есть у каждой из пяти колонок: узкая «Строки» при фиксированной раскладке без своей доли
+   сжималась до нуля, и ход к строкам лога с числом «/мин» уезжал за край таблицы. Содержимое
+   ячеек переносится и не шире своей колонки — таблица не прокручивается вбок ни на какой ширине */
+@media (min-width: 721px) {
+	[data-logs-table] { table-layout: fixed; }
+	[data-logs-table] th:nth-child(1) { width: 26%; }
+	[data-logs-table] th:nth-child(2) { width: 27%; }
+	[data-logs-table] th:nth-child(3) { width: 19%; }
+	[data-logs-table] th:nth-child(4) { width: 15%; }
+	[data-logs-table] th:nth-child(5) { width: 13%; }
+	[data-logs-table] .cell-narrow { white-space: normal; }
+	[data-logs-level] .field__control { min-width: 0; width: 100%; }
+}
+
+/* ветка дерева: раскрывашка-панель кита прячет маркер <summary>, и без знака раскрытия
+   свёрнутая ветка не читается раскрываемой; строка ветки плотнее строки панели, вложенная
+   ветка сдвинута под родителя, а выбор ветки — цель якоря после «Применить» — не уходит
+   под прилипшую шапку */
+[data-logs-branch] > summary { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+[data-logs-branch] > summary::before {
+	content: "";
+	flex: none;
+	width: 0.45em;
+	height: 0.45em;
+	margin-right: var(--space-1);
+	border-right: 2px solid var(--color-text-muted);
+	border-bottom: 2px solid var(--color-text-muted);
+	transform: rotate(-45deg);
+}
+[data-logs-branch][open] > summary::before { transform: rotate(45deg); }
+
+/* первая кнопка отправки формы дерева — невидимая «Применить»: Enter в поле жмёт её, а не кнопку
+   свёрнутой ветки; с экрана, из порядка табуляции и от скринридера она убрана */
+[data-logs-enter] { display: none; }
+
+/* свёрнутая ветка — строка панели с кнопкой формы дерева: раскрытие уносит с собой
+   выбранное в дереве, поэтому это отправка, а не ссылка */
+[data-logs-closed] {
+	align-items: center;
+	padding: var(--space-2) var(--space-3);
+	border: 1px solid var(--color-divider);
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+	line-height: 1.6;
+}
+[data-logs-closed]::before {
+	content: "";
+	flex: none;
+	width: 0.45em;
+	height: 0.45em;
+	margin-right: var(--space-1);
+	border-right: 2px solid var(--color-text-muted);
+	border-bottom: 2px solid var(--color-text-muted);
+	transform: rotate(-45deg);
+	align-self: center;
+}
+[data-logs-closed] > .button--link { font-family: var(--font-mono); font-weight: 600; color: var(--color-text); padding-top: 0; padding-bottom: 0; }
+:is([data-logs-closed], [data-logs-branch]) + :is([data-logs-closed], [data-logs-branch]) { margin-top: var(--space-2); }
+[data-logs-branch] :is([data-logs-branch], [data-logs-closed]) { margin-left: var(--space-2); }
+[data-logs-branch] select[id] { scroll-margin-top: 9rem; }

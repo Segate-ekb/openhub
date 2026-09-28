@@ -1166,6 +1166,7 @@
 	Добавить("settings.hub.block.delivery", "Доставка уведомлений");
 	Добавить("settings.hub.nav.proxy", "Прокси апстрима");
 	Добавить("settings.hub.nav.audit", "Аудит");
+	Добавить("settings.hub.nav.logs", "Логи");
 	Добавить("settings.hub.nav.maintenance", "Обслуживание");
 	Добавить("settings.hub.screen.users", "Пользователи");
 	Добавить("settings.hub.screen.groups", "Группы");
@@ -1997,6 +1998,20 @@
 		+ " текст запроса может нести значения полей. Текст дают только SQL-бэкенды"
 		+ " (SQLite, PostgreSQL); на файловой базе спан текста не несёт.");
 
+	Добавить("settings.key.oshub-log-otel-level.label", "Порог журнала для коллектора");
+	Добавить("settings.key.oshub-log-otel-level.hint",
+		"С какого уровня строки журнала уходят в коллектор телеметрии. Пусто — как уровень"
+		+ " журнала; порог только сужает поток и подробности не добавляет. DISABLE — журнал"
+		+ " в коллектор не идёт, трассы и метрики идут.");
+	Добавить("settings.key.oshub-log-otel-levels.label", "Пороги коллектора отдельным журналам");
+	Добавить("settings.key.oshub-log-otel-levels.hint",
+		"Имя=Уровень через запятую; имя журнала — имя класса. DISABLE — этот журнал"
+		+ " в коллектор не идёт, консоль и память его пишут.");
+	Добавить("settings.key.oshub-log-tail-size.label", "Строк журнала в памяти");
+	Добавить("settings.key.oshub-log-tail-size.hint",
+		"Сколько последних строк хаб держит для просмотра на экране; предупреждениям и ошибкам —"
+		+ " отдельная четверть. 0 — память журнала выключена.");
+
 	Добавить("settings.key.oshub-storage-s3-endpoint.label", "Адрес хранилища S3");
 	Добавить("settings.key.oshub-storage-s3-endpoint.hint",
 		"Куда хаб кладёт артефакты при бэкенде s3.");
@@ -2770,6 +2785,201 @@
 
 КонецПроцедуры
 
+// Экран «Логи» дома «Хаб» (КонтроллерЛогов, ВитринаУровнейЛогов, ВитринаДереваЛогов,
+// ВитринаВозвратаЛогов, ВитринаСтрокЛогов, НавигацияЛогов, ПодписиПутей, ОтказыПультаЖурнала).
+Процедура КлючиЛогов()
+
+	Добавить("settings.hub.logs.title", "Логи хаба");
+	Добавить("settings.hub.logs.lead", "Сколько подробностей пишет каждый компонент хаба и библиотек"
+		+ " и уходят ли его строки в коллектор. Уровень меняется здесь же, без перезапуска.");
+	Добавить("settings.hub.logs.tab.label", "Половины экрана логов");
+	Добавить("settings.hub.logs.tab.levels", "Уровни");
+	Добавить("settings.hub.logs.tab.lines", "Строки");
+
+	Добавить("settings.hub.logs.state.term", "Правка");
+	Добавить("settings.hub.logs.state.otel", "Коллектор");
+	Добавить("settings.hub.logs.state.pin", "Закрепить");
+	Добавить("settings.hub.logs.term.runtime", "действует сразу и до перезапуска хаба, в базу не"
+		+ " пишется; каждая правка — в журнале аудита");
+	Добавить("settings.hub.logs.otel.on", "журнал уходит в коллектор: строки логов с включённой"
+		+ " отправкой уезжают туда");
+	Добавить("settings.hub.logs.otel.off", "журнал в коллектор не уходит (выключена телеметрия либо"
+		+ " экспорт логов): тумблеры отправки пока ничего не отправляют");
+	Добавить("settings.hub.logs.pin.lead", "Заданное с экрана пропадёт при перезапуске — чтобы"
+		+ " оставить, перенесите в окружение развёртывания:");
+	Добавить("settings.hub.logs.applied", "Только что применено к логам: %1.");
+	Добавить("settings.hub.logs.applied.more", "%1 и ещё %2");
+	Добавить("settings.hub.logs.applied.lines", "Посмотреть их строки");
+	Добавить("settings.hub.logs.draft.note", "Выбрано и ещё не применено: %1. «Применить» внизу"
+		+ " дерева применит выбранное, «Отменить» — сбросит.");
+	Добавить("settings.hub.logs.draft.mark", "не применено");
+	Добавить("settings.hub.logs.draft.dropped", "Из выбранного отброшено: %1 — таких логов нет, с экрана"
+		+ " их не правят либо выбрано значение, которого у лога быть не может.");
+	Добавить("settings.hub.logs.draft.hidden", "Выбрано, но на этой странице не показано и не применится:"
+		+ " %1 — снимите отбор, чтобы увидеть.");
+	Добавить("settings.hub.logs.draft.hidden.plain", "Выбрано, но на этой странице не показано и не"
+		+ " применится: %1.");
+
+	Добавить("settings.hub.logs.paths.label", "Путь:");
+	Добавить("settings.hub.logs.path.delivery", "выдача пакета");
+	Добавить("settings.hub.logs.path.upstream", "поход к чужому хабу");
+	Добавить("settings.hub.logs.path.intake", "приём внешней версии");
+	Добавить("settings.hub.logs.path.publish", "публикация");
+	Добавить("settings.hub.logs.path.login", "вход");
+	Добавить("settings.hub.logs.path.notifications", "очередь уведомлений");
+	Добавить("settings.hub.logs.path.storage", "хранилище артефактов");
+	Добавить("settings.hub.logs.path.unknown", "Такого пути нет: «%1». Выберите путь из списка"
+		+ " либо сбросьте отбор.");
+
+	Добавить("settings.hub.logs.search.label", "Лог или ветка");
+	Добавить("settings.hub.logs.search.placeholder", "Часть имени: прокси, Резолвер, entity");
+	Добавить("settings.hub.logs.search.scope", "Показать");
+	Добавить("settings.hub.logs.search.scope.all", "Все логи");
+	Добавить("settings.hub.logs.search.scope.changed", "Заданные с экрана");
+	Добавить("settings.hub.logs.search.button", "Найти");
+	Добавить("settings.hub.logs.found", "Под отбором логов: %1.");
+	Добавить("settings.hub.logs.found.reset", "Показать все");
+	Добавить("settings.hub.logs.found.level", "Всем под отбором");
+	Добавить("settings.hub.logs.found.apply", "Задать (%1)");
+	Добавить("settings.hub.logs.level.back", "как при старте");
+
+	Добавить("settings.hub.logs.back.note", "С экрана задано: %1.");
+	Добавить("settings.hub.logs.back.show", "Показать только их");
+	Добавить("settings.hub.logs.back.button", "Вернуть всё как при старте");
+	Добавить("settings.hub.logs.back.confirm.title", "Вернуть всё как при старте?");
+	Добавить("settings.hub.logs.back.confirm.lead", "С экрана задано: %1. Всё это снимется разом,"
+		+ " и логи вернутся к окружению и файлу настроек.");
+	Добавить("settings.hub.logs.back.confirm.none", "С экрана сейчас ничего не задано — возвращать нечего.");
+	Добавить("settings.hub.logs.back.confirm.others", "Снимутся и правки других администраторов: %1."
+		+ " Вернуть их можно будет только заново руками.");
+	Добавить("settings.hub.logs.back.confirm.button", "Вернуть всё как при старте (%1)");
+	Добавить("settings.hub.logs.back.confirm.cancel", "Не возвращать, к дереву");
+	Добавить("settings.hub.logs.back.col.log", "Лог");
+	Добавить("settings.hub.logs.back.col.what", "Задано с экрана");
+	Добавить("settings.hub.logs.back.col.by", "Кем и когда");
+	Добавить("settings.hub.logs.back.what.level", "уровень %1");
+	Добавить("settings.hub.logs.back.what.otel", "в коллектор: %1");
+	Добавить("settings.hub.logs.back.by", "%1, %2");
+
+	Добавить("settings.hub.logs.tree.title", "Дерево логов");
+	Добавить("settings.hub.logs.tree.lead", "Уровень ветки — это правка всех её логов разом, своего"
+		+ " уровня у ветки нет. «Как при старте» снимает с лога всё заданное с экрана: и уровень,"
+		+ " и отправку. Поменяйте что нужно и нажмите «Применить».");
+	Добавить("settings.hub.logs.tree.apply", "Применить");
+	Добавить("settings.hub.logs.tree.apply.term", "Действует сразу, до перезапуска хаба");
+	Добавить("settings.hub.logs.tree.hub", "Модули хаба");
+	Добавить("settings.hub.logs.tree.libraries", "Библиотеки");
+	Добавить("settings.hub.logs.tree.nogroup", "Логи без группы");
+	Добавить("settings.hub.logs.tree.empty", "Под этот отбор не попал ни один лог.");
+	Добавить("settings.hub.logs.tree.none", "Хаб не назвал ни одного лога: править пока нечего.");
+
+	Добавить("settings.hub.logs.root.title", "Корень");
+	Добавить("settings.hub.logs.root.lead", "Уровень логов, которым настройки не назвали своего.");
+	Добавить("settings.hub.logs.root.level", "Уровень корня");
+	Добавить("settings.hub.logs.root.otel", "В коллектор");
+
+	Добавить("settings.hub.logs.level.start", "как при старте: %1 (%2)");
+	Добавить("settings.hub.logs.level.root", "как у корня: %1");
+
+	Добавить("settings.hub.logs.branch.logs", "логов: %1");
+	Добавить("settings.hub.logs.branch.found", "под отбором: %1 из %2");
+	Добавить("settings.hub.logs.branch.debug", "DEBUG: %1");
+	Добавить("settings.hub.logs.branch.screen", "с экрана: %1");
+	Добавить("settings.hub.logs.branch.nootel", "не в коллектор: %1");
+	Добавить("settings.hub.logs.branch.rate", "строк/мин: %1");
+	Добавить("settings.hub.logs.branch.level", "Всем логам ветки (%1)");
+	Добавить("settings.hub.logs.branch.keep", "не менять");
+	Добавить("settings.hub.logs.branch.readonly", "пропустит %1: только чтение");
+	Добавить("settings.hub.logs.branch.lines", "Строки ветки");
+	Добавить("settings.hub.logs.branch.open", "Раскрыть ветку «%1»; выбранное в дереве сохранится");
+	Добавить("settings.hub.logs.branch.unknown", "Такой ветки нет: «%1». Выберите ветку из списка"
+		+ " либо сбросьте отбор.");
+
+	Добавить("settings.hub.logs.col.log", "Лог");
+	Добавить("settings.hub.logs.col.level", "Уровень");
+	Добавить("settings.hub.logs.col.origin", "Откуда");
+	Добавить("settings.hub.logs.col.otel", "Коллектор");
+	Добавить("settings.hub.logs.col.lines", "Строки");
+
+	Добавить("settings.hub.logs.row.level", "Уровень лога %1");
+	Добавить("settings.hub.logs.row.readonly", "только чтение: с экрана не правится");
+	Добавить("settings.hub.logs.row.readonly.audit", "только чтение: журнал аудита с экрана не приглушают");
+	Добавить("settings.hub.logs.row.readonly.early", "только чтение: лог заведён раньше, чем хаб прочитал"
+		+ " настройки, и пишет без обезличивания, поэтому с экрана не правится");
+	Добавить("settings.hub.logs.row.noconsole", "не в консоль");
+	Добавить("settings.hub.logs.row.nomemory", "не в память");
+	Добавить("settings.hub.logs.row.outputs", "ещё пишет: %1");
+	Добавить("settings.hub.logs.row.otel", "Отправлять строки лога %1 в коллектор");
+	Добавить("settings.hub.logs.row.otel.on", "да");
+	Добавить("settings.hub.logs.row.otel.off", "нет");
+	Добавить("settings.hub.logs.row.otel.unreachable", "не доходит до коллектора");
+	Добавить("settings.hub.logs.row.otel.readonly", "только чтение");
+	Добавить("settings.hub.logs.row.otel.threshold", "только с %1");
+	Добавить("settings.hub.logs.row.otel.by", "с экрана, %1");
+	Добавить("settings.hub.logs.row.otel.byat", "с экрана, %1, %2");
+	Добавить("settings.hub.logs.row.lines", "строки");
+	Добавить("settings.hub.logs.row.lines.rate", "строки · %1/мин");
+
+	Добавить("settings.hub.logs.origin.screen", "с экрана");
+	Добавить("settings.hub.logs.origin.screen.by", "%1, %2");
+	Добавить("settings.hub.logs.origin.env", "окружение");
+	Добавить("settings.hub.logs.origin.file", "файл настроек");
+	Добавить("settings.hub.logs.origin.default", "умолчание");
+	Добавить("settings.hub.logs.origin.root", "корень");
+
+	Добавить("settings.hub.logs.reply.applied", "Применено к логам: %1. Действует сразу, до перезапуска.");
+	Добавить("settings.hub.logs.reply.nothing", "Ничего не изменилось: уровни и отправка уже"
+		+ " такие, как выбрано.");
+	Добавить("settings.hub.logs.reply.returned", "Вернули к старту логов: %1. Действует сразу.");
+	Добавить("settings.hub.logs.reply.kept", "Групповая правка пропустила %1: эти логи с экрана"
+		+ " не правятся.");
+	Добавить("settings.hub.logs.reply.unknown", "Неизвестное действие: экран устарел, обновите страницу.");
+
+	Добавить("settings.hub.logs.refused.level", "Хаб не принял правку: такого уровня нет (%1)."
+		+ " Правки после отказа не применены.");
+	Добавить("settings.hub.logs.refused.logger", "Хаб не принял правку: такого лога нет (%1) —"
+		+ " экран устарел, обновите страницу. Правки после отказа не применены.");
+	Добавить("settings.hub.logs.refused.readonly", "Хаб не принял правку: лог только для чтения,"
+		+ " его уровень и отправку с экрана не меняют (%1). Правки после отказа не применены.");
+	Добавить("settings.hub.logs.refused.otel", "Хаб не принял правку: лог до коллектора не"
+		+ " доходит, отправку ему не включить (%1). Правки после отказа не применены.");
+
+	Добавить("settings.hub.logs.lines.title", "Строки журнала");
+	Добавить("settings.hub.logs.lines.lead", "Последние строки, которые хаб написал, — свежие"
+		+ " сверху, время UTC. Память держит %1 последних строк и отдельно %2 предупреждений"
+		+ " и ошибок, которые отладка не вытесняет; с запуска записано %3. Более ранние остались"
+		+ " в консоли и в коллекторе.");
+	Добавить("settings.hub.logs.lines.shown", "Показано строк: %1, снимок на %2.");
+	Добавить("settings.hub.logs.lines.refresh", "Обновить");
+	Добавить("settings.hub.logs.lines.filter.log", "Лог");
+	Добавить("settings.hub.logs.lines.filter.log.placeholder", "Имя лога; несколько — через запятую");
+	Добавить("settings.hub.logs.lines.filter.path", "Путь");
+	Добавить("settings.hub.logs.lines.filter.path.all", "Все пути");
+	Добавить("settings.hub.logs.lines.filter.branch", "Ветка");
+	Добавить("settings.hub.logs.lines.filter.branch.all", "Все ветки");
+	Добавить("settings.hub.logs.lines.filter.level", "Уровень не ниже");
+	Добавить("settings.hub.logs.lines.filter.level.all", "Любой");
+	Добавить("settings.hub.logs.lines.filter.level.from", "%1 и серьёзнее");
+	Добавить("settings.hub.logs.lines.filter.ring", "Память");
+	Добавить("settings.hub.logs.lines.filter.ring.all", "Все строки");
+	Добавить("settings.hub.logs.lines.filter.ring.important", "Только важное: WARN и серьёзнее");
+	Добавить("settings.hub.logs.lines.filter.text", "Текст");
+	Добавить("settings.hub.logs.lines.filter.text.placeholder", "Часть строки");
+	Добавить("settings.hub.logs.lines.filter.button", "Показать");
+	Добавить("settings.hub.logs.lines.filter.reset", "Сбросить отбор");
+	Добавить("settings.hub.logs.lines.empty", "По этому отбору строк в памяти нет.");
+	Добавить("settings.hub.logs.lines.quiet", "Лог %1 сейчас пишет от уровня %2: строк подробнее"
+		+ " он не пишет вовсе, и здесь их не будет.");
+	Добавить("settings.hub.logs.lines.nomemory", "Строки лога %1 в память не идут: здесь их не"
+		+ " будет, смотрите консоль или коллектор.");
+	Добавить("settings.hub.logs.lines.quiet.link", "Поменять уровень");
+	Добавить("settings.hub.logs.lines.now", "Сейчас пишут:");
+	Добавить("settings.hub.logs.lines.now.item", "%1: %2");
+	Добавить("settings.hub.logs.lines.back", "Вернуть как при старте (%1)");
+	Добавить("settings.hub.logs.lines.trace", "Трасса %1");
+
+КонецПроцедуры
+
 // Почта хаба: письмо подтверждения, страница /confirm-email, проверка отправки и метки настроек.
 Процедура КлючиПочты()
 
@@ -2966,6 +3176,7 @@
 	КлючиНастроекПодсистем();
 	КлючиЗеркал();
 	КлючиПочты();
+	КлючиЛогов();
 	КлючиУведомлений();
 	КлючиГлавнойКабинета();
 	КлючиПервойПубликации();
