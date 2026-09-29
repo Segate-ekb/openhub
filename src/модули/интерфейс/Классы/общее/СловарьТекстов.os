@@ -150,6 +150,8 @@
 	Добавить("settings.account.error.password.repeat", "Новый пароль и повтор не совпадают");
 	Добавить("settings.account.error.email.taken", "Этот адрес электронной почты уже принадлежит"
 		+ " другой учётной записи. Укажите другой адрес.");
+	Добавить("settings.account.error.form", "Форма раздела «Профиль» не распознана — ничего"
+		+ " не изменено. Обновите страницу и повторите.");
 
 	Добавить("settings.account.security.forced", "Для продолжения работы необходимо сменить пароль.");
 	Добавить("settings.account.security.passwordlogin.off", "Вход по логину и паролю на этом"
@@ -164,6 +166,8 @@
 	Добавить("settings.account.profile.email.empty", "Email не задан");
 	Добавить("settings.account.profile.email.confirmed", "Email подтверждён");
 	Добавить("settings.account.profile.email.unconfirmed", "Email не подтверждён");
+	Добавить("settings.account.confirm.lead",
+		"Адрес %1 не подтверждён: его подтверждает ссылка из письма.");
 
 	Добавить("settings.account.password.title", "Пароль");
 	Добавить("settings.account.password.lead", "Требования к паролю задаются политикой хаба.");
@@ -2866,6 +2870,11 @@
 		+ " Сообщите администратору хаба — причина записана в журнал.");
 	Добавить("confirm.page.error.address",
 		"Адрес учётной записи не годится для отправки письма: исправьте его в кабинете.");
+	Добавить("confirm.page.error.url",
+		"У хаба не задан внешний адрес — ссылке в письме некуда вести, и письмо не отправлено."
+		+ " Обратитесь к администратору хаба.");
+	Добавить("confirm.page.error.failed",
+		"Письмо выслать не удалось — причина записана в журнал хаба. Попробуйте позже.");
 
 	Добавить("settings.hub.mail.test.title", "Проверка отправки");
 	Добавить("settings.hub.mail.test.lead",
