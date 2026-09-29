@@ -47,7 +47,7 @@
 &Возвращает(Код = 200, Описание = "GET: версии пакета; POST: номер переиздан")
 &Возвращает(Код = 201, Описание = "POST: версия опубликована")
 &Возвращает(Код = 202, Описание = "POST: заявка во «входящих», версии ещё нет")
-&Возвращает(Код = 400, Описание = "`bad_request` — файл или его имя не приняты")
+&Возвращает(Код = 400, Описание = "`bad_request` — файл, его имя или манифест не приняты")
 &Возвращает(Код = 401, Описание = "`unauthorized` — нет ключа и id-token")
 &Возвращает(Код = 403, Описание = "`forbidden`, `token_scope`, `token_pool_mismatch`")
 &Возвращает(Код = 404, Описание = "`pool_not_found`, `package_not_found`")
@@ -800,7 +800,8 @@
 //   payload_too_large — limit (ключ настройки), limit_bytes, actual_bytes;
 //   quota_exceeded    — pool, limit, limit_bytes, used_bytes, actual_bytes;
 //   pool_not_found    — pool;
-//   conflict, bad_request по правилам приёма — package, version.
+//   conflict, bad_request по правилам приёма — package, version;
+//   bad_request первой версии без веб-адреса репозитория — package, field (repo-address).
 // Вердикта без подробностей это не запрещает: тогда поля details в ответе нет вовсе.
 Функция ПодробностиВердикта(Знач Результат)
 	Подробности = Неопределено;

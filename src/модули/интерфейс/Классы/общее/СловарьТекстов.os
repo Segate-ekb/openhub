@@ -651,6 +651,18 @@
 	Добавить("settings.inbox.card.file", "Имя файла");
 	Добавить("settings.inbox.card.sha256", "sha256");
 
+	Добавить("settings.inbox.manifest.deps", "зависимостей: %1");
+	Добавить("settings.inbox.manifest.details", "Подробнее");
+	Добавить("settings.inbox.manifest.details.about", "Подробнее о пакете %1 %2");
+	Добавить("settings.inbox.manifest.missing", "Сведений из packagedef у заявки нет: она подана"
+		+ " раньше, чем хаб начал их сохранять.");
+	Добавить("settings.inbox.manifest.field.description", "Описание");
+	Добавить("settings.inbox.manifest.field.repository", "Репозиторий");
+	Добавить("settings.inbox.manifest.field.author", "Автор");
+	Добавить("settings.inbox.manifest.field.engine", "Версия OneScript");
+	Добавить("settings.inbox.manifest.field.deps", "Зависимости");
+	Добавить("settings.inbox.manifest.field.dev-deps", "Для разработки");
+
 	Добавить("settings.inbox.approve.title", "Одобрить заявку №%1");
 	Добавить("settings.inbox.approve.lead", "Версия будет опубликована от имени заявителя,"
 		+ " а он станет мейнтейнером этого пакета.");
