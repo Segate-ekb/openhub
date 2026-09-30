@@ -35,9 +35,8 @@ exporters:
     tls:
       insecure: true
 
-  # Логи уходят в Loki его OTLP-приёмником (/otlp/v1/logs). Экспортёра loki в коллекторе
-  # больше нет — начиная с 3.0 Loki принимает OTLP сам, и trace_id кладёт в structured
-  # metadata, а не в тело строки.
+  # Логи уходят в Loki его OTLP-приёмником (/otlp/v1/logs); trace_id Loki кладёт
+  # в structured metadata, а не в тело строки.
   otlphttp/loki:
     endpoint: http://loki:3100/otlp
     tls:

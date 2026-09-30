@@ -1,19 +1,15 @@
-# Тестовый стенд OpenHub: хаб + MinIO + конвейер наблюдаемости. Из каталога docker/:
+# Тестовый стенд OpenHub: хаб + MinIO + стенд наблюдаемости. Из каталога docker/:
 #
 #   docker compose up            # хаб на http://localhost:3333, Grafana :3000, консоль MinIO :9001
 #   docker compose down -v       # снести стенд вместе с данными
 #
-# Стенд именно тестовый: пароли лежат в открытую, том MinIO одноразовый, Grafana пускает
-# анонимов администраторами, W^X отключён ради запуска amd64-образа под qemu.
-# Для продового развёртывания см. docker/README.md.
+# Стенд тестовый: пароли лежат в открытую, том MinIO одноразовый, Grafana пускает анонимов
+# администраторами, W^X отключён ради запуска amd64-образа под qemu. Комплект для сервера —
+# deploy/compose.yaml; образ и его переменные — docker/README.md.
 #
-# Без этого файла контейнер самодостаточен: `docker run -p 3333:3333 segateekb/openhub`
-# поднимает хаб с файловым хранилищем и SQLite на томе, без единой внешней системы.
-#
-# Конвейер наблюдаемости самодостаточен в другую сторону: он работает и без сервиса
-# openhub. На Apple Silicon образ хаба идёт под qemu и заводится не везде, поэтому
-# порт коллектора опубликован на localhost — хаб, запущенный нативно на хосте, шлёт
-# телеметрию туда же. Как именно — docker/README.md, раздел «Наблюдаемость».
+# Стенд наблюдаемости работает и без сервиса openhub: порт коллектора опубликован
+# на localhost, и хаб, запущенный на хосте, шлёт телеметрию туда же
+# (docker/наблюдаемость/README.md).
 
 name: openhub
 
@@ -21,9 +17,7 @@ services:
 
   minio:
     image: minio/minio:latest
-    # Порт 80, а не 9000, сознательно: SigV4 в oint 2.3.0 подписывает заголовок Host БЕЗ
-    # порта, и на нестандартном порту MinIO отвечает 403 SignatureDoesNotMatch
-    # Наружу порт S3 не публикуется вовсе.
+    # S3 слушает порт 80 внутри сети стенда и наружу не публикуется; наружу — только консоль.
     command: server /data --address ":80" --console-address ":9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-openhub}
@@ -69,9 +63,7 @@ services:
       OSHUB_STORAGE_S3_ENDPOINT: http://minio
       OSHUB_STORAGE_S3_BUCKET: ${OSHUB_BUCKET:-openhub}
       OSHUB_STORAGE_S3_REGION: us-east-1
-      # Двойное подчёркивание — конвенция configor: `__` -> `_` внутри ключа
-      # (oshub.storage.s3.force_path_style). С одинарными значение молча уедет
-      # в несуществующую детальку.
+      # `__` — подчёркивание внутри ключа: oshub.storage.s3.force_path_style.
       OSHUB_STORAGE_S3_FORCE__PATH__STYLE: "true"
       OSHUB_STORAGE_S3_ACCESS__KEY: ${MINIO_ROOT_USER:-openhub}
       OSHUB_STORAGE_S3_SECRET__KEY: ${MINIO_ROOT_PASSWORD:-openhub-secret}
@@ -92,8 +84,7 @@ services:
     volumes:
       # БД и журнал аудита — на томе; артефакты при backend=s3 уходят в MinIO.
       - openhub-data:/var/lib/openhub
-      # Демонстрация второго способа конфигурации: файл поверх приехавшего в пакете.
-      # Переменные окружения выше перебивают всё, что задано здесь.
+      # Второй способ конфигурации — файл настроек; переменные окружения выше сильнее него.
       - ../autumn-properties.json:/opt/openhub/autumn-properties.json:ro
 
   # --- Наблюдаемость: одна дверь, три хранилища, одно окно ------------------------
