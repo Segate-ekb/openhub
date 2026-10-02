@@ -30,37 +30,47 @@ fi
 
 echo "== Версия из packagedef: $version"
 
-# oscript_modules едет в .ospx и в образ как есть. Проверка: в oint есть исправление подписи
-# S3, признак — вызов ПолучитьКодированнуюСтроку. Без него --push отказывает, проверочная
-# сборка идёт дальше с предупреждением.
-oint_http="oscript_modules/oint/tools/http/Modules/internal/Classes/OPI_HTTPКлиент.os"
-oint_fixed=1
-grep -q "ПолучитьКодированнуюСтроку" "$oint_http" 2>/dev/null || oint_fixed=0
+# oscript_modules едет в .ospx и в образ как есть. Сборки форков — winow, autumn-cache, oint — в хабе
+# не опубликованы: их версия в opm-metadata.xml обязана совпасть с .ЗависитОт в packagedef. Расхождение
+# --push отказывает, проверочная сборка идёт дальше с предупреждением.
+fork_builds="winow autumn-cache oint"
 
-oint_explain() {
+wanted_version() {
+	sed -n "s/^[[:space:]]*\.ЗависитОт(\"$1\",[[:space:]]*\"\([^\"]*\)\").*/\1/p" packagedef | head -n1
+}
+
+installed_version() {
+	sed -n 's/.*<version>\([^<]*\)<\/version>.*/\1/p' "oscript_modules/$1/opm-metadata.xml" 2>/dev/null | head -n1 || true
+}
+
+mismatched=""
+for lib in $fork_builds; do
+	wanted="$(wanted_version "$lib")"
+	installed="$(installed_version "$lib")"
+	if [ "$wanted" != "$installed" ]; then
+		mismatched="${mismatched}  ${lib}: в oscript_modules ${installed:-нет сборки}, packagedef требует ${wanted:-—}"$'\n'
+	fi
+done
+
+builds_explain() {
+	printf '%s' "$mismatched" >&2
 	cat >&2 <<-MSG
-	В $oint_http
-	нет исправления подписи S3 (признак — вызов ПолучитьКодированнуюСтроку).
-
-	Что сделать — одно из двух:
-	  1) положить в oscript_modules/oint сборку oint с исправлением; после этого
-	     «opm install -l» без имени пакета не запускать — он поставит oint из хаба поверх;
-	  2) поднять .ЗависитОт("oint", …) в packagedef до версии с исправлением
-	     и выполнить «opm install -l oint».
+	Поставить сборки форков нужных версий — шаг «Собрать и запустить» в docs/разработка.md
+	(opm install -l -s -f <каталог>/<библиотека>-<версия>.ospx).
 	MSG
 }
 
-if [ "$oint_fixed" = "1" ]; then
-	echo "== oint: исправление подписи S3 на месте"
+if [ -z "$mismatched" ]; then
+	echo "== Сборки форков на месте: $fork_builds — версии как в packagedef"
 elif [ "$push" = "1" ]; then
-	echo "Публикация остановлена: oint без исправления подписи S3." >&2
-	oint_explain
+	echo "Публикация остановлена: сборки форков в oscript_modules не совпадают с packagedef:" >&2
+	builds_explain
 	echo "Затем запустить docker/образ.sh --push заново." >&2
 	exit 1
 else
-	echo "!! ВНИМАНИЕ: oint без исправления подписи S3 — этот образ НЕЛЬЗЯ публиковать." >&2
-	oint_explain
-	echo "!! Проверочная сборка продолжается; docker/образ.sh --push с этой oint откажет." >&2
+	echo "!! ВНИМАНИЕ: сборки форков в oscript_modules не совпадают с packagedef — этот образ НЕЛЬЗЯ публиковать:" >&2
+	builds_explain
+	echo "!! Проверочная сборка продолжается; docker/образ.sh --push с этими модулями откажет." >&2
 fi
 
 echo "== Сборка пакета (opm build .)"

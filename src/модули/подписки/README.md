@@ -46,12 +46,15 @@
 | `oshub.webhooks.max_attempts` | `5` | попыток доставки одного задания |
 | `oshub.webhooks.backoff_base_sec` | `10` | основание отсрочки между попытками |
 | `oshub.webhooks.delivery_interval_sec` | `5` | как часто фон разбирает очередь |
-| `oshub.webhooks.delivery_timeout_sec` | `10` | срок одной отправки |
+| `oshub.webhooks.delivery_timeout_sec` | `10` | срок одной отправки вебхука |
 | `oshub.webhooks.test_max_per_hour` | `100` | пробных отправок в час на подписку |
 | `oshub.webhooks.telegram.proxy.host` | пусто | прокси до Bot API; пусто — напрямую |
 | `oshub.webhooks.telegram.proxy.port` | `3128` | порт прокси |
 | `oshub.webhooks.telegram.proxy.user` | пусто | учётка прокси |
 | `oshub.webhooks.telegram.proxy.password` | пусто | пароль прокси (секрет) |
+
+Ответа Bot API отправка Telegram ждёт общий срок запросов через oint — `oshub.storage.s3.timeout.sec`
+(30 с); его ставит на старте рогатка `УстановкаСрокаОтветаOint` модуля `хранилище`.
 
 ## Где что лежит
 

@@ -544,9 +544,6 @@
 	Словарь.Добавить("settings.key.oshub-storage-health-ttl-sec.hint",
 		"Сколько хаб считает результат проверки доступности хранилища свежим, прежде чем"
 		+ " спросить хранилище снова.");
-	Словарь.Добавить("settings.key.oshub-storage-health-timeout-sec.label", "Таймаут пробы хранилища, секунд");
-	Словарь.Добавить("settings.key.oshub-storage-health-timeout-sec.hint",
-		"Сколько хаб ждёт ответа хранилища, прежде чем счесть его недоступным.");
 
 	Словарь.Добавить("settings.key.oshub-publish-max-upload-bytes.label",
 		"Максимальный размер загрузки, байт");
@@ -706,9 +703,10 @@
 	Словарь.Добавить("settings.key.oshub-webhooks-delivery-interval-sec.label", "Разбор очереди, секунд");
 	Словарь.Добавить("settings.key.oshub-webhooks-delivery-interval-sec.hint",
 		"Как часто хаб заглядывает в очередь недоставленного.");
-	Словарь.Добавить("settings.key.oshub-webhooks-delivery-timeout-sec.label", "Таймаут одной доставки, секунд");
+	Словарь.Добавить("settings.key.oshub-webhooks-delivery-timeout-sec.label", "Таймаут доставки вебхука, секунд");
 	Словарь.Добавить("settings.key.oshub-webhooks-delivery-timeout-sec.hint",
-		"Сколько хаб ждёт ответа принимающей стороны, прежде чем счесть попытку неудачной.");
+		"Сколько хаб ждёт ответа адреса вебхука, прежде чем счесть попытку неудачной. Telegram ждёт"
+		+ " срок oshub.storage.s3.timeout.sec.");
 	Словарь.Добавить("settings.key.oshub-webhooks-test-max-per-hour.label", "Пробных отправок в час на подписку");
 	Словарь.Добавить("settings.key.oshub-webhooks-test-max-per-hour.hint",
 		"Потолок кнопки «Проверить»: сколько раз в час одну подписку разрешено дёргать"
@@ -925,6 +923,11 @@
 	Словарь.Добавить("settings.key.oshub-storage-s3-force-path-style.label", "Адресация путём");
 	Словарь.Добавить("settings.key.oshub-storage-s3-force-path-style.hint",
 		"Обращаться к корзине путём, а не поддоменом. Нужно хранилищам вроде MinIO.");
+	Словарь.Добавить("settings.key.oshub-storage-s3-timeout-sec.label", "Срок ответа S3, секунд");
+	Словарь.Добавить("settings.key.oshub-storage-s3-timeout-sec.hint",
+		"Сколько хаб ждёт ответа корзины на каждый запрос — и на пробе доступности, — прежде чем"
+		+ " счесть её недоступной; столько же ждёт и Telegram. В срок должна уложиться отправка каждой"
+		+ " части загрузки (5 МиБ); скачивание, начавшееся в срок, он не обрывает.");
 	Словарь.Добавить("settings.key.oshub-storage-s3-access-key.label", "Ключ доступа S3");
 	Словарь.Добавить("settings.key.oshub-storage-s3-access-key.hint",
 		"Задаётся только конфигурацией; в интерфейсе не показывается никогда.");

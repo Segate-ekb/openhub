@@ -1202,7 +1202,8 @@
 Функция СнятыеКлючи()
 
 	Возврат СтрРазделить("oshub.auth.email.confirm.max.per.day,"
-		+ "oshub.auth.email.confirm.max.per.day.ip,oshub.webhooks.max_per_pool", ",", Ложь);
+		+ "oshub.auth.email.confirm.max.per.day.ip,oshub.webhooks.max_per_pool,"
+		+ "oshub.storage.health.timeout.sec", ",", Ложь);
 
 КонецФункции
 
