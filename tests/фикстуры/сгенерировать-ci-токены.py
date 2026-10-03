@@ -19,8 +19,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 
 ЗДЕСЬ = os.path.dirname(os.path.abspath(__file__))
-КОРЕНЬ = os.path.dirname(ЗДЕСЬ)
-ВЫХОД = os.path.join(КОРЕНЬ, "tests", "фикстуры", "ci-токены.json")
+ВЫХОД = os.path.join(ЗДЕСЬ, "ci-токены.json")
 
 ИЗДАТЕЛЬ = "https://token.actions.githubusercontent.com"
 АУДИТОРИЯ = "https://hub.example.test"
@@ -35,6 +34,13 @@ from cryptography.hazmat.primitives.asymmetric import padding, rsa
 КОНФИГ_GITLAB = "gitlab.com/acme/widgets//.gitlab-ci.yml@refs/heads/main"
 РЕФ = "refs/heads/main"
 KID = "openhub-ci-1"
+# кто запустил конвейер: у GitHub — actor, у GitLab — user_login
+ЗАПУСТИВШИЙ = "octocat"
+ЗАПУСТИВШИЙ_GITLAB = "gitlab-mona"
+# конвейер, запущенный публикацией релиза: событие release и реф тега
+ТЕГ_РЕЛИЗА = "v1.2.0"
+ТЕГ_СО_СЛЕШЕМ = "release/2.0+build"
+ТЕГ_ПЕРЕЗАПИСИ = "v1.5.0-rc.1"
 
 ДАЛЁКИЙ_EXP = 4102444800   # 2100-01-01
 ДАВНИЙ_EXP = 1104537600    # 2005-01-01
@@ -80,9 +86,26 @@ def клеймы(**переопределения) -> dict:
         "workflow_ref": КОНВЕЙЕР,
         "job_workflow_ref": КОНВЕЙЕР,
         "ref": РЕФ,
+        "actor": ЗАПУСТИВШИЙ,
+        "event_name": "push",
     }
     базовые.update(переопределения)
     return {ключ: значение for ключ, значение in базовые.items() if значение is not None}
+
+
+def клеймы_тега(тег, событие, **переопределения) -> dict:
+    реф = "refs/tags/" + тег
+    конвейер = "acme/widgets/.github/workflows/release.yml@" + реф
+    return клеймы(ref=реф, sub="repo:%s:ref:%s" % (РЕПОЗИТОРИЙ, реф), workflow_ref=конвейер,
+                  job_workflow_ref=конвейер, event_name=событие, **переопределения)
+
+
+def клеймы_gitlab(**переопределения) -> dict:
+    базовые = dict(iss=ИЗДАТЕЛЬ_GITLAB, repository=None, project_path=РЕПОЗИТОРИЙ,
+                   workflow_ref=None, job_workflow_ref=None, ci_config_ref_uri=КОНФИГ_GITLAB,
+                   actor=None, event_name=None, user_login=ЗАПУСТИВШИЙ_GITLAB)
+    базовые.update(переопределения)
+    return клеймы(**базовые)
 
 
 def главная():
@@ -122,14 +145,23 @@ def главная():
         "чужой_издатель": подписать(свой, заголовок, клеймы(iss="https://evil.example.test")),
         "издатель_gitlab": подписать(свой, заголовок, клеймы(iss="https://gitlab.com")),
         # полноценный токен GitLab: свой издатель, project_path и ci_config_ref_uri
-        "gitlab_годный": подписать(свой, заголовок, клеймы(
-            iss=ИЗДАТЕЛЬ_GITLAB, repository=None, project_path=РЕПОЗИТОРИЙ,
-            workflow_ref=None, job_workflow_ref=None, ci_config_ref_uri=КОНФИГ_GITLAB)),
+        "gitlab_годный": подписать(свой, заголовок, клеймы_gitlab()),
         # тот же токен, но конфиг другой — сверка пути нагружена и у GitLab
-        "gitlab_чужой_конфиг": подписать(свой, заголовок, клеймы(
-            iss=ИЗДАТЕЛЬ_GITLAB, repository=None, project_path=РЕПОЗИТОРИЙ,
-            workflow_ref=None, job_workflow_ref=None,
+        "gitlab_чужой_конфиг": подписать(свой, заголовок, клеймы_gitlab(
             ci_config_ref_uri="gitlab.com/acme/widgets//other/.gitlab-ci.yml@refs/heads/main")),
+        # GitLab с тегом и клеймом event_name=release: страница релиза бывает только у GitHub
+        "gitlab_с_релизом": подписать(свой, заголовок, клеймы_gitlab(
+            ref="refs/tags/" + ТЕГ_РЕЛИЗА, event_name="release",
+            ci_config_ref_uri="gitlab.com/acme/widgets//.gitlab-ci.yml@refs/tags/" + ТЕГ_РЕЛИЗА)),
+        # конвейер, запущенный публикацией релиза: страница релиза строится из event_name и ref
+        "релиз": подписать(свой, заголовок, клеймы_тега(ТЕГ_РЕЛИЗА, "release")),
+        "релиз_тег_со_слешем": подписать(свой, заголовок, клеймы_тега(ТЕГ_СО_СЛЕШЕМ, "release")),
+        "релиз_перезаписи": подписать(свой, заголовок, клеймы_тега(ТЕГ_ПЕРЕЗАПИСИ, "release")),
+        # тот же тег, но запуск по push тега: релиза нет — и ссылки нет
+        "тег_без_релиза": подписать(свой, заголовок, клеймы_тега(ТЕГ_РЕЛИЗА, "push")),
+        # событие release без клейма actor: кто запустил, токен не говорит
+        "релиз_без_запустившего": подписать(свой, заголовок, клеймы_тега(ТЕГ_РЕЛИЗА, "release",
+                                                                        actor=None)),
         "alg_none": вход_none + ".",
     }
 
@@ -141,6 +173,11 @@ def главная():
         "издатель_gitlab_адрес": ИЗДАТЕЛЬ_GITLAB,
         "конфиг_gitlab": КОНФИГ_GITLAB,
         "реф": РЕФ,
+        "запустивший": ЗАПУСТИВШИЙ,
+        "запустивший_gitlab": ЗАПУСТИВШИЙ_GITLAB,
+        "тег_релиза": ТЕГ_РЕЛИЗА,
+        "тег_со_слешем": ТЕГ_СО_СЛЕШЕМ,
+        "тег_перезаписи": ТЕГ_ПЕРЕЗАПИСИ,
         "kid": KID,
         "адрес_дискавери": ИЗДАТЕЛЬ + "/.well-known/openid-configuration",
         "адрес_ключей": ИЗДАТЕЛЬ + "/.well-known/jwks",
