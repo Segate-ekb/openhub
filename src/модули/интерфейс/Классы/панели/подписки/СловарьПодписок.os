@@ -9,6 +9,7 @@
 
 	КлючиПодписок(Словарь);
 	КлючиОтбораИСужения(Словарь);
+	КлючиДереваПолучателей(Словарь);
 
 КонецПроцедуры
 
@@ -163,6 +164,38 @@
 	Словарь.Добавить("subscriptions.above.events.legend", "Присылать события");
 	Словарь.Добавить("subscriptions.above.button.save", "Сохранить поправку");
 	Словарь.Добавить("subscriptions.above.button.reset", "Снять поправку");
+
+КонецПроцедуры
+
+// Дерево получателей подписки хаба и пула.
+Процедура КлючиДереваПолучателей(Словарь)
+
+	Словарь.Добавить("subscriptions.recipients.legend", "Получатели");
+	Словарь.Добавить("subscriptions.recipients.all",
+		"Подписка сообщает обо всех пулах и пакетах; новые попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.excluded",
+		"Исключены из подписки: %1. Новые пулы и пакеты попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.excluded.pools", "пулов — %1");
+	Словарь.Добавить("subscriptions.recipients.excluded.packages", "пакетов — %1");
+	Словарь.Добавить("subscriptions.recipients.lead",
+		"Снимите галку с того, о ком подписке сообщать не нужно: снятый пул исключает и все свои"
+		+ " пакеты. Новые пулы и пакеты попадают в подписку включёнными.");
+	Словарь.Добавить("subscriptions.recipients.find.label", "Найти пакет");
+	Словарь.Добавить("subscriptions.recipients.find.placeholder", "имя пакета или пула");
+	Словарь.Добавить("subscriptions.recipients.find.button", "Найти");
+	Словарь.Добавить("subscriptions.recipients.private", "приватный");
+	Словарь.Добавить("subscriptions.recipients.packages", "пакетов: %1");
+	Словарь.Добавить("subscriptions.recipients.packages.excluded", "исключено: %1");
+	Словарь.Добавить("subscriptions.recipients.pool.excluded", "исключён со всеми пакетами");
+	Словарь.Добавить("subscriptions.recipients.pool.check",
+		"Сообщать о пуле — снятая галка исключает пул со всеми его пакетами");
+	Словарь.Добавить("subscriptions.recipients.pool.empty", "В пуле пока нет пакетов.");
+	Словарь.Добавить("subscriptions.recipients.more", "Показаны %1 из %2 — остальные найдите поиском.");
+	Словарь.Добавить("subscriptions.recipients.notfound", "Под «%1» не подходит ни один пул или пакет.");
+	Словарь.Добавить("subscriptions.recipients.empty", "Пулов и пакетов пока нет.");
+	Словарь.Добавить("subscriptions.recipients.button.open", "Настроить получателей");
+	Словарь.Добавить("subscriptions.recipients.button.close", "Свернуть дерево");
+	Словарь.Добавить("subscriptions.recipients.button.save", "Сохранить получателей");
 
 КонецПроцедуры
 
