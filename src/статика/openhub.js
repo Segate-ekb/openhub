@@ -335,6 +335,67 @@
 		});
 	}
 
+	/* --- дерево галок ([data-checktree]) ---
+	   Три состояния ветки печатает сервер, здесь — пересчёт на лету по тому же правилу, по
+	   которому сервер сохраняет форму: сняты все пакеты — ветка снята; у снятой ветки отмечены
+	   все показанные — включена целиком; иначе «частично». Непоказанных детей ветка знает
+	   числом ([data-tree-rest-on|off]). Значения галок скрипт не трогает. */
+
+	function галкаУзла(узел) { return узел.querySelector(':scope > div [data-checktree-box]'); }
+	function детиУзла(узел) { return все(':scope > details > ul > li', узел); }
+	function вышеУзла(узел) {
+		var список = узел.parentElement;
+		return список.hasAttribute('data-checktree') ? null : список.closest('li');
+	}
+
+	function поставитьГалку(галка, сост) {
+		галка.checked = сост !== 'off';
+		галка.indeterminate = сост === 'mixed';
+		галка.setAttribute('data-checktree-state', сост);
+		if (сост === 'mixed') { галка.setAttribute('aria-checked', 'mixed'); } else { галка.removeAttribute('aria-checked'); }
+	}
+
+	function пересчитать(узел) {
+		var галка = галкаУзла(узел), вкл = 0, выкл = 0;
+		детиУзла(узел).forEach(function (ребёнок) {
+			if (галкаУзла(ребёнок).checked) { вкл += 1; } else { выкл += 1; }
+		});
+		var на = +галка.getAttribute('data-tree-rest-on') || 0, без = +галка.getAttribute('data-tree-rest-off') || 0;
+		if (галка.getAttribute('data-tree-printed') === 'off') {
+			// у снятой ветки непоказанные идут за показанными: отмечены все — включены и они
+			if (выкл === 0) { вкл += на + без; } else { выкл += на + без; }
+		} else { вкл += на; выкл += без; }
+		поставитьГалку(галка, выкл === 0 ? 'on' : (вкл === 0 ? 'off' : 'mixed'));
+		if (вышеУзла(узел)) { пересчитать(вышеУзла(узел)); }
+	}
+
+	function поставитьВетку(узел, вкл) {
+		поставитьГалку(галкаУзла(узел), вкл ? 'on' : 'off');
+		детиУзла(узел).forEach(function (ребёнок) { поставитьВетку(ребёнок, вкл); });
+	}
+
+	document.addEventListener('change', function (событие) {
+		var галка = событие.target;
+		if (!галка.hasAttribute || !галка.hasAttribute('data-checktree-box')) { return; }
+		var узел = галка.closest('li'), было = галка.getAttribute('data-checktree-state');
+		if (!детиУзла(узел).length) {
+			поставитьГалку(галка, галка.checked ? 'on' : 'off');
+		} else {
+			// «частично» и «снято» щелчком становятся «включено», «включено» — «снято» целиком, вместе
+			// с непоказанными; ветку, которую непоказанные удержали бы в «частично», тот же щелчок снимает
+			if (было !== 'on') { поставитьВетку(узел, true); пересчитать(узел); }
+			if (было === 'on' || галка.getAttribute('data-checktree-state') === было) { поставитьВетку(узел, false); }
+		}
+		if (вышеУзла(узел)) { пересчитать(вышеУзла(узел)); }
+	});
+
+	function оживитьДеревья() {
+		все('[data-checktree-box]').forEach(function (галка) {
+			галка.setAttribute('data-tree-printed', галка.getAttribute('data-checktree-state'));
+			галка.indeterminate = галка.getAttribute('data-checktree-state') === 'mixed';
+		});
+	}
+
 	/* --- живая форма подписки: предпросмотр на лету ([data-sub-preview]) и проба без
 	   перезагрузки ([data-sub-trial]) ---
 	   Сообщение собирает только сервер — той же дверью, что боевая доставка; здесь его ответ
@@ -466,6 +527,7 @@
 		оживитьПлашки();
 		оживитьОтборы();
 		оживитьПодсказки();
+		оживитьДеревья();
 		все('[data-sub-preview]').forEach(оживитьПредпросмотр);
 	}
 
