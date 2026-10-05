@@ -34,7 +34,7 @@ jobs:
         # Тот же выпуск, что в базовом образе хаба (docker/Dockerfile, ARG ONESCRIPT_IMAGE).
         uses: otymko/setup-onescript@v1.5.1
         with:
-          version: 2.2.0
+          version: 2.2.1
 
       - name: Установка зависимостей
         # Порядок пинов держит packagedef.
@@ -83,7 +83,7 @@ jobs:
         # Тот же выпуск, что в базовом образе хаба (docker/Dockerfile, ARG ONESCRIPT_IMAGE).
         uses: otymko/setup-onescript@v1.5.1
         with:
-          version: 2.2.0
+          version: 2.2.1
 
       - name: Установка зависимостей
         run: |

@@ -30,10 +30,10 @@ fi
 
 echo "== Версия из packagedef: $version"
 
-# oscript_modules едет в .ospx и в образ как есть. Сборки форков — winow, autumn-cache, oint — в хабе
-# не опубликованы: их версия в opm-metadata.xml обязана совпасть с .ЗависитОт в packagedef. Расхождение
+# oscript_modules едет в .ospx и в образ как есть. Сборка форка oint ставится из файла, autumn-cache —
+# библиотека владельца: их версия в opm-metadata.xml обязана совпасть с .ЗависитОт в packagedef. Расхождение
 # --push отказывает, проверочная сборка идёт дальше с предупреждением.
-fork_builds="winow autumn-cache oint"
+fork_builds="autumn-cache oint"
 
 wanted_version() {
 	sed -n "s/^[[:space:]]*\.ЗависитОт(\"$1\",[[:space:]]*\"\([^\"]*\)\").*/\1/p" packagedef | head -n1

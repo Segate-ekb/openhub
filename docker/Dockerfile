@@ -1,6 +1,6 @@
 # Образ хаба OpenHub. Контекст сборки — корень репозитория; собирать через docker/образ.sh.
 
-ARG ONESCRIPT_IMAGE=evilbeaver/onescript:2.2.0
+ARG ONESCRIPT_IMAGE=evilbeaver/onescript:2.2.1
 
 FROM ${ONESCRIPT_IMAGE}
 
