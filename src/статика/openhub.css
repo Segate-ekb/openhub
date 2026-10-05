@@ -37,3 +37,25 @@
    с тем, кто его ставит. */
 
 .savebar--dirty { box-shadow: var(--shadow-lg); }
+
+/* --- живая форма подписки: сообщение предпросмотра и итог пробы ---------------------
+   Предпросмотр показывает уведомление так, как его покажет Telegram: простой текст
+   с переносами строк «пузырём» и под ним карточка ссылки. Разметку собирает сервер
+   элементами кита, и оформление находит её по тем же признакам, что и скрипт
+   (data-sub-*), — своих имён классов у неё нет. Итог пробы несёт состояние словом и
+   знаком, цвет — только вторая подсказка. */
+
+[data-sub-preview] { display: grid; gap: var(--space-2); margin: var(--space-2) 0; }
+[data-sub-preview][hidden] { display: none; }
+[data-sub-bubble] {
+	max-width: 32rem; padding: var(--space-2) var(--space-3);
+	background: var(--color-surface-alt); border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-sm);
+}
+[data-sub-text] { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+[data-sub-card] {
+	display: grid; gap: var(--space-1); margin-top: var(--space-2); padding-left: var(--space-2);
+	border-left: 3px solid var(--color-accent); font-size: var(--font-size-small); overflow-wrap: anywhere;
+}
+[data-sub-result="err"] { color: var(--color-danger); white-space: pre-wrap; }
+[data-sub-trial] { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+[data-sub-trial-result] [data-sub-result="ok"] { color: var(--color-success); }

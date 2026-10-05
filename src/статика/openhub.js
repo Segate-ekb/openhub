@@ -1,6 +1,6 @@
 /* OpenHub — прогрессивные улучшения интерфейса.
  *
- * Ванильный JS без сборки, бюджет 15–20 КБ. ВСЁ ЗДЕСЬ — ТОЛЬКО УЛУЧШЕНИЕ: страницы
+ * Ванильный JS без сборки, бюджет 32 КБ. ВСЁ ЗДЕСЬ — ТОЛЬКО УЛУЧШЕНИЕ: страницы
  * обязаны оставаться осмысленными и работоспособными без этого файла (каждый раздел
  * имеет свой URL, каждая мутация — обычную POST-форму). Ни один сценарий ниже не
  * является единственным способом что-либо сделать.
@@ -335,6 +335,93 @@
 		});
 	}
 
+	/* --- живая форма подписки: предпросмотр на лету ([data-sub-preview]) и проба без
+	   перезагрузки ([data-sub-trial]) ---
+	   Сообщение собирает только сервер — той же дверью, что боевая доставка; здесь его ответ
+	   лишь вставляется на место. Адрес, который отвечает кусочком, и имена секретных полей,
+	   которые в предпросмотр не уходят, печатает сервер. Без скрипта место предпросмотра
+	   скрыто, а обе кнопки шлют форму обычной отправкой в новую вкладку. */
+
+	// ответ — разметка с узлом [data-sub-result]; страница отказа гейта его не несёт
+	function вставитьОтвет(цель, текст, запасной) {
+		var узел = new DOMParser().parseFromString(текст, 'text/html').querySelector('[data-sub-result]');
+		цель.textContent = '';
+		if (узел) {
+			цель.appendChild(document.importNode(узел, true));
+		} else {
+			цель.textContent = запасной;
+		}
+	}
+
+	function отправитьКусочек(адрес, поля, сигнал) {
+		return fetch(адрес, { method: 'POST', body: поля, credentials: 'same-origin', signal: сигнал })
+			.then(function (ответ) { return ответ.text(); });
+	}
+
+	function поляФормы(форма, пропустить) {
+		var поля = new URLSearchParams();
+		new FormData(форма).forEach(function (значение, имя) {
+			if (пропустить.indexOf(имя) < 0 && typeof значение === 'string') { поля.append(имя, значение); }
+		});
+		return поля;
+	}
+
+	function оживитьПредпросмотр(место) {
+		var форма = место.closest('form');
+		var цель = место.querySelector('[data-sub-preview-target]');
+		if (!форма || !цель || typeof fetch !== 'function') { return; }
+
+		var секреты = (место.getAttribute('data-sub-omit') || '').split(' ').filter(Boolean);
+		var таймер = null;
+		var прежний = null;
+
+		function обновить() {
+			if (прежний) { прежний.abort(); }
+			прежний = new AbortController();
+			отправитьКусочек(место.getAttribute('data-sub-preview'), поляФормы(форма, секреты), прежний.signal)
+				.then(function (текст) { вставитьОтвет(цель, текст, место.getAttribute('data-sub-failed')); },
+					function (ошибка) {
+						if (ошибка.name !== 'AbortError') { цель.textContent = место.getAttribute('data-sub-failed'); }
+					});
+		}
+
+		function отложить() {
+			clearTimeout(таймер);
+			таймер = setTimeout(обновить, 300);
+		}
+
+		форма.addEventListener('input', отложить);
+		форма.addEventListener('change', отложить);
+		все('[data-sub-preview-button]', форма).forEach(function (кнопка) { кнопка.hidden = true; });
+		место.hidden = false;
+
+		// форма правки живёт в свёрнутой карточке каждой подписки: при загрузке спрашиваем только
+		// видимую, свёрнутую — когда её раскроют или начнут править
+		var карточка = место.closest('details');
+		if (!карточка || карточка.open) {
+			обновить();
+			return;
+		}
+		карточка.addEventListener('toggle', function () {
+			if (карточка.open && !прежний) { обновить(); }
+		});
+	}
+
+	function пробовать(кнопка) {
+		var проба = кнопка.closest('[data-sub-trial]');
+		var форма = кнопка.form;
+		var итог = проба.querySelector('[data-sub-trial-result]');
+		if (!форма || !итог || typeof fetch !== 'function') { return false; }
+
+		кнопка.disabled = true;
+		итог.textContent = проба.getAttribute('data-sub-busy');
+		отправитьКусочек(проба.getAttribute('data-sub-trial'), поляФормы(форма, []))
+			.then(function (текст) { вставитьОтвет(итог, текст, проба.getAttribute('data-sub-failed')); },
+				function () { итог.textContent = проба.getAttribute('data-sub-failed'); })
+			.then(function () { кнопка.disabled = false; });
+		return true;
+	}
+
 	/* --- общая делегированная обработка событий --- */
 
 	document.addEventListener('click', function (событие) {
@@ -346,6 +433,12 @@
 
 		var закрытие = цель.closest('[data-close]');
 		if (закрытие) { закрытьТост(закрытие); return; }
+
+		var проба = цель.closest('[data-sub-trial] button');
+		if (проба) {
+			if (пробовать(проба)) { событие.preventDefault(); }
+			return;
+		}
 
 		var набор = цель.closest('[data-sets] a[href]');
 		if (набор && !событие.defaultPrevented && событие.button === 0
@@ -373,6 +466,7 @@
 		оживитьПлашки();
 		оживитьОтборы();
 		оживитьПодсказки();
+		все('[data-sub-preview]').forEach(оживитьПредпросмотр);
 	}
 
 	if (document.readyState === 'loading') {
