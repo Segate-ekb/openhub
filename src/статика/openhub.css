@@ -54,6 +54,8 @@
    (data-sub-*), — своих имён классов у неё нет. Итог пробы несёт состояние словом и
    знаком, цвет — только вторая подсказка. */
 
+/* пустое поле шаблона показывает шаблон по умолчанию целиком — все его шесть строк */
+form:has([data-sub-preview]) textarea.field__control { min-height: 10.5em; }
 [data-sub-preview] { display: grid; gap: var(--space-2); margin: var(--space-2) 0; }
 [data-sub-preview][hidden] { display: none; }
 [data-sub-bubble] {
