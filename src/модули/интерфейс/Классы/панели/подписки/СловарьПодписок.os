@@ -152,6 +152,7 @@
 	Словарь.Добавить("subscriptions.narrowed.muted", "не присылать");
 	Словарь.Добавить("subscriptions.narrowed.events", "сняты события: %1");
 	Словарь.Добавить("subscriptions.narrowed.tags", "только теги: %1");
+	Словарь.Добавить("subscriptions.narrowed.packages", "исключено: %1");
 
 	Словарь.Добавить("subscriptions.above.title", "Подписки сверху");
 	Словарь.Добавить("subscriptions.above.lead",
@@ -186,6 +187,7 @@
 		+ " и будущих пакетов; новые пулы и пакеты включённых пулов попадают в подписку сами.");
 	Словарь.Добавить("subscriptions.recipients.find.label", "Найти пакет");
 	Словарь.Добавить("subscriptions.recipients.find.placeholder", "имя пакета или пула");
+	Словарь.Добавить("subscriptions.recipients.find.placeholder.package", "имя пакета");
 	Словарь.Добавить("subscriptions.recipients.find.button", "Найти");
 	Словарь.Добавить("subscriptions.recipients.private", "приватный");
 	Словарь.Добавить("subscriptions.recipients.packages.excluded", "исключено: %1");
@@ -199,6 +201,22 @@
 	Словарь.Добавить("subscriptions.recipients.button.save", "Сохранить получателей");
 	Словарь.Добавить("subscriptions.recipients.brief.all", "все; новые попадают сами");
 	Словарь.Добавить("subscriptions.recipients.brief.except", "все, кроме %1");
+
+	Словарь.Добавить("subscriptions.recipients.amendment.legend", "Получатели в пуле");
+	Словарь.Добавить("subscriptions.recipients.amendment.lead",
+		"Снимите галку с пакета пула, о котором подписке хаба сообщать не нужно. Пакет, снятый хозяином"
+		+ " подписки, снят и закрыт: вернуть его отсюда нельзя. Новые пакеты пула попадают в подписку сами.");
+	Словарь.Добавить("subscriptions.recipients.amendment.all",
+		"Подписка сообщает обо всех пакетах пула; новые попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.amendment.except",
+		"Подписка сообщает обо всех пакетах пула, кроме %1. Новые пакеты попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.amendment.except.above",
+		"Подписка сообщает обо всех пакетах пула, кроме снятых хозяином подписки: %1."
+		+ " Новые пакеты попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.amendment.except.split",
+		"Подписка сообщает обо всех пакетах пула, кроме %1: %2 сняли вы, %3 — хозяин подписки."
+		+ " Новые пакеты попадают в неё сами.");
+	Словарь.Добавить("subscriptions.recipients.package.above", "снят хозяином подписки");
 
 	Словарь.Добавить("subscriptions.count.and", " и ");
 	Словарь.Добавить("subscriptions.count.pools", "%1 пул|%1 пула|%1 пулов");
@@ -224,6 +242,7 @@
 	Словарь.Добавить("subscriptions.brief.here.events", "только %1");
 	Словарь.Добавить("subscriptions.brief.quoted", "«%1»");
 	Словарь.Добавить("subscriptions.brief.here.tags", "только с тегами %1");
+	Словарь.Добавить("subscriptions.brief.here.packages", "сняли %1");
 	Словарь.Добавить("subscriptions.brief.owner.hub", "подписка хаба");
 	Словарь.Добавить("subscriptions.brief.owner.pool", "подписка пула %1");
 	Словарь.Добавить("subscriptions.brief.name.hub", "Подписка хаба");
