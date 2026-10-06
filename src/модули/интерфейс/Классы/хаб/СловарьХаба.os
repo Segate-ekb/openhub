@@ -748,6 +748,13 @@
 	Словарь.Добавить("settings.key.oshub-upstream-probe-enabled.hint",
 		"Перед сохранением источника хаб пробует к нему подключиться и не сохраняет адрес,"
 		+ " по которому не дозвонился. Выключайте, если инсталляции ходить наружу нечем.");
+	Словарь.Добавить("settings.key.oshub-readme-repository-enabled.label", "README из репозитория пакета");
+	Словарь.Добавить("settings.key.oshub-readme-repository-enabled.hint",
+		"Если в пакете нет README, хаб ищет его в репозитории пакета на GitHub — на теге версии,"
+		+ " затем в ветке по умолчанию. Выключайте, если инсталляции ходить наружу нечем.");
+	Словарь.Добавить("settings.key.oshub-readme-repository-raw-url.label", "Адрес содержимого GitHub");
+	Словарь.Добавить("settings.key.oshub-readme-repository-raw-url.hint",
+		"Откуда хаб берёт файлы репозиториев на GitHub, когда ищет README.");
 	Словарь.Добавить("settings.key.oshub-proxy-max-redirects.label", "Потолок перенаправлений");
 	Словарь.Добавить("settings.key.oshub-proxy-max-redirects.hint",
 		"Сколько переходов по Location хаб делает, прежде чем счесть цепочку бесконечной.");

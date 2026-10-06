@@ -196,6 +196,8 @@
 	Ярус("oshub.proxy.upstream.recheck.ttl.sec", 3);
 	// проба — политика («ходить наружу или нет»), а не порог: булеву настройку под кат не прячут
 	Ярус("oshub.upstream.probe.enabled", 1);
+	// поход за README в репозиторий — тоже политика «ходить наружу или нет»
+	Ярус("oshub.readme.repository.enabled", 1);
 	Ярус("oshub.proxy.max_redirects", 3);
 
 	Ярус("oshub.ui.audit_page_size", 2);
