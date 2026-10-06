@@ -36,7 +36,7 @@ jobs:
           version: 2.2.1
 
       - name: Установка зависимостей
-        # Порядок пинов держит packagedef.
+        # Версии зависимостей держит packagedef.
         run: |
           opm install opm
           opm install -l --dev
