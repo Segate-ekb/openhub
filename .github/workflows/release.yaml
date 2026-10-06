@@ -1,17 +1,91 @@
-# Публикация openhub на hub.oscript.io при публикации GitHub-релиза.
-# Версия пакета берётся из packagedef — тег релиза на неё не влияет, но обязан совпадать.
+# Публикация пакета openhub в пул default на hub.oscript.io при публикации GitHub-релиза.
+#
+# Версия — `.Версия` в packagedef; тег релиза — `vX.Y.Z` с тем же номером, иначе публикации нет.
+# Пакет `openhub-X.Y.Z.ospx` собирает `opm build .` после установки зависимостей теми же шагами,
+# что в image.yaml: хук ПриСборке кладёт в пакет рантайм-закрытие из oscript_modules.
+#
+# Публикация доверенная, без секретов: конвейер предъявляет хабу короткоживущий id-token
+# GitHub Actions. Публикация проходит, если у пакета openhub в пуле default заведено доверие
+# на репозиторий Segate-ekb/openhub, конвейер release.yaml и реф refs/tags/v* (вид — тег),
+# поэтому запуск только по релизу.
 name: Публикация релиза
 
 on:
   release:
     types:
       - published
-  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write          # без этого GitHub не выпустит id-token
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  release:
-    uses: autumn-library/workflows/.github/workflows/release.yml@main
-    with:
-      package_mask: "openhub-*.ospx"
-    secrets:
-      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+  publish:
+    name: Публикация на hub.oscript.io
+    runs-on: ubuntu-latest
+    env:
+      audience: https://hub.oscript.io
+      hub: https://hub.oscript.io
+      pool: default
+      package: openhub
+    steps:
+      - name: Актуализация
+        uses: actions/checkout@v7.0.1
+
+      - name: Сверка тега с версией
+        run: |
+          version="$(sed -n 's/^[[:space:]]*\.Версия("\([^"]*\)").*/\1/p' packagedef | head -n1)"
+          if [ "$GITHUB_REF_NAME" != "v$version" ]; then
+            echo "::error::Тег релиза $GITHUB_REF_NAME не совпадает с версией $version в packagedef: ожидается тег v$version"
+            exit 1
+          fi
+          echo "file=${package}-${version}.ospx" >> "$GITHUB_ENV"
+
+      - name: Установка OneScript
+        # Тот же выпуск, что в базовом образе хаба (docker/Dockerfile, ARG ONESCRIPT_IMAGE).
+        uses: otymko/setup-onescript@v1.5.1
+        with:
+          version: 2.2.1
+
+      - name: Установка зависимостей
+        # Без dev-зависимостей: в пакет едет только рантайм-закрытие. Источники — opm.cfg
+        # в корне репозитория.
+        run: |
+          opm install opm
+          opm install -l
+
+      - name: Сборка пакета
+        run: |
+          opm build .
+          test -f "$file" || { echo "::error::Сборка не дала $file"; exit 1; }
+
+      - name: Публикация
+        run: |
+          id_token="$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=$audience" | jq -r .value)"
+          echo "::add-mask::$id_token"
+          if [ -z "$id_token" ] || [ "$id_token" = "null" ]; then
+            echo "::error::GitHub не выдал id-token"
+            exit 1
+          fi
+
+          status="$(curl -sS -o response.txt -w '%{http_code}' -X POST "$hub/api/v1/pools/$pool/push" \
+            -H "OAUTH-TOKEN: $id_token" \
+            -H "FILE-NAME: $(basename "$file")" \
+            --data-binary "@$file")"
+          echo "Ответ хаба: HTTP $status"
+          cat response.txt
+          echo
+          case "$status" in
+            2??) ;;
+            *) echo "::error::Хаб отверг $file: HTTP $status"; exit 1 ;;
+          esac
+
+          {
+            echo "### Опубликован \`$file\`"
+            echo "Пул \`$pool\` на $hub, доверенный конвейер."
+          } >> "$GITHUB_STEP_SUMMARY"
