@@ -30,6 +30,12 @@
 	Словарь.Добавить("public.showcase.upstream.tag", "с апстрима");
 	Словарь.Добавить("public.showcase.upstream.hint",
 		"Ни одна версия этого имени не опубликована здесь — все получены с апстрима");
+	Словарь.Добавить("public.showcase.reserve.tag", "резерв");
+	Словарь.Добавить("public.showcase.reserve.hint",
+		"Имя занято, версий ещё нет: первая публикация придёт в этот пакет");
+	Словарь.Добавить("public.showcase.reserve.release", "Снять резерв");
+	Словарь.Добавить("public.showcase.reserve.release.hint",
+		"Удалить пакет без версий вместе с ролями на него и освободить имя");
 	Словарь.Добавить("public.showcase.settings.label", "Настройки");
 	Словарь.Добавить("public.showcase.settings.hint", "Изменить настройки пакета");
 
