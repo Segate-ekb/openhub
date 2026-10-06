@@ -6,7 +6,7 @@ name: openhub-server
 
 services:
   openhub:
-    image: segateekb/openhub:0.20.3
+    image: segateekb/openhub:0.20.4
     restart: unless-stopped
     depends_on:
       postgres:
