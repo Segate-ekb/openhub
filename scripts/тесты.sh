@@ -8,10 +8,14 @@
 #   scripts/тесты.sh --e2e                        # все живые наборы tests/e2e/
 #   scripts/тесты.sh --всё                        # регрессия: всё дерево без тега «внешние»
 #   scripts/тесты.sh --внешние                    # наборы tests/внешние/ — с поднятыми системами
+#   scripts/тесты.sh --инфраструктура             # самотесты обвязки tests/инфраструктура/
 #   scripts/тесты.sh <модуль> --список            # напечатать отобранные наборы (и почему) и выйти
 #   scripts/тесты.sh <модуль> -- --mode summary   # всё после «--» уходит в oneunit execute
 #
 # Ключи модуля сочетаются: `scripts/тесты.sh вход --с-потребителями --e2e`.
+#
+# Вывод открывает шапка прогона (коммит, состояние дерева, команда, время начала) и закрывает
+# итог с кодом выхода, во всех режимах; формат — в scripts/шапка-прогона.sh.
 #
 # Наборы отбираются файлами (`-f`), а не тегами: фильтр тегов не доходит до наборов
 # с &Изолированный(Уровень = "Процесс"), см. scripts/смоук.sh. Регрессия тег всё же ставит:
@@ -32,6 +36,16 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
+. "$ROOT_DIR/scripts/шапка-прогона.sh"
+run_header "$ROOT_DIR" "$0" "$@"
+WORK=""
+on_exit() {
+	local code=$?
+	if [ -n "$WORK" ]; then rm -rf "$WORK"; fi
+	run_footer "$code"
+}
+trap on_exit EXIT
+
 # Границы слов у grep -w — по буквам кириллицы только в UTF-8; прогону возвращается своя локаль.
 ORIGINAL_LC_ALL="${LC_ALL-}"
 export LC_ALL=C.UTF-8
@@ -42,6 +56,7 @@ WITH_CONSUMERS=0
 WITH_E2E=0
 EVERYTHING=0
 EXTERNAL=0
+INFRASTRUCTURE=0
 LIST_ONLY=0
 PASS=()
 
@@ -51,6 +66,7 @@ while [ $# -gt 0 ]; do
 		--e2e) WITH_E2E=1 ;;
 		--всё) EVERYTHING=1 ;;
 		--внешние) EXTERNAL=1 ;;
+		--инфраструктура) INFRASTRUCTURE=1 ;;
 		--список) LIST_ONLY=1 ;;
 		--) shift; PASS=("$@"); break ;;
 		-*) echo "Неизвестный ключ: $1" >&2; exit 2 ;;
@@ -66,20 +82,20 @@ while [ $# -gt 0 ]; do
 done
 
 usage() {
-	sed -n '3,12p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
+	sed -n '3,13p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
 	exit 2
 }
 
-if [ $((EVERYTHING + EXTERNAL)) -gt 0 ] \
-	&& { [ -n "$MODULE" ] || [ $((EVERYTHING + EXTERNAL + WITH_E2E + WITH_CONSUMERS)) -gt 1 ]; }; then
-	echo "--всё и --внешние не сочетаются с модулем и другими ключами." >&2
+if [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE)) -gt 0 ] \
+	&& { [ -n "$MODULE" ] || [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + WITH_E2E + WITH_CONSUMERS)) -gt 1 ]; }; then
+	echo "--всё, --внешние и --инфраструктура не сочетаются с модулем и другими ключами." >&2
 	exit 2
 fi
 if [ -z "$MODULE" ] && [ "$WITH_CONSUMERS" -eq 1 ]; then
 	echo "--с-потребителями требует модуля." >&2
 	exit 2
 fi
-if [ -z "$MODULE" ] && [ $((EVERYTHING + EXTERNAL + WITH_E2E)) -eq 0 ]; then
+if [ -z "$MODULE" ] && [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + WITH_E2E)) -eq 0 ]; then
 	usage
 fi
 if [ -n "$MODULE" ] && [ ! -d "src/модули/$MODULE" ]; then
@@ -89,7 +105,6 @@ if [ -n "$MODULE" ] && [ ! -d "src/модули/$MODULE" ]; then
 fi
 
 WORK="$(mktemp -d)"
-trap 'rm -rf "$WORK"' EXIT
 
 # Наборы — *_Тесты.os вне каталогов фикстур; каталог модуля без вложенных каталогов.
 all_suites() {
@@ -304,6 +319,9 @@ if [ "$EVERYTHING" -eq 1 ]; then
 elif [ "$EXTERNAL" -eq 1 ]; then
 	suites_in внешние > "$WORK/selected"
 	TITLE="внешние наборы"
+elif [ "$INFRASTRUCTURE" -eq 1 ]; then
+	suites_in инфраструктура > "$WORK/selected"
+	TITLE="самотесты обвязки tests/инфраструктура"
 elif [ -z "$MODULE" ]; then
 	find tests/e2e -name '*_Тесты.os' > "$WORK/selected"
 	TITLE="все живые наборы"
@@ -346,7 +364,7 @@ if [ "$LIST_ONLY" -eq 1 ]; then
 	exit 0
 fi
 
-# exec подменяет процесс, и ловушка EXIT уже не сработает
-rm -rf "$WORK"
 if [ -n "$ORIGINAL_LC_ALL" ]; then export LC_ALL="$ORIGINAL_LC_ALL"; else unset LC_ALL; fi
-exec oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "${FILE_ARGS[@]}" ${PASS[@]+"${PASS[@]}"}
+code=0
+oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "${FILE_ARGS[@]}" ${PASS[@]+"${PASS[@]}"} || code=$?
+exit "$code"
