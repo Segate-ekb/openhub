@@ -30,7 +30,7 @@ fi
 
 echo "== Версия из packagedef: $version"
 
-# oscript_modules едет в .ospx и в образ как есть. Сборка форка oint ставится из файла, autumn-cache —
+# oscript_modules едет в .ospx и в образ как есть. oint — сборка форка из пула segate-ekb, autumn-cache —
 # библиотека владельца: их версия в opm-metadata.xml обязана совпасть с .ЗависитОт в packagedef. Расхождение
 # --push отказывает, проверочная сборка идёт дальше с предупреждением.
 fork_builds="autumn-cache oint"
@@ -55,8 +55,8 @@ done
 builds_explain() {
 	printf '%s' "$mismatched" >&2
 	cat >&2 <<-MSG
-	Поставить сборки форков нужных версий — шаг «Собрать и запустить» в docs/разработка.md
-	(opm install -l -s -f <каталог>/<библиотека>-<версия>.ospx).
+	Поставить зависимости версий packagedef — opm install -l в корне репозитория (пулы — в opm.cfg),
+	шаг «Собрать и запустить» в docs/разработка.md.
 	MSG
 }
 
