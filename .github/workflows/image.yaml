@@ -24,7 +24,6 @@ on:
 
 env:
   IMAGE_REPO: segateekb/openhub
-  OPM_HUB_MIRROR: oscript-hub
 
 jobs:
   image:
@@ -43,7 +42,7 @@ jobs:
       - name: Установка зависимостей
         # Образ несёт oscript_modules внутри .ospx, поэтому зависимости нужны до сборки
         # пакета, а не внутри Dockerfile: opm (обновлённый из хаба) ставит пакет из файла
-        # с -s, зависимости из хаба не ставятся.
+        # с -s, зависимости из хаба не ставятся. Источники — opm.cfg в корне репозитория.
         run: |
           opm install opm
           opm install -l
