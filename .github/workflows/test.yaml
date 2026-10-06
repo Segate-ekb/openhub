@@ -10,7 +10,7 @@
 # (всё дерево файлами, тег «внешние» исключён), смоук — через scripts/смоук.sh.
 #
 # Зависимости ставит `opm install -l` из корня репозитория: источники — opm.cfg рядом
-# с packagedef (пул segate-ekb, за ним основной пул hub.oscript.io).
+# с packagedef (основной пул hub.oscript.io, за ним пул segate-ekb).
 name: Тестирование
 
 # push только на main + pull_request — без двойных прогонов для веток с PR
