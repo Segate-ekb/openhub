@@ -128,7 +128,6 @@
 	Добавить("chrome.menu.deed.inbox.count", "Заявок ждут решения: %1");
 
 	Добавить("chrome.menu.badge.waiting", "Ждут вашего внимания: %1");
-	Добавить("chrome.menu.deed.office", "Кабинет");
 	Добавить("chrome.menu.deed.space", "Личное пространство");
 	Добавить("chrome.menu.deed.packages", "Мои пакеты");
 	Добавить("chrome.menu.deed.notifications", "Уведомления");
