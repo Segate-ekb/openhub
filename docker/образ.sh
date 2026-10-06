@@ -4,6 +4,10 @@
 # Версия берётся из packagedef и больше нигде не пишется: ею помечаются .ospx, теги
 # образа и метки OCI.
 #
+# Зависимости едут внутри .ospx: хук ПриСборке в packagedef кладёт в пакет рантайм-закрытие
+# .ЗависитОт из oscript_modules без dev-зависимостей, посторонних библиотек и частей, которых
+# хаб не грузит (tools/ПоставкаЗависимостей.os). oscript_modules сборка только читает.
+#
 #   docker/образ.sh                          # segateekb/openhub:<версия> локально
 #   docker/образ.sh --push                   # собрать и отправить в реестр
 #   docker/образ.sh --push harbor.example/openhub   # другой репозиторий
@@ -30,7 +34,7 @@ fi
 
 echo "== Версия из packagedef: $version"
 
-# oscript_modules едет в .ospx и в образ как есть. oint — сборка форка из пула segate-ekb, autumn-cache —
+# Версия сборки в пакете — та, что установлена в oscript_modules. oint — сборка форка из пула segate-ekb, autumn-cache —
 # библиотека владельца: их версия в opm-metadata.xml обязана совпасть с .ЗависитОт в packagedef. Расхождение
 # --push отказывает, проверочная сборка идёт дальше с предупреждением.
 fork_builds="autumn-cache oint"
