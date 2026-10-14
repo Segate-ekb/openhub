@@ -27,3 +27,6 @@ oscript_modules
 
 # журналы локальных прогонов тестов (oneunit execute > прогон*.log)
 прогон*.log
+
+# Личные настройки Claude Code сессии — у каждого свои
+.claude/settings.json
