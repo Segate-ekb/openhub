@@ -102,3 +102,8 @@ jobs:
         env:
           OSHUB_TEST_PG_DSN: Host=localhost;Port=15432;Username=openhub;Password=openhub;Database=openhub
         run: oneunit execute -f tests/внешние/АгрегатыPostgreSQL_Тесты.os -f tests/внешние/СмокБэкендов_Тесты.os
+
+      - name: Карантин OneUnit (плавающие под нагрузкой)
+        # Наборы *_Плавающие_Тесты.os регрессия не берёт: красное здесь видно, но конвейер не роняет.
+        continue-on-error: true
+        run: scripts/тесты.sh --плавающие

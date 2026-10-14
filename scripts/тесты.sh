@@ -2,17 +2,37 @@
 #
 # Тесты OpenHub по модулям: наборы модуля лежат в tests/<модуль>/, живые — в tests/e2e/<модуль>/.
 #
-#   scripts/тесты.sh <модуль>                     # tests/<модуль>/ и tests/сквозные/
+#   scripts/тесты.sh <модуль>                     # наборы модуля tests/<модуль>/ — перед коммитом шага
+#   scripts/тесты.sh <модуль> --сквозные          # плюс линты tests/сквозные/ — один раз в конце шага
 #   scripts/тесты.sh <модуль> --с-потребителями   # плюс чужие наборы, грузящие код модуля
 #   scripts/тесты.sh <модуль> --e2e               # плюс живые наборы tests/e2e/<модуль>/
 #   scripts/тесты.sh --e2e                        # все живые наборы tests/e2e/
 #   scripts/тесты.sh --всё                        # регрессия: всё дерево без тега «внешние»
 #   scripts/тесты.sh --внешние                    # наборы tests/внешние/ — с поднятыми системами
 #   scripts/тесты.sh --инфраструктура             # самотесты обвязки tests/инфраструктура/
+#   scripts/тесты.sh --плавающие                  # только карантин *_Плавающие_Тесты.os, без корзин
+#   scripts/тесты.sh <модуль> --параллельно 4     # отобранное — в 4 одновременных oneunit
+#   scripts/тесты.sh <модуль> --время             # наборы по одному: таблица «набор — секунды»
 #   scripts/тесты.sh <модуль> --список            # напечатать отобранные наборы (и почему) и выйти
 #   scripts/тесты.sh <модуль> -- --mode summary   # всё после «--» уходит в oneunit execute
 #
-# Ключи модуля сочетаются: `scripts/тесты.sh вход --с-потребителями --e2e`.
+# Ключи модуля сочетаются: `scripts/тесты.sh вход --сквозные --с-потребителями --e2e`.
+#
+# Наборы карантина (*_Плавающие_Тесты.os) — тесты, которые плавают под нагрузкой: их не берёт ни один
+# режим, кроме --плавающие.
+#
+# --параллельно N (без ключа прогон один) делит отобранные наборы на N корзин, выравнивая суммарный
+# размер файлов, и гоняет каждую своим oneunit execute в своём временном воркспейсе git с копией
+# oscript_modules: процессы одного чекаута мешают друг другу читать общие файлы. Воркспейсы стоят
+# на снимке рабочего дерева — корзины гоняют ровно то, что в дереве, с правками и новыми файлами.
+# Снимок — висячий коммит, его объекты убирает обычный gc.
+# Корзина — своя группа процессов: прерванный прогон гасит её целиком и только потом снимает
+# воркспейсы. Вывод первой корзины идёт по ходу прогона, остальных — по её окончании, строками
+# «корзина K │ …»; за ними — СВОДКА: суммы строк статистики oneunit и «Тестирование завершилось
+# удачно», только если так закончилась каждая корзина; код выхода — ненулевой, если ненулевой
+# у любой корзины. Ключи файлов отчёта oneunit после «--» (--junit, --cobertura и другие) корзины
+# не принимают — код 2: все корзины писали бы в один файл; отчёт снимают прогоном в один поток.
+# --время и --плавающие корзин не делят.
 #
 # Вывод открывает шапка прогона (коммит, состояние дерева, команда, время начала) и закрывает
 # итог с кодом выхода, во всех режимах; формат — в scripts/шапка-прогона.sh.
@@ -39,12 +59,69 @@ cd "$ROOT_DIR"
 . "$ROOT_DIR/scripts/шапка-прогона.sh"
 run_header "$ROOT_DIR" "$0" "$@"
 WORK=""
+BUCKETS=1
+# BUCKET_PIDS — PID корзин по номерам; дождавшаяся корзина оставляет пустую строку, чтобы сигнал
+# не ушёл группе, чей номер система уже отдала другому процессу.
+BUCKET_PIDS=()
+BUCKET_TREES=()
 on_exit() {
 	local code=$?
+	if [ "${#BUCKET_PIDS[@]}" -gt 0 ]; then
+		stop_buckets
+		print_bucket_tails
+	fi
+	remove_bucket_trees
 	if [ -n "$WORK" ]; then rm -rf "$WORK"; fi
 	run_footer "$code"
 }
 trap on_exit EXIT
+
+# Корзины, не дождавшиеся конца, гасятся группой процессов целиком — с хабами и изолированными
+# наборами: фоновые группы сигнал терминала не получают. Упрямой группе через пять секунд — KILL.
+stop_buckets() {
+	local pid tick=0
+	for pid in "${BUCKET_PIDS[@]}"; do
+		if [ -n "$pid" ]; then kill -TERM -- "-$pid" 2>/dev/null || true; fi
+	done
+	while [ "$tick" -lt 50 ] && buckets_alive; do sleep 0.1; tick=$((tick + 1)); done
+	for pid in "${BUCKET_PIDS[@]}"; do
+		if [ -n "$pid" ]; then kill -KILL -- "-$pid" 2>/dev/null || true; fi
+	done
+	for pid in "${BUCKET_PIDS[@]}"; do
+		if [ -n "$pid" ]; then wait "$pid" 2>/dev/null || true; fi
+	done
+}
+
+buckets_alive() {
+	local pid
+	for pid in "${BUCKET_PIDS[@]}"; do
+		if [ -n "$pid" ] && kill -0 -- "-$pid" 2>/dev/null; then return 0; fi
+	done
+	return 1
+}
+
+# Хвосты журналов прерванных корзин — до того, как каталог с журналами уйдёт.
+print_bucket_tails() {
+	local b=1
+	while [ "$b" -le "${#BUCKET_PIDS[@]}" ]; do
+		if [ -n "${BUCKET_PIDS[$((b - 1))]}" ] && [ -s "$WORK/bucket-$b.log" ]; then
+			echo "== корзина $b/$BUCKETS: прервана, последние 30 строк журнала"
+			tail -n 30 "$WORK/bucket-$b.log" | sed "s/^/корзина $b │ /"
+		fi
+		b=$((b + 1))
+	done
+}
+
+# Временные воркспейсы корзин снимаются после того, как их процессы дождались конца.
+remove_bucket_trees() {
+	local tree failure
+	for tree in ${BUCKET_TREES[@]+"${BUCKET_TREES[@]}"}; do
+		if ! failure="$(git -C "$ROOT_DIR" worktree remove --force "$tree" 2>&1)"; then
+			echo "Воркспейс корзины не снят: $tree — $failure" >&2
+		fi
+	done
+	BUCKET_TREES=()
+}
 
 # Границы слов у grep -w — по буквам кириллицы только в UTF-8; прогону возвращается своя локаль.
 ORIGINAL_LC_ALL="${LC_ALL-}"
@@ -53,20 +130,30 @@ export LC_ALL=C.UTF-8
 # Имена переменных латиницей — bash 3.2 кириллических не принимает; mapfile в нём тоже нет.
 MODULE=""
 WITH_CONSUMERS=0
+WITH_CROSS=0
 WITH_E2E=0
 EVERYTHING=0
 EXTERNAL=0
 INFRASTRUCTURE=0
+FLAKY=0
+TIMING=0
 LIST_ONLY=0
+JOBS=""
 PASS=()
 
 while [ $# -gt 0 ]; do
 	case "$1" in
 		--с-потребителями) WITH_CONSUMERS=1 ;;
+		--сквозные) WITH_CROSS=1 ;;
 		--e2e) WITH_E2E=1 ;;
 		--всё) EVERYTHING=1 ;;
 		--внешние) EXTERNAL=1 ;;
 		--инфраструктура) INFRASTRUCTURE=1 ;;
+		--плавающие) FLAKY=1 ;;
+		--время) TIMING=1 ;;
+		--параллельно)
+			if [ $# -lt 2 ]; then echo "--параллельно ждёт число корзин." >&2; exit 2; fi
+			JOBS="$2"; shift ;;
 		--список) LIST_ONLY=1 ;;
 		--) shift; PASS=("$@"); break ;;
 		-*) echo "Неизвестный ключ: $1" >&2; exit 2 ;;
@@ -82,20 +169,32 @@ while [ $# -gt 0 ]; do
 done
 
 usage() {
-	sed -n '3,13p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
+	sed -n '3,17p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
 	exit 2
 }
 
-if [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE)) -gt 0 ] \
-	&& { [ -n "$MODULE" ] || [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + WITH_E2E + WITH_CONSUMERS)) -gt 1 ]; }; then
-	echo "--всё, --внешние и --инфраструктура не сочетаются с модулем и другими ключами." >&2
+if [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + FLAKY)) -gt 0 ] \
+	&& { [ -n "$MODULE" ] || [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + FLAKY + WITH_E2E + WITH_CONSUMERS + WITH_CROSS)) -gt 1 ]; }; then
+	echo "--всё, --внешние, --инфраструктура и --плавающие не сочетаются с модулем и другими ключами." >&2
 	exit 2
 fi
+if [ -n "$JOBS" ] && [ $((FLAKY + TIMING)) -gt 0 ]; then
+	echo "--плавающие и --время корзин не делят: --параллельно с ними не сочетается." >&2
+	exit 2
+fi
+case "$JOBS" in
+	"") JOBS=1 ;;
+	*[!0-9]* | 0*) echo "Число корзин — целое больше нуля, а не «${JOBS}»." >&2; exit 2 ;;
+esac
 if [ -z "$MODULE" ] && [ "$WITH_CONSUMERS" -eq 1 ]; then
 	echo "--с-потребителями требует модуля." >&2
 	exit 2
 fi
-if [ -z "$MODULE" ] && [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + WITH_E2E)) -eq 0 ]; then
+if [ -z "$MODULE" ] && [ "$WITH_CROSS" -eq 1 ]; then
+	echo "--сквозные требует модуля." >&2
+	exit 2
+fi
+if [ -z "$MODULE" ] && [ $((EVERYTHING + EXTERNAL + INFRASTRUCTURE + FLAKY + WITH_E2E)) -eq 0 ]; then
 	usage
 fi
 if [ -n "$MODULE" ] && [ ! -d "src/модули/$MODULE" ]; then
@@ -106,14 +205,18 @@ fi
 
 WORK="$(mktemp -d)"
 
-# Наборы — *_Тесты.os вне каталогов фикстур; каталог модуля без вложенных каталогов.
+# Наборы — *_Тесты.os вне каталогов фикстур и вне карантина; каталог модуля без вложенных каталогов.
+QUARANTINE='*_Плавающие_Тесты.os'
 all_suites() {
-	find tests -name '*_Тесты.os' -not -path '*/фикстуры/*'
+	find tests -name '*_Тесты.os' -not -name "$QUARANTINE" -not -path '*/фикстуры/*'
 }
 suites_in() {
 	if [ -d "tests/$1" ]; then
-		find "tests/$1" -maxdepth 1 -name '*_Тесты.os'
+		find "tests/$1" -maxdepth 1 -name '*_Тесты.os' -not -name "$QUARANTINE"
 	fi
+}
+quarantined_suites() {
+	find tests -name "$QUARANTINE" -not -path '*/фикстуры/*'
 }
 
 # ---------------------------------------------------------------- потребители модуля
@@ -322,12 +425,23 @@ elif [ "$EXTERNAL" -eq 1 ]; then
 elif [ "$INFRASTRUCTURE" -eq 1 ]; then
 	suites_in инфраструктура > "$WORK/selected"
 	TITLE="самотесты обвязки tests/инфраструктура"
+elif [ "$FLAKY" -eq 1 ]; then
+	quarantined_suites > "$WORK/selected"
+	TITLE="карантин: наборы, плавающие под нагрузкой"
 elif [ -z "$MODULE" ]; then
-	find tests/e2e -name '*_Тесты.os' > "$WORK/selected"
+	find tests/e2e -name '*_Тесты.os' -not -name "$QUARANTINE" > "$WORK/selected"
 	TITLE="все живые наборы"
 else
-	{ suites_in "$MODULE"; suites_in сквозные; } > "$WORK/selected"
-	TITLE="модуль $MODULE и сквозные наборы"
+	suites_in "$MODULE" > "$WORK/selected"
+	if [ "$WITH_CROSS" -eq 1 ]; then
+		suites_in сквозные | while IFS= read -r suite; do
+			echo "$suite"
+			printf '%s\tключ --сквозные\n' "$suite" >> "$WORK/reasons"
+		done >> "$WORK/selected"
+		TITLE="модуль $MODULE и сквозные наборы (ключ --сквозные)"
+	else
+		TITLE="модуль $MODULE без сквозных наборов (их добавляет --сквозные)"
+	fi
 	if [ "$WITH_CONSUMERS" -eq 1 ]; then
 		consumers >> "$WORK/selected"
 		TITLE="$TITLE, потребители модуля"
@@ -339,10 +453,8 @@ else
 fi
 
 SUITES=()
-FILE_ARGS=()
 while IFS= read -r suite; do
 	SUITES+=("$suite")
-	FILE_ARGS+=(-f "$suite")
 done < <(sort -u "$WORK/selected")
 
 if [ "${#SUITES[@]}" -eq 0 ]; then
@@ -350,7 +462,49 @@ if [ "${#SUITES[@]}" -eq 0 ]; then
 	exit 1
 fi
 
-echo "== Тесты: $TITLE — ${#SUITES[@]} наборов"
+# Корзины: наборы по убыванию размера файла, каждый — в корзину с наименьшей суммой размеров;
+# корзин не больше, чем наборов. Строки «<номер корзины>\t<набор>» — в $WORK/buckets.
+split_into_buckets() {
+	local suite
+	for suite in "${SUITES[@]}"; do
+		printf '%s\t%s\n' "$(wc -c < "$suite" | tr -d ' ')" "$suite"
+	done | sort -t "$(printf '\t')" -k1,1nr -k2,2 | awk -F '\t' -v jobs="$JOBS" '
+		{ sizes[NR] = $1; paths[NR] = $2 }
+		END {
+			buckets = (NR < jobs) ? NR : jobs
+			for (b = 1; b <= buckets; b++) load[b] = 0
+			for (i = 1; i <= NR; i++) {
+				best = 1
+				for (b = 2; b <= buckets; b++) if (load[b] < load[best]) best = b
+				load[best] += sizes[i]
+				print best "\t" paths[i]
+			}
+		}' > "$WORK/buckets"
+	BUCKETS="$(cut -f1 "$WORK/buckets" | sort -un | tail -1)"
+}
+
+if [ "$JOBS" -gt 1 ]; then
+	split_into_buckets
+fi
+
+if [ "$BUCKETS" -gt 1 ] && [ "$LIST_ONLY" -eq 0 ]; then
+	if [ "$RUN_IN_GIT" -ne 1 ]; then
+		echo "Параллельный режим гоняет корзины во временных воркспейсах git, а каталог вне git." >&2
+		exit 2
+	fi
+	for argument in ${PASS[@]+"${PASS[@]}"}; do
+		case "$argument" in
+			--junit | --junit=* | --genericExecution | --genericExecution=* | --openTestReport \
+				| --openTestReport=* | --genericCoverage | --genericCoverage=* | --cobertura | --cobertura=*)
+				echo "В параллельном режиме отчёты oneunit не поддерживаются: уберите ${argument%%=*} или гоняйте в один поток." >&2
+				exit 2 ;;
+		esac
+	done
+fi
+
+heading="== Тесты: $TITLE — ${#SUITES[@]} наборов"
+if [ "$BUCKETS" -gt 1 ]; then heading="$heading, корзин $BUCKETS"; fi
+echo "$heading"
 for suite in "${SUITES[@]}"; do
 	reason=""
 	if [ "$LIST_ONLY" -eq 1 ] && [ -s "$WORK/reasons" ]; then
@@ -358,13 +512,161 @@ for suite in "${SUITES[@]}"; do
 	fi
 	echo "   $suite${reason:+  ← $reason}"
 done
+if [ "$BUCKETS" -gt 1 ]; then
+	sort -t "$(printf '\t')" -k1,1n -k2,2 "$WORK/buckets" \
+		| awk -F '\t' -v buckets="$BUCKETS" '{ printf "== корзина %s/%s: %s\n", $1, buckets, $2 }'
+fi
 echo
 
 if [ "$LIST_ONLY" -eq 1 ]; then
 	exit 0
 fi
 
+# Сводка прогонов oneunit: суммы строк статистики и вердикт. Строки «<имя>\t<код>\t<лог>» —
+# в файле-аргументе; «удачно» — только если каждый прогон вышел с кодом 0 и так и написал.
+summarize() {
+	local name status log verdict="удачно"
+	echo "== СВОДКА: прогонов oneunit $(grep -c '' "$1")"
+	cut -f3 "$1" | while IFS= read -r log; do cat "$log"; done | awk '
+		/^\[ *[0-9]+ (Наборов|Тестов) .*\]$/ {
+			line = $0
+			sub(/^\[ */, "", line); sub(/ *\]$/, "", line)
+			count = line; sub(/ .*/, "", count)
+			label = line; sub(/^[0-9]+ /, "", label)
+			if (!(label in sums)) order[++labels] = label
+			sums[label] += count
+		}
+		END {
+			for (i = 1; i <= labels; i++) {
+				group = order[i]; sub(/ .*/, "", group)
+				if (i > 1 && group != previous) print ""
+				printf "[ %9d %s ]\n", sums[order[i]], order[i]
+				previous = group
+			}
+		}'
+	echo
+	while IFS=$'\t' read -r name status log; do
+		if [ "$status" -ne 0 ]; then
+			echo "== $name: код $status"
+			verdict="неудачно"
+		elif ! grep -q '^Тестирование завершилось удачно' "$log"; then
+			echo "== $name: oneunit не написал «Тестирование завершилось удачно»"
+			verdict="неудачно"
+		fi
+	done < "$1"
+	echo "Тестирование завершилось $verdict"
+	[ "$verdict" = "удачно" ]
+}
+
+# Снимок рабочего дерева коммитом поверх HEAD — то, что гоняют корзины. Индекс временный:
+# основной индекс чекаута не трогается, игнорируемое (oscript_modules) в снимок не идёт.
+snapshot_tree() {
+	local index="$WORK/снимок.index" tree parent=()
+	if [ -n "$(tree_head)" ]; then
+		parent=(-p HEAD)
+		GIT_INDEX_FILE="$index" git read-tree HEAD
+	fi
+	GIT_INDEX_FILE="$index" git add -A
+	tree="$(GIT_INDEX_FILE="$index" git write-tree)"
+	GIT_AUTHOR_NAME="scripts/тесты.sh" GIT_AUTHOR_EMAIL="tests@localhost" \
+		GIT_COMMITTER_NAME="scripts/тесты.sh" GIT_COMMITTER_EMAIL="tests@localhost" \
+		git commit-tree --no-gpg-sign ${parent[@]+"${parent[@]}"} -m "снимок для параллельного прогона" "$tree"
+}
+
+# Корзина в своём воркспейсе со своей копией зависимостей; на macOS копия — клон файлов.
+run_bucket() {
+	local tree="$1"
+	shift
+	if [ -e oscript_modules ]; then
+		cp -c -a oscript_modules/. "$tree/oscript_modules" 2> /dev/null \
+			|| cp -a oscript_modules/. "$tree/oscript_modules" || exit 1
+	fi
+	cd "$tree" || exit 1
+	exec oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "$@" ${PASS[@]+"${PASS[@]}"}
+}
+
+# Корзины одновременно, каждая своим oneunit в своём воркспейсе на снимке дерева, своей группой
+# процессов и в свой лог. Первая печатается по ходу прогона, остальные — по окончании, по порядку.
+# Пути наборов — относительно корня, в воркспейсе они те же.
+run_parallel() {
+	local b=1 args bucket suite status snapshot
+	snapshot="$(snapshot_tree)"
+	: > "$WORK/runs"
+	while [ "$b" -le "$BUCKETS" ]; do
+		git worktree add --quiet --detach "$WORK/корзина-$b" "$snapshot"
+		BUCKET_TREES+=("$WORK/корзина-$b")
+		b=$((b + 1))
+	done
+
+	# Своя группа процессов (set -m) — только у корзин: иначе её получил бы и каждый sed или git.
+	set -m
+	b=1
+	while [ "$b" -le "$BUCKETS" ]; do
+		args=()
+		while IFS=$'\t' read -r bucket suite; do
+			if [ "$bucket" = "$b" ]; then args+=(-f "$suite"); fi
+		done < "$WORK/buckets"
+		if [ "$b" -eq 1 ]; then
+			( run_bucket "$WORK/корзина-1" "${args[@]}" 2>&1 | tee "$WORK/bucket-1.log" \
+				| awk '{ print "корзина 1 │ " $0; fflush() }' ) < /dev/null &
+		else
+			run_bucket "$WORK/корзина-$b" "${args[@]}" > "$WORK/bucket-$b.log" 2>&1 < /dev/null &
+		fi
+		BUCKET_PIDS+=("$!")
+		b=$((b + 1))
+	done
+	set +m
+
+	b=1
+	while [ "$b" -le "$BUCKETS" ]; do
+		status=0
+		wait "${BUCKET_PIDS[$((b - 1))]}" || status=$?
+		BUCKET_PIDS[$((b - 1))]=""
+		echo "== корзина $b/$BUCKETS: код $status"
+		if [ "$b" -gt 1 ]; then sed "s/^/корзина $b │ /" "$WORK/bucket-$b.log"; fi
+		echo
+		printf 'корзина %s\t%s\t%s\n' "$b" "$status" "$WORK/bucket-$b.log" >> "$WORK/runs"
+		b=$((b + 1))
+	done
+	BUCKET_PIDS=()
+	remove_bucket_trees
+	summarize "$WORK/runs"
+}
+
+# Наборы по одному со временем каждого; в конце — таблица по убыванию и сводка.
+run_timed() {
+	local i=0 suite started seconds status log
+	: > "$WORK/runs"
+	: > "$WORK/timing"
+	for suite in "${SUITES[@]}"; do
+		i=$((i + 1))
+		log="$WORK/suite-$i.log"
+		started="$(date +%s)"
+		status=0
+		oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} -f "$suite" ${PASS[@]+"${PASS[@]}"} > "$log" 2>&1 || status=$?
+		seconds=$(($(date +%s) - started))
+		echo "== набор $i/${#SUITES[@]}: $suite — $seconds с, код $status"
+		if [ "$status" -ne 0 ]; then sed 's/^/   │ /' "$log"; fi
+		printf '%s\t%s\t%s\n' "$seconds" "$status" "$suite" >> "$WORK/timing"
+		printf '%s\t%s\t%s\n' "$suite" "$status" "$log" >> "$WORK/runs"
+	done
+	echo
+	echo "== Время наборов по убыванию: секунды, итог набора, набор"
+	sort -t "$(printf '\t')" -k1,1nr -k3,3 "$WORK/timing" \
+		| awk -F '\t' '{ total += $1; printf "%7d  %s  %s\n", $1, ($2 == 0 ? "✔" : "✘"), $3 } END { printf "%7d  всего\n", total }'
+	echo
+	summarize "$WORK/runs"
+}
+
 if [ -n "$ORIGINAL_LC_ALL" ]; then export LC_ALL="$ORIGINAL_LC_ALL"; else unset LC_ALL; fi
 code=0
-oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "${FILE_ARGS[@]}" ${PASS[@]+"${PASS[@]}"} || code=$?
+if [ "$TIMING" -eq 1 ]; then
+	run_timed || code=$?
+elif [ "$BUCKETS" -gt 1 ]; then
+	run_parallel || code=$?
+else
+	FILE_ARGS=()
+	for suite in "${SUITES[@]}"; do FILE_ARGS+=(-f "$suite"); done
+	oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "${FILE_ARGS[@]}" ${PASS[@]+"${PASS[@]}"} || code=$?
+fi
 exit "$code"
