@@ -13,7 +13,8 @@
 #   scripts/тесты.sh --плавающие                  # только карантин *_Плавающие_Тесты.os, без корзин
 #   scripts/тесты.sh <модуль> --параллельно 4     # отобранное — в 4 одновременных oneunit
 #   scripts/тесты.sh <модуль> --время             # наборы по одному: таблица «набор — секунды»
-#   scripts/тесты.sh <модуль> --список            # напечатать отобранные наборы (и почему) и выйти
+#   scripts/тесты.sh <модуль> --список            # напечатать отобранные наборы (и почему), группы
+#                                                 # общих хабов с фазами — и выйти
 #   scripts/тесты.sh <модуль> -- --mode summary   # всё после «--» уходит в oneunit execute
 #
 # Ключи модуля сочетаются: `scripts/тесты.sh вход --сквозные --с-потребителями --e2e`.
@@ -41,6 +42,19 @@
 # с &Изолированный(Уровень = "Процесс"), см. scripts/смоук.sh. Регрессия тег всё же ставит:
 # изолированные внешние наборы без своего окружения пропускают тесты сами.
 #
+# Общие хабы: в режимах --e2e, <модуль> --e2e и --всё (в один поток) живые наборы с тегом
+# «хаб:<группа>» идут в одном хабе группы. Прогон — два вызова oneunit: первый — наборы без тега
+# группы, как прежде; затем скрипт поднимает хаб каждой группы инструментом
+# tests/инструменты/хаб-группы.os, отдаёт наборам адрес переменной OSHUB_TEST_HUB_<ИДЕНТИФИКАТОР>
+# (и журнал — OSHUB_TEST_HUB_<ИДЕНТИФИКАТОР>_LOG), второй oneunit гоняет наборы групп, после него
+# хабы гасятся; упал второй вызов — перед остановкой печатаются последние 30 строк журнала каждого
+# хаба. Фазы внутри второго вызова держит &Порядок набора: oneunit идёт по &Порядок, затем по имени
+# — чтение (1) → создание (2) → удаление (3). Сводка и код выхода — по обоим вызовам.
+# Переменными OSHUB_TEST_HUB_* в этих режимах владеет скрипт: унаследованные он снимает в начале
+# (строка «== прогон.среда»); к своему хабу набор подключают руками только при oneunit execute -f.
+# Хаб гасится только тот, у кого в командной строке точка входа src/main.os.
+# Группы — tests/фикстуры/ГруппыХабов.os.
+#
 # Потребитель модуля — набор из каталога другого модуля или tests/инфраструктура, чей текст либо
 # текст названных в нём фикстур (транзитивно) грузит код модуля: «"<модуль>", "Классы"» или путь
 # «<модуль>/Классы», имя класса модуля литералом или в перечне через запятую, модуль в строке-перечне
@@ -64,8 +78,14 @@ BUCKETS=1
 # не ушёл группе, чей номер система уже отдала другому процессу.
 BUCKET_PIDS=()
 BUCKET_TREES=()
+# Общие хабы групп: имя группы, PID, временный каталог и журнал — по одному номеру.
+HUB_NAMES=()
+HUB_PIDS=()
+HUB_DIRS=()
+HUB_LOGS=()
 on_exit() {
 	local code=$?
+	if [ "${#HUB_PIDS[@]}" -gt 0 ]; then stop_shared_hubs "$code"; fi
 	if [ "${#BUCKET_PIDS[@]}" -gt 0 ]; then
 		stop_buckets
 		print_bucket_tails
@@ -138,6 +158,7 @@ INFRASTRUCTURE=0
 FLAKY=0
 TIMING=0
 LIST_ONLY=0
+SHARED_HUBS=0
 JOBS=""
 PASS=()
 
@@ -224,7 +245,7 @@ quarantined_suites() {
 # Фикстуры-механизмы грузят то, что им назовёт набор, — их собственный текст не в счёт.
 MECHANISMS="КлассыСлоя СлоиКонтейнера ОбъявленияПредметов МаршрутыХаба РеестрФикстур КаталогиПроекта
 ИсходникиПроекта ИсходникБезКомментариев УникальныеИмена ПомощникиСтендов ЭкземплярХаба КлиентХаба
-ВыдачаПортов ЭкземплярФейковогоIdP ЭкземплярФейковогоКоллектора РеестрНастроекХаба"
+ВыдачаПортов ЭкземплярФейковогоIdP ЭкземплярФейковогоКоллектора РеестрНастроекХаба ГруппыХабов ОбщийХаб"
 
 module_facts() {
 	local dir="src/модули/$MODULE"
@@ -418,6 +439,7 @@ if [ "$EVERYTHING" -eq 1 ]; then
 		echo "$suite"
 	done > "$WORK/selected"
 	EXTRA=(-T внешние)
+	SHARED_HUBS=1
 	TITLE="регрессия: всё дерево без тега «внешние»"
 elif [ "$EXTERNAL" -eq 1 ]; then
 	suites_in внешние > "$WORK/selected"
@@ -430,6 +452,7 @@ elif [ "$FLAKY" -eq 1 ]; then
 	TITLE="карантин: наборы, плавающие под нагрузкой"
 elif [ -z "$MODULE" ]; then
 	find tests/e2e -name '*_Тесты.os' -not -name "$QUARANTINE" > "$WORK/selected"
+	SHARED_HUBS=1
 	TITLE="все живые наборы"
 else
 	suites_in "$MODULE" > "$WORK/selected"
@@ -448,6 +471,7 @@ else
 	fi
 	if [ "$WITH_E2E" -eq 1 ]; then
 		suites_in "e2e/$MODULE" >> "$WORK/selected"
+		SHARED_HUBS=1
 		TITLE="$TITLE, живые наборы модуля"
 	fi
 fi
@@ -460,6 +484,155 @@ done < <(sort -u "$WORK/selected")
 if [ "${#SUITES[@]}" -eq 0 ]; then
 	echo "Наборов не отобрано ($TITLE) — прогонять нечего." >&2
 	exit 1
+fi
+
+# ---------------------------------------------------------------- общие хабы групп
+
+# Значение тега набора «&Тег("<приставка>:<значение>")» в начале строки; нет тега — пусто.
+suite_tag() {
+	grep -m1 -oE "^&Тег\(\"$2:[^\"]+\"\)" "$1" | sed "s/^&Тег(\"$2://; s/\")\$//" || true
+}
+phase_rank() {
+	case "$1" in
+		чтение) echo 1 ;;
+		создание) echo 2 ;;
+		удаление) echo 3 ;;
+		*) return 1 ;;
+	esac
+}
+
+# Наборы делятся на два вызова oneunit: REST_SUITES — без тега группы, GROUP_SUITES — наборы групп
+# по группам и фазам (так их печатает --список; гонит их oneunit по &Порядок). HUB_GROUPS — группы;
+# строки «группа\tранг\tфаза\tнабор» — в $WORK/hub-suites.
+HUB_GROUPS=()
+REST_SUITES=()
+GROUP_SUITES=()
+split_by_hub_groups() {
+	local suite group phase rank
+	: > "$WORK/hub-suites"
+	for suite in "${SUITES[@]}"; do
+		group="$(suite_tag "$suite" хаб)"
+		if [ -z "$group" ]; then
+			REST_SUITES+=("$suite")
+			continue
+		fi
+		phase="$(suite_tag "$suite" фаза)"
+		phase="${phase:-создание}"
+		if ! rank="$(phase_rank "$phase")"; then
+			echo "Неизвестная фаза «$phase» у $suite: чтение, создание или удаление." >&2
+			exit 2
+		fi
+		printf '%s\t%s\t%s\t%s\n' "$group" "$rank" "$phase" "$suite" >> "$WORK/hub-suites"
+	done
+	sort -t "$(printf '\t')" -k1,1 -k2,2n -k4,4 -o "$WORK/hub-suites" "$WORK/hub-suites"
+	while IFS="$(printf '\t')" read -r group rank phase suite; do
+		GROUP_SUITES+=("$suite")
+		case " ${HUB_GROUPS[*]-} " in *" $group "*) ;; *) HUB_GROUPS+=("$group") ;; esac
+	done < "$WORK/hub-suites"
+}
+
+# «== хаб.<группа>: общий хаб, наборов N, фазы: чтение A → создание B → удаление C».
+print_hub_groups() {
+	local group
+	for group in ${HUB_GROUPS[@]+"${HUB_GROUPS[@]}"}; do
+		awk -F '\t' -v group="$group" '
+			$1 == group { total++; count[$3]++ }
+			END {
+				printf "== хаб.%s: общий хаб, наборов %d, фазы: чтение %d → создание %d → удаление %d\n",
+					group, total, count["чтение"], count["создание"], count["удаление"]
+			}' "$WORK/hub-suites"
+	done
+}
+
+hub_field() {
+	sed -n "s/^$1: //p" "$2" | tail -1
+}
+
+# Поднимает хаб каждой группы и отдаёт наборам его адрес и журнал переменными среды. Хаб с PID
+# попадает в список остановки сразу; инструмент упал или не назвал переменную, порт, PID или каталог —
+# код 1, поднятое гасится.
+start_shared_hubs() {
+	local group out status variable port pid dir log number=0
+	for group in ${HUB_GROUPS[@]+"${HUB_GROUPS[@]}"}; do
+		number=$((number + 1))
+		out="$WORK/hub-$number.out"
+		status=0
+		oscript tests/инструменты/хаб-группы.os поднять "$group" > "$out" 2>&1 || status=$?
+		variable="$(hub_field переменная "$out")"
+		port="$(hub_field порт "$out")"
+		pid="$(hub_field pid "$out")"
+		dir="$(hub_field каталог "$out")"
+		log="$(hub_field журнал "$out")"
+		# хаб с PID гасится выходом прогона, даже если о нём сказано не всё
+		if [ -n "$pid" ]; then
+			HUB_NAMES+=("$group")
+			HUB_PIDS+=("$pid")
+			HUB_DIRS+=("$dir")
+			HUB_LOGS+=("$log")
+		fi
+		if [ "$status" -ne 0 ]; then
+			echo "== хаб.$group: не поднялся"
+			sed 's/^/   │ /' "$out"
+			return 1
+		fi
+		if [ -z "$variable" ] || [ -z "$port" ] || [ -z "$pid" ] || [ -z "$dir" ]; then
+			echo "== хаб.$group: инструмент не назвал переменную, порт, pid или каталог"
+			sed 's/^/   │ /' "$out"
+			return 1
+		fi
+		export "$variable=http://127.0.0.1:$port" "${variable}_LOG=$log"
+		echo "== хаб.$group: порт $port, pid $pid"
+	done
+}
+
+# PID мог достаться чужому процессу: сигнал — только процессу с точкой входа хаба в командной строке.
+our_hub() {
+	ps -o command= -p "$1" 2> /dev/null | grep -qF "/src/main.os"
+}
+
+# Гасит общие хабы; код прогона не 0 — сперва хвост журнала каждого, пока каталог с ним не снят.
+stop_shared_hubs() {
+	local code="${1:-0}" i=0
+	while [ "$i" -lt "${#HUB_PIDS[@]}" ]; do
+		if [ "$code" -ne 0 ] && [ -s "${HUB_LOGS[$i]}" ]; then
+			echo "== хаб.${HUB_NAMES[$i]}: последние 30 строк журнала"
+			tail -n 30 "${HUB_LOGS[$i]}" | sed "s/^/хаб.${HUB_NAMES[$i]} │ /"
+		fi
+		if oscript tests/инструменты/хаб-группы.os остановить "${HUB_PIDS[$i]}" ${HUB_DIRS[$i]:+"${HUB_DIRS[$i]}"} > "$WORK/hub-stop.out" 2>&1; then
+			echo "== хаб.${HUB_NAMES[$i]}: остановлен, pid ${HUB_PIDS[$i]}"
+			i=$((i + 1))
+			continue
+		fi
+		sed 's/^/   │ /' "$WORK/hub-stop.out"
+		if our_hub "${HUB_PIDS[$i]}"; then
+			kill "${HUB_PIDS[$i]}" 2> /dev/null || true
+			echo "== хаб.${HUB_NAMES[$i]}: погашен сигналом, каталог не снят: ${HUB_DIRS[$i]:-нет}"
+		else
+			echo "== хаб.${HUB_NAMES[$i]}: pid ${HUB_PIDS[$i]} — не хаб этого репозитория, не тронут; каталог не снят: ${HUB_DIRS[$i]:-нет}"
+		fi
+		i=$((i + 1))
+	done
+	HUB_NAMES=()
+	HUB_PIDS=()
+	HUB_DIRS=()
+	HUB_LOGS=()
+}
+
+# Общими хабами режима владеет скрипт: унаследованная OSHUB_TEST_HUB_* увела бы наборы к чужому хабу.
+if [ "$SHARED_HUBS" -eq 1 ]; then
+	INHERITED_HUBS="$(env | sed -n 's/^\(OSHUB_TEST_HUB_[A-Za-z0-9_]*\)=.*/\1/p' | sort | tr '\n' ' ')"
+	if [ -n "$INHERITED_HUBS" ]; then
+		for variable in $INHERITED_HUBS; do unset "$variable"; done
+		echo "== прогон.среда: сняты унаследованные ${INHERITED_HUBS% } — общие хабы поднимает скрипт"
+	fi
+fi
+
+# Корзины гоняются одновременно — фаз общего хаба там не выдержать: наборы поднимают свои хабы.
+if [ "$SHARED_HUBS" -eq 1 ] && [ "$JOBS" -le 1 ]; then
+	split_by_hub_groups
+	if [ "${#GROUP_SUITES[@]}" -eq 0 ]; then SHARED_HUBS=0; fi
+else
+	SHARED_HUBS=0
 fi
 
 # Корзины: наборы по убыванию размера файла, каждый — в корзину с наименьшей суммой размеров;
@@ -505,13 +678,25 @@ fi
 heading="== Тесты: $TITLE — ${#SUITES[@]} наборов"
 if [ "$BUCKETS" -gt 1 ]; then heading="$heading, корзин $BUCKETS"; fi
 echo "$heading"
-for suite in "${SUITES[@]}"; do
-	reason=""
-	if [ "$LIST_ONLY" -eq 1 ] && [ -s "$WORK/reasons" ]; then
-		reason="$(grep -F "$suite"$'\t' "$WORK/reasons" | head -1 | cut -f2 || true)"
-	fi
-	echo "   $suite${reason:+  ← $reason}"
-done
+print_suites() {
+	local suite reason
+	for suite in "$@"; do
+		reason=""
+		if [ "$LIST_ONLY" -eq 1 ] && [ -s "$WORK/reasons" ]; then
+			reason="$(grep -F "$suite"$'\t' "$WORK/reasons" | head -1 | cut -f2 || true)"
+		fi
+		echo "   $suite${reason:+  ← $reason}"
+	done
+}
+if [ "$SHARED_HUBS" -eq 1 ]; then
+	echo "== oneunit 1/2: наборы без общего хаба — ${#REST_SUITES[@]}"
+	print_suites ${REST_SUITES[@]+"${REST_SUITES[@]}"}
+	echo "== oneunit 2/2: наборы общих хабов — ${#GROUP_SUITES[@]}, фазы держит &Порядок"
+	print_suites "${GROUP_SUITES[@]}"
+	print_hub_groups
+else
+	print_suites "${SUITES[@]}"
+fi
 if [ "$BUCKETS" -gt 1 ]; then
 	sort -t "$(printf '\t')" -k1,1n -k2,2 "$WORK/buckets" \
 		| awk -F '\t' -v buckets="$BUCKETS" '{ printf "== корзина %s/%s: %s\n", $1, buckets, $2 }'
@@ -633,23 +818,26 @@ run_parallel() {
 	summarize "$WORK/runs"
 }
 
-# Наборы по одному со временем каждого; в конце — таблица по убыванию и сводка.
-run_timed() {
-	local i=0 suite started seconds status log
-	: > "$WORK/runs"
-	: > "$WORK/timing"
-	for suite in "${SUITES[@]}"; do
-		i=$((i + 1))
-		log="$WORK/suite-$i.log"
+# Наборы по одному со временем каждого; строки — в $WORK/runs и $WORK/timing, номера сквозные.
+TIMED=0
+run_timed_suites() {
+	local suite started seconds status log
+	for suite in "$@"; do
+		TIMED=$((TIMED + 1))
+		log="$WORK/suite-$TIMED.log"
 		started="$(date +%s)"
 		status=0
 		oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} -f "$suite" ${PASS[@]+"${PASS[@]}"} > "$log" 2>&1 || status=$?
 		seconds=$(($(date +%s) - started))
-		echo "== набор $i/${#SUITES[@]}: $suite — $seconds с, код $status"
+		echo "== набор $TIMED/${#SUITES[@]}: $suite — $seconds с, код $status"
 		if [ "$status" -ne 0 ]; then sed 's/^/   │ /' "$log"; fi
 		printf '%s\t%s\t%s\n' "$seconds" "$status" "$suite" >> "$WORK/timing"
 		printf '%s\t%s\t%s\n' "$suite" "$status" "$log" >> "$WORK/runs"
 	done
+}
+
+# Таблица времени по убыванию и сводка.
+report_timed() {
 	echo
 	echo "== Время наборов по убыванию: секунды, итог набора, набор"
 	sort -t "$(printf '\t')" -k1,1nr -k3,3 "$WORK/timing" \
@@ -658,10 +846,56 @@ run_timed() {
 	summarize "$WORK/runs"
 }
 
+# Один вызов oneunit на перечисленные наборы, вывод — в терминал и в лог; строка «имя\tкод\tлог» —
+# в $WORK/runs. Возвращает код oneunit.
+run_oneunit() {
+	local name="$1" log="$2" suite status=0 args=()
+	shift 2
+	for suite in "$@"; do args+=(-f "$suite"); done
+	oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "${args[@]}" ${PASS[@]+"${PASS[@]}"} 2>&1 | tee "$log" || status=$?
+	printf '%s\t%s\t%s\n' "$name" "$status" "$log" >> "$WORK/runs"
+	return "$status"
+}
+
 if [ -n "$ORIGINAL_LC_ALL" ]; then export LC_ALL="$ORIGINAL_LC_ALL"; else unset LC_ALL; fi
 code=0
-if [ "$TIMING" -eq 1 ]; then
-	run_timed || code=$?
+: > "$WORK/runs"
+: > "$WORK/timing"
+if [ "$SHARED_HUBS" -eq 1 ]; then
+	# Два вызова: наборы без группы, затем хабы групп и их наборы; хабы гасятся сразу после второго.
+	if [ "${#REST_SUITES[@]}" -gt 0 ]; then
+		echo "== oneunit 1/2: наборы без общего хаба — ${#REST_SUITES[@]}"
+		if [ "$TIMING" -eq 1 ]; then
+			run_timed_suites "${REST_SUITES[@]}"
+		else
+			run_oneunit "oneunit 1/2" "$WORK/oneunit-1.log" "${REST_SUITES[@]}" || true
+		fi
+		echo
+	fi
+	group_code=0
+	if start_shared_hubs; then
+		echo "== oneunit 2/2: наборы общих хабов — ${#GROUP_SUITES[@]}"
+		if [ "$TIMING" -eq 1 ]; then
+			before="$(grep -c '' "$WORK/runs" || true)"
+			run_timed_suites "${GROUP_SUITES[@]}"
+			if tail -n +"$((before + 1))" "$WORK/runs" | cut -f2 | grep -qv '^0$'; then group_code=1; fi
+		else
+			run_oneunit "oneunit 2/2" "$WORK/oneunit-2.log" "${GROUP_SUITES[@]}" || group_code=$?
+		fi
+	else
+		group_code=1
+		printf 'хабы групп\t1\t/dev/null\n' >> "$WORK/runs"
+	fi
+	stop_shared_hubs "$group_code"
+	echo
+	if [ "$TIMING" -eq 1 ]; then
+		report_timed || code=$?
+	else
+		summarize "$WORK/runs" || code=$?
+	fi
+elif [ "$TIMING" -eq 1 ]; then
+	run_timed_suites "${SUITES[@]}"
+	report_timed || code=$?
 elif [ "$BUCKETS" -gt 1 ]; then
 	run_parallel || code=$?
 else
