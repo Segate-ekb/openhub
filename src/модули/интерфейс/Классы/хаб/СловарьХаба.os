@@ -508,17 +508,13 @@
 	Словарь.Добавить("settings.values.editable.note", "Изменения записываются в журнал аудита.");
 	Словарь.Добавить("settings.values.occupied.lead",
 		"Значения этого раздела сейчас задаёт конфигурация инсталляции.");
-	Словарь.Добавить("settings.values.reset.title", "Значения, введённые вручную");
-	Словарь.Добавить("settings.values.reset.lead", "Сброс возвращает значение конфигурации или умолчания.");
-	Словарь.Добавить("settings.values.reset.button", "Сбросить");
-	Словарь.Добавить("settings.values.reset.col.setting", "Настройка");
-	Словарь.Добавить("settings.values.reset.col.value", "Значение");
-	Словарь.Добавить("settings.values.reset.col.action", "Действие");
 
 	Словарь.Добавить("settings.source.config", "из конфигурации");
-	Словарь.Добавить("settings.source.db", "из базы");
+	Словарь.Добавить("settings.source.db", "изменено");
 	Словарь.Добавить("settings.source.default", "по умолчанию");
-	Словарь.Добавить("settings.source.line", "%1 · %2");
+	Словарь.Добавить("settings.source.title", "%1 · %2");
+	Словарь.Добавить("settings.source.reset", "Сбросить «%1»");
+	Словарь.Добавить("settings.source.reset.title", "Сбросить к значению по умолчанию");
 
 	Словарь.Добавить("settings.value.locked.forced",
 		"Задано конфигурацией: уберите ключ %1 или переменную %2 — поле снова станет "

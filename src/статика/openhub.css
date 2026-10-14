@@ -106,3 +106,31 @@ form:has(input[name="accent"]:placeholder-shown) [data-brand-preview="own-accent
 .tag[data-mirror-стиль="deprecated"] { --_bg: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
 .tag[data-mirror-стиль="special"] { --_bg: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
 
+
+/* --- источник значения у настройки ----------------------------------------------------
+   Поле настройки и плашку его источника сервер печатает одним узлом с признаками
+   data-setting и data-source (ПоляНастроек.Настройка). Плашка стоит справа от поля по высоте
+   его управления; колонка плашек у всех полей одной ширины, поэтому правые края полей раздела
+   совпадают. На телефоне плашка встаёт над полем. У занятого конфигурацией поля управление
+   лежит в пунктирной рамке — плашка опускается на её внутренний отступ. */
+
+[data-setting] {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 10.5rem;
+	column-gap: var(--space-3);
+	align-items: start;
+}
+[data-setting] > :last-child { justify-self: start; margin-top: 11px; }
+[data-setting]:has(.toggle) > :last-child { margin-top: 9px; }
+[data-setting]:has(> .from-config) > :last-child { margin-top: calc(var(--space-4) + 11px); }
+@media (max-width: 640px) {
+	[data-setting] { grid-template-columns: minmax(0, 1fr); }
+	[data-setting] > :last-child { grid-row: 1; justify-self: end; margin: 0 0 var(--space-1); }
+	[data-setting]:has(.toggle) > :last-child,
+	[data-setting]:has(> .from-config) > :last-child { margin: 0 0 var(--space-1); }
+}
+
+/* Формы сброса скрыты: их шлют кнопки плашек «изменено» атрибутом form. В шапке секции-формы
+   они единственное, что лежит вне её <form>, и место действий шапке от них не нужно. */
+.section__head--actions:not(:has(> .section__actions > :not([data-setting-reset]))) { display: block; }
+.section__actions:not(:has(> :not([data-setting-reset]))) { display: none; }
