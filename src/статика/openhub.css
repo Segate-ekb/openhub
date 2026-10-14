@@ -70,3 +70,39 @@ form:has([data-sub-preview]) textarea.field__control { min-height: 10.5em; }
 [data-sub-result="err"] { color: var(--color-danger); white-space: pre-wrap; }
 [data-sub-trial] { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
 [data-sub-trial-result] [data-sub-result="ok"] { color: var(--color-success); }
+
+/* --- брендирование: образец шапки и слоты картинок ----------------------------------
+   Образец — узел кита, а что внутри рамки, решает хаб: мини-шапка, ряд акцента и подвал,
+   их находят по признакам data-brand-preview. Ряд акцента перекрашивает сам кит: зеркало
+   поля accent пересобирает палитру узла внутри образца. Название рядом со знаком прячется
+   вместе с выключенным тумблером — так, как его спрячет шапка; пометка «+ свой акцент» у
+   пресета — вместе с опустевшим полем акцента. */
+
+[data-brand-preview="head"], [data-brand-preview="accent"] { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+[data-brand-preview="head"] { padding-bottom: var(--space-3); border-bottom: 1px solid var(--md-sys-color-outline-variant); }
+[data-brand-preview="head"] > img { height: 28px; width: auto; }
+[data-brand-preview="name"] { margin-right: auto; font: var(--type-title-medium); }
+[data-brand-preview="accent"] { padding: var(--space-3) 0; }
+[data-brand-preview="foot"] {
+	margin: 0; padding-top: var(--space-3); border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+form:has(input[type="checkbox"][name="show_name"]:not(:checked)) [data-brand-preview="name"] { display: none; }
+form:has(input[name="accent"]:placeholder-shown) [data-brand-preview="own-accent"] { display: none; }
+[data-brand-slot] {
+	display: grid; gap: var(--space-2); padding: var(--space-3);
+	border: 1px solid var(--md-sys-color-outline-variant); border-radius: var(--md-sys-shape-corner-medium);
+}
+
+/* --- образец плашки тега в окне «Оформление» ----------------------------------------
+   Плашку образца сервер печатает в виде выбранного стиля, а выбранный стиль кит зеркалит в её
+   признак (data-mirror-стиль — слово ЗеркалоПризнаком): вид по нему задаёт этот лист. Роли
+   цвета те же, что у плашки заведённого тега (ОформлениеТега.ВидПлашки и .tag--<вид> кита;
+   соответствие сверяет СлойПредставления_Тесты). Значок, выбранный сеткой, скрипт кита кладёт
+   в плашку сам. Без скрипта признак — значение, напечатанное сервером. */
+
+.tag[data-mirror-стиль] { --_bg: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface-variant); }
+.tag[data-mirror-стиль="stable"] { --_bg: var(--md-sys-color-success-container); color: var(--md-sys-color-on-success-container); }
+.tag[data-mirror-стиль="prerelease"] { --_bg: var(--md-sys-color-warning-container); color: var(--md-sys-color-on-warning-container); }
+.tag[data-mirror-стиль="deprecated"] { --_bg: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
+.tag[data-mirror-стиль="special"] { --_bg: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+

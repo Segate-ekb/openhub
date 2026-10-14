@@ -11,6 +11,8 @@
 	КлючиДомаАккаунта(Словарь);
 	КлючиАдресаПосетителя(Словарь);
 	КлючиВосстановленияИПодтверждения(Словарь);
+	КлючиПривязокOIDC(Словарь);
+	КлючиВыхода(Словарь);
 
 КонецПроцедуры
 
@@ -22,8 +24,10 @@
 		+ " ключ доступа не выпускает и не отзывает ключи.");
 
 	Словарь.Добавить("settings.account.title", "Настройки аккаунта");
-	Словарь.Добавить("settings.account.lead", "Ваши дела на хабе и личные настройки: профиль,"
-		+ " доступ, токены и внешний вид. Права на пулы и пакеты редактируются на самих объектах.");
+	Словарь.Добавить("settings.account.lead", "Профиль, доступ, токены и внешний вид.");
+	Словарь.Добавить("settings.account.heading", "Аккаунт · %1");
+	Словарь.Добавить("settings.account.group.account", "Аккаунт");
+	Словарь.Добавить("settings.account.group.access", "Доступ");
 	Словарь.Добавить("settings.account.nav.office", "Кабинет");
 	Словарь.Добавить("settings.account.nav.profile", "Профиль");
 	Словарь.Добавить("settings.account.nav.security", "Безопасность");
@@ -85,19 +89,95 @@
 	Словарь.Добавить("settings.account.groups.col.description", "Описание");
 	Словарь.Добавить("settings.account.groups.empty", "Вы не состоите в группах.");
 
-	Словарь.Добавить("settings.account.appearance.title", "Вид");
+	Словарь.Добавить("settings.account.appearance.title", "Вид и язык");
 	Словарь.Добавить("settings.account.appearance.lead",
-		"Оформление интерфейса. Хранится в cookie этого браузера.");
+		"Хранится в этом браузере. Тема, плотность и скругления сохраняются сразу.");
+	Словарь.Добавить("settings.account.appearance.save", "Сохранить");
 	Словарь.Добавить("settings.account.appearance.theme.label", "Тема");
-	Словарь.Добавить("settings.account.appearance.theme.dark", "Тёмная");
-	Словарь.Добавить("settings.account.appearance.theme.light", "Светлая");
+	Словарь.Добавить("settings.account.appearance.theme.light", "светлая");
+	Словарь.Добавить("settings.account.appearance.theme.dark", "тёмная");
 	Словарь.Добавить("settings.account.appearance.accent.label", "Акцент");
-	Словарь.Добавить("settings.account.appearance.accent.hint", "Цвет в формате #rrggbb. Пусто — акцент темы."
-		+ " Контрастный цвет текста на кнопках хаб выводит сам.");
+	Словарь.Добавить("settings.account.appearance.accent.hint",
+		"Контрастный цвет текста на кнопках хаб выводит сам");
 	Словарь.Добавить("settings.account.appearance.density.label", "Плотность");
-	Словарь.Добавить("settings.account.appearance.density.hint", "Множитель шага сетки, 0.5–2");
+	Словарь.Добавить("settings.account.appearance.density.compact", "компактно");
+	Словарь.Добавить("settings.account.appearance.density.normal", "обычно");
+	Словарь.Добавить("settings.account.appearance.density.roomy", "просторно");
 	Словарь.Добавить("settings.account.appearance.radius.label", "Скругления");
-	Словарь.Добавить("settings.account.appearance.radius.hint", "Множитель радиусов, 0.5–2");
+	Словарь.Добавить("settings.account.appearance.radius.less", "меньше");
+	Словарь.Добавить("settings.account.appearance.radius.normal", "обычно");
+	Словарь.Добавить("settings.account.appearance.radius.more", "больше");
+
+	КлючиТокенов(Словарь);
+
+КонецПроцедуры
+
+// Раздел «Токены доступа»: реестр личных токенов, окно выпуска шагами и отзыв.
+Процедура КлючиТокенов(Словарь)
+
+	Словарь.Добавить("settings.account.tokens.title", "Токены доступа");
+	Словарь.Добавить("settings.account.tokens.lead", "Для opm и CI. Секрет показывается один раз — при выпуске.");
+	Словарь.Добавить("settings.account.tokens.add", "Выпустить токен");
+	Словарь.Добавить("settings.account.tokens.empty", "Токенов пока нет.");
+	Словарь.Добавить("settings.account.tokens.unnamed", "(без имени)");
+
+	Словарь.Добавить("settings.account.tokens.scope.read", "чтение");
+	Словарь.Добавить("settings.account.tokens.scope.write", "запись");
+	Словарь.Добавить("settings.account.tokens.scope.none", "нет областей");
+	Словарь.Добавить("settings.account.tokens.where.hub", "весь хаб");
+	Словарь.Добавить("settings.account.tokens.where.pools", "пулы %1");
+	Словарь.Добавить("settings.account.tokens.where.pool", "пул %1");
+	Словарь.Добавить("settings.account.tokens.term.until", "до %1");
+	Словарь.Добавить("settings.account.tokens.term.expired", "истёк %1");
+	Словарь.Добавить("settings.account.tokens.term.never", "бессрочно — выпущен до запрета, отзовите");
+
+	Словарь.Добавить("settings.account.tokens.prop.prefix", "префикс");
+	Словарь.Добавить("settings.account.tokens.prop.scopes", "области");
+	Словарь.Добавить("settings.account.tokens.prop.where", "где действует");
+	Словарь.Добавить("settings.account.tokens.prop.created", "создан");
+	Словарь.Добавить("settings.account.tokens.prop.expires", "истекает");
+
+	Словарь.Добавить("settings.account.tokens.revoke", "Отозвать");
+	Словарь.Добавить("settings.account.tokens.revoke.title", "Отозвать токен «%1»?");
+	Словарь.Добавить("settings.account.tokens.revoke.consequence",
+		"Программы, которые входят с этим токеном, перестанут попадать в хаб. Вернуть токен нельзя.");
+	Словарь.Добавить("settings.account.tokens.revoke.missing", "Токен не найден");
+
+	Словарь.Добавить("settings.account.tokens.window.new", "Новый токен");
+	Словарь.Добавить("settings.account.tokens.step.name", "Имя и права");
+	Словарь.Добавить("settings.account.tokens.step.where", "Где действует");
+	Словарь.Добавить("settings.account.tokens.step.term", "Срок");
+	Словарь.Добавить("settings.account.tokens.field.name", "Имя");
+	Словарь.Добавить("settings.account.tokens.field.name.example", "например, ноутбук");
+	Словарь.Добавить("settings.account.tokens.field.name.hint", "Зачем этот токен — чтобы потом отозвать нужный");
+	Словарь.Добавить("settings.account.tokens.field.rights", "Права");
+	Словарь.Добавить("settings.account.tokens.field.read", "чтение — скачивать пакеты и читать метаданные");
+	Словарь.Добавить("settings.account.tokens.field.write", "запись — публиковать версии и менять настройки");
+	Словарь.Добавить("settings.account.tokens.field.where", "Где действует");
+	Словарь.Добавить("settings.account.tokens.field.where.hub", "весь хаб");
+	Словарь.Добавить("settings.account.tokens.field.where.pools", "выбранные пулы");
+	Словарь.Добавить("settings.account.tokens.field.pools", "Пулы");
+	Словарь.Добавить("settings.account.tokens.field.pools.cut",
+		"Показаны %1 пулов из %2 — остальные найдёт поиск.");
+	Словарь.Добавить("settings.account.tokens.field.pools.marked", "Уже отмечены: %1");
+	Словарь.Добавить("settings.account.tokens.field.where.nopools",
+		"Доступных пулов нет — токен будет действовать на весь хаб.");
+	Словарь.Добавить("settings.account.tokens.field.term", "Срок, дней");
+	Словарь.Добавить("settings.account.tokens.field.term.hint",
+		"От 1 до %1 дней. Бессрочных токенов хаб не выпускает.");
+	Словарь.Добавить("settings.account.tokens.issue", "Выпустить");
+
+	Словарь.Добавить("settings.account.tokens.error.scopes",
+		"Отметьте хотя бы одно право: токен без прав ничего не может.");
+	Словарь.Добавить("settings.account.tokens.error.term",
+		"Срок действия — целое число от 1 до %1 дней: бессрочных токенов хаб не выпускает.");
+	Словарь.Добавить("settings.account.tokens.error.pools", "Отметьте хотя бы один пул или выберите «весь хаб».");
+	Словарь.Добавить("settings.account.tokens.error.pool", "Пул %1 не найден.");
+	Словарь.Добавить("settings.account.tokens.error.issue", "Не удалось выпустить токен: %1");
+
+	Словарь.Добавить("settings.account.tokens.issued.title", "Токен выпущен");
+	Словарь.Добавить("settings.account.tokens.issued.lead", "Скопируйте его сейчас — больше он показан не будет.");
+	Словарь.Добавить("settings.account.tokens.issued.token", "токен");
 
 КонецПроцедуры
 
@@ -125,6 +205,11 @@
 	Словарь.Добавить("password.requirements.title", "Требования к паролю:");
 
 	Словарь.Добавить("access.page.login", "Страница входа");
+	Словарь.Добавить("access.page.signin", "Вход");
+	Словарь.Добавить("access.page.signin.hub", "Вход в %1");
+	Словарь.Добавить("access.page.or", "или");
+	Словарь.Добавить("access.page.signup.prompt", "Нет аккаунта? %1");
+	Словарь.Добавить("access.page.signup.link", "Зарегистрироваться");
 
 	Словарь.Добавить("recover.page.title", "Восстановление пароля");
 	Словарь.Добавить("recover.page.lead", "Назовите логин или адрес электронной почты своей"
@@ -192,6 +277,39 @@
 	Словарь.Добавить("confirm.page.error.failed",
 		"Письмо выслать не удалось — причина записана в журнал хаба. Попробуйте позже.");
 
+КонецПроцедуры
+
+// Поток «кабинет» (Х4а): раздел «Привязки OIDC» — таблица личностей, отвязка окном, привязка провайдеров.
+Процедура КлючиПривязокOIDC(Словарь)
+
+	Словарь.Добавить("settings.account.oidc.title", "Привязки OIDC");
+	Словарь.Добавить("settings.account.oidc.lead", "Входы через внешних провайдеров, связанные с учётной записью.");
+	Словарь.Добавить("settings.account.oidc.empty", "Пока нет привязанных личностей.");
+	Словарь.Добавить("settings.account.oidc.col.issuer", "Провайдер (issuer)");
+	Словарь.Добавить("settings.account.oidc.col.account", "Аккаунт у провайдера");
+	Словарь.Добавить("settings.account.oidc.col.email", "Email");
+	Словарь.Добавить("settings.account.oidc.menu", "Действия с привязкой %1");
+	Словарь.Добавить("settings.account.oidc.unlink", "Отвязать");
+	Словарь.Добавить("settings.account.oidc.unlink.title", "Отвязать %1?");
+	Словарь.Добавить("settings.account.oidc.unlink.consequence", "Вход через этого провайдера перестанет"
+		+ " вести в вашу учётку. Учётка и роли останутся; привязать можно снова.");
+	Словарь.Добавить("settings.account.oidc.last", "Это последний способ входа: без него в учётку"
+		+ " не войти. Сначала задайте пароль или привяжите другого провайдера.");
+	Словарь.Добавить("settings.account.oidc.password", "Задать пароль");
+	Словарь.Добавить("settings.account.oidc.link.title", "Привязать провайдера");
+	Словарь.Добавить("settings.account.oidc.link.lead", "Вход провайдером поведёт в эту учётку.");
+	Словарь.Добавить("settings.account.oidc.link.button", "Привязать %1");
+	Словарь.Добавить("settings.account.oidc.link.none", "Провайдеры OIDC не настроены.");
+	Словарь.Добавить("settings.account.oidc.error.provider", "Неизвестный провайдер входа.");
+	Словарь.Добавить("settings.account.oidc.error.start", "Не удалось начать привязку через провайдера.");
+
+КонецПроцедуры
+
+// Выход: отказ двери выхода без токена сессии.
+Процедура КлючиВыхода(Словарь)
+	Словарь.Добавить("access.logout.title", "Выход");
+	Словарь.Добавить("access.logout.stale", "Выйти не получилось: страница, с которой нажали «Выйти», устарела."
+		+ " Вы по-прежнему в учётной записи — «Выйти» в меню учётки вверху.");
 КонецПроцедуры
 
 &Прозвище("ЧастьСловаряТекстов")

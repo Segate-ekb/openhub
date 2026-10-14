@@ -78,141 +78,6 @@
 		});
 	}
 
-	/* --- переключателя темы здесь БОЛЬШЕ НЕТ (замечание З-1 и ревью Р-7) --- */
-	/* Он целиком серверный: POST-форма /ui/theme, иконку выбирает сервер по текущему
-	   оформлению. Промежуточная редакция держала ДВА пути — серверный и клиентский, — и
-	   они разошлись на контракте куки: сервер писал значение url-кодированным, транспорт
-	   кодировал ещё раз, а `document.cookie` декодируется браузером один раз, поэтому
-	   скрипт видел мусор, не находил «=» и при следующем переключении МОЛЧА терял акцент,
-	   плотность и радиус. Один путь вместо двух снимает и расхождение, и код: цена —
-	   обычная перезагрузка страницы после редиректа. */
-
-	/* --- живая плашка конструктора тега ([data-chip]) ---
-	   Ту же плашку печатает сервер при любой перерисовке страницы; здесь она лишь успевает
-	   за вводом. Имена полей и текст образца объявлены атрибутами студии.
-
-	   Цвет НЕ трогаем вовсе: вид плашки — это CSS-класс tag--*, а его цвет даёт переменная
-	   темы. Соответствие «ключ стиля — класс» объявлено на самих вариантах выбора
-	   ([data-chip-view]), поэтому второй копии этого знания в скрипте нет. */
-
-	/* Носитель выбранного значения: у списка это выбранный <option> (на нём же живут
-	   data-атрибуты варианта), у радиогруппы — отмеченная кнопка, у поля — оно само. */
-	function выбранное(форма, имя) {
-		if (!имя) { return null; }
-		var поле = форма.querySelector('[name="' + имя + '"]:checked')
-			|| форма.querySelector('[name="' + имя + '"]');
-		if (поле && поле.tagName === 'SELECT') {
-			return поле.options[поле.selectedIndex] || null;
-		}
-		return поле;
-	}
-
-	function перерисоватьПлашку(студия) {
-		var цель = студия.querySelector('[data-chip-target]');
-		var плашка = цель && цель.firstElementChild;
-		if (!плашка) { return; }
-
-		var форма = студия.closest('form');
-		if (!форма) { return; }
-
-		var имя = выбранное(форма, студия.getAttribute('data-chip-name'));
-		var подпись = плашка.querySelector('[data-chip-caption]');
-		var текст = (имя && имя.value.trim()) || студия.getAttribute('data-chip-sample') || '';
-		if (подпись) { подпись.textContent = текст; }
-
-		var стиль = выбранное(форма, студия.getAttribute('data-chip-style'));
-		var вид = стиль ? стиль.getAttribute('data-chip-view') : null;
-		плашка.className = 'tag' + (вид ? ' tag--' + вид : '');
-
-		/* Значок: сервер напечатал ВСЕ допустимые глифы, лишние — с hidden. Синтезировать
-		   svg кита в скрипте нечем, да и не нужно: показ переключается той же пометкой,
-		   которую ставит сервер. */
-		var значок = выбранное(форма, студия.getAttribute('data-chip-icon'));
-		var ключ = значок ? значок.value : '';
-		все('[data-chip-glyph]', плашка).forEach(function (глиф) {
-			глиф.hidden = глиф.getAttribute('data-chip-glyph') !== ключ;
-		});
-	}
-
-	function оживитьПлашки() {
-		все('[data-chip]').forEach(function (студия) {
-			var форма = студия.closest('form');
-			if (!форма) { return; }
-			форма.addEventListener('input', function () { перерисоватьПлашку(студия); });
-			форма.addEventListener('change', function () { перерисоватьПлашку(студия); });
-			перерисоватьПлашку(студия);
-		});
-	}
-
-	/* --- переключатель наборов полей ([data-sets] + [data-set]) ---
-	   Сервер печатает ВСЕ наборы, а невыбранные — с `disabled` и `hidden`: отключённые
-	   поля браузер не отправляет, в них не уходит фокус, и `required` внутри них отправке
-	   не мешает. Здесь снимаются и возвращаются ровно те же две пометки, поэтому
-	   клиентский путь не может отправить больше, чем серверный.
-
-	   Переключают либо ссылки с ключом в адресе, либо список, названный тем же именем,
-	   что и группа: у второго серверный путь — круг через кнопку формы. */
-
-	function ключИзСсылки(ссылка, параметр) {
-		var адрес = ссылка.getAttribute('href') || '';
-		var вопрос = адрес.indexOf('?');
-		if (вопрос < 0) { return null; }
-		var части = адрес.slice(вопрос + 1).split('&');
-		for (var индекс = 0; индекс < части.length; индекс += 1) {
-			var пара = части[индекс].split('=');
-			if (decodeURIComponent(пара[0]) === параметр) {
-				return decodeURIComponent((пара[1] || '').replace(/\+/g, ' '));
-			}
-		}
-		return null;
-	}
-
-	// наборы ищем рядом с переключателем, а не по всей странице: второй такой переключатель
-	// на экране не должен переключать чужие наборы
-	function областьНаборов(группа) {
-		return группа.parentElement || document;
-	}
-
-	// Наборы бывают вложенными (у «своего провайдера» внутри его набора живёт ещё один
-	// переключатель — по протоколу). Свои переключателю только ВНЕШНИЕ наборы области:
-	// вложенным распоряжается тот переключатель, который лежит рядом с ними.
-	function наборыОбласти(область) {
-		return все('[data-set]', область).filter(function (набор) {
-			var родитель = набор.parentElement;
-			var внешний = родитель && родитель.closest('[data-set]');
-			return !(внешний && внешний !== область && область.contains(внешний));
-		});
-	}
-
-	function выбратьНабор(группа, ключ) {
-		все('a[href]', группа).forEach(function (ссылка) {
-			var свой = ключИзСсылки(ссылка, группа.getAttribute('data-sets'));
-			if (свой === ключ) {
-				ссылка.setAttribute('aria-current', 'true');
-			} else {
-				ссылка.removeAttribute('aria-current');
-			}
-		});
-
-		наборыОбласти(областьНаборов(группа)).forEach(function (набор) {
-			var выбран = набор.getAttribute('data-set') === ключ;
-			набор.disabled = !выбран;
-			набор.hidden = !выбран;
-		});
-	}
-
-	function переключитьНабор(ссылка) {
-		var группа = ссылка.closest('[data-sets]');
-		if (!группа) { return false; }
-		var ключ = ключИзСсылки(ссылка, группа.getAttribute('data-sets'));
-		if (ключ === null
-			|| !областьНаборов(группа).querySelector('[data-set="' + ключ + '"]')) {
-			return false; // набора рядом нет — пусть отработает обычная ссылка
-		}
-		выбратьНабор(группа, ключ);
-		return true;
-	}
-
 	/* --- подтверждение отправки ([data-confirm]) ---
 	   Без скрипта первый POST только СПРАШИВАЕТ: страницу с вопросом рисует сервер, и
 	   он же сверяет поле подтверждения. Здесь тот же вопрос задаётся диалогом, а поле
@@ -335,73 +200,14 @@
 		});
 	}
 
-	/* --- дерево галок ([data-checktree]) ---
-	   Три состояния ветки печатает сервер, здесь — пересчёт на лету по тому же правилу, по
-	   которому сервер сохраняет форму: сняты все пакеты — ветка снята; у снятой ветки отмечены
-	   все показанные — включена целиком; иначе «частично». Непоказанных детей ветка знает
-	   числом ([data-tree-rest-on|off]). Значения галок скрипт не трогает. */
-
-	function галкаУзла(узел) { return узел.querySelector(':scope > div [data-checktree-box]'); }
-	function детиУзла(узел) { return все(':scope > details > ul > li', узел); }
-	function вышеУзла(узел) {
-		var список = узел.parentElement;
-		return список.hasAttribute('data-checktree') ? null : список.closest('li');
-	}
-
-	function поставитьГалку(галка, сост) {
-		галка.checked = сост !== 'off';
-		галка.indeterminate = сост === 'mixed';
-		галка.setAttribute('data-checktree-state', сост);
-		if (сост === 'mixed') { галка.setAttribute('aria-checked', 'mixed'); } else { галка.removeAttribute('aria-checked'); }
-	}
-
-	function пересчитать(узел) {
-		var галка = галкаУзла(узел), вкл = 0, выкл = 0;
-		детиУзла(узел).forEach(function (ребёнок) {
-			if (галкаУзла(ребёнок).checked) { вкл += 1; } else { выкл += 1; }
-		});
-		var на = +галка.getAttribute('data-tree-rest-on') || 0, без = +галка.getAttribute('data-tree-rest-off') || 0;
-		if (галка.getAttribute('data-tree-printed') === 'off') {
-			// у снятой ветки непоказанные идут за показанными: отмечены все — включены и они
-			if (выкл === 0) { вкл += на + без; } else { выкл += на + без; }
-		} else { вкл += на; выкл += без; }
-		поставитьГалку(галка, выкл === 0 ? 'on' : (вкл === 0 ? 'off' : 'mixed'));
-		if (вышеУзла(узел)) { пересчитать(вышеУзла(узел)); }
-	}
-
-	function поставитьВетку(узел, вкл) {
-		поставитьГалку(галкаУзла(узел), вкл ? 'on' : 'off');
-		детиУзла(узел).forEach(function (ребёнок) { поставитьВетку(ребёнок, вкл); });
-	}
-
-	document.addEventListener('change', function (событие) {
-		var галка = событие.target;
-		if (!галка.hasAttribute || !галка.hasAttribute('data-checktree-box')) { return; }
-		var узел = галка.closest('li'), было = галка.getAttribute('data-checktree-state');
-		if (!детиУзла(узел).length) {
-			поставитьГалку(галка, галка.checked ? 'on' : 'off');
-		} else {
-			// «частично» и «снято» щелчком становятся «включено», «включено» — «снято» целиком, вместе
-			// с непоказанными; ветку, которую непоказанные удержали бы в «частично», тот же щелчок снимает
-			if (было !== 'on') { поставитьВетку(узел, true); пересчитать(узел); }
-			if (было === 'on' || галка.getAttribute('data-checktree-state') === было) { поставитьВетку(узел, false); }
-		}
-		if (вышеУзла(узел)) { пересчитать(вышеУзла(узел)); }
-	});
-
-	function оживитьДеревья() {
-		все('[data-checktree-box]').forEach(function (галка) {
-			галка.setAttribute('data-tree-printed', галка.getAttribute('data-checktree-state'));
-			галка.indeterminate = галка.getAttribute('data-checktree-state') === 'mixed';
-		});
-	}
-
 	/* --- живая форма подписки: предпросмотр на лету ([data-sub-preview]) и проба без
 	   перезагрузки ([data-sub-trial]) ---
 	   Сообщение собирает только сервер — той же дверью, что боевая доставка; здесь его ответ
 	   лишь вставляется на место. Адрес, который отвечает кусочком, и имена секретных полей,
-	   которые в предпросмотр не уходят, печатает сервер. Без скрипта место предпросмотра
-	   скрыто, а обе кнопки шлют форму обычной отправкой в новую вкладку. */
+	   которые в предпросмотр не уходят, печатает сервер. Место живёт в окне подписки: окно новой
+	   подписки стоит на странице закрытым, окно правки кит приносит запросом, — поэтому место
+	   оживает, когда его окно открылось или в его форме набирают. Без скрипта место скрыто,
+	   а обе кнопки шлют форму окна, и сервер возвращает окно открытым с итогом. */
 
 	// ответ — разметка с узлом [data-sub-result]; страница отказа гейта его не несёт
 	function вставитьОтвет(цель, текст, запасной) {
@@ -427,45 +233,60 @@
 		return поля;
 	}
 
-	function оживитьПредпросмотр(место) {
+	// предпросмотр, который сейчас в пути, и таймер ввода — у каждого места свои
+	var запросыМест = new WeakMap();
+	var таймерыМест = new WeakMap();
+
+	function обновитьМесто(место) {
 		var форма = место.closest('form');
 		var цель = место.querySelector('[data-sub-preview-target]');
 		if (!форма || !цель || typeof fetch !== 'function') { return; }
 
-		var секреты = (место.getAttribute('data-sub-omit') || '').split(' ').filter(Boolean);
-		var таймер = null;
-		var прежний = null;
-
-		function обновить() {
-			if (прежний) { прежний.abort(); }
-			прежний = new AbortController();
-			отправитьКусочек(место.getAttribute('data-sub-preview'), поляФормы(форма, секреты), прежний.signal)
-				.then(function (текст) { вставитьОтвет(цель, текст, место.getAttribute('data-sub-failed')); },
-					function (ошибка) {
-						if (ошибка.name !== 'AbortError') { цель.textContent = место.getAttribute('data-sub-failed'); }
-					});
-		}
-
-		function отложить() {
-			clearTimeout(таймер);
-			таймер = setTimeout(обновить, 300);
-		}
-
-		форма.addEventListener('input', отложить);
-		форма.addEventListener('change', отложить);
 		все('[data-sub-preview-button]', форма).forEach(function (кнопка) { кнопка.hidden = true; });
 		место.hidden = false;
 
-		// форма правки живёт в свёрнутой карточке каждой подписки: при загрузке спрашиваем только
-		// видимую, свёрнутую — когда её раскроют или начнут править
-		var карточка = место.closest('details');
-		if (!карточка || карточка.open) {
-			обновить();
-			return;
-		}
-		карточка.addEventListener('toggle', function () {
-			if (карточка.open && !прежний) { обновить(); }
+		var прежний = запросыМест.get(место);
+		if (прежний) { прежний.abort(); }
+		var текущий = new AbortController();
+		запросыМест.set(место, текущий);
+		var секреты = (место.getAttribute('data-sub-omit') || '').split(' ').filter(Boolean);
+		отправитьКусочек(место.getAttribute('data-sub-preview'), поляФормы(форма, секреты), текущий.signal)
+			.then(function (текст) { вставитьОтвет(цель, текст, место.getAttribute('data-sub-failed')); },
+				function (ошибка) {
+					if (ошибка.name !== 'AbortError') { цель.textContent = место.getAttribute('data-sub-failed'); }
+				});
+	}
+
+	function отложитьМеста(форма) {
+		все('[data-sub-preview]', форма).forEach(function (место) {
+			clearTimeout(таймерыМест.get(место));
+			таймерыМест.set(место, setTimeout(function () { обновитьМесто(место); }, 300));
 		});
+	}
+
+	// место в закрытом окне ждёт, пока окно откроют: страница не спрашивает сервер зря
+	function оживитьМестаВидимые(корень) {
+		все('[data-sub-preview]', корень).forEach(function (место) {
+			var окно = место.closest('dialog');
+			if (!окно || окно.open) { обновитьМесто(место); }
+		});
+	}
+
+	function следитьЗаОкнами() {
+		if (typeof MutationObserver !== 'function') { return; }
+		new MutationObserver(function (записи) {
+			записи.forEach(function (запись) {
+				var узел = запись.target;
+				if (запись.type === 'attributes' && узел.tagName === 'DIALOG' && узел.open) {
+					оживитьМестаВидимые(узел);
+				}
+			});
+		}).observe(document.body, { attributes: true, attributeFilter: ['open'], subtree: true });
+	}
+
+	function вводВФорму(событие) {
+		var форма = событие.target && событие.target.form;
+		if (форма && форма.querySelector('[data-sub-preview]')) { отложитьМеста(форма); }
 	}
 
 	function пробовать(кнопка) {
@@ -498,37 +319,26 @@
 		var проба = цель.closest('[data-sub-trial] button');
 		if (проба) {
 			if (пробовать(проба)) { событие.preventDefault(); }
-			return;
 		}
-
-		var набор = цель.closest('[data-sets] a[href]');
-		if (набор && !событие.defaultPrevented && событие.button === 0
-			&& !(событие.metaKey || событие.ctrlKey || событие.shiftKey || событие.altKey)) {
-			if (переключитьНабор(набор)) { событие.preventDefault(); }
-		}
-	});
-
-	document.addEventListener('change', function (событие) {
-		var цель = событие.target;
-		if (!цель || !цель.closest || цель.tagName !== 'SELECT') { return; }
-		var группа = цель.closest('[data-sets]');
-		if (!группа || цель.getAttribute('name') !== группа.getAttribute('data-sets')) { return; }
-		выбратьНабор(группа, цель.value);
 	});
 
 	document.addEventListener('submit', function (событие) {
 		var форма = событие.target;
 		if (!форма || !форма.getAttribute || !форма.getAttribute('data-confirm')) { return; }
+		// data-confirm, который называет окно подтверждения кита, спрашивает кит своим окном
+		var окно = document.getElementById(форма.getAttribute('data-confirm'));
+		if (окно && окно.tagName === 'DIALOG') { return; }
 		if (!подтвердить(форма)) { событие.preventDefault(); }
 	});
 
 	function запустить() {
 		следитьЗаФормами();
-		оживитьПлашки();
 		оживитьОтборы();
 		оживитьПодсказки();
-		оживитьДеревья();
-		все('[data-sub-preview]').forEach(оживитьПредпросмотр);
+		оживитьМестаВидимые(document);
+		следитьЗаОкнами();
+		document.addEventListener('input', вводВФорму);
+		document.addEventListener('change', вводВФорму);
 	}
 
 	if (document.readyState === 'loading') {

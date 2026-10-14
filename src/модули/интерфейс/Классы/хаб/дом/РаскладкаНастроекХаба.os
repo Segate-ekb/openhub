@@ -133,6 +133,7 @@
 	Ярус("oshub.ui.tagline", 1);
 	Ярус("oshub.ui.show_name", 1);
 	Ярус("oshub.ui.theme", 1);
+	Ярус("oshub.ui.preset", 1);
 	Ярус("oshub.ui.accent", 1);
 
 	Ярус("oshub.auth.password.enabled", 1);
@@ -199,6 +200,11 @@
 	// поход за README в репозиторий — тоже политика «ходить наружу или нет»
 	Ярус("oshub.readme.repository.enabled", 1);
 	Ярус("oshub.proxy.max_redirects", 3);
+
+	// проверка новой версии — тоже политика «ходить наружу или нет», а адрес источника отвечает
+	// на «куда», а не на «сколько», и порогом быть не может
+	Ярус("oshub.updates.check", 1);
+	Ярус("oshub.updates.source", 1);
 
 	Ярус("oshub.ui.audit_page_size", 2);
 	Ярус("oshub.stats.flush_interval_sec", 3);
