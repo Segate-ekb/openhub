@@ -206,6 +206,8 @@
 	Ярус("oshub.updates.check", 1);
 	Ярус("oshub.updates.source", 1);
 
+	// выключатель кэша страниц гостя — рычаг отката: «отдавать гостю из памяти или нет»
+	Ярус("oshub.cache.guest_pages", 1);
 	Ярус("oshub.ui.audit_page_size", 2);
 	Ярус("oshub.stats.flush_interval_sec", 3);
 	Ярус("oshub.stats.flush_threshold", 3);

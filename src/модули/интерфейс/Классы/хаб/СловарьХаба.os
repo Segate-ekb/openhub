@@ -897,6 +897,9 @@
 	Словарь.Добавить("settings.key.oshub-ui-audit-page-size.label", "Записей на странице журнала");
 	Словарь.Добавить("settings.key.oshub-ui-audit-page-size.hint",
 		"Сколько записей аудита показывается на одной странице журнала.");
+	Словарь.Добавить("settings.key.oshub-cache-guest-pages.label", "Кэш страниц гостя");
+	Словарь.Добавить("settings.key.oshub-cache-guest-pages.hint",
+		"Гость получает страницы каталога из памяти хаба, не старше минуты. Выключение действует сразу.");
 	Словарь.Добавить("settings.key.oshub-api-page-size.label", "Размер страницы API");
 	Словарь.Добавить("settings.key.oshub-api-page-size.hint",
 		"Сколько элементов отдаёт списковая ручка API, когда клиент не назвал размер"
