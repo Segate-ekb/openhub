@@ -11,10 +11,12 @@
 #   scripts/тесты.sh --внешние                    # наборы tests/внешние/ — с поднятыми системами
 #   scripts/тесты.sh --инфраструктура             # самотесты обвязки tests/инфраструктура/
 #   scripts/тесты.sh --плавающие                  # только карантин *_Плавающие_Тесты.os, без корзин
+#   scripts/тесты.sh --всё --параллельно 4        # регрессия: 4 корзины и корзина «хабы» одновременно
 #   scripts/тесты.sh <модуль> --параллельно 4     # отобранное — в 4 одновременных oneunit
 #   scripts/тесты.sh <модуль> --время             # наборы по одному: таблица «набор — секунды»
+#   scripts/тесты.sh --всё --время --таблица-времени scripts/время-наборов.tsv  # веса корзин
 #   scripts/тесты.sh <модуль> --список            # напечатать отобранные наборы (и почему), группы
-#                                                 # общих хабов с фазами — и выйти
+#                                                 # общих хабов с фазами, корзины — и выйти
 #   scripts/тесты.sh <модуль> -- --mode summary   # всё после «--» уходит в oneunit execute
 #
 # Ключи модуля сочетаются: `scripts/тесты.sh вход --сквозные --с-потребителями --e2e`.
@@ -23,17 +25,25 @@
 # режим, кроме --плавающие.
 #
 # --параллельно N (без ключа прогон один) делит отобранные наборы на N корзин, выравнивая суммарный
-# размер файлов, и гоняет каждую своим oneunit execute в своём временном воркспейсе git с копией
+# вес, и гоняет каждую своим oneunit execute в своём временном воркспейсе git с копией
 # oscript_modules: процессы одного чекаута мешают друг другу читать общие файлы. Воркспейсы стоят
 # на снимке рабочего дерева — корзины гоняют ровно то, что в дереве, с правками и новыми файлами.
 # Снимок — висячий коммит, его объекты убирает обычный gc.
-# Корзина — своя группа процессов: прерванный прогон гасит её целиком и только потом снимает
-# воркспейсы. Вывод первой корзины идёт по ходу прогона, остальных — по её окончании, строками
-# «корзина K │ …»; за ними — СВОДКА: суммы строк статистики oneunit и «Тестирование завершилось
-# удачно», только если так закончилась каждая корзина; код выхода — ненулевой, если ненулевой
-# у любой корзины. Ключи файлов отчёта oneunit после «--» (--junit, --cobertura и другие) корзины
-# не принимают — код 2: все корзины писали бы в один файл; отчёт снимают прогоном в один поток.
-# --время и --плавающие корзин не делят.
+# Вес набора — секунды из таблицы scripts/время-наборов.tsv (строки «<секунды>\t<набор>», путь
+# как в -f), набору вне таблицы — медиана таблицы, без таблицы — размер файла; раскладка жадная:
+# по убыванию веса, в корзину с наименьшей суммой. Шапка называет, по чему выровнено. Таблицу пишет
+# --время --таблица-времени <файл> по итогу прогона, файлом целиком; без --время ключ — код 2.
+# Упавший набор нового веса не получает: строка — из прежней таблицы по этому пути, без неё строки нет.
+# Наборы общих хабов идут корзиной «хабы» одновременно с остальными, в своём воркспейсе: хабы групп
+# поднимает инструмент воркспейса, один oneunit гоняет наборы групп по фазам, хабы гасятся; вывод —
+# строками «корзина хабы │ …» после остальных корзин, в сводке — своей строкой.
+# Корзина — своя группа процессов: прерванный прогон гасит её целиком (корзину «хабы» — с хабами)
+# и только потом снимает воркспейсы. Вывод первой корзины идёт по ходу прогона, остальных — по её
+# окончании, строками «корзина K │ …»; за ними — СВОДКА: суммы строк статистики oneunit и
+# «Тестирование завершилось удачно», только если так закончилась каждая корзина; код выхода —
+# ненулевой, если ненулевой у любой корзины. Ключи файлов отчёта oneunit после «--» (--junit,
+# --cobertura и другие) корзины не принимают — код 2: все корзины писали бы в один файл; отчёт
+# снимают прогоном в один поток. --время и --плавающие корзин не делят.
 #
 # Вывод открывает шапка прогона (коммит, состояние дерева, команда, время начала) и закрывает
 # итог с кодом выхода, во всех режимах; формат — в scripts/шапка-прогона.sh.
@@ -42,8 +52,9 @@
 # с &Изолированный(Уровень = "Процесс"), см. scripts/смоук.sh. Регрессия тег всё же ставит:
 # изолированные внешние наборы без своего окружения пропускают тесты сами.
 #
-# Общие хабы: в режимах --e2e, <модуль> --e2e и --всё (в один поток) живые наборы с тегом
-# «хаб:<группа>» идут в одном хабе группы. Прогон — два вызова oneunit: первый — наборы без тега
+# Общие хабы: в режимах --e2e, <модуль> --e2e и --всё живые наборы с тегом «хаб:<группа>» идут
+# в одном хабе группы. С --параллельно их гоняет корзина «хабы» (см. выше), в один поток прогон —
+# два вызова oneunit: первый — наборы без тега
 # группы, как прежде; затем скрипт поднимает хаб каждой группы инструментом
 # tests/инструменты/хаб-группы.os, отдаёт наборам адрес переменной OSHUB_TEST_HUB_<ИДЕНТИФИКАТОР>
 # (и журнал — OSHUB_TEST_HUB_<ИДЕНТИФИКАТОР>_LOG), второй oneunit гоняет наборы групп, после него
@@ -68,6 +79,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# относительный путь --таблица-времени — от каталога вызова, а не от корня
+CALLER_DIR="$(pwd)"
 cd "$ROOT_DIR"
 
 . "$ROOT_DIR/scripts/шапка-прогона.sh"
@@ -78,6 +91,9 @@ BUCKETS=1
 # не ушёл группе, чей номер система уже отдала другому процессу.
 BUCKET_PIDS=()
 BUCKET_TREES=()
+# Корзина «хабы» — наборы общих хабов при --параллельно; пустой PID — её нет или она дождалась конца.
+HUB_BUCKET=0
+HUB_BUCKET_PID=""
 # Общие хабы групп: имя группы, PID, временный каталог и журнал — по одному номеру.
 HUB_NAMES=()
 HUB_PIDS=()
@@ -86,7 +102,7 @@ HUB_LOGS=()
 on_exit() {
 	local code=$?
 	if [ "${#HUB_PIDS[@]}" -gt 0 ]; then stop_shared_hubs "$code"; fi
-	if [ "${#BUCKET_PIDS[@]}" -gt 0 ]; then
+	if [ "${#BUCKET_PIDS[@]}" -gt 0 ] || [ -n "$HUB_BUCKET_PID" ]; then
 		stop_buckets
 		print_bucket_tails
 	fi
@@ -97,24 +113,29 @@ on_exit() {
 trap on_exit EXIT
 
 # Корзины, не дождавшиеся конца, гасятся группой процессов целиком — с хабами и изолированными
-# наборами: фоновые группы сигнал терминала не получают. Упрямой группе через пять секунд — KILL.
+# наборами: фоновые группы сигнал терминала не получают. Упрямой группе через пять секунд — KILL;
+# корзине «хабы» — через минуту: на TERM она сама гасит хабы инструментом и снимает их каталоги.
 stop_buckets() {
 	local pid tick=0
-	for pid in "${BUCKET_PIDS[@]}"; do
+	for pid in ${BUCKET_PIDS[@]+"${BUCKET_PIDS[@]}"} $HUB_BUCKET_PID; do
 		if [ -n "$pid" ]; then kill -TERM -- "-$pid" 2>/dev/null || true; fi
 	done
 	while [ "$tick" -lt 50 ] && buckets_alive; do sleep 0.1; tick=$((tick + 1)); done
-	for pid in "${BUCKET_PIDS[@]}"; do
+	for pid in ${BUCKET_PIDS[@]+"${BUCKET_PIDS[@]}"}; do
 		if [ -n "$pid" ]; then kill -KILL -- "-$pid" 2>/dev/null || true; fi
 	done
-	for pid in "${BUCKET_PIDS[@]}"; do
+	if [ -n "$HUB_BUCKET_PID" ]; then
+		while [ "$tick" -lt 600 ] && kill -0 -- "-$HUB_BUCKET_PID" 2>/dev/null; do sleep 0.1; tick=$((tick + 1)); done
+		kill -KILL -- "-$HUB_BUCKET_PID" 2>/dev/null || true
+	fi
+	for pid in ${BUCKET_PIDS[@]+"${BUCKET_PIDS[@]}"} $HUB_BUCKET_PID; do
 		if [ -n "$pid" ]; then wait "$pid" 2>/dev/null || true; fi
 	done
 }
 
 buckets_alive() {
 	local pid
-	for pid in "${BUCKET_PIDS[@]}"; do
+	for pid in ${BUCKET_PIDS[@]+"${BUCKET_PIDS[@]}"}; do
 		if [ -n "$pid" ] && kill -0 -- "-$pid" 2>/dev/null; then return 0; fi
 	done
 	return 1
@@ -130,6 +151,10 @@ print_bucket_tails() {
 		fi
 		b=$((b + 1))
 	done
+	if [ -n "$HUB_BUCKET_PID" ] && [ -s "$WORK/bucket-хабы.log" ]; then
+		echo "== корзина хабы: прервана, последние 30 строк журнала"
+		tail -n 30 "$WORK/bucket-хабы.log" | sed "s/^/корзина хабы │ /"
+	fi
 }
 
 # Временные воркспейсы корзин снимаются после того, как их процессы дождались конца.
@@ -160,6 +185,7 @@ TIMING=0
 LIST_ONLY=0
 SHARED_HUBS=0
 JOBS=""
+TIME_TABLE_OUT=""
 PASS=()
 
 while [ $# -gt 0 ]; do
@@ -175,6 +201,9 @@ while [ $# -gt 0 ]; do
 		--параллельно)
 			if [ $# -lt 2 ]; then echo "--параллельно ждёт число корзин." >&2; exit 2; fi
 			JOBS="$2"; shift ;;
+		--таблица-времени)
+			if [ $# -lt 2 ] || [ -z "$2" ]; then echo "--таблица-времени ждёт путь файла." >&2; exit 2; fi
+			TIME_TABLE_OUT="$2"; shift ;;
 		--список) LIST_ONLY=1 ;;
 		--) shift; PASS=("$@"); break ;;
 		-*) echo "Неизвестный ключ: $1" >&2; exit 2 ;;
@@ -190,7 +219,7 @@ while [ $# -gt 0 ]; do
 done
 
 usage() {
-	sed -n '3,17p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
+	sed -n '3,20p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' >&2
 	exit 2
 }
 
@@ -203,6 +232,14 @@ if [ -n "$JOBS" ] && [ $((FLAKY + TIMING)) -gt 0 ]; then
 	echo "--плавающие и --время корзин не делят: --параллельно с ними не сочетается." >&2
 	exit 2
 fi
+if [ -n "$TIME_TABLE_OUT" ] && [ "$TIMING" -eq 0 ]; then
+	echo "--таблица-времени пишет итог --время: без --время её не из чего писать." >&2
+	exit 2
+fi
+case "$TIME_TABLE_OUT" in
+	"" | /*) ;;
+	*) TIME_TABLE_OUT="$CALLER_DIR/$TIME_TABLE_OUT" ;;
+esac
 case "$JOBS" in
 	"") JOBS=1 ;;
 	*[!0-9]* | 0*) echo "Число корзин — целое больше нуля, а не «${JOBS}»." >&2; exit 2 ;;
@@ -628,40 +665,78 @@ if [ "$SHARED_HUBS" -eq 1 ]; then
 	fi
 fi
 
-# Корзины гоняются одновременно — фаз общего хаба там не выдержать: наборы поднимают свои хабы.
-if [ "$SHARED_HUBS" -eq 1 ] && [ "$JOBS" -le 1 ]; then
+# Наборы групп идут одним вызовом oneunit — после остальных в один поток или корзиной «хабы»
+# рядом с корзинами при --параллельно; REST_SUITES — остальные наборы.
+if [ "$SHARED_HUBS" -eq 1 ]; then
 	split_by_hub_groups
 	if [ "${#GROUP_SUITES[@]}" -eq 0 ]; then SHARED_HUBS=0; fi
-else
-	SHARED_HUBS=0
 fi
+if [ "$SHARED_HUBS" -eq 0 ]; then REST_SUITES=("${SUITES[@]}"); fi
+if [ "$SHARED_HUBS" -eq 1 ] && [ "$JOBS" -gt 1 ]; then HUB_BUCKET=1; fi
 
-# Корзины: наборы по убыванию размера файла, каждый — в корзину с наименьшей суммой размеров;
-# корзин не больше, чем наборов. Строки «<номер корзины>\t<набор>» — в $WORK/buckets.
-split_into_buckets() {
-	local suite
-	for suite in "${SUITES[@]}"; do
+# Таблица времени наборов «<секунды>\t<набор>», её пишет --время --таблица-времени.
+TIME_TABLE="$ROOT_DIR/scripts/время-наборов.tsv"
+BALANCE="по размеру"
+BALANCE_NOTE=""
+
+# Вес набора строками «<вес>\t<набор>»: с таблицей времени — секунды из неё, набору вне таблицы —
+# медиана таблицы (BALANCE_NOTE называет, скольким); без таблицы — размер файла.
+suite_weights() {
+	local suite median
+	if [ "$BALANCE" = "по времени" ]; then
+		median="$(awk -F '\t' 'NF >= 2 { print $1 }' "$TIME_TABLE" | sort -n | awk '
+			{ values[NR] = $1 }
+			END { print (NR % 2) ? values[(NR + 1) / 2] : (values[NR / 2] + values[NR / 2 + 1]) / 2 }')"
+		printf '%s\n' "$@" | awk -F '\t' -v median="$median" '
+			NR == FNR { if (NF >= 2) seconds[$2] = $1; next }
+			{ print (($0 in seconds) ? seconds[$0] : median) "\t" $0 }' "$TIME_TABLE" - > "$WORK/weights"
+		BALANCE_NOTE="== корзины по времени из scripts/время-наборов.tsv: вне таблицы наборов $(printf '%s\n' "$@" \
+			| awk -F '\t' 'NR == FNR { if (NF >= 2) known[$2] = 1; next } !($0 in known) { n++ } END { print n + 0 }' \
+				"$TIME_TABLE" -), их вес — медиана $median с"
+		return
+	fi
+	for suite in "$@"; do
 		printf '%s\t%s\n' "$(wc -c < "$suite" | tr -d ' ')" "$suite"
-	done | sort -t "$(printf '\t')" -k1,1nr -k2,2 | awk -F '\t' -v jobs="$JOBS" '
-		{ sizes[NR] = $1; paths[NR] = $2 }
-		END {
-			buckets = (NR < jobs) ? NR : jobs
-			for (b = 1; b <= buckets; b++) load[b] = 0
-			for (i = 1; i <= NR; i++) {
-				best = 1
-				for (b = 2; b <= buckets; b++) if (load[b] < load[best]) best = b
-				load[best] += sizes[i]
-				print best "\t" paths[i]
-			}
-		}' > "$WORK/buckets"
+	done > "$WORK/weights"
+}
+
+# Корзины: наборы по убыванию веса, каждый — в корзину с наименьшей суммой весов; корзин не больше,
+# чем наборов. Строки «<номер корзины>\t<набор>» — в $WORK/buckets.
+split_into_buckets() {
+	if [ -n "$(awk -F '\t' 'NF >= 2 { print; exit }' "$TIME_TABLE" 2> /dev/null)" ]; then
+		BALANCE="по времени"
+	fi
+	: > "$WORK/buckets"
+	if [ $# -gt 0 ]; then
+		suite_weights "$@"
+		sort -t "$(printf '\t')" -k1,1gr -k2,2 "$WORK/weights" | awk -F '\t' -v jobs="$JOBS" '
+			{ weights[NR] = $1; paths[NR] = $2 }
+			END {
+				buckets = (NR < jobs) ? NR : jobs
+				for (b = 1; b <= buckets; b++) { load[b] = 0; count[b] = 0 }
+				for (i = 1; i <= NR; i++) {
+					best = 1
+					# при равной сумме — корзина с меньшим числом наборов: нулевые веса не копятся в одной
+					for (b = 2; b <= buckets; b++)
+						if (load[b] < load[best] || (load[b] == load[best] && count[b] < count[best])) best = b
+					load[best] += weights[i]
+					count[best]++
+					print best "\t" paths[i]
+				}
+			}' > "$WORK/buckets"
+	fi
 	BUCKETS="$(cut -f1 "$WORK/buckets" | sort -un | tail -1)"
+	BUCKETS="${BUCKETS:-0}"
 }
 
 if [ "$JOBS" -gt 1 ]; then
-	split_into_buckets
+	split_into_buckets ${REST_SUITES[@]+"${REST_SUITES[@]}"}
 fi
+# Параллельный прогон — больше одной корзины или корзина «хабы» рядом с остальными.
+PARALLEL=0
+if [ "$BUCKETS" -gt 1 ] || [ "$HUB_BUCKET" -eq 1 ]; then PARALLEL=1; fi
 
-if [ "$BUCKETS" -gt 1 ] && [ "$LIST_ONLY" -eq 0 ]; then
+if [ "$PARALLEL" -eq 1 ] && [ "$LIST_ONLY" -eq 0 ]; then
 	if [ "$RUN_IN_GIT" -ne 1 ]; then
 		echo "Параллельный режим гоняет корзины во временных воркспейсах git, а каталог вне git." >&2
 		exit 2
@@ -677,8 +752,14 @@ if [ "$BUCKETS" -gt 1 ] && [ "$LIST_ONLY" -eq 0 ]; then
 fi
 
 heading="== Тесты: $TITLE — ${#SUITES[@]} наборов"
-if [ "$BUCKETS" -gt 1 ]; then heading="$heading, корзин $BUCKETS"; fi
+if [ "$PARALLEL" -eq 1 ] && [ "$BUCKETS" -gt 0 ]; then
+	heading="$heading, корзин $BUCKETS $BALANCE"
+	if [ "$HUB_BUCKET" -eq 1 ]; then heading="$heading и корзина хабы"; fi
+elif [ "$HUB_BUCKET" -eq 1 ]; then
+	heading="$heading, корзина хабы"
+fi
 echo "$heading"
+if [ "$PARALLEL" -eq 1 ] && [ -n "$BALANCE_NOTE" ]; then echo "$BALANCE_NOTE"; fi
 print_suites() {
 	local suite reason
 	for suite in "$@"; do
@@ -689,7 +770,7 @@ print_suites() {
 		echo "   $suite${reason:+  ← $reason}"
 	done
 }
-if [ "$SHARED_HUBS" -eq 1 ]; then
+if [ "$SHARED_HUBS" -eq 1 ] && [ "$HUB_BUCKET" -eq 0 ]; then
 	echo "== oneunit 1/2: наборы без общего хаба — ${#REST_SUITES[@]}"
 	print_suites ${REST_SUITES[@]+"${REST_SUITES[@]}"}
 	echo "== oneunit 2/2: наборы общих хабов — ${#GROUP_SUITES[@]}, фазы держит &Порядок"
@@ -698,9 +779,13 @@ if [ "$SHARED_HUBS" -eq 1 ]; then
 else
 	print_suites "${SUITES[@]}"
 fi
-if [ "$BUCKETS" -gt 1 ]; then
+if [ "$PARALLEL" -eq 1 ]; then
 	sort -t "$(printf '\t')" -k1,1n -k2,2 "$WORK/buckets" \
 		| awk -F '\t' -v buckets="$BUCKETS" '{ printf "== корзина %s/%s: %s\n", $1, buckets, $2 }'
+fi
+if [ "$HUB_BUCKET" -eq 1 ]; then
+	for suite in "${GROUP_SUITES[@]}"; do echo "== корзина хабы: $suite"; done
+	print_hub_groups
 fi
 echo
 
@@ -760,19 +845,41 @@ snapshot_tree() {
 }
 
 # Корзина в своём воркспейсе со своей копией зависимостей; на macOS копия — клон файлов.
+copy_modules() {
+	if [ -e oscript_modules ]; then
+		cp -c -a oscript_modules/. "$1/oscript_modules" 2> /dev/null \
+			|| cp -a oscript_modules/. "$1/oscript_modules" || exit 1
+	fi
+}
+
 run_bucket() {
 	local tree="$1"
 	shift
-	if [ -e oscript_modules ]; then
-		cp -c -a oscript_modules/. "$tree/oscript_modules" 2> /dev/null \
-			|| cp -a oscript_modules/. "$tree/oscript_modules" || exit 1
-	fi
+	copy_modules "$tree"
 	cd "$tree" || exit 1
 	exec oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "$@" ${PASS[@]+"${PASS[@]}"}
 }
 
+# Корзина «хабы»: хабы групп поднимает инструмент её воркспейса, один oneunit гоняет наборы групп
+# (фазы держит &Порядок), хабы гасятся на выходе корзины — упала она, хвосты их журналов печатаются
+# перед остановкой. TERM прерванного прогона — выход с кодом 143 через ту же остановку.
+run_hub_bucket() {
+	local tree="$1" status=0
+	shift
+	copy_modules "$tree"
+	cd "$tree" || exit 1
+	# в остановке сигналы глушатся: повторный Ctrl-C не обрывает её посреди хабов
+	trap 'hub_bucket_code=$?; trap "" TERM INT HUP; stop_shared_hubs "$hub_bucket_code"' EXIT
+	trap 'exit 143' TERM INT HUP
+	start_shared_hubs || exit 1
+	echo "== корзина хабы: наборы общих хабов — $(($# / 2)), фазы держит &Порядок"
+	oneunit execute ${EXTRA[@]+"${EXTRA[@]}"} "$@" ${PASS[@]+"${PASS[@]}"} || status=$?
+	exit "$status"
+}
+
 # Корзины одновременно, каждая своим oneunit в своём воркспейсе на снимке дерева, своей группой
-# процессов и в свой лог. Первая печатается по ходу прогона, остальные — по окончании, по порядку.
+# процессов и в свой лог; корзина «хабы» — так же, со своими хабами групп. Первая корзина печатается
+# по ходу прогона, остальные — по окончании, по порядку, корзина «хабы» — последней.
 # Пути наборов — относительно корня, в воркспейсе они те же.
 run_parallel() {
 	local b=1 args bucket suite status snapshot
@@ -783,6 +890,10 @@ run_parallel() {
 		BUCKET_TREES+=("$WORK/корзина-$b")
 		b=$((b + 1))
 	done
+	if [ "$HUB_BUCKET" -eq 1 ]; then
+		git worktree add --quiet --detach "$WORK/корзина-хабы" "$snapshot"
+		BUCKET_TREES+=("$WORK/корзина-хабы")
+	fi
 
 	# Своя группа процессов (set -m) — только у корзин: иначе её получил бы и каждый sed или git.
 	set -m
@@ -801,6 +912,12 @@ run_parallel() {
 		BUCKET_PIDS+=("$!")
 		b=$((b + 1))
 	done
+	if [ "$HUB_BUCKET" -eq 1 ]; then
+		args=()
+		for suite in "${GROUP_SUITES[@]}"; do args+=(-f "$suite"); done
+		run_hub_bucket "$WORK/корзина-хабы" "${args[@]}" > "$WORK/bucket-хабы.log" 2>&1 < /dev/null &
+		HUB_BUCKET_PID="$!"
+	fi
 	set +m
 
 	b=1
@@ -815,6 +932,15 @@ run_parallel() {
 		b=$((b + 1))
 	done
 	BUCKET_PIDS=()
+	if [ "$HUB_BUCKET" -eq 1 ]; then
+		status=0
+		wait "$HUB_BUCKET_PID" || status=$?
+		HUB_BUCKET_PID=""
+		echo "== корзина хабы: код $status"
+		sed "s/^/корзина хабы │ /" "$WORK/bucket-хабы.log"
+		echo
+		printf 'корзина хабы\t%s\t%s\n' "$status" "$WORK/bucket-хабы.log" >> "$WORK/runs"
+	fi
 	remove_bucket_trees
 	summarize "$WORK/runs"
 }
@@ -844,7 +970,34 @@ report_timed() {
 	sort -t "$(printf '\t')" -k1,1nr -k3,3 "$WORK/timing" \
 		| awk -F '\t' '{ total += $1; printf "%7d  %s  %s\n", $1, ($2 == 0 ? "✔" : "✘"), $3 } END { printf "%7d  всего\n", total }'
 	echo
-	summarize "$WORK/runs"
+	local table=0
+	if [ -n "$TIME_TABLE_OUT" ]; then write_time_table || table=1; fi
+	summarize "$WORK/runs" || return 1
+	return "$table"
+}
+
+# Таблица времени для корзин «<секунды>\t<набор>» по пути набора — файлом целиком: соседний
+# временный файл переименовывается в итоговый. Упавшему набору — строка прежней таблицы, если она есть.
+write_time_table() {
+	local temporary="$TIME_TABLE_OUT.$$" previous=""
+	if [ -f "$TIME_TABLE_OUT" ]; then previous="$TIME_TABLE_OUT"; fi
+	if awk -F '\t' -v previous="$previous" '
+			BEGIN {
+				if (previous != "") while ((getline line < previous) > 0) {
+					if (split(line, field, "\t") >= 2) old[field[2]] = field[1]
+				}
+			}
+			$2 == 0 { print $1 "\t" $3; next }
+			$3 in old { print old[$3] "\t" $3 }' "$WORK/timing" \
+		| LC_ALL=C sort -t "$(printf '\t')" -k2,2 > "$temporary" \
+		&& mv -f "$temporary" "$TIME_TABLE_OUT"; then
+		echo "== таблица времени: $TIME_TABLE_OUT, наборов $(grep -c '' "$TIME_TABLE_OUT")"
+	else
+		rm -f "$temporary"
+		echo "== таблица времени не записана: $TIME_TABLE_OUT"
+		return 1
+	fi
+	echo
 }
 
 # Один вызов oneunit на перечисленные наборы, вывод — в терминал и в лог; строка «имя\tкод\tлог» —
@@ -862,7 +1015,9 @@ if [ -n "$ORIGINAL_LC_ALL" ]; then export LC_ALL="$ORIGINAL_LC_ALL"; else unset 
 code=0
 : > "$WORK/runs"
 : > "$WORK/timing"
-if [ "$SHARED_HUBS" -eq 1 ]; then
+if [ "$PARALLEL" -eq 1 ]; then
+	run_parallel || code=$?
+elif [ "$SHARED_HUBS" -eq 1 ]; then
 	# Два вызова: наборы без группы, затем хабы групп и их наборы; хабы гасятся сразу после второго.
 	if [ "${#REST_SUITES[@]}" -gt 0 ]; then
 		echo "== oneunit 1/2: наборы без общего хаба — ${#REST_SUITES[@]}"
@@ -897,8 +1052,6 @@ if [ "$SHARED_HUBS" -eq 1 ]; then
 elif [ "$TIMING" -eq 1 ]; then
 	run_timed_suites "${SUITES[@]}"
 	report_timed || code=$?
-elif [ "$BUCKETS" -gt 1 ]; then
-	run_parallel || code=$?
 else
 	FILE_ARGS=()
 	for suite in "${SUITES[@]}"; do FILE_ARGS+=(-f "$suite"); done
