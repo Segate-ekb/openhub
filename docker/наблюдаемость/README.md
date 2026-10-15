@@ -77,7 +77,7 @@ oscript src/main.os
 `entity_operation`, `entity_type`, `entity_repository`, `code_function_name`.
 
 **Метрики хаба.** Скачивания, публикации, реестр, занятое место, очереди фона — приборы
-`oshub.*` (`oshub.downloads`, `oshub.publications`, `oshub.storage.used_bytes` и другие);
+`oshub.*` (`oshub.downloads`, `oshub.publications`, `oshub.storage.used_bytes`, попадания и промахи кэшей `oshub.cache.hits` и `oshub.cache.misses` с атрибутом `oshub.cache` и другие);
 панели «Бизнес хаба» дашборда.
 
 **RED-метрики маршрутов** считает генератор метрик Tempo: `traces_spanmetrics_calls_total`,
