@@ -354,6 +354,11 @@
 	Вызов("GET", "/api/v1/pools/{Пул}/packages/{Имя}/resolve", АдресПакета() + "/resolve?spec=1.0.0");
 	Вызов("GET", "/api/v1/pools/{Пул}/packages/{Имя}/resolve", АдресПакета() + "/resolve?spec=nosuchtag");
 	Вызов("GET", "/api/v1/pools/{Пул}/packages/{Имя}/resolve", АдресПакета() + "/resolve?spec=%3E%3E%3E");
+	ПоПулам = "/api/v1/packages/" + Пакет() + "/resolve";
+	Вызов("GET", "/api/v1/packages/{Имя}/resolve", ПоПулам + "?spec=1.0.0");
+	Вызов("GET", "/api/v1/packages/{Имя}/resolve", ПоПулам + "?spec=nosuchtag");
+	Вызов("GET", "/api/v1/packages/{Имя}/resolve", ПоПулам + "?spec=%3E%3E%3E");
+	Вызов("GET", "/api/v1/packages/{Имя}/resolve", "/api/v1/packages/no-such-package/resolve");
 	Вызов("GET", "/api/v1/pools/{Пул}/packages/{Имя}/readme", АдресПакета() + "/readme");
 	Вызов("GET", "/api/v1/search", "/api/v1/search?q=" + Пакет());
 
@@ -365,6 +370,9 @@
 		СтрШаблон("%1/channels/stable/download/%2/%3", АдресПула(), Пакет(), ИмяФайла("1.0.0")));
 	Вызов("GET", "/api/v1/pools/{Пул}/download/{ИмяПакета}/{ИмяФайла}",
 		СтрШаблон("%1/download/%2/%3", АдресПула(), Пакет(), ИмяФайла("9.9.9")));
+	Выдача("/api/v1/download/{ИмяПакета}/{ИмяФайла}", СтрШаблон("/api/v1/download/%1/%2", Пакет(), ИмяФайла("1.0.0")));
+	Вызов("GET", "/api/v1/download/{ИмяПакета}/{ИмяФайла}",
+		СтрШаблон("/api/v1/download/%1/%2", Пакет(), ИмяФайла("9.9.9")));
 	Вызов("GET", "/api/v1/pools/{Пул}/changes", АдресПула() + "/changes");
 	Вызов("GET", "/api/v1/pools/{Пул}/changes", АдресПула() + "/changes?since=вчера");
 
