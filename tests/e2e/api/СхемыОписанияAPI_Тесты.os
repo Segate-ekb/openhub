@@ -60,7 +60,7 @@
 	Кука = Клиент.Войти(ЛогинАдмина(), ПарольАдмина());
 	Ключ = Клиент.ВыпуститьPAT(Кука);
 
-	Учётки();
+	Учетки();
 	Пулы();
 	Пакеты();
 	Теги();
@@ -305,7 +305,7 @@
 
 #Область Сценарий
 
-Процедура Учётки()
+Процедура Учетки()
 
 	Тело_ = СтрШаблон("{""login"":""schemas-guest"",""email"":""guest@example.com"",""password"":""%1""}",
 		ПарольГостя());
@@ -402,12 +402,12 @@
 
 	Конвейер = "{""provider"":""github"",""repository"":""schemas/pkg"",""workflow"":""release.yml"",""ref"":""main""}";
 	Адрес = АдресПакета() + "/trusted-workflows";
-	Заведённый = Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес, Конвейер);
+	Заведенный = Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес, Конвейер);
 	Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес, Конвейер);
 	Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес, "{""provider"":""bitbucket""}");
 	Вызов("GET", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес);
 	Вызов("DELETE", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows/{Ид}",
-		Адрес + "/" + Ид(Заведённый, "trusted_workflow"), "{}");
+		Адрес + "/" + Ид(Заведенный, "trusted_workflow"), "{}");
 	Второй = Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows", Адрес, Конвейер);
 	Вызов("POST", "/api/v1/pools/{Пул}/packages/{Имя}/trusted-workflows/{Ид}/delete",
 		Адрес + "/" + Ид(Второй, "trusted_workflow") + "/delete", "{}");
