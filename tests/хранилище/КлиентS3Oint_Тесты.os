@@ -539,7 +539,8 @@
 КонецФункции
 
 Функция ОтветНачалаЗагрузки()
-	Возврат ОтветСТелом("200 OK", "<InitiateMultipartUploadResult><UploadId>u-1</UploadId></InitiateMultipartUploadResult>");
+	Возврат ОтветСТелом("200 OK",
+		"<InitiateMultipartUploadResult><UploadId>u-1</UploadId></InitiateMultipartUploadResult>");
 КонецФункции
 
 Функция ОтветЧасти(Знач Метка)
