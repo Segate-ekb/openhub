@@ -1,5 +1,6 @@
 // Учётка вошедшего; как он вошёл - только в ответе «кто я».
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -35,3 +36,4 @@
 &Тип("Строка")
 &ОдинИз("token", "session")
 Перем СпособВхода;
+// BSLLS:MissingVariablesDescription-on

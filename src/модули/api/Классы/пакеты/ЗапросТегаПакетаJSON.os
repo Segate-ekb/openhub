@@ -1,5 +1,6 @@
 // Тело записи тега пакета: ручной тег либо тег по правилу.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("mode")
 Перем Режим;
 
@@ -24,3 +25,4 @@
 
 &Сериализуемое("icon")
 Перем Значок;
+// BSLLS:MissingVariablesDescription-on

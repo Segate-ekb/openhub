@@ -1,5 +1,6 @@
 // Страница сопоставлений клеймов с группами.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("items")
 &Заполнено
 &Тип("Массив")
@@ -26,3 +27,4 @@
 &Заполнено
 &Тип("Булево")
 Перем ЕстьЕще;
+// BSLLS:MissingVariablesDescription-on

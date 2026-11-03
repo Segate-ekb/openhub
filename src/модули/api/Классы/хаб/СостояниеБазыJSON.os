@@ -1,5 +1,6 @@
 // Состояние базы: доступна ли, пул соединений и причина отказа.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("status")
 &Заполнено
 &Тип("Строка")
@@ -13,3 +14,4 @@
 &Сериализуемое("reason")
 &Тип("Строка")
 Перем Причина;
+// BSLLS:MissingVariablesDescription-on

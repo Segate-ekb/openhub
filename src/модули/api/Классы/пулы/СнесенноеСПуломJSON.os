@@ -1,5 +1,6 @@
 // Что снесено вместе с пулом: число записей по видам.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("packages")
 &Заполнено
 &Тип("Число")
@@ -44,3 +45,4 @@
 &Заполнено
 &Тип("Число")
 Перем Строки;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Ответ на просьбу синхронизировать зеркало.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("sync")
 &Заполнено
 &Тип("ОчередьСинхронизацииJSON")
@@ -9,3 +10,4 @@
 &Заполнено
 &Тип("ЗеркалоJSON")
 Перем Зеркало;
+// BSLLS:MissingVariablesDescription-on

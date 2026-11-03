@@ -1,5 +1,6 @@
 // Пакет в дереве получателей; excluded_above - исключён подпиской сверху.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -13,3 +14,4 @@
 &Сериализуемое("excluded_above")
 &Тип("Булево")
 Перем ИсключенСверху;
+// BSLLS:MissingVariablesDescription-on

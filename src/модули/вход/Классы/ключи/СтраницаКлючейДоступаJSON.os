@@ -1,5 +1,6 @@
 // Страница ключей доступа учётки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("tokens")
 &Заполнено
 &Тип("Массив")
@@ -26,3 +27,4 @@
 &Заполнено
 &Тип("Булево")
 Перем ЕстьЕще;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Версия, выбранная по спецификации, и адрес её файла.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("version")
 &Заполнено
 &Тип("Строка")
@@ -30,3 +31,4 @@
 &Заполнено
 &Тип("Булево")
 Перем ВсеИсточникиОпрошены;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Тело предпросмотра правила тега на версиях пакета.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("pool")
 &Заполнено
 Перем Пул;
@@ -15,3 +16,4 @@
 &Сериализуемое("type")
 &ОдинИз("semver", "regex")
 Перем Тип;
+// BSLLS:MissingVariablesDescription-on

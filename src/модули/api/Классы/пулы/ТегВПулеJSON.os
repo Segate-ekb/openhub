@@ -1,5 +1,6 @@
 // Тег пула: правило, по которому тег достаётся пакетам пула.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -42,3 +43,4 @@
 &Тип("Строка")
 &ОдинИз("", "check", "verified", "warning", "stop", "lock", "history", "cube", "key")
 Перем Значок;
+// BSLLS:MissingVariablesDescription-on

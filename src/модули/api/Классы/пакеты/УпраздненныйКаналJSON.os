@@ -1,5 +1,6 @@
 // Тег, заведённый упразднённым адресом канала.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -20,3 +21,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Упразднено;
+// BSLLS:MissingVariablesDescription-on

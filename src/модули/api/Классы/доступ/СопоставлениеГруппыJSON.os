@@ -1,5 +1,6 @@
 // Сопоставление клейма OIDC с группой.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -29,3 +30,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Значение;
+// BSLLS:MissingVariablesDescription-on

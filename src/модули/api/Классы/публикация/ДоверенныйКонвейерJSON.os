@@ -1,5 +1,6 @@
 // Доверенный конвейер CI, которому пакет разрешает публикацию.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -40,3 +41,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Заведен;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Зеркало пула; в карточке зеркала - ещё и его происшествия.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -76,3 +77,4 @@
 &Сериализуемое("incidents_readable")
 &Тип("Булево")
 Перем ПроисшествияПрочитаны;
+// BSLLS:MissingVariablesDescription-on

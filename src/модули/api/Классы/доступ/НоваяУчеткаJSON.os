@@ -1,5 +1,6 @@
 // Заведённая учётка.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -20,3 +21,4 @@
 &Тип("Строка")
 &ОдинИз("user")
 Перем Роль;
+// BSLLS:MissingVariablesDescription-on

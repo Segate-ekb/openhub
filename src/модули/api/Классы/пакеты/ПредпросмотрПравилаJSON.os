@@ -1,5 +1,6 @@
 // Что отдал бы тег с этим правилом: версия и подходящие версии.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("version")
 &Заполнено
 &Тип("Строка")
@@ -34,3 +35,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Предупреждение;
+// BSLLS:MissingVariablesDescription-on

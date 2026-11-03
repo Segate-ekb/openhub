@@ -1,5 +1,6 @@
 // Апстрим пула: адрес, порядок опроса, кэш и состояние.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -49,3 +50,4 @@
 &Сериализуемое("last_failure")
 &Тип("НеудачаИсточникаJSON")
 Перем ПрошлаяНеудача;
+// BSLLS:MissingVariablesDescription-on

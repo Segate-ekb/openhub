@@ -1,5 +1,6 @@
 // Пул в дереве получателей подписки хаба.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -27,3 +28,4 @@
 &ДляКаждого("Значение")
 &Тип("ПакетПолучателейJSON")
 Перем Пакеты;
+// BSLLS:MissingVariablesDescription-on

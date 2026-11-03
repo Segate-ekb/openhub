@@ -1,5 +1,6 @@
 // Тело записи тега пула.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("rule")
 Перем Правило;
 
@@ -21,3 +22,4 @@
 
 &Сериализуемое("icon")
 Перем Значок;
+// BSLLS:MissingVariablesDescription-on

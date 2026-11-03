@@ -1,5 +1,6 @@
 // Теги пула и галка их наследования пакетами.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("tags")
 &Заполнено
 &Тип("Массив")
@@ -31,3 +32,4 @@
 &Заполнено
 &Тип("Булево")
 Перем НаследованиеВключено;
+// BSLLS:MissingVariablesDescription-on

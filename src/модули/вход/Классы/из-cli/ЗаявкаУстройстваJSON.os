@@ -1,5 +1,6 @@
 // Заявка входа с устройства: коды и адрес подтверждения в браузере.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("device_code")
 &Заполнено
 &Тип("Строка")
@@ -29,3 +30,4 @@
 &Заполнено
 &Тип("Число")
 Перем ИнтервалОпроса;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Зависимость пакета из заявки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -19,3 +20,4 @@
 &Заполнено
 &Тип("Булево")
 Перем ДляРазработки;
+// BSLLS:MissingVariablesDescription-on

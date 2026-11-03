@@ -1,5 +1,6 @@
 // Тело заведения доверенного конвейера CI.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("provider")
 &Заполнено
 &ОдинИз("github", "gitlab")
@@ -21,3 +22,4 @@
 
 &Сериализуемое("ref_kind")
 Перем ВидРефа;
+// BSLLS:MissingVariablesDescription-on

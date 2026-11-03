@@ -1,5 +1,6 @@
 // Действия, которые право разрешает.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("create")
 &Заполнено
 &Тип("Булево")
@@ -19,3 +20,4 @@
 &Заполнено
 &Тип("Булево")
 Перем Чтение;
+// BSLLS:MissingVariablesDescription-on

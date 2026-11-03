@@ -1,5 +1,6 @@
 // Происшествие синхронизации зеркала; null в recoverable - исход неизвестен.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("subject")
 &Заполнено
 &Тип("Строка")
@@ -33,3 +34,4 @@
 &Сериализуемое("recoverable", Обязательное = Истина)
 &Тип("Булево")
 Перем Поправимо;
+// BSLLS:MissingVariablesDescription-on

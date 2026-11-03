@@ -1,5 +1,6 @@
 // Тело выдачи и отзыва права на пул или его пакет.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("package")
 Перем Пакет;
 
@@ -13,3 +14,4 @@
 
 &Сериализуемое("role")
 Перем Роль;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Решение по заявке: одобрена либо отклонена.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("status")
 &Заполнено
 &Тип("Строка")
@@ -10,3 +11,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Сообщение;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Живость хаба: версия, время работы и состояние базы.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("status")
 &Заполнено
 &Тип("Строка")
@@ -20,3 +21,4 @@
 &Заполнено
 &Тип("СостояниеБазыJSON")
 Перем База;
+// BSLLS:MissingVariablesDescription-on
