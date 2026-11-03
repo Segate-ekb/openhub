@@ -8,7 +8,8 @@
 &Сериализуемое("section")
 &Заполнено
 &Тип("Строка")
-&ОдинИз("identity", "maintenance", "branding", "mail", "mirrors", "legacy", "trusted", "pools", "login", "password", "delivery", "proxy", "storage")
+&ОдинИз("identity", "maintenance", "branding", "mail", "mirrors", "legacy", "trusted", "pools", "login",
+	"password", "delivery", "proxy", "storage")
 Перем Раздел;
 
 &Сериализуемое("type")
