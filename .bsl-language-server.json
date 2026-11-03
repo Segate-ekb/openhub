@@ -6,11 +6,6 @@
   ],
   "diagnostics": {
     "parameters": {
-      "InvalidCharacterInFile": false,
-      "YoLetterUsage": false,
-      "MissingVariablesDescription": false,
-      "MissingParameterDescription": false,
-      "MissingReturnedValueDescription": false,
       "FunctionShouldHaveReturn": false,
       "NestedFunctionInParameters": false,
       "NestedConstructorsInStructureDeclaration": false,
