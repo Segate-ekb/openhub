@@ -31,8 +31,10 @@
 	&Деталька(Значение = "oshub.webhooks.test_max_per_hour", ЗначениеПоУмолчанию = "") _ПотолокПроб = "",
 	&Деталька(Значение = "oshub.webhooks.telegram.proxy.host", ЗначениеПоУмолчанию = "") _СерверПроксиTelegram = "",
 	&Деталька(Значение = "oshub.webhooks.telegram.proxy.port", ЗначениеПоУмолчанию = "") _ПортПроксиTelegram = "",
-	&Деталька(Значение = "oshub.webhooks.telegram.proxy.user", ЗначениеПоУмолчанию = "") _ПользовательПроксиTelegram = "",
-	&Деталька(Значение = "oshub.webhooks.telegram.proxy.password", ЗначениеПоУмолчанию = "") _ПарольПроксиTelegram = "") Экспорт
+	&Деталька(Значение = "oshub.webhooks.telegram.proxy.user", ЗначениеПоУмолчанию = "")
+		_ПользовательПроксиTelegram = "",
+	&Деталька(Значение = "oshub.webhooks.telegram.proxy.password", ЗначениеПоУмолчанию = "")
+		_ПарольПроксиTelegram = "") Экспорт
 
 	Ключи = Новый ОбъявленияНастроек();
 
