@@ -74,13 +74,13 @@
 		ВызватьИсключение "Учётки root нет: ЗасеятьСводкуКабинета.os запускается после ЗасеятьКабинет.os.";
 	КонецЕсли;
 
-	Автор = Учётка("author", "author@ex.com", "AuthorPassw0rd");
-	Учётка("newbie", "newbie@ex.com", "NewbiePassw0rd");
-	Ключник = Учётка("keyman", "keyman@ex.com", "KeymanPassw0rd");
-	Зеркальщик = Учётка("mirrorman", "mirror@ex.com", "MirrorPassw0rd");
-	Райтер = Учётка("penman", "penman@ex.com", "PenmanPassw0rd");
-	Одиночка = Учётка("solo", "solo@ex.com", "SoloPassw0rd");
-	Писарь = Учётка("scribe", "scribe@ex.com", "ScribePassw0rd");
+	Автор = Учетка("author", "author@ex.com", "AuthorPassw0rd");
+	Учетка("newbie", "newbie@ex.com", "NewbiePassw0rd");
+	Ключник = Учетка("keyman", "keyman@ex.com", "KeymanPassw0rd");
+	Зеркальщик = Учетка("mirrorman", "mirror@ex.com", "MirrorPassw0rd");
+	Райтер = Учетка("penman", "penman@ex.com", "PenmanPassw0rd");
+	Одиночка = Учетка("solo", "solo@ex.com", "SoloPassw0rd");
+	Писарь = Учетка("scribe", "scribe@ex.com", "ScribePassw0rd");
 
 	ЗасеятьПакетыАвтора(Автор);
 	ЗасеятьКлючи(Ключник);
@@ -225,20 +225,20 @@
 Процедура ИспортитьЛичныеПространства(Знач Корень)
 
 	// двери смены типа у хаба нет: разжалование — прямой записью пула
-	Разжалованное = СервисПулов.НайтиПул(Учётка("demoted", "demoted@ex.com", "DemotedPassw0rd").Логин);
+	Разжалованное = СервисПулов.НайтиПул(Учетка("demoted", "demoted@ex.com", "DemotedPassw0rd").Логин);
 	Разжалованное.Тип = "custom";
 	Разжалованное.Сохранить();
 
-	Захваченный = СервисПулов.НайтиПул(Учётка("usurped", "usurped@ex.com", "UsurpedPassw0rd").Логин);
+	Захваченный = СервисПулов.НайтиПул(Учетка("usurped", "usurped@ex.com", "UsurpedPassw0rd").Логин);
 	Захваченный.ВладелецИдентификатор = Корень.Идентификатор;
 	Захваченный.Сохранить();
 
-	Бездомный = Учётка("homeless", "homeless@ex.com", "HomelessPassw0rd");
+	Бездомный = Учетка("homeless", "homeless@ex.com", "HomelessPassw0rd");
 	СервисПулов.УдалитьПул(СервисПулов.НайтиПул(Бездомный.Логин).Идентификатор);
 
 КонецПроцедуры
 
-Функция Учётка(Знач Логин, Знач Почта, Знач Пароль)
+Функция Учетка(Знач Логин, Знач Почта, Знач Пароль)
 	Возврат СервисПользователей.СоздатьПользователя(Логин, Почта, Пароль, "user");
 КонецФункции
 

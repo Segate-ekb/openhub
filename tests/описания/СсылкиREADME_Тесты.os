@@ -81,7 +81,7 @@
 	ПроверитьРазбор("https://github.com/acme/mono/tree/main/a%2Fb%2F..%2Fc/./d", "github",
 		"https://github.com/acme/mono", "main", "branch", "a/c/d");
 
-	HTML = Разрешённый("![к](img/a.png)", "https://github.com/acme/lib/tree/main/x%2F..%2F..%2Fevil");
+	HTML = Разрешенный("![к](img/a.png)", "https://github.com/acme/lib/tree/main/x%2F..%2F..%2Fevil");
 	Ожидаем.Что(Картинка(HTML, "к"), "картинка не уходит в чужой репозиторий").Равно(Неопределено);
 
 КонецПроцедуры
@@ -100,7 +100,7 @@
 	ПроверитьРазбор("ssh://git@gitea.local:2222/acme/lib.git", "gitea", "https://gitea.local/acme/lib", "HEAD", "branch",
 		"");
 
-	Ожидаем.Что(Картинка(Разрешённый("![к](a.png)", "http://gitea.local:3000/acme/lib"), "к"))
+	Ожидаем.Что(Картинка(Разрешенный("![к](a.png)", "http://gitea.local:3000/acme/lib"), "к"))
 		.Равно("http://gitea.local:3000/acme/lib/raw/branch/HEAD/a.png");
 
 КонецПроцедуры
@@ -211,7 +211,7 @@
 &Тест
 Процедура СсылкаИКартинкаВедутВРепозиторий() Экспорт
 
-	HTML = Разрешённый("[Руководство](docs/test.md) ![Схема](img/scheme.png)", "https://github.com/acme/lib");
+	HTML = Разрешенный("[Руководство](docs/test.md) ![Схема](img/scheme.png)", "https://github.com/acme/lib");
 
 	Ожидаем.Что(Адрес(HTML, "Руководство")).Равно("https://github.com/acme/lib/blob/HEAD/docs/test.md");
 	Ожидаем.Что(Картинка(HTML, "Схема")).Равно("https://raw.githubusercontent.com/acme/lib/HEAD/img/scheme.png");
@@ -237,7 +237,7 @@
 	Случаи.Вставить("docs/a%2Bb.md", База + "pkg/docs/a%2Bb.md");
 
 	Для Каждого Случай Из Случаи Цикл
-		HTML = Разрешённый("[т](" + Случай.Ключ + ")", "https://github.com/acme/mono/tree/main/pkg");
+		HTML = Разрешенный("[т](" + Случай.Ключ + ")", "https://github.com/acme/mono/tree/main/pkg");
 		Ожидаем.Что(Адрес(HTML, "т"), Случай.Ключ).Равно(Случай.Значение);
 	КонецЦикла;
 
@@ -247,7 +247,7 @@
 &Тест
 Процедура ПутьВышеКорняНеВыводитЗаРепозиторий() Экспорт
 
-	HTML = Разрешённый("[выше](../../etc/passwd) [ещё](pkg/../../x.md) ![к](../logo.png)", "https://github.com/acme/lib");
+	HTML = Разрешенный("[выше](../../etc/passwd) [ещё](pkg/../../x.md) ![к](../logo.png)", "https://github.com/acme/lib");
 
 	Ожидаем.Что(ЕстьСсылка(HTML, "выше"), "ссылки нет").ЭтоЛожь();
 	Ожидаем.Что(ЕстьСсылка(HTML, "ещё"), "ссылки нет").ЭтоЛожь();
@@ -261,7 +261,7 @@
 &Тест
 Процедура КартинкаВнутриСнятойСсылкиОстаётся() Экспорт
 
-	HTML = Разрешённый("[![Значок](img/badge.svg)](../../out.md) [дальше](docs/a.md)", "https://github.com/acme/lib");
+	HTML = Разрешенный("[![Значок](img/badge.svg)](../../out.md) [дальше](docs/a.md)", "https://github.com/acme/lib");
 
 	Ожидаем.Что(СтрНайти(HTML, "out.md"), "ссылки за репозиторий нет").Равно(0);
 	Ожидаем.Что(Картинка(HTML, "Значок")).Равно("https://raw.githubusercontent.com/acme/lib/HEAD/img/badge.svg");
@@ -308,7 +308,7 @@
 
 	Для Каждого Репозиторий Из СтрРазделить("|http://git.example.ru/acme/lib|https://example.ru", "|") Цикл
 
-		HTML = Разрешённый("[Руководство](docs/test.md) ![Схема](img/scheme.png) [Сайт](https://example.ru)", Репозиторий);
+		HTML = Разрешенный("[Руководство](docs/test.md) ![Схема](img/scheme.png) [Сайт](https://example.ru)", Репозиторий);
 
 		Ожидаем.Что(ЕстьСсылка(HTML, "Руководство"), Репозиторий + ": ссылки нет").ЭтоЛожь();
 		Ожидаем.Что(HTML, Репозиторий + ": текст ссылки остался").Содержит("<p>Руководство <img");
@@ -360,7 +360,7 @@
 &Тест
 Процедура СкриптВАдресеНеОживает() Экспорт
 
-	HTML = НРег(Разрешённый("[а](javascript:alert(1)) [б](javascript%3Aalert(1)) [в](./javascript:alert(1)) "
+	HTML = НРег(Разрешенный("[а](javascript:alert(1)) [б](javascript%3Aalert(1)) [в](./javascript:alert(1)) "
 		+ "![г](data:image/svg+xml;base64,PHN2Zz4=) [д](java&#09;script:alert(1))", "https://github.com/acme/lib"));
 
 	Ожидаем.Что(СтрНайти(HTML, "href=""javascript"), "ни одной ссылки со схемой-скриптом").Равно(0);
@@ -408,7 +408,7 @@
 
 КонецПроцедуры
 
-Функция Разрешённый(Знач Markdown, Знач Репозиторий)
+Функция Разрешенный(Знач Markdown, Знач Репозиторий)
 	Возврат Ссылки.ВРепозиторий(Рендерер.ВБезопасныйHTML(Markdown), Репозиторий, Неопределено);
 КонецФункции
 
