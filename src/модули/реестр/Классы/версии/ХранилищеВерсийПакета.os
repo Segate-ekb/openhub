@@ -377,6 +377,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Модель сущности есть только у собранного репозитория, поэтому форма снимка строится при первом снимке.
 Функция Форма()
 	Если ФормаСнимка = Неопределено Тогда
@@ -394,3 +396,5 @@
 	Агрегаты = _Агрегаты;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

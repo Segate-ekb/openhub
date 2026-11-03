@@ -73,6 +73,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Множества строит СервисПроисхождения: правило «какой источник считать апстримом»
 // живёт там, а снимок только отвечает по нему.
 Процедура ПриСозданииОбъекта(Знач ПакетИдентификатор, Знач МножествоАпстримных,
@@ -84,3 +86,5 @@
 	ЕстьСвои = (ЕстьСобственные = Истина);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

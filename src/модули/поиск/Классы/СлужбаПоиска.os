@@ -7,7 +7,9 @@
 Перем Отбор;            // ПоискПоКоллекции (основа)
 Перем Числа;            // ПриведениеЧисел (основа)
 
+// BSLLS:MissingVariablesDescription-off
 Перем РазмерСтраницыПоУмолчанию;
+// BSLLS:MissingVariablesDescription-on
 
 #Область НастройкиОтбора
 // BSLLS:MissingParameterDescription-off

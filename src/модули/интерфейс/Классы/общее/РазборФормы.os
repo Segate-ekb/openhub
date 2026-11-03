@@ -262,6 +262,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Именованные пары urlencoded-тела: безымянная пара полем формы не считается.
 Функция Пары(Знач ТелоЗапроса)
 
@@ -279,6 +281,8 @@
 	Возврат Найденные;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта(&Пластилин(Значение = "ЗаписьФормы") _ЗаписьТела = Неопределено) Экспорт

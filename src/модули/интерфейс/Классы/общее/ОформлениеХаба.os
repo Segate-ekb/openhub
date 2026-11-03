@@ -40,6 +40,8 @@
 	Возврат "oshub_ui";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Страница обязана нарисоваться и при недоступной базе: пустое оформление - это оформление кита.
 Функция Значение(Знач Ключ)
 
@@ -59,6 +61,8 @@
 			Ключ, Ошибки.ДляЧеловека(Ошибка));
 	КонецЕсли;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Верховный
 &Прозвище("ОформлениеИнсталляции")

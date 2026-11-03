@@ -169,6 +169,8 @@
 	Возврат Агрегаты.Есть(Сам.Достать(), ОтборСреза(Подсистема, Объект, Прогон));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Тот же срез, что у выборок ПоОбъекту и ПоОбъектуИПрогону, - отбором для агрегата.
 Функция ОтборСреза(Знач Подсистема, Знач Объект, Знач Прогон)
 
@@ -198,3 +200,5 @@
 	Агрегаты = _Агрегаты;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

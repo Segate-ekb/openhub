@@ -3,7 +3,9 @@
 
 Перем Обработчик;   // ОбработчикЗапросов (winow)
 Перем Перехватчик;  // ПерехватчикАутентификации (вход)
+// BSLLS:MissingVariablesDescription-off
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем ЧтениеЗаголовков;   // ЗаголовкиHTTP (основа)
 
 // Формирует ответ обёрнутым обработчиком и отмечает в нём негодный токен доступа.
@@ -32,6 +34,8 @@
 
 // --- служебные ---
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция ИмяЗаголовка()
 	Возврат "OSHub-Token-Status";
 КонецФункции
@@ -70,6 +74,8 @@
 Функция КлючУказанийКэшу(Знач Заголовки)
 	Возврат ЧтениеЗаголовков.КлючПоИмени(Заголовки, "Cache-Control");
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 Процедура ПриСозданииОбъекта(Знач ОбернутыйОбработчик, Знач ПерехватчикЗапроса, Знач _Лог) Экспорт
 

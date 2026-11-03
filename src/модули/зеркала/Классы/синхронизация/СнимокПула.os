@@ -103,6 +103,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Опись приходит готовой картой: её снимают раз на обход и делят между порциями.
 // Неопределено - опись не снята.
 Процедура ПриСозданииОбъекта(Знач ЛежащиеАртефакты = Неопределено)
@@ -111,3 +113,5 @@
 	ОписьЕсть = (ЛежащиеАртефакты <> Неопределено);
 	Лежащие = ?(ОписьЕсть, ЛежащиеАртефакты, Новый Соответствие());
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

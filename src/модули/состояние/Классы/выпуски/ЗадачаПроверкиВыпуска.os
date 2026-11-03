@@ -22,6 +22,8 @@
 	Выпуски.Проверить();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Не в горячем пути старта: хаб сначала поднимается и отвечает, потом спрашивает наружу.
 Функция ЗадержкаСтартовойПроверкиСек()
 	Возврат 300;
@@ -36,3 +38,5 @@
 Процедура ПриСозданииОбъекта(&Пластилин(Значение = "ВыпускиХаба") _Выпуски)
 	Выпуски = _Выпуски;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

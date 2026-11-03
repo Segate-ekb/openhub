@@ -23,6 +23,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Неопределено - строка версией semver не является.
 Функция Разобранная(Знач Текст)
 
@@ -42,3 +44,5 @@
 &Желудь
 Процедура ПриСозданииОбъекта()
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

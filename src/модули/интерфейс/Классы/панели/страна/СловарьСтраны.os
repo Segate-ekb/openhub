@@ -11,6 +11,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Отказ по стране и атрибуция базы стран.
 Процедура КлючиОтказаПоСтране(Словарь)
 
@@ -39,6 +41,8 @@
 	Словарь.Добавить("geo.attribution.dbip", "IP Geolocation by DB-IP");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(90)

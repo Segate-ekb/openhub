@@ -194,6 +194,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Перечень словами дома: рубрика объявляется, когда сменилась; адрес раздела собирает кит.
 // Разделы рубрики объекта встают без рубрики - и в колонке, и в шторке: под заголовком дома
 // она повторила бы имя объекта.
@@ -231,6 +233,8 @@
 		ТипЗнч(Секция));
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 #КонецОбласти
 

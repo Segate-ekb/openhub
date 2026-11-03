@@ -125,6 +125,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Карта меняется только копией: читатель работает с неизменным снимком и замка не берёт,
 // а опубликованная карта после публикации уже никем не правится.
 Процедура Положить(Знач Ключ, Знач ТекЗапись)
@@ -209,3 +211,5 @@
 	Часы = Неопределено;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

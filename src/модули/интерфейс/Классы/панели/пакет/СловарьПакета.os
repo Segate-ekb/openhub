@@ -14,6 +14,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Плашки пула (шапка страницы пула и список /pools) и подписи шапки пула.
 Процедура КлючиПлашекПула(Словарь)
 
@@ -89,6 +91,8 @@
 		"Версия не отдаётся резолвом, но скачивается по точной координате");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(80)

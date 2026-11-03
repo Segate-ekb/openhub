@@ -393,6 +393,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Подписки меняются только копией: публикация обходит неизменный снимок без замка, а
 // опубликованные карта и списки после публикации уже никем не правятся. Зовётся под блокировкой.
 Функция СПодписчиком(Знач ТипСобытия, Знач Подписчик)
@@ -438,3 +440,5 @@
 		Лог = _Лог;
 	КонецЕсли;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

@@ -73,6 +73,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция ПутьИзФормы(Знач ПараметрыАдреса)
 
 	Если ТипЗнч(ПараметрыАдреса) <> Тип("Соответствие") Тогда
@@ -128,3 +130,5 @@
 	СменаТемы = _СменаТемы;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

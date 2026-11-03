@@ -66,6 +66,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Управляющие, DEL, NEL, неразрывный пробел и разделители строк и абзацев Юникода.
 Функция ЗапрещенныйСимвол(Знач Символ)
 
@@ -74,6 +76,8 @@
 		ИЛИ Контроль.ЭтоРазрывЮникода(Код);
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ПочтовыйАдрес")
 &Желудь

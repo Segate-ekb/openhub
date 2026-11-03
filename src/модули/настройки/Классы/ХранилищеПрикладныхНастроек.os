@@ -96,6 +96,8 @@
 	Возврат Таблица().Все();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Таблица «ключ → строка» над этим же хранилищем.
 Функция Таблица()
 	Возврат Новый ТаблицаПоКлючу(Сам.Достать());
@@ -108,3 +110,5 @@
 	Сам = _Сам;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

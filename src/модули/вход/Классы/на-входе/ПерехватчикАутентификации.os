@@ -128,6 +128,8 @@
 
 // --- служебные ---
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Клиент назвал токен явно, поэтому к куке не откатываемся ни при каком отказе.
 Функция ПринципалТокена(Знач ЗначениеТокена, Знач Сейчас)
 
@@ -188,3 +190,5 @@
 	Принципалы = ?(_Принципалы = Неопределено, Новый УчеткаПринципала(), _Принципалы);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

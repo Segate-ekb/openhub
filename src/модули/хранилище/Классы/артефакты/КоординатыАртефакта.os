@@ -52,6 +52,8 @@
 	Возврат СтрШаблон("%1/%2/%3", ЗначениеПула, ЗначениеПакета, ЗначениеИмениФайла);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Процедура ПриСозданииОбъекта(Знач Пул, Знач Пакет, Знач Версия, Знач ИмяФайла = "")
 
 	// координаты - значение-объект с позиционным конструктором: внедрять сюда нечем
@@ -147,3 +149,5 @@
 	// удерживает сегмент в файловых лимитах (255 байт у ext4/APFS/NTFS)
 	Возврат 100;
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

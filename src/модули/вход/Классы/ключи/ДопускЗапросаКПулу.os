@@ -50,6 +50,8 @@
 		ИЛИ ГейтТокена.ЗаписьРазрешена(Принципал, Пул);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Мягкий fail-closed: аноним и сессия читают публичное, запрос с ключом не открываем - проверить нечем.
 Функция БезГейтаПропускаем(Знач Принципал)
 	Возврат НЕ Перехватчик.ЭтоКлюч(Принципал);
@@ -65,3 +67,5 @@
 	ГейтТокена = _ГейтТокена;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

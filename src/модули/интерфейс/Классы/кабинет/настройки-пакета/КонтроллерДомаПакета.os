@@ -1,7 +1,9 @@
 // Маршруты дома настроек «Пакет»: показ разделов pools/{pool}/packages/{name}/settings
 // и передача их формы пульту.
 
+// BSLLS:MissingVariablesDescription-off
 Перем ГвардПакета;
+// BSLLS:MissingVariablesDescription-on
 Перем Ответы;        // ОтветыНастроек
 Перем Сбои;        // ТекстСбоя - причина сбоя человеку и отчёт в журнал
 Перем Дом;           // ДомПакета

@@ -14,6 +14,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // мусор и пусто - умолчание реестра; меньше секунды Установить поднимает до секунды
 &Рогатка(ЗапускатьВФоне = Ложь)
 &Порядок(0)
@@ -23,3 +25,5 @@
 	Назначенный = Новый ПриведениеЧисел().ЧислоИлиДефолт(СыройСрок, 30);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

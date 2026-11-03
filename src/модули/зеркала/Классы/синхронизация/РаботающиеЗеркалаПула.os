@@ -25,6 +25,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // «В работе» - и «идёт», и «поставлено»; брошенный прогон зеркало не держит.
 Функция ЗеркалоЗанято(Знач Зеркало)
 
@@ -49,3 +51,5 @@
 	ПрогонЗеркала = _Прогон;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

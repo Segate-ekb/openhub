@@ -165,6 +165,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Дерево файлов настроек без окружения, плоская карта провайдера окружения, программные детальки.
 Процедура ПриСозданииОбъекта(Знач ИзФайлов, Знач ИзОкружения, Знач Программные)
 
@@ -182,3 +184,5 @@
 	КонецЦикла;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

@@ -3,8 +3,10 @@
 
 #Использовать ip
 
+// BSLLS:MissingVariablesDescription-off
 Перем СемействоIPv4;
 Перем СемействоIPv6;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 

@@ -87,6 +87,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Пулы под управлением по правам, без обхода реестра; админу хаба - все.
 Функция ПулыВУправлении(Знач Пользователь, Знач Снимок = Неопределено)
 
@@ -237,3 +239,5 @@
 	СервисПрав = _СервисПрав;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

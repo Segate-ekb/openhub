@@ -13,7 +13,9 @@
 Перем ТелеметрияВключена;         // otel.enabled
 Перем Датчики;           // ссылки на приборы: без них наблюдателя некому опрашивать
 Перем Счетчики;          // тип события -> Структура(Прибор, Действие)
+// BSLLS:MissingVariablesDescription-off
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем Ошибки;            // ТекстОшибки (основа)
 
 #Область ПубличныйИнтерфейс
@@ -440,6 +442,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Имена без повторов и в одном порядке: ряд графика не зависит от порядка желудей.
 Функция ИменаОбъявленныхКэшей(Знач Предметы)
 
@@ -493,3 +497,5 @@
 	Лог = _Лог;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

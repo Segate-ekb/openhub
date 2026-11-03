@@ -36,6 +36,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Процедура Освободить()
 
 	Рефлектор = Новый Рефлектор();
@@ -173,3 +175,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

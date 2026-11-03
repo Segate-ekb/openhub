@@ -139,6 +139,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Имя параметра - то же, которым версию называет адрес README в API.
 Функция ПараметрВерсии()
 	Возврат "version";
@@ -159,6 +161,8 @@
 	Возврат КодироватьСтроку(?(ТипЗнч(Имя) = Тип("Строка"), Имя, Строка(Имя)),
 		СпособКодированияСтроки.КодировкаURL);
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта() Экспорт

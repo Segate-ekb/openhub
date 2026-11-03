@@ -7,7 +7,9 @@
 Перем Страница;       // СтраницаДоступа - каркас публичного экрана
 Перем Кит;            // Кит (кит) - фабрика элементов экрана
 Перем Тексты;         // ТекстыИнтерфейса (кит)
+// BSLLS:MissingVariablesDescription-off
 Перем РазборФормы;
+// BSLLS:MissingVariablesDescription-on
 Перем HTTP;           // МетодыHTTP (основа)
 
 #Область ТочкиМаршрута
@@ -119,6 +121,8 @@
 	Возврат "/forgot-password";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция ИмяПоля()
 	Возврат "учётка";
 КонецФункции
@@ -131,6 +135,8 @@
 Функция Форма(Знач ТелоЗапроса)
 	Возврат РазборФормы.Разобрать(ТелоЗапроса);
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 #КонецОбласти
 

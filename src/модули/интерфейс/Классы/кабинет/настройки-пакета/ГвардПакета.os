@@ -54,6 +54,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Отказ уже отвечен страницей: причина гварда дома - та самая страница, а не код.
 Функция Отказ()
 	Возврат Вердикты.Отказ("", ПоляОтвета());
@@ -68,6 +70,8 @@
 	Возврат Поля;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта(

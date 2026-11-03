@@ -22,6 +22,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Кабинет «/me» - первый раздел дома «Аккаунт»: сводка дел и витрины её блоков.
 Процедура КлючиЛичногоПространства(Словарь)
 
@@ -1176,6 +1178,8 @@
 		"Настройки пакета доступны его мейнтейнерам и владельцу пула");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(30)

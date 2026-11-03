@@ -23,6 +23,8 @@
 	Обновление.Обойти();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Не в первую секунду старта: заход тянет десятки мегабайт и строит индекс.
 Функция ЗадержкаСтартовогоЗаходаСек()
 	Возврат 120;
@@ -38,3 +40,5 @@
 	Интервал = Новый ПриведениеЧисел().ЧислоИлиДефолт(_Интервал, 86400);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

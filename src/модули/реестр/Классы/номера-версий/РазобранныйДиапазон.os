@@ -47,6 +47,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Попадание версии в диапазон чисто по порядку, без политики пререлизов.
 Функция СодержитПоПорядку(Знач Версия)
 
@@ -327,3 +329,5 @@
 Функция ОшибкаРазбора(Знач Причина)
 	Возврат СтрШаблон("Некорректный диапазон версий ""%1"": %2", ИсходнаяСтрока, Причина);
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

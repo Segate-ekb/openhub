@@ -1,7 +1,9 @@
 // Секрет, заданный значением либо файлом (Docker и Kubernetes монтируют секреты файлами):
 // значение сильнее файла, у содержимого файла снимаются края.
 
+// BSLLS:MissingVariablesDescription-off
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 // Секрет по прямому значению и пути к файлу.
 //

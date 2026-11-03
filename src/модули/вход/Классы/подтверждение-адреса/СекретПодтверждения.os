@@ -83,6 +83,8 @@
 	Возврат Сверка.Совпадают(Первое, Второе);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Только цифры и разумная длина: идентификатор заявки - это счётчик, а не выражение.
 Функция ЭтоНомер(Знач Значение)
 
@@ -107,3 +109,5 @@
 	Хеши = ?(_Хеши = Неопределено, Новый Хеш(), _Хеши);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

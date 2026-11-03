@@ -35,12 +35,16 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Неопределено - признака у пула нет, и места в списке он не занимает.
 Процедура ДобавитьПризнак(Результат, Знач Модель)
 	Если Модель <> Неопределено Тогда
 		Результат.Добавить(Модель);
 	КонецЕсли;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Плашка типа пула; Неопределено - тип ничего не сообщает и не показывается.
 //
@@ -215,6 +219,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Пулы, которые наполняет хоть одно включённое зеркало; спросить некого - пусто.
 Функция ПулыСВключеннымЗеркалом()
 
@@ -250,6 +256,8 @@
 Функция Плашка(Знач Текст, Знач Вид, Знач Подсказка)
 	Возврат Новый Структура("Текст, Вид, Подсказка", Текст, Вид, Подсказка);
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Модель шапки страницы пула: слаг вида, иконка, подпись вида, плашки и мета со значками.
 //

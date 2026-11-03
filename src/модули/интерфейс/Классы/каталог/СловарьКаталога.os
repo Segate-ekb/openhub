@@ -15,6 +15,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Каталог пакетов /packages: поиск, отборы, пустая выдача.
 Процедура КлючиКаталогаПакетов(Словарь)
 
@@ -248,6 +250,8 @@
 		+ " раздел «Основное») и не назначен основной пул хаба.");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(20)

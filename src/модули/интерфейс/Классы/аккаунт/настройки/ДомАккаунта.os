@@ -155,10 +155,14 @@
 	Возврат Тексты.Текст("settings.account.lead");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Раздел перечня дома.
 Процедура Раздел(Знач КлючРаздела, Знач Подпись, Знач Иконка, Знач Рубрика, Знач СвойАдрес = "")
 	Сборка.Раздел(Перечень, КлючРаздела, Подпись, Иконка, Рубрика, СвойАдрес);
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта(

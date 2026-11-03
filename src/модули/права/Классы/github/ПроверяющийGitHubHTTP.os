@@ -49,6 +49,8 @@
 
 // --- служебные ---
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Спрашивается на каждый вызов; нет резолвера или ошибка чтения - выключено (fail-closed).
 Функция Включена()
 	Возврат Настройки <> Неопределено И Настройки.Флаг("oshub.publish.github_legacy", Ложь);
@@ -123,3 +125,5 @@
 	ШаблонРепозитория = Новый ШаблонURI("https://{+host}/repos/{owner}/{repo}");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

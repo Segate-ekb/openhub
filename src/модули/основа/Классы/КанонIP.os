@@ -3,8 +3,10 @@
 
 #Использовать ip
 
+// BSLLS:MissingVariablesDescription-off
 Перем ПрефиксNAT64;
 Перем ПрефиксСовместимый;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 

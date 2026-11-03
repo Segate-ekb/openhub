@@ -435,6 +435,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция РольДопустима(Знач Роль)
 	Возврат Роль = РольАдмин() ИЛИ Роль = РольПользователь();
 КонецФункции
@@ -499,3 +501,5 @@
 	Вердикты = Новый Вердикт();
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

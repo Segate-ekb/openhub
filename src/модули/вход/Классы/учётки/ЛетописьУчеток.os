@@ -174,6 +174,8 @@
 	Возврат "адрес.сменён";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Письмо восстановления и удаление учётки называют свои строки: восстановления пароля и удаления с числом снятого.
 Процедура НазватьСобытиеУчетки(Знач Действие, Знач Кто, Знач Логин)
 
@@ -253,3 +255,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

@@ -300,6 +300,8 @@
 	Возврат ЧерезЗапятую.Содержит(Права, Скоуп);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Процедура ЗаписатьПривязки(Знач Запись, Знач Пулы)
 
 	Для Каждого ПулИдентификатор Из НаборПулов(Пулы) Цикл
@@ -424,3 +426,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

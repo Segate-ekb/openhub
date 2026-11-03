@@ -13,6 +13,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Колонки таблицы прав одни на все экраны; тип субъекта и роль - словами.
 Процедура КлючиТаблицы(Словарь)
 
@@ -56,6 +58,8 @@
 		+ " пропадёт сразу. Выдать роль снова можно в любой момент.");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(70)

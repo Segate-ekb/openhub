@@ -155,6 +155,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Приводит регистр, но НЕ проверяет адрес: битый клейм не должен рушить саму привязку.
 Функция АдресЛичности(Знач Email)
 	Возврат НРег(СокрЛП(Строка(Email)));
@@ -175,3 +177,5 @@
 	СервисПользователей = _СервисПользователей;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

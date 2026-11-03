@@ -70,6 +70,8 @@
 	Возврат "email_not_confirmed";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Письмо ушло: сбоя не было, ссылки на руках не было.
 Функция ПисьмоУшло()
 	Возврат Вердикты.Успех(Поля("", Ложь));
@@ -105,3 +107,5 @@
 	Коды = _Коды;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

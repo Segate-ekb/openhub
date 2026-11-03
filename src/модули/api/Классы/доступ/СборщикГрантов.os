@@ -43,6 +43,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция Запись(Знач Грант, Знач Снимок)
 
 	Структура = Новый Структура();
@@ -151,3 +153,5 @@
 	Моменты = ?(_Моменты = Неопределено, Новый МоментISO(), _Моменты);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

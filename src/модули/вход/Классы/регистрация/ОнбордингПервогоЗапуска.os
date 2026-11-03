@@ -63,6 +63,8 @@
 	Возврат ДанныеПодключения;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Выполняет безголовый онбординг и возвращает читаемый итог для журнала.
 Функция БезголовыйОнбординг()
 
@@ -148,3 +150,5 @@
 	ФайлПароляИзДеталей = _ФайлПароляДеталь;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

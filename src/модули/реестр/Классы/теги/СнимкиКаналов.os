@@ -83,6 +83,8 @@
 Процедура ЗабытьСнимокПула(Знач ПулИдентификатор) Экспорт
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Метки всех тегов пакета одной выборкой; у тега-правила их нет, и в ответе он пуст.
 Функция МеткиТегов(Знач Теги)
 
@@ -127,3 +129,5 @@
 	ФормаСнимкаПула = Новый ФормаСнимка(ХранилищеТеговПулов.ПолучитьОбъектМодели());
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

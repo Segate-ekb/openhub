@@ -40,6 +40,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Что стоит на странице: код 404 с фразой и ход обратно в каталог.
 Функция Содержимое()
 
@@ -54,6 +56,8 @@
 	Возврат Кит.Ссылка(АдресаКаталога.Каталог())
 		.Добавить(Кит.Текст(Тексты.Текст("public.catalog.back"))).Родитель();
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("НеизвестныйАдресСловами")
 &Желудь

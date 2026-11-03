@@ -44,6 +44,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Ключи снимаемых привязок без повторов: две рамки одного ключа спрашивают его один раз.
 Функция НомераКлючей(Знач Привязки)
 
@@ -80,3 +82,5 @@
 	ХранилищеПривязок = _ХранилищеПривязок;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

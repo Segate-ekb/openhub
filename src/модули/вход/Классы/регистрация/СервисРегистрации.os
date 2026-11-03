@@ -127,6 +127,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Причина едет машинным кодом, а в журнал - вместе с действующим режимом хаба.
 Процедура ОтказатьВРегистрации(Знач Логин, Знач Причина)
 	Лог.Отладка("Регистрация ""%1"" закрыта: %2, действующий режим хаба - ""%3""",
@@ -155,3 +157,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

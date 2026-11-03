@@ -29,6 +29,8 @@
 	Актуализатор.Актуализировать();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Ноль здесь осмыслен - это полночь, поэтому «не задано» отличается от нуля явно.
 Функция РазобратьЧас(Знач Значение, Знач Дефолт)
 
@@ -90,3 +92,5 @@
 	ОтброшенныйЧас = РазобранныйЧас.Отброшено;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

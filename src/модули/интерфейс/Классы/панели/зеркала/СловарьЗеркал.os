@@ -12,6 +12,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Форма зеркала: протокол, перенос из другого хаба и отказы полей.
 Процедура КлючиФормыЗеркала(Словарь)
 
@@ -45,6 +47,8 @@
 	Словарь.Добавить("mirror.run.state.failed", "ошибка");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(60)

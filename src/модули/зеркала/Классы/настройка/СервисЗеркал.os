@@ -483,6 +483,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Дубль ищется по канону с обеих сторон: сохранённый адрес мог лечь в базу в иной записи
 // («https://хаб» без слеша, «:443», «%7e»); зеркал на пул немного - перебор дешевле расхождения.
 Функция ЗеркалоНаТотЖеАпстрим(Знач Существующие, Знач НормУРЛ)
@@ -522,3 +524,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

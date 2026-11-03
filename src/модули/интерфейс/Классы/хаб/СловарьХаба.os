@@ -18,6 +18,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Раздел «Пулы»: таблица пулов, отбор, окно нового пула, «Сделать основным» и удаление.
 Процедура КлючиПулов(Словарь)
 
@@ -1371,6 +1373,8 @@
 	Словарь.Добавить("settings.hub.audit.filter.find", "Найти");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(40)

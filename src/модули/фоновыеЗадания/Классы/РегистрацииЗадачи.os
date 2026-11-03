@@ -3,7 +3,9 @@
 
 #Использовать os-scheduler
 
+// BSLLS:MissingVariablesDescription-off
 Перем Состав_;
+// BSLLS:MissingVariablesDescription-on
 
 // Интервальная регистрация. Первый запуск - через интервал после регистрации.
 //

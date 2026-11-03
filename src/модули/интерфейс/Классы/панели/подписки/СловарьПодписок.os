@@ -15,6 +15,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Раздел «Подписки на события»: список, форма, действия и события.
 Процедура КлючиПодписок(Словарь)
 
@@ -288,6 +290,8 @@
 	Словарь.Добавить("subscriptions.live.failed", "Хаб не ответил - обновите страницу и попробуйте снова.");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(50)

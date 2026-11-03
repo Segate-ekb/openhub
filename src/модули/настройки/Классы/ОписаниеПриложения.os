@@ -40,6 +40,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // От файла класса, а не точки входа: путь одинаков под main.os, тестом и opm.
 Функция ПутьМанифеста()
 
@@ -53,3 +55,5 @@
 Процедура ПриСозданииОбъекта()
 	Манифест = Новый ИнформацияОПакете(ПутьМанифеста());
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

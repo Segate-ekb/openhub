@@ -166,6 +166,8 @@
 	Возврат Настройки.Значение("oshub.auth.login.maxattempts");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Срок блокировки, секунды.
 Функция СрокБлокировки()
 	Возврат Настройки.Значение("oshub.auth.login.lockoutseconds");
@@ -179,3 +181,5 @@
 	Настройки = _Настройки;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

@@ -28,6 +28,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Процедура Перевести()
 
 	// подписки издателя дописывает фоновый поток службы аудита; читать их можно, когда её гейт закрыт
@@ -73,3 +75,5 @@
 	Ошибки = _Ошибки;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

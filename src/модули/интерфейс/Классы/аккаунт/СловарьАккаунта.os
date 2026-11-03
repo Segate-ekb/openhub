@@ -16,6 +16,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Дом «Аккаунт»: разделы настроек аккаунта.
 Процедура КлючиДомаАккаунта(Словарь)
 
@@ -311,6 +313,8 @@
 	Словарь.Добавить("access.logout.stale", "Выйти не получилось: страница, с которой нажали «Выйти», устарела."
 		+ " Вы по-прежнему в учётной записи - «Выйти» в меню учётки вверху.");
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(10)

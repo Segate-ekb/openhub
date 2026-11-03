@@ -143,6 +143,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция Разметка(Знач page, Знач pageSize, Знач РазмерПоУмолчанию)
 	Возврат Новый Структура("Номер, Размер",
 		Номер(page), Размер(pageSize, РазмерПоУмолчанию, Потолок()));
@@ -168,6 +170,8 @@
 Функция Целое(Знач Ключ, Знач Дефолт)
 	Возврат ?(Настройки = Неопределено, Дефолт, Настройки.Целое(Ключ, Дефолт, 1));
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 #КонецОбласти
 

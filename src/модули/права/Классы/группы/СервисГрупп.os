@@ -284,6 +284,8 @@
 
 // --- служебные ---
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция КанонизироватьИмя(Знач Имя)
 	Возврат Строки.Канон(Имя);
 КонецФункции
@@ -318,3 +320,5 @@
 	Снятие = _Снятие;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

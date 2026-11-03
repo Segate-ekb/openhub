@@ -47,6 +47,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Запись не отменяется - журнал молчать не имеет права, - но расхождение обязано быть громким.
 Процедура СверитьФорму(Знач ТипСобытия, Знач Роль, Знач Значение)
 
@@ -62,6 +64,8 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 #КонецОбласти
 

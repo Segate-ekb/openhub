@@ -71,6 +71,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Первая пара коллекции с этим именем без учёта регистра; нет такой - Неопределено.
 Функция ПараПоИмени(Знач Заголовки, Знач Имя)
 
@@ -88,6 +90,8 @@
 	Возврат Неопределено;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта() Экспорт

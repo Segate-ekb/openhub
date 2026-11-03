@@ -103,6 +103,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Повреждённое содержимое даёт Неопределено, а не исключение.
 Функция ВосстановитьИзЗаписи(Знач Запись)
 	Попытка
@@ -113,6 +115,8 @@
 		Возврат Неопределено;
 	КонецПопытки;
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Безопасен ли идентификатор сессии: ровно 64 символа из [0-9a-f].
 //

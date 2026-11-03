@@ -98,6 +98,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Неверные учётные данные: след отказа, счёт неудачи и замки учётки и адреса.
 Функция ОтказПоУчетнымДанным(Знач Логин, Знач Пользователь, Знач КлючЛогин, Знач КлючIP, Знач IP, Знач Сейчас)
 
@@ -115,6 +117,8 @@
 	Возврат Результат(Ложь, "invalid_credentials", Неопределено, Неопределено);
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Код причины отказа «вход по логину и паролю выключен на хабе».
 //
@@ -127,6 +131,8 @@
 
 // --- служебные ---
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Веха входа: учётка и адрес клиента без хозяина; сырой адрес остаётся отладке.
 Процедура НазватьВход(Знач Пользователь, Знач IP)
 	Лог.Информация("Вход паролем: учётка ""%1"" (#%2) вошла, клиент %3",
@@ -274,3 +280,5 @@
 	КонецЕсли;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

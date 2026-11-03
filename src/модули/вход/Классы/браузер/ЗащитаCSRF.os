@@ -71,6 +71,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // 64 hex-символа из 32 крипто-стойких байт (pwhash.СгенерироватьСоль), как у сессий.
 Функция СгенерироватьТокен()
 	Возврат НРег(ПолучитьHexСтрокуИзДвоичныхДанных(ХешированиеПаролей.СгенерироватьСоль(32)));
@@ -99,3 +101,5 @@
 	СлужбаСессий = _СлужбаСессий;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

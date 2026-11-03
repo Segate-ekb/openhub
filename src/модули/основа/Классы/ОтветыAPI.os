@@ -80,6 +80,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Уровень отчёта: поломка хаба - ОШИБКА, непринятый ввод - ОТЛАДКА.
 Процедура ЗаписатьВЖурнал(Знач Код, Знач КодОшибки, Знач Инфо)
 
@@ -112,6 +114,8 @@
 	Возврат Ложь;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Разбирает тело запроса в Соответствие полей (JSON-объект либо form-urlencoded).
 //

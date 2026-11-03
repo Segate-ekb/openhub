@@ -185,6 +185,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция РазобратьНастройки()
 	Если НЕ ЗначениеЗаполнено(НастройкиJSON) Тогда
 		Возврат Неопределено;
@@ -212,3 +214,5 @@
 &Сущность(ИмяТаблицы = "Пулы")
 Процедура ПриСозданииОбъекта()
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

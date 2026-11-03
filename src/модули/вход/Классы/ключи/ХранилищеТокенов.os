@@ -86,10 +86,14 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Момент, которым записан бессрочный ключ: ЗначениеЗаполнено считает его незаполненным.
 Функция ПустаяДата()
 	Возврат '00010101';
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Удаляет (отзывает) токен вместе с его привязками к пулам.
 //

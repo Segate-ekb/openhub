@@ -100,6 +100,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Уже отправленное письмо новым не заменяется: человека надо вернуть к тому, что у него на руках.
 Функция АдресНеПодтвержден(Знач Письмо)
 
@@ -116,6 +118,8 @@
 		+ " кнопку подтверждения, после этого входите как обычно." + Страница;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // HTTP-код отказа входа по паролю.
 //

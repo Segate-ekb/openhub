@@ -129,6 +129,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Набор проверяется целиком: половина компонент дала бы версию, не совпадающую со своей строкой.
 Процедура ПринятьКомпоненты(Знач Компоненты)
 
@@ -278,3 +280,5 @@
 Функция ЭтоТолькоЦифры(Знач Сегмент)
 	Возврат Новый РегулярноеВыражение("\A[0-9]+\z").Совпадает(Сегмент);
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

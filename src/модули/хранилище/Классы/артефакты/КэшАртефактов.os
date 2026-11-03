@@ -136,6 +136,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Расхождение суммы - окно перезаписи версии: несверенное в кэш не кладётся.
 Функция СуммаСовпала(Знач Sha256, Знач Координаты, Знач Путь)
 
@@ -419,3 +421,5 @@
 	ХранилищеУдаленное = ИмяБэкенда = "s3";
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

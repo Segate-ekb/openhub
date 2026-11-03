@@ -883,6 +883,8 @@
 // BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Дубль ищется по канону с обеих сторон: сохранённый адрес мог лечь в базу не каноничным.
 Функция ТотЖеАдрес(Знач Сохраненный, Знач Новый_)
 	Возврат Адреса.Каноничный(Сохраненный) = Адреса.Каноничный(Новый_);
@@ -935,3 +937,5 @@
 	ОтборТегов = _ОтборТегов;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

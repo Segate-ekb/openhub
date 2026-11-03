@@ -69,10 +69,14 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Адрес подтверждения с уже вписанным кодом: человеку остаётся открыть ссылку.
 Функция СКодомПользователя(Знач Адрес, Знач Код)
 	Возврат ПараметрыСсылки.Установить(Адрес, "user_code", Строка(Код));
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Вход CLI через браузер: опрос заявки.
 //

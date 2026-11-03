@@ -33,6 +33,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Адрес принадлежит одной учётке, поэтому «нашли двоих» - сломанные данные: не находим никого.
 Функция ПоАдресу(Знач Названное)
 
@@ -55,3 +57,5 @@
 	Адреса = _Адреса;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

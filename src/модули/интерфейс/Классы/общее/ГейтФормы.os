@@ -3,7 +3,9 @@
 
 Перем Ответы;      // ОтветыНастроек
 Перем Защита;      // ЗащитаCSRF (вход)
+// BSLLS:MissingVariablesDescription-off
 Перем РазборФормы;
+// BSLLS:MissingVariablesDescription-on
 
 // Разобранная форма POST-запроса с принятым токеном.
 //

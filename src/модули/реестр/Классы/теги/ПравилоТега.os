@@ -97,6 +97,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Процедура ПриСозданииОбъекта(Знач ТипПравила, Знач Текст)
 
 	ТипНорм = НРег(СокрЛП(Строка(ТипПравила)));
@@ -236,3 +238,5 @@
 Функция ЭтоКвантификатор(Знач Символ)
 	Возврат Символ = "+" ИЛИ Символ = "*" ИЛИ Символ = "{";
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

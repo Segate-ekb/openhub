@@ -25,6 +25,8 @@
 
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // 0 - «пакет», 1 - «пакета», 2 - «пакетов».
 Функция НомерФормы(Знач Число)
 
@@ -42,6 +44,8 @@
 	Возврат 2;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("СчетСловами")
 &Желудь

@@ -131,6 +131,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Предел длины адреса, который вводят руками.
 Функция ПредельнаяДлинаАдресаРепозитория()
 	Возврат 500;
@@ -184,3 +186,5 @@
 &Желудь
 Процедура ПриСозданииОбъекта()
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

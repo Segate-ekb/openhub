@@ -212,6 +212,8 @@
 КонецПроцедуры
 #КонецОбласти
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Повторный ключ - исключение: тихая перезапись ставила бы текст в зависимость от порядка строк.
 Процедура Добавить(Знач Ключ, Знач Текст)
 
@@ -222,6 +224,8 @@
 	Тексты.Вставить(Ключ, Текст);
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 Процедура ПриСозданииОбъекта() Экспорт
 

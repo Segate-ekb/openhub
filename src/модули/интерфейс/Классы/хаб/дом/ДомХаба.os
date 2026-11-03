@@ -151,6 +151,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Место слитого раздела в дереве - у его преемника: иначе из него нет возврата.
 Функция Действующий(Знач Ключ)
 
@@ -163,6 +165,8 @@
 	Возврат ?(ЗначениеЗаполнено(Хозяйский), Хозяйский, Ключ);
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 // Ключи блоков, у которых нет своего пункта дерева: их настройки печатает хозяйский экран.
 //
@@ -216,10 +220,14 @@
 	Возврат Тексты.Текст("settings.hub.lead");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Раздел перечня дома.
 Процедура Раздел(Знач КлючРаздела, Знач Подпись, Знач Иконка, Знач Рубрика)
 	Сборка.Раздел(Перечень, КлючРаздела, Подпись, Иконка, Рубрика);
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Желудь
 Процедура ПриСозданииОбъекта(

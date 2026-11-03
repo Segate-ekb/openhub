@@ -316,6 +316,8 @@
 	Возврат Сам.Достать().ПолучитьПо();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция ЦелыеИдентификаторы(Знач Идентификаторы)
 
 	Целые = Новый Массив();
@@ -344,3 +346,5 @@
 	Агрегаты = _Агрегаты;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

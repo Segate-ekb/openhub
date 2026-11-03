@@ -93,6 +93,8 @@
 	Возврат "database.unavailable";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция КодОбщегоСбоя()
 	Возврат "server.error";
 КонецФункции
@@ -110,6 +112,8 @@
 Функция ПовторитьЧерез()
 	Возврат 60;
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 #КонецОбласти
 

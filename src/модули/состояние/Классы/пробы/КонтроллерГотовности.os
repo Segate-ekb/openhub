@@ -27,6 +27,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // «Стартую» пройдёт само, «база не отвечает» - нет: поводы для 503 названы порознь.
 Функция ПризнакГотовности(Знач ПринимаетТрафик, Знач СтартЗавершен)
 
@@ -49,3 +51,5 @@
 	Ответы = _Ответы;
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

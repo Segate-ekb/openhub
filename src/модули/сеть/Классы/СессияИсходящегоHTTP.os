@@ -3,7 +3,9 @@
 
 #Использовать 1connector
 
+// BSLLS:MissingVariablesDescription-off
 Перем СессияКоннектора;
+// BSLLS:MissingVariablesDescription-on
 
 // Выполняет HTTP-запрос по контракту сессии 1connector.
 //

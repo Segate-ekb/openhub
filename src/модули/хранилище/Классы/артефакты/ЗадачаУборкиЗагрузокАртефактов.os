@@ -21,6 +21,8 @@
 	Кэш.УбратьОставленное();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Файл, переживший паузу, лежит на диске лишнего не дольше интервала.
 Функция ИнтервалСек()
 	Возврат 60;
@@ -31,3 +33,5 @@
 Процедура ПриСозданииОбъекта(&Пластилин(Значение = "КэшАртефактов") _Кэш)
 	Кэш = _Кэш;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
