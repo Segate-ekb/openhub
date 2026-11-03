@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Гейт мутации API: неизвестный способ аутентификации и ключ без собранного гейта мутацию
 // не проходят. По HTTP в эти ветки не въехать — отсюда прямой экземпляр.
 

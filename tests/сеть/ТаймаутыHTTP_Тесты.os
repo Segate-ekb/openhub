@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Ожидание апстрима — живое число из настройки, ключ один у читающего и у подсказки оператору.
 
 #Использовать asserts

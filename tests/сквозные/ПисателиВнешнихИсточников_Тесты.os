@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каждый путь записи внешнего источника пула — апстрима или зеркала — в src/модули судит адрес SSRF-гейтом
 // и спрашивает тип пула. Скан читает код без комментариев и литералов: новый писатель краснит набор,
 // только если пишет мимо гейта.

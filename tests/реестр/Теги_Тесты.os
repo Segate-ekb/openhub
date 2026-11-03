@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Теги-каналы в контейнере ОСени на КоннекторInMemory: служба, состав канала, правила, наблюдатель
 // публикаций, летопись и лесенка резолва «пакет@спецификация»; отдельный процесс.
 

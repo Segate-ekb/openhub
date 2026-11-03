@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страница /whoami на двух живых хабах: за доверенным прокси с базой стран и правилом «закрыт в RU»
 // и без доверенных сетей и правил — посетитель видит адрес и страну так, как их видит гейт входа.
 

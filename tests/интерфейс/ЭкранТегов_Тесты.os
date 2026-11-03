@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разделы «Теги» домов пула и пакета на механизме «⚙ записи + окно по адресу + подтверждение»:
 // окно по ?окно=…, отбитая форма в открытом окне, проба правила, удаление через подтверждение,
 // тумблер наследования, унаследованный тег, визард каналов — настоящими контроллерами поверх

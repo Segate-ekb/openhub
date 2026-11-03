@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Причины обхода зеркала — заглушка: набор задаёт снимки для экрана или велит чтению упасть,
 // как лежащая база; обращения считаются — цена отрисовки одно чтение.
 

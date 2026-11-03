@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеВерсийПакета в памяти, считающее обращения и прочитанные строки: счёт строк отличает
 // три запроса по N строк от одного там, где счёт запросов этого не видит.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Диагностика транспорта дословно, как её отдаёт 1connector стражу источников: тексты сняты с живого
 // клиента и сообщений .NET, и переписывать их нельзя — сторож судит то, что бывает на самом деле.
 

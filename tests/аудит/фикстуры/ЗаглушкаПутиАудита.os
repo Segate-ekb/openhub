@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка аппендера журнала аудита: отдаёт только путь к файлу. Нужна там, где
 // проверяется читатель, а писать в файл через logos не требуется.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: хранилище артефактов, у которого не удаётся замер занятого. Так ведёт себя
 // S3 выше предела листинга oint: объекты на месте, а посчитать их нечем.
 

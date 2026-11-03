@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отладка кэша выдачи на живом хабе: корневой OSHUB_LOG_LEVEL=DEBUG открывает и строки хаба
 // о решении кэша, и строки библиотеки кэша — разбор по одной консоли, без точечных уровней.
 

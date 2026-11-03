@@ -1,4 +1,10 @@
-﻿// Витрина журнала аудита: варианты отбора по прочитанному хвосту, объяснение границ хвоста,
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Витрина журнала аудита: варианты отбора по прочитанному хвосту, объяснение границ хвоста,
 // экранирование ячеек и деталей, выход со страницы за краем журнала.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Пулы» дома «Хаб» на живом стенде: формы раздела и окна предупреждения о сносе
 // личных пространств, число в окне и следы пространств на стенде.
 

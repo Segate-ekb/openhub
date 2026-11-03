@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страницы-ворота как у GitHub: одна узкая колонка со знаком и заголовком, шапка без дорог
 // и «Войти», кнопки провайдеров со значками брендов под разделителем «или», строка
 // регистрации рамкой, атрибуция базы стран — сноской и только при правиле по стране.

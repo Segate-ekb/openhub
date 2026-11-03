@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Права учётки на живом хабе: роль администратора хаба — надстройка, её назначение и снятие
 // выданного на пулах не трогают; удалённая учётка уносит свои права из списков прав пула.
 // На общем хабе меняет и возвращает роль хаба у bob, owner1, alice и pub, публикует alice-as-admin в public.

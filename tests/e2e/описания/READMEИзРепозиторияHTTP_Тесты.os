@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // README из репозитория на живом хабе: opm push без README в пакете, GitHub — стенд сырого содержимого
 // на своём порту; публикация и страница его не ждут, найденное видно на странице и в GET …/readme.
 // Свой хаб: README из репозитория и адрес его стенда — настройки всего хаба.

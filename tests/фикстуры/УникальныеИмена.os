@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Свободные имена, номера и временные каталоги для наборов: один счётчик на процесс с солью запуска,
 // имя годится и в логин, и в имя пула, пакета, провайдера.
 

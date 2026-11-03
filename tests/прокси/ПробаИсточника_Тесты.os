@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пробное подключение к источнику: исход словами, токен приватного источника, потолок переходов,
 // выключатель пробы и память о живости. Транспорт — фейк, который на незаданный адрес бросает.
 

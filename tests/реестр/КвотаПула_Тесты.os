@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Занятый пулом объём, эффективная квота и гейт публикации по ней — на контейнере ОСени
 // с КоннекторInMemory и файловым хранилищем во временном каталоге, в отдельном процессе.
 

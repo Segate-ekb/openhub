@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка перехватчика аутентификации для замеров цены выдач: запрос идёт сессией,
 // ключа в нём нет, и допуск запроса без гейта токена пропускает его к правам человека.
 

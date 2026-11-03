@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПулов для ЛетописиВерсий: только пул по идентификатору.
 
 Перем Пулы; // Соответствие: идентификатор -> Структура (Идентификатор, Имя)

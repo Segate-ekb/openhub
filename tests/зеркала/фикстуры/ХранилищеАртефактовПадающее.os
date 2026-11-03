@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище артефактов, отказывающее машинным кодом errors, как лежащий S3: падает сохранение,
 // чтение размера либо вопрос о наличии; иначе «существует» отвечает тем, что велел набор.
 

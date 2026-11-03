@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Правило, по которому приёмка против живого hub.oscript.io решает, идти ли ей в сеть: «сервера нет»
 // отличается от «сервер ответил иначе, чем вчера». Сама приёмка живёт в наборе с тегом «внешние».
 

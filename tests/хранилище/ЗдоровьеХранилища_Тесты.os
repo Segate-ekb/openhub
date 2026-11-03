@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Доступность хранилища артефактов: троичная проба обоих бэкендов на сроке ответа хранилища, память стража,
 // боевые отказы, происшествия на переходе и экран, который берёт вердикт у стража, а не у хранилища.
 

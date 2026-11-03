@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разметка схем у точек под /api/ без живого хаба: каждый объявленный ответ с телом и каждое JSON-тело
 // запроса называют тип — класс дерева либо тип платформы; новая точка без схемы — красный до запуска хаба.
 

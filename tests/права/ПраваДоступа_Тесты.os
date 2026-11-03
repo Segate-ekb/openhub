@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты гранулярной модели прав: объединение личных и групповых грантов, пресеты ролей,
 // наследование Хаб→Пул→Пакет, admin-суперправо, self-service пулов, защита от эскалации.
 

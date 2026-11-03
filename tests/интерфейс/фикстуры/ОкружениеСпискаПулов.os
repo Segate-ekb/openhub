@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение списка пулов в памяти: какие пулы видит запрос (гвард чтения), сколько в них
 // пакетов, есть ли апстримы и включённое зеркало, кто какой пул вправе настраивать. Помнит,
 // о каких пулах спрашивали число пакетов, считает обращения к каждой двери и снимки прав.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окно «Получатели» подписки на живом хабе: администратор видит в окне подписки хаба все пулы,
 // включая приватные, с настоящим режимом «Все / Выбранные / Никто»; правки окна сохраняются и гасят
 // доставку, сегмент «Выбранные» (со скриптом и без) начинает с того, что было видно, и не берёт новых

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Самотест СтендПодписок: что видят хранилище и служба подписок после обеих дверей; строка первой
 // совпадает со строкой второй. Отдельный процесс — свой контейнер ОСени.
 

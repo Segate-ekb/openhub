@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Подсказка установки: адресная форма команды, источник узла (настройка «Адрес хаба» либо Host),
 // описание сервера для opm.cfg, карточка второго способа и случаи, где прописка клиенту не нужна.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сбой, до которого не дотянулся обработчик, и адрес без маршрута: страница человеку и конверт машине,
 // отдельный ответ на недоступную базу, код запроса на экране и в журнале.
 

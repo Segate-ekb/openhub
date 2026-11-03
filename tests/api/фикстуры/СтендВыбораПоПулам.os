@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд выбора по пулам без базы: один объект играет гварда (одиночная дверь над набором), сервисы пакетов,
 // пулов и апстримов, лесенку реестра, объединённый набор, допуск API и резолвер выдачи, который записывает, у какого
 // пула и по какой спецификации просили файл. Пулы, версии и отказы пулов задаёт тест.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ХранилищеПрикладныхНастроек в памяти: точечное чтение, разрез введённого руками, запись.
 
 Перем Записи; // Соответствие: ключ -> Структура(Значение, Кто, Когда)

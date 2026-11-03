@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Публичная часть интерфейса на живом хабе с засевом: каждая страница по HTTP — код ответа,
 // ключевое содержимое, санитизация README, статика, тема и ритм форм.
 

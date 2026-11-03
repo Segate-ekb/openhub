@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Подставной приёмник исходящих запросов хаба для живых стендов: свой порт до запроса, сырой запрос
 // тесту. Не отвечает: набор однопоточный и ждёт ответа хаба, поэтому запрос забирается из очереди ОС
 // уже после того, как хаб его отправил и бросил ждать по таймауту.

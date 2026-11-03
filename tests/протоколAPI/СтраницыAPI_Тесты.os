@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты формы страницы списковых ручек API: разметка из параметров запроса, потолок
 // выдачи, срез и конверт {items, page, pageSize, total, has_more}.
 

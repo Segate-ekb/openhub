@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СервисНастроек: значения из карты, мутабельна; незнакомый ключ — исключение.
 
 Перем Значения; // Соответствие: ключ (НРег) -> значение

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разбор страницы пакета источника: версии — из ссылок на артефакты этого пакета; чужие ссылки,
 // latest-ссылка и текст страницы версий не дают. Разбором живут перечисление зеркала и выдача.
 

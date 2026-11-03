@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пакет .ospx несёт рантайм-закрытие зависимостей хаба и не несёт того, чего рантайм не грузит:
 // состав — по архиву, который собирает хук ПриСборке из packagedef, закрытие — по коду.
 

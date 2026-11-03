@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеПроисхожденияВерсий в памяти, считающее обращения и прочитанные строки: видны и разные
 // вопросы страницы о провенансе, и вопрос на каждую строку версий.
 

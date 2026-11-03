@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Считающая обёртка над хранилищем, которое отвечает по версиям, — ХранилищеЗависимостей либо
 // ХранилищеМетокВерсий: строки отдаёт настоящее, счёт — там, где цена уборки растёт числом версий.
 

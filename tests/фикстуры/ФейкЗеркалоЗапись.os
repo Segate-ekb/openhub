@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковая запись зеркала: колонки сущности «ЗеркалоХаба» и Сохранить() поверх фейкового хранилища.
 
 Перем Хранилище_;

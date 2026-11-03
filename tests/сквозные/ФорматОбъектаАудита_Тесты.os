@@ -1,4 +1,10 @@
-﻿// Сторож единого формата: нагрузку записи журнала собирает только аудит/СобытиеАудита, адрес объекта —
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Сторож единого формата: нагрузку записи журнала собирает только аудит/СобытиеАудита, адрес объекта —
 // только аудит/ИмяОбъектаАудита; ручная сборка опознаётся в любом виде, собранное значение держит форму.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фоновый старт фикстуры ЭкземплярХаба на заглушке хаба: экземпляры стартуют разом, каждый дожидается
 // своего старта на своём порту, перехваченный порт — повтор старта на другом.
 

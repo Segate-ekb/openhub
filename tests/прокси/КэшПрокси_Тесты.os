@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты кэш-политик прокси: TTL-ревалидация, негативный кэш 404, offline-фолбэк.
 // Время управляется инъектируемыми часами (фикстура ЧасыРучные) — без реального Sleep.
 

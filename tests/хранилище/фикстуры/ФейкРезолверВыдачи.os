@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк РезолвераВыдачи: роняет заранее подготовленный сбой — на резолве либо, когда версия
 // «найдена», на чтении её тела. Так проверяется, каким кодом отвечает выдача на отказ хранилища.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Кэширование прокси без отравления: битый .ospx и расхождение с ETag не кэшируются, 404 — негативом,
 // фильтр имён закрыт при сбое; манифест доносит до реестра состав зависимостей и карточку пакета.
 

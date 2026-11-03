@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Проба базы: отвечает ли база, снимок её пула и тело пробы живости. Главное — проба
 // не встаёт в очередь за соединением: исчерпанный пул она называет отказом по снимку.
 

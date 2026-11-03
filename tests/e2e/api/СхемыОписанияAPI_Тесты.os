@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Схемы описания API против живого хаба: сценарий вызывает каждую операцию документа /v3/api-docs,
 // и каждый ответ сверяется со схемой своего кода — поля, их типы, обязательность и null.
 // Хаб группы «пакеты», фаза удаления: заводит пулы schemas, schemas-mirror, schemas-gone, учётки schemas-*,

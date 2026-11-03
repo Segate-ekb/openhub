@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Асинхронный запуск синхронизации зеркал: очередь заявок и её отметка «поставлено» на записи,
 // фоновый рабочий (порции, лимит циклов, изоляция сбоя) и плановая задача.
 

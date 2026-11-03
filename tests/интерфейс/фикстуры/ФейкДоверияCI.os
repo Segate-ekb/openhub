@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисДоверияCI для тестов раздела: записи задаёт вызывающий, база не нужна; заведение
 // и отзыв меняют выдачу и пишутся в свой журнал. Имя записи считает настоящий ИмяЗаписиДоверия —
 // своей копии этого правила у фейка нет.

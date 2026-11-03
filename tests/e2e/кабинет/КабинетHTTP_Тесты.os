@@ -1,4 +1,10 @@
-﻿// HTTP-интеграционные тесты приватной части: настоящий хаб на файловой БД, засеянной
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// HTTP-интеграционные тесты приватной части: настоящий хаб на файловой БД, засеянной
 // сидером ЗасеятьКабинет.os. Вход, кабинет, управление, CSRF, yank, PAT, админка.
 
 #Использовать asserts

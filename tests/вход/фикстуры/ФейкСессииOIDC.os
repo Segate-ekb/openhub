@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Двойник сессии исходящего HTTP под боевым прозвищем: discovery, token, userinfo и список адресов
 // почты отвечают настроенным телом, а запрос на незнакомый адрес запоминается для набора.
 

@@ -1,4 +1,10 @@
-﻿// Очередь заявок, резерв имён, доверенные конвейеры и личные пулы: мутации со своей авторизацией
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Очередь заявок, резерв имён, доверенные конвейеры и личные пулы: мутации со своей авторизацией
 // и рамками ключа.
 
 #Использовать asserts

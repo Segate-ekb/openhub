@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк двух дверей реестра, которыми отбор по тегам пользуется: каналы, в составе которых версия
 // (КаналыПоУмолчанию), и имена тегов пакета и пула, из которых выбирают отбор (СервисТегов).
 // Правила — настоящие ПравилоТега, ручной состав — перечнем версий; теги пула — только имена,

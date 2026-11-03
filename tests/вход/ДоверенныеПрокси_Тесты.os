@@ -1,4 +1,10 @@
-﻿// Адрес клиента за обратным прокси: без доверенных сетей заголовок пересылки не читается, с ними —
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Адрес клиента за обратным прокси: без доверенных сетей заголовок пересылки не читается, с ними —
 // только у соединения из доверенной сети; клиент — первая справа запись цепочки не из своих прокси.
 
 #Использовать asserts

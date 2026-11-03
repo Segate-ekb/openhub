@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты входа через провайдера на контейнере ОСени с КоннекторInMemory: в сеть набор
 // не ходит, discovery, token и userinfo отвечает ФейкСессииOIDC под прозвищем СессияИсходящегоHTTP.
 

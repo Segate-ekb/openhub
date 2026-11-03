@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Интеграционные тесты единого пути выдачи и апстримов как свойства пула: порядок «свой пул → апстримы по порядку →
 // кэш/индекс → 404», SSRF-гейт адресов, list.txt, администрирование апстримов. Сети нет: клиент апстримов — фейк.
 

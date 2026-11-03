@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Публичный вход на живом хабе после мастера /setup: пустой лендинг, закрытый мастер, регистрация,
 // аккаунт в шапке, /logout. Хаб — общий группы «мастер»: мастер проходит помощник группы, своя учётка
 // bob; пустой лендинг опирается на то, что пакетов на хабе группы нет. Проверки до мастера — в

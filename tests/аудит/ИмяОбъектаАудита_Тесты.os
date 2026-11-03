@@ -1,4 +1,10 @@
-﻿// Адрес объекта в журнале аудита: сборка из готовых имён, имена по идентификатору от предметов
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Адрес объекта в журнале аудита: сборка из готовых имён, имена по идентификатору от предметов
 // и «тип#идентификатор» у утраченной сущности.
 
 #Использовать asserts

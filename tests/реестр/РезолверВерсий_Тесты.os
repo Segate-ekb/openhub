@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты РезолверВерсий (реестр): точная версия, максимум по диапазону, каналы
 // (semver | regex | pin, stable/dev), «последняя», смешанные semver+legacy, мусорные входы.
 

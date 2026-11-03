@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сверка значения JSON со схемой описания API: подмножество JSON Schema, которое печатает winow,
 // и объект со свойствами считается закрытым — лишнее поле расходится со схемой.
 

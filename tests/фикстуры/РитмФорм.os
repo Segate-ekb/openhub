@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: единственный разбор таблицы стилей слоя — правила, CSS-переменные и ритм полей
 // в формах (у родителя с двумя и более полями обязан быть интервал: gap либо «> * + *»).
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // «Брендирование», в котором конфигурация заняла все значения: на настоящем контроллере раздела поверх
 // настоящих служб в контейнере с детальками конфигурации.
 

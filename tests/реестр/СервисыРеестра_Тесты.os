@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Интеграционные тесты сервисов реестра (СервисПулов, СервисПакетов, СервисВерсий): именование,
 // уникальность, иммутабельность версий, semver-колонки, резолв. InMemory, набор в отдельном процессе.
 

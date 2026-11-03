@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сборка КонтроллераЗеркалAPI для модульных наборов: части называются именами, а не позициями,
 // и правка конструктора контроллера видна здесь одним местом.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты ПрогонаЗеркала (модуль зеркала) на фейковом хранилище: захват прогона и защита
 // от двойного запуска, отвисание брошенного прогона, курсор, дросселирование прогресса.
 

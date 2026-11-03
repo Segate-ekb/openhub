@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отказы правки и удаления зеркала в API без живого хаба: сбой службы — JSON 500 своим кодом
 // и честным составом применённого, зеркало, снятое параллельно, — 404, негодный токен — 422.
 

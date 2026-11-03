@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Работа с каналами не объявляет сети: классы каналов реестра и их прямые сотрудники в любом
 // модуле читаются исходниками и сверяются с закрытыми списками зависимостей, типов и библиотек.
 

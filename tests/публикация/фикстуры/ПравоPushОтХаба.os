@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисПрав, у которого право push есть у каждого — даже у анонима — и выдано самим хабом.
 // Прочие вопросы уходят настоящему сервису прав.
 

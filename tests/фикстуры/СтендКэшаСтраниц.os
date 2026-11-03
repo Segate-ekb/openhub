@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение КэшСтраницАнонима одним объектом: поделка winow, менеджер кэшей в памяти, перехватчик,
 // выбор оформления (разбор куки — настоящий из кита), настройки хаба, фоновый запуск по требованию
 // и обёрнутый обработчик, который считает сборки.

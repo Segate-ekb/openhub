@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Задача планировщика «переиндексация-readme» на ручных часах: ночной обход описаний идёт в час
 // из настройки; час вне суток встаёт на умолчание и не срывает регистрацию соседних задач.
 

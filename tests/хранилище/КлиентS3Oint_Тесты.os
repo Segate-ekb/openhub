@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Клиент S3 на oint против слушателя на свободном порту: каждый вид запроса к молчащему хранилищу отказывает
 // за процессный срок oint, а не через час; запросы уходят подписанными; скачивание — один GET прямо в файл,
 // упавшая часть загрузки повторяется теми же байтами, перечень разбирается; отказ корзины и сбой записи файла

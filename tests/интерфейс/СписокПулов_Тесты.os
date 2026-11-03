@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Список пулов /pools глазами гостя и вошедшего: видимые пулы названы словами, невидимый не
 // упомянут ни именем, ни числом, личное пространство перечислено тому, кто его настраивает,
 // у настраиваемого пула — меню ⚙, пустота говорит, что делать дальше, длинный список

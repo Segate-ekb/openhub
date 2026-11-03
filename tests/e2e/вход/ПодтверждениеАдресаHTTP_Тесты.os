@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страница /confirm-email, письма подтверждения и восстановления на настоящем хабе; стенды: без почты,
 // с почтой на подставном SMTP и фейковым IdP, с почтой, но без внешнего адреса инсталляции.
 

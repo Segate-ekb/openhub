@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты ПланировщикаПриложения на ручных часах: расписание, изоляция ошибки задачи,
 // грациозная остановка, политика перекрытия и уборка реестра фоновых заданий.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страница пула без пакетов глазами админа командного пула, владельца пустого личного
 // пространства, постороннего и гостя; засев кабинета — пустой пул owned (owner1) и пространства учёток.
 

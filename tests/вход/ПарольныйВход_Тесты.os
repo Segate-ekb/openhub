@@ -1,4 +1,10 @@
-﻿// Выключатель парольного входа: вердикт предохранителя (СтражПарольногоВхода) и разбор формы
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Выключатель парольного входа: вердикт предохранителя (СтражПарольногоВхода) и разбор формы
 // раздела (ПультПарольногоВхода); провайдеров даёт настоящая КонфигурацияOIDC над фейковой таблицей.
 
 #Использовать asserts

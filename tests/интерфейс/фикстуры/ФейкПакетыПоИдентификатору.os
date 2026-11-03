@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк двери СервисаПакетов, которой витрина называет пакет поправки: пакет по идентификатору.
 
 Перем Пакеты;  // Соответствие: идентификатор -> Структура (Идентификатор, Имя)

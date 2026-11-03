@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисПакетов в памяти, считающий прочитанные строки: «все пакеты хаба» и «пакеты названных
 // пулов» стоят одного запроса каждый и различаются объёмом выдачи.
 

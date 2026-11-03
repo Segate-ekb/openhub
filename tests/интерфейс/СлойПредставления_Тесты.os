@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Слой представления хаба на ките: статика и лист стилей (цвета, ритм форм, сетки, каскад),
 // токены и выбор темы, выдача кита без скрипта, витрины каталога (карточка, плашки тегов, значки
 // версий, вкладка версий), брендирование, тексты экранов; сканы модуля интерфейс — сырая

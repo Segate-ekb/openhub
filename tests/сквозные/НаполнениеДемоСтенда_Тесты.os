@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Наполнитель демо-стенда ходит в хаб только по HTTP, скрипт стенда не несёт секретов,
 // а провайдер входа из его конфигурации не ведёт к живому IdP. Детекторы закрыты самотестами.
 

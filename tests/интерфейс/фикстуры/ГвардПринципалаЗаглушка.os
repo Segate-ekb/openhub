@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гвардов с принципалом — кабинета и аккаунта (ГвардКабинета) и дома «Пул» (ГвардПула):
 // впускает учётку с её принципалом и пулом раздела — запрос доходит до настоящего домена;
 // «не впускать» — гвард отказал и ответил 403 сам, дальше запрос не идёт.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты разбора и сравнения версий (РазобраннаяВерсия, СравнительВерсий):
 // semver 2.0.0, legacy 4-компонентные и единый порядок сравнения смешанных списков.
 

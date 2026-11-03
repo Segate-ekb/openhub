@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разметка раздела «Подписки сверху» и свойств подписки: нижестоящий видит название, способ
 // доставки, события и отбор без адреса и секретов; хозяин видит, кто сузил его подписку; отбор
 // по тегам — галки из тегов пула или пакета, у хаба его нет. Запись своей подписки и подписки

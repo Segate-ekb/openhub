@@ -1,4 +1,10 @@
-﻿// Живой хаб с включённой телеметрией и заведомо мёртвым коллектором: включённость едет строкой
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Живой хаб с включённой телеметрией и заведомо мёртвым коллектором: включённость едет строкой
 // из окружения, а спаны родятся только на настоящем запросе.
 
 #Использовать asserts

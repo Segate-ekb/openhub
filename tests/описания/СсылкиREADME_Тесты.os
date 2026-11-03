@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Относительные адреса README — в файлы репозитория пакета: адрес репозитория из карточки
 // (GitHub, GitLab, Gitea, Bitbucket, похожие на GitHub), страница файла и сам файл, разрешение
 // ссылок и картинок отрисованного README и его безопасность; отдельный процесс.

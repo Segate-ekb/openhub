@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Экран «Токены доступа» дома «Аккаунт»: окно выпуска по адресу, секрет один раз в окне ответа
 // (не в адресе), отбитая форма в открытом окне, пулы деревом с поиском через сервер, отзыв через
 // подтверждение — настоящим контроллером поверх настоящей службы токенов в контейнере.

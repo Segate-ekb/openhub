@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Рестарт посреди обхода: прогон, оставшийся идущим от прошлого запуска, подбирается на старте,
 // обход возобновляется с курсора, а отказ живой заявке называет цифры вместо «уже идёт».
 

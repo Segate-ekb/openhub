@@ -1,4 +1,10 @@
-﻿// Экран журнала аудита /hub/settings/audit на живом хабе: порог админа хаба, метод, круг
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Экран журнала аудита /hub/settings/audit на живом хабе: порог админа хаба, метод, круг
 // «форма → адрес → форма» и выход со страницы за краем; запрос собирается из выданной формы.
 // Засев группы: журнал непуст из-за засева — каждая заведённая сидерами учётка получает личный пул
 // с ролью мейнтейнера («права.выданы»), основной пул назначается («пул.основной.назначен»);

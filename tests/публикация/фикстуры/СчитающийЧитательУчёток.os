@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обёртка СервисПользователей, считающая обращения к нему: учётки отдаёт настоящая служба,
 // счёт нужен там, где цена выдачи росла числом строк.
 

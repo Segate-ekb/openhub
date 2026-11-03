@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отбор доставки подписки по тегу, который пакеты наследуют от пула, вместе с деревом получателей,
 // и перечни тегов, из которых отбор выбирают, — на настоящих службах реестра и подписок
 // в контейнере ОСени на КоннекторInMemory. Отдельный процесс — свой контейнер.

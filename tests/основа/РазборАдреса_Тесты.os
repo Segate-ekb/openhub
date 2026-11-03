@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Канон адреса: одна запись на один адрес; тем же каноном сличают источники пула и подписки вебхука,
 // а составные части адреса одинаково видят все судящие двери.
 

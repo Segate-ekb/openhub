@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Доставка вебхуков: очередь, подпись X-OpenHub-Signature, повторы с отсрочкой и пределом,
 // рубильник доставки, предел очереди, перезапуск процесса, латинский код события в заголовке.
 

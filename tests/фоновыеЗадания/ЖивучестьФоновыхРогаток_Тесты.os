@@ -1,4 +1,10 @@
-﻿// Фоновую рогатку ОСень запускает без ожидания и её исход не смотрит: каждая ловит своё исключение
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Фоновую рогатку ОСень запускает без ожидания и её исход не смотрит: каждая ловит своё исключение
 // сама — здесь проверяется, что сбой доходит до оператора, а не молчит при ответах 200.
 
 #Использовать asserts

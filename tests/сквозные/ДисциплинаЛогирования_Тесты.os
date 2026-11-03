@@ -1,4 +1,10 @@
-﻿// Скан-тест дисциплины логирования: лог приходит только инъекцией &Лог — без #Использовать logos
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Скан-тест дисциплины логирования: лог приходит только инъекцией &Лог — без #Использовать logos
 // и без статического Логирование.* вне списка исключений; детекторы закрыты самотестами.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Кабинет на настоящих правах и реестре: кто управляет пакетом и распоряжается пулом;
 // рядом — правки реестра, которые делает кабинет (отзыв версий, метаданные, видимость, квота).
 

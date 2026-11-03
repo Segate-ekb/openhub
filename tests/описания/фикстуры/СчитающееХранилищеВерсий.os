@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеВерсийПакета-обёртка: делегирует настоящему хранилищу и считает ЗАПРОСЫ
 // (сторож N+1). Считаются и разрезы по списку пакетов, и двери «на один пакет».
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Негодный ключ доступа на настоящем хабе: клиент с протухшим или отозванным ключом обслуживается
 // как гость, но узнаёт из заголовка ответа, что ключ отвергнут.
 // Хаб группы «пакеты»: свои пулы marked и markedpriv с пакетом markedpkg и отозванный ключ админа

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // «Добавить пакет» в списке пакетов пула и снятие резерва оттуда же — глазами мейнтейнера пула,
 // райтера, читателя и гостя; засев кабинета (owner1 — владелец owned, pub — райтер public)
 // и пакет owned/yanked-only с единственной отозванной версией.

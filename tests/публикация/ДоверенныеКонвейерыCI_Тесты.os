@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Публикация доверенным конвейером насквозь: push с id-token, подпись RS256 по JWKS фейкового
 // транспорта; ключи и токены — tests/фикстуры/ci-токены.json. Рядом с отказом — запрос, который проходит.
 

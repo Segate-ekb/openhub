@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Ответ winow для наборов кэша страниц гостя: поля и методы, которые читает и ставит кэш.
 
 Перем ИдентификаторЗапроса Экспорт;

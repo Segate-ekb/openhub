@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Версии, каналы, происхождение и скачивания для вкладки версий пакета — ровно то, чем вкладка
 // пользуется; базы и доменных служб здесь нет, каналы заводит ДобавитьКанал.
 

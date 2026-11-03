@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковая запись пакета: поля, которых касаются ЛетописьВерсий, отметка последней публикации
 // в СервисеВерсий и порядок выдачи кабинета, и Сохранить().
 

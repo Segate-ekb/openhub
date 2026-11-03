@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Частые чтения из базы идут из кэша неизменяемых снимков, а запись через хаб видна следующему же
 // чтению: на каждого писателя — «записал, прочитал новое»; свежесть держит сброс, а не устаревание.
 

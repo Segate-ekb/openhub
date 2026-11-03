@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адрес репозитория, который мейнтейнер вводит руками: правило годности (ПравилаИменования)
 // и дверь правки карточки (ПравкаКарточкиПакета) — что записано и что ушло в журнал аудита.
 

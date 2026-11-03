@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Запуск задач при готовности: задачи собираются по прозвищу, исполняются после готовности хаба
 // одним фоновым заданием, сбой одной не трогает прочих, неготовый хаб задачи не получает.
 

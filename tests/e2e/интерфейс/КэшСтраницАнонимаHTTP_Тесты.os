@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Кэш страниц гостя на живом хабе: в странице гостя нет следов чужой сессии, оформление различает
 // страницы, опубликованное видно гостю сразу, вошедший получает свою страницу.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СервисПользователей: считает пользователей и запоминает вызов СоздатьПользователя;
 // учётки с исходом личного пространства заводит ДобавитьУчётку, учётки с признаком Админ — ОтвечатьУчётками.
 

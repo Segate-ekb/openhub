@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Файловое хранилище артефактов сверх общего контракта: раскладка на диске, временные файлы
 // записи, файлы мимо координат и защита от выхода за корень. Каждый тест — в своём временном корне.
 

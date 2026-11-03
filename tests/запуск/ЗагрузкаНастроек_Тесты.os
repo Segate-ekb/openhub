@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Загрузка настроек: правила над тем, что прочитал configor, — окружение перебивает файл,
 // производные ключи, устройство хаба и умолчания хаба для чужих деталек; имена переменных;
 // согласованность с тем, что видит собранная Поделка.

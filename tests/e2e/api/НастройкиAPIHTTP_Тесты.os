@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-тесты настроек хаба через JSON API (/api/v1/hub/settings): чтение карточек с источником
 // и признаком правки, правка, сброс, отказ на заданное конфигурацией, секрет «вводится, но не
 // читается», порог администратора хаба и запись в журнал аудита. Хаб поднимается настоящий,

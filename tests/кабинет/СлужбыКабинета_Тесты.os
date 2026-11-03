@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты служб кабинета на фейках соседей: службы реестра, прав и учёток подменены,
 // гвард квоты, журнал аудита и шина событий — настоящие. Проверяется решение службы.
 

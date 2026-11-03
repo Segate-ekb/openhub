@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Общий контракт источника зеркала одним набором на оба протокола: срез изменений OpenHub и легаси-
 // список opm. Параметр теста — имя протокола, как его называет Протокол(); клиент апстрима — фейк.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: атомарные инлайны в контейнере вертикального ритма. Контейнеры выводит из самого CSS
 // (правила «X > * + *»), атомарность ребёнка — из его display и списка замещаемых тегов.
 

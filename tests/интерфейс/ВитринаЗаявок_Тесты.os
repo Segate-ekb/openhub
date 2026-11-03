@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // «Входящие» пула: сводка манифеста разворотом под строкой заявки, раскрывашка с подробностями
 // и сведения на шаге подтверждения. Разметку печатает настоящая ВитринаЗаявокПула, строки задаёт тест.
 

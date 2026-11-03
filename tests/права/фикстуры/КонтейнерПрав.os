@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-контейнер модели прав на базе в памяти: реестр, таблицы входа, прав и настроек, аудит,
 // события, службы прав и служба доступа кабинета; набор подключает сверх этого своё.
 

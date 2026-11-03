@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // S3-хранилище артефактов сверх общего контракта, на ФейкКлиентS3: раскладка ключей и префикс
 // бакета, ключи мимо координат, временные копии выдачи, предел листинга, снос области, тип содержимого.
 

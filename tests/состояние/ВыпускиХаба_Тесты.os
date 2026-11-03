@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Новая версия хаба: порядок semver, событие один раз на версию и после рестарта, выключатель,
 // тихий отказ источника, сведения экрану без похода в сеть — на таблице в памяти и фейке транспорта.
 

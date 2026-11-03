@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Правило квоты пула по всему дереву: тексты и статьи утверждают действующее правило, каждый вход
 // к записи квоты спрашивает право, апстримная версия заводится одним швом реестра.
 

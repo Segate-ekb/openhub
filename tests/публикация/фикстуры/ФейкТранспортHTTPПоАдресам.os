@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый ТранспортHTTP с ответом НА КАЖДЫЙ АДРЕС: нужен там, где один сценарий читает
 // несколько документов (discovery и JWKS). Незаданный адрес — сетевой сбой.
 

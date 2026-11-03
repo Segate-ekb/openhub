@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище привязок токенов к пулам в памяти, считающее ОБРАЩЕНИЯ. Считаются обе двери:
 // «привязки одного токена» — та, через которую и растёт N+1, — и «привязки списка токенов».
 

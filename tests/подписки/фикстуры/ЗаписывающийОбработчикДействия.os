@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: обработчик доставки стороннего типа действия «тест.запись» — доказательство, что новый
 // тип добавляется без правки ядра подписок. Доставки пишутся в память, неуспех задаётся тестом.
 

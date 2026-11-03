@@ -1,4 +1,10 @@
-﻿// Попытки обойти право на push: очередь заявок, резерв имён, доверенные конвейеры, личные пулы.
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Попытки обойти право на push: очередь заявок, резерв имён, доверенные конвейеры, личные пулы.
 // Рядом с каждым отказом — КОНТРОЛЬ, который проходит.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты слоя представления подписок: окно собирается ИЗ ДЕКЛАРАЦИИ ОБРАБОТЧИКА — поля боевых типов
 // и стороннего типа из фикстуры в наборах сегментов, сторож имён полей, секрет не печатается, подписи
 // из словаря; запись реестра, окна по адресу, предпросмотр и проба без скрипта, пульт.

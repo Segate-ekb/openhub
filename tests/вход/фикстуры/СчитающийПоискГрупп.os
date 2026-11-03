@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обёртка СервисаГрупп, считающая обращения к нему: сами группы отдаёт настоящая служба,
 // счёт нужен там, где цена входа через провайдера не должна расти числом значений клейма.
 

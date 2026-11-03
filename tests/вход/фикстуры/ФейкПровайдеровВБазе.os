@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ХранилищаПровайдеровВхода: строки таблицы провайдеров задаёт тест, чтобы над
 // ними работала НАСТОЯЩАЯ КонфигурацияOIDC (в том числе её отбор по признаку «включён»).
 

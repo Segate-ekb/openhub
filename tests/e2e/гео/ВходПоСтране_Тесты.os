@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Правило «закрыт в странах» на живом хабе: посетитель с петли (страна неизвестна) не видит
 // закрытого провайдера ни на одной двери; доверенных прокси нет — подделанный заголовок снимается.
 

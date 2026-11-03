@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пакет в десятки мегабайт на живом хабе: push проходит и скачивается байт в байт, тело сверх
 // предела загрузки получает 413 хаба без следов, временный каталог хаба после запросов пуст.
 // Свой хаб: проверяет сам предел загрузки хаба и пустоту его временного каталога.

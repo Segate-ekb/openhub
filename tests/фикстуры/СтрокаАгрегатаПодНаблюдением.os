@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: строка агрегата скачиваний поверх настоящей; перед сохранением даёт
 // репозиторию РепозиторийАгрегатовПодНаблюдением спросить витрину.
 

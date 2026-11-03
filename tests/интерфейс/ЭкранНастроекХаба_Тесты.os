@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дом «Хаб», разделы с полями реестра настроек: «Основное» одной формой со «Сборкой», парольный вход —
 // тумблером и окном выключения по адресу, проба почты — кнопкой своей формы; настоящим контроллером
 // дома поверх настоящей службы настроек в контейнере. Предохранитель парольного входа — фейком: его

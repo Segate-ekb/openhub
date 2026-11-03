@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // «Выйти» вошедшего несёт токен его сессии на каждой странице, чей контекст собирает своя дверь:
 // главная, каталог, страница пакета и её 404, пул и его 404, список пулов, неизвестный адрес,
 // проводник. Настоящие контроллеры, страж, служба сессий, защита CSRF, каркас кита и обрамление

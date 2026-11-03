@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Широкий образец выдачи кита: по образцу каждого узла и компонента, которыми хаб печатает
 // экраны, — родов холста, форм всех четырёх родов, окон и компонентов.
 // Сторожа статики и разметки сверяют с ним листы стилей, ритм форм, имена полей и меню

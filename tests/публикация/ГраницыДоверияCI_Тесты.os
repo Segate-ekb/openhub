@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Попытки обойти доверенный конвейер через точку маршрута push: формы aud, канонизация iss,
 // сверка конвейера, срок токена, чужой пакет, транспорт ключей и отказ при сбое внутри проверки.
 

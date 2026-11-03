@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Первая полоса главной: строка поиска в каталог без карточки и заголовка, лид под ней; имени
 // хаба и второй дороги в каталог на странице нет — они в шапке. Состав главной: обзор пулов,
 // свежее, популярное и быстрый старт; пустой хаб ведёт гостя на вход, вошедшего — к первым шагам.

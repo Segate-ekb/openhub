@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеОтметокВыпуска в памяти, считающее чтения: экран новой версии хаба читает отметку
 // последней проверки, и сторож цены видит, сколько раз.
 

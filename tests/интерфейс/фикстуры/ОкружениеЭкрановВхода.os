@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение страниц-ворот без базы: оно одно стоит на месте конфигурации провайдеров, гейта
 // страны, политики пароля, геоправила и определителя страны, служб входа (паролем, через
 // провайдера и CLI), восстановления, приглашений, подтверждения адреса и мастера первого запуска.

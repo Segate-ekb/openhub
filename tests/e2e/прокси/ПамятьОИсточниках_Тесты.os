@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Причина, по которой источник молчал, переживает перезапуск хаба: два экземпляра по очереди на одной
 // файловой базе; каталоги базы держит набор — ЭкземплярХаба сносит свой корень при остановке.
 

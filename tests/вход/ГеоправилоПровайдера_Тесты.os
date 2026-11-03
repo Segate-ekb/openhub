@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Правило «провайдер закрыт в странах» на значении: канон кодов, отказы, снятие, перезапуск, предохранитель
 // последнего свободного провайдера, подсчёт учёток и аудит; парольный вход и обстановка — фейки.
 

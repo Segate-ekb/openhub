@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый транспорт Telegram: записывает отправки вместо сети; ответ и сбой настраиваются тестом.
 
 Перем Отправки;      // Массив из Структура {Токен, ЧатИд, Текст, АдресПревью}

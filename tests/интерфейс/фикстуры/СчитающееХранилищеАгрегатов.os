@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеСкачиванийАгрегатов в памяти, считающее прочитанные строки: разрезы «весь хаб» и «по списку
 // пакетов» стоят одного запроса, а суммы отдаются готовыми, как их считает база, и строк не оставляют.
 

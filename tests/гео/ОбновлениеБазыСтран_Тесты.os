@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обновление базы стран без сети: подмена tmp → rename, неудача и негодный кандидат оставляют
 // прежнюю базу, происшествие пишется и снимается, положенный руками файл подхватывается.
 

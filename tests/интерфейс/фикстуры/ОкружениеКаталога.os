@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение каталога /packages без базы: выдача каталога готовой страницей, гвард онбординга,
 // принципал и каркас. Экран спрашивает выдачу один раз; что он спросил, окружение запоминает.
 

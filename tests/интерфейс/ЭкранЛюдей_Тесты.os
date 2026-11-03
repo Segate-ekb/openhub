@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Экраны «Пользователи» и «Группы» дома «Хаб» — таблица с ⚙ в строке, отбор и страницы в адресе,
 // окна и подтверждения по адресу: настоящими контроллерами поверх настоящих служб входа и прав.
 

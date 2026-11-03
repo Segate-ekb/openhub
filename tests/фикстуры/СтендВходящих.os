@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд заявок во «входящие» пула: строкой в хранилище — для фона сценария, службой СервисВходящих —
 // с артефактом в хранилище и учтённым местом пула.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты фабрики КонфигурацияХранилища: выбор бэкенда по конфигу, проброс каталога и квоты,
 // ключи S3 — детальками значением либо файлом. Фабрика создаётся прямым конструктором.
 

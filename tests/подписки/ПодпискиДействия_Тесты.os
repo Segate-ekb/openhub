@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каналы подписок на фейках: сторонний тип «тест.запись» проходит весь путь без правки ядра,
 // telegram от события до сообщения и предпросмотр его текста, инварианты реестра каналов,
 // уникальность с типом действия.

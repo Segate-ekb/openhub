@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: выдача свободного TCP-порта тестовым экземплярам хаба.
 // Взаимоисключение прогонов — файл-заявка в общем КаталогеВременныхФайлов(); поверх — проба у ОС.
 

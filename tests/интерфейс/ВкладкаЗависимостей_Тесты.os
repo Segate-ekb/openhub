@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Вкладка «Зависимости» страницы пакета без базы: «Зависит от» называет пакет своего пула ссылкой, чужое имя
 // — экранированным текстом, зависимость для разработки — плашкой; «Кто зависит» — только читаемые смотрящему
 // пакеты, по имени, а не по порядку записей.

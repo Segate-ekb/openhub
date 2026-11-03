@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Строки для человека во всём слое представления живут в словаре текстов: ключи кода
 // и словаря совпадают, форма ключей соблюдена; корпус — модули с экранами и кит.
 

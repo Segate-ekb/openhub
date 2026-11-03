@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обработчик фонового задания: как стартовая рогатка, подписывает своих подписчиков на общие типы
 // событий издателя, начиная в общий для всех потоков момент; первую жалобу запоминает, судит набор.
 

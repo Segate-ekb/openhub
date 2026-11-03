@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Описание приложения отдаёт версии библиотек, от которых хаб зависит в рантайме, ровно как их
 // называет packagedef: ожидание разбирается из packagedef своим разбором, а не у проверяемого.
 

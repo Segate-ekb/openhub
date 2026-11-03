@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: реестр настроек, как у живого хаба; общий модуль — состояние одно на процесс. Ключи модуля
 // приезжают вслед за его классами (КлассыСлоя.ПодключитьФайл), ключи всех — по просьбе сторожа полноты.
 

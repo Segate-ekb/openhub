@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обработчик фонового задания: спрашивает картинки оформления так же, как рамка страницы и отдача
 // /brand/{файл}, — имя по ключу и ключ по имени, — пока не выйдет срок; первую жалобу запоминает,
 // судит набор.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Картинки оформления на живом хабе: знак и иконка, загруженные слотами раздела «Брендирование»
 // (каждая картинка — своим адресом), рисуются в шапке и <head>, отдаются адресом с отпечатком
 // и возвращаются к фирменным.

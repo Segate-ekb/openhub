@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаВходаCLI: заведение заявки падает по требованию теста. Нужен там, где
 // проверяется ответ контроллера на сбой домена, а не сам поток входа CLI.
 

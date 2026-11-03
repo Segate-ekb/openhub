@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разрезы по спискам идентификаторов — пакеты, учётки, лента, агрегаты скачиваний — на таблицах
 // со строками, которые разрез обязан отсеять; отдельный процесс.
 

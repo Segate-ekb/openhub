@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Карточка ссылки на живом хабе: страница пакета публичного пула отдаёт анонимному краулеру
 // свойства Open Graph с абсолютными адресами, приватного — тот же 404 без разметки карточки.
 // Хаб группы «пакеты»: свои пулы cardteam и cardinner с пакетами заводятся в ПередВсеми; засеянное набор

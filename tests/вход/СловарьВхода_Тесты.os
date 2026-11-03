@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Словарь домена входа: каждый ключ, который спрашивает код модуля, в словаре есть — иначе
 // в письме или отказе вместо слова окажется маркер, — и ключей, которых никто не спрашивает, нет.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Интеграционные тесты выдачи пакетов (list.txt и .ospx): реальный хаб отдельным процессом,
 // настоящий HTTP-клиент, проверка кодов, тела, заголовков, ETag/304 и HEAD. Проверяются
 // канонические адреса /api/v1/... и вечные алиасы, включая их совпадение между собой,

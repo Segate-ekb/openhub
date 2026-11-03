@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Форма подписки на живом хабе: отбор по тегам — галки из тегов пула или пакета, строки ввода
 // тегов нет, у хаба отбора нет; тег, удалённый из пула, выпадает из отбора, и раздел об этом
 // предупреждает. Предпросмотр текста Telegram — шаблон окна на образце пакета: кусочком для

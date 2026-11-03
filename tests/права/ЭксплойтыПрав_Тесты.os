@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Эксплойты прав доступа: кросс-пуловая выдача (IDOR), эскалация роли, обратный резолв,
 // лакуны энфорсмента ключа, потеря прав при свёртке легаси-пресетов.
 

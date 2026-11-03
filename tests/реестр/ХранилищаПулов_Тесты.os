@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилища вокруг пула — пулы, участники, апстримы, зеркала, вебхуки: отборы деривацией и доменные
 // методы на таблицах со строками, которые отбор обязан отсеять; отдельный процесс.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк клиента S3 для S3Хранилище в памяти, с семантикой КлиентS3Oint: атомарная запись, идемпотентное
 // удаление, resource.not_found и подставная dependency.unavailable.
 

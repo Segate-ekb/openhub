@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Наблюдатель за идущим прогоном зеркала: на заданном по счёту скачивании снимает состояние
 // прогона и, если попросили, пробует запустить синк того же зеркала повторно.
 

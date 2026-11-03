@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Гейт токена в ЧАСТИЧНОМ контейнере: что будет, если желудь гейта не собрался —
 // контракт сборки «нет гейта — нет и гварда» и мягкий fail-closed прямого экземпляра.
 

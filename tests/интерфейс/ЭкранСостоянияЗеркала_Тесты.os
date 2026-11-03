@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Экран состояния синхронизации зеркала, прогон в списках и запуск синка — на настоящих
 // витринах, пультах и контроллерах дома пула и кабинета; зеркала задаёт фейк сервиса.
 

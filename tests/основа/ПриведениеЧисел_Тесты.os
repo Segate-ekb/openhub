@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Чтение числа снаружи: терпимое прощает мусор, строгое отвергает, усекающее берёт целую часть —
 // ноль значим сам по себе и отличим от мусора.
 

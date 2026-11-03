@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Три двери самостоятельной регистрации на настоящем хабе: на каждое состояние хаба — один статус
 // и одна причина; каждое состояние поднимает свой хаб из окружения. Гейт первого запуска (администратора
 // ещё нет) — в ХабДоМастера_Тесты на хабе группы «мастер».

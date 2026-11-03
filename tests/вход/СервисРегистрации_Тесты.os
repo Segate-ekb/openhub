@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты СервисРегистрации: гейт первого запуска и режимы. На пустой БД самостоятельная
 // регистрация запрещена в любом режиме — иначе аноним закрыл бы мастер /setup (first-run hijack).
 

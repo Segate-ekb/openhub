@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страна посетителя: три исхода определителя, «своя сеть раньше базы», оба порядка
 // источников, доверие заголовку на шве входа и порядок обёрток на этом шве.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Экран «Провайдеры входа» — образец механизма «⚙ записи + окно по адресу + подтверждение»:
 // окно по ?окно=…, отбитая форма в открытом окне, удаление через подтверждение и тумблер —
 // настоящим контроллером поверх настоящей службы провайдеров в контейнере.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Подписки на события» трёх домов на механизме «⚙ записи + окно по адресу + подтверждение»:
 // окно новой подписки на странице и по адресу, отбитая форма в открытом окне, секрет подписи один
 // раз окном, правка без смены включённости, удаление через подтверждение с именем, тумблер, проба

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Считающий читатель происшествий: отдаёт то же, что настоящий, и считает обращения к нему.
 // Нужен там, где судится ЦЕНА экрана: одно чтение на весь список против чтения на строку.
 

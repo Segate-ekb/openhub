@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: жизненный цикл фейкового IdP в отдельном процессе — свободный порт,
 // приметы провайдера окружением, запуск, ожидание готовности, гарантированная остановка.
 

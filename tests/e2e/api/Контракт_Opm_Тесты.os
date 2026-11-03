@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Контрактные тесты совместимости с настоящим opm: реальный хаб с засеянным пакетом,
 // install по имени, по версии, по каноническому адресу /api/v1 и через вечные алиасы,
 // отрицательные сценарии, Authorization. ПутьНаСервере и РесурсПубликацииПакетов задаются

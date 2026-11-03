@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Теги пула в контейнере ОСени на КоннекторInMemory: пакет наследует теги пула вживую, своя
 // копия перекрывает тег пула, выключенный тег пропадает у пакета, галка пула включает
 // и выключает наследование; основной тег, запрет перезаписи и имя тега против номеров версий.

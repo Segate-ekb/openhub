@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гвардов трёх домов подписок — хаба, кабинета и пакета: впускает учётку, которую задал
 // тест, с пулом и пакетом раздела, так мутации доходят до настоящей службы подписок; «не впускать» —
 // гвард отказал и сам ответил, дальше запрос не идёт.

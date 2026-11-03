@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разделы «Видимость», «Квота» и «Опасная зона» дома «Пул»: видимость сегментами одной формой,
 // квота полем только администратору хаба, удаление пула подтверждением с эхом имени по адресу
 // ?окно=удалить — настоящим контроллером дома поверх настоящих служб пулов, доступа и прав.

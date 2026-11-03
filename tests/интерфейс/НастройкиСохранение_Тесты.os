@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сохранение раздела дома «Хаб»: автор изменения берётся из сессии, а повторный сабмит без правок
 // доменную запись не зовёт. Проверяется на контроллере с поддельной службой настроек, считающей вызовы.
 

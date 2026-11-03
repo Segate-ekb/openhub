@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отбор доставки по тегам и поправки нижестоящих объектов к подпискам хаба и пула — на фейках,
 // без контейнера и базы: событие проходит подписчик, число доставок в очереди — то, что
 // увидит адресат.

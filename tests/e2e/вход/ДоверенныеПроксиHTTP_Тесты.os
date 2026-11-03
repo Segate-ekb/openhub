@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адрес клиента за обратным прокси вживую: два хаба — со списком доверенных сетей и без; снаружи видны
 // ведро ограничителя входа и запись «вход.заблокирован» с объектом «адрес/…» в журнале аудита.
 

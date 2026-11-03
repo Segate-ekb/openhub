@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ответа winow для контроллеров входа: редирект, куки, статус, тип и тело.
 // Куки приходят отдельным объектом, чтобы фикстуры не зависели друг от друга по типу.
 

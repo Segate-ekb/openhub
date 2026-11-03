@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Память хаба на файлах: приём и отдача пакета в 40 МБ не поднимают его в память процесса —
 // пик RSS хаба по ходу передачи выше исходного меньше чем на половину размера пакета.
 // Свой хаб: пик RSS меряется по PID процесса хаба, а PID общего хаба набору не известен.

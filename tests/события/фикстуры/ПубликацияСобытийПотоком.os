@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обработчик фонового задания: публикует события, пока стартовые рогатки на них подписываются, —
 // так первые запросы приходят к хабу, ещё не закончившему старт; первую жалобу запоминает.
 

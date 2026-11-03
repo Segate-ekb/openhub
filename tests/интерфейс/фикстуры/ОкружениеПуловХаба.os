@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение таблицы пулов хаба для замера цены экрана: пулы, занятое место, число пакетов и владельцы
 // отвечают из памяти и считают обращения по дверям — как служба пулов, служба пакетов и служба учёток.
 

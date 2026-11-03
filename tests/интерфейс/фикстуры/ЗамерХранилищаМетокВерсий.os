@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеМетокВерсий в памяти, считающее обращения и прочитанные строки: ответ `/versions`
 // перечисляет метки каждой версии, и вопрос на строку стоил бы горячему пути `opm` обращения на версию.
 

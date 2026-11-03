@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Самотест СтендПринципалов: что скажут о ручном принципале гварды хаба и совпадает ли его форма
 // с принципалом живого запроса. Отдельный процесс — свой контейнер ОСени.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СервисПодтвержденияEmail: считает запросы письма, ничего никуда не шлёт.
 // Нужна там, где проверяется регистрация, а не цикл подтверждения.
 

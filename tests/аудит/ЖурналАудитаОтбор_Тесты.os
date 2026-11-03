@@ -1,4 +1,10 @@
-﻿// Домен журнала аудита: разбор отбора из адреса и страница службы поверх источника-файла
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Домен журнала аудита: разбор отбора из адреса и страница службы поверх источника-файла
 // (постранично, с признаком следующей — числа страниц у хвоста файла нет).
 
 #Использовать asserts

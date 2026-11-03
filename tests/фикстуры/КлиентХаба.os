@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-клиент подопытного хаба: соединение берёт у ЭкземплярХаба; второй хаб — второй клиент.
 // Страницу читает как браузер: токен CSRF и поля формы в том виде, в каком браузер их отправит.
 

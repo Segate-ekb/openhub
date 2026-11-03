@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд учёток, ролей на пулах, грантов и ключей: строкой в хранилище — для фона сценария, службами
 // хаба — когда набор потом судит продуктовую логику входа и прав.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пустой пул на странице пула: читателю — пустота словами, тому, кто пулом распоряжается, — карточка
 // с путями из неё: первая публикация всегда, перенос из другого хаба — только пулу, которому внешние
 // источники допустимы (не личному пространству).

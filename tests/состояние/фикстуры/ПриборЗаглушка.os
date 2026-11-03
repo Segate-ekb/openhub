@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Прибор фейкового метра: помнит, чем его завели, и что ему насчитали. Контракт
 // ОтелСчетчик в объёме, которым пользуются приборы хаба.
 

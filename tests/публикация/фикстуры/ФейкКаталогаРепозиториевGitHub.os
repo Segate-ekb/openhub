@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк КаталогРепозиториевGitHub: отвечает по таблице «токен → репозитории», без сети.
 // Считает обращения — этим проверяется, что в сеть не ходили вовсе.
 

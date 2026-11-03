@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-сторож долговечности счётчика скачиваний: настоящие GET артефакта, остановка хаба
 // и повторный старт на той же базе — карточка пакета показывает то же число, что до остановки.
 

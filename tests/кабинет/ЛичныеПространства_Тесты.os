@@ -1,4 +1,10 @@
-﻿// Оба перехода настройки «Личные пространства», полнота каскада удаления пула и границы
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Оба перехода настройки «Личные пространства», полнота каскада удаления пула и границы
 // сноса: соседи с общим префиксом имени, проектные пулы и учётки остаются целы.
 
 #Использовать asserts

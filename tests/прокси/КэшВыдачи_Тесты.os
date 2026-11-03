@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Выдача популярного пакета без похода в хранилище: HEAD и «не изменилось» — по записи версии,
 // повтор — потоком из файла кэша, перезапись — сразу новой; хранилище — S3 над фейком со счётом обращений.
 

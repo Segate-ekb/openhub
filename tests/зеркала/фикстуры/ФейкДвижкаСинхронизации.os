@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк движка синхронизации зеркал: считает вызовы, отдаёт ЕстьЕщё заданное число раз,
 // умеет падать и умеет вернуть итог вовсе без поля ЕстьЕщё.
 

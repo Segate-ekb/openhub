@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПакетов: ЛетописьВерсий спрашивает имя и пул пакета, отметка последней публикации
 // пишется прямо в запись; службы кабинета читают пакеты пула и списком.
 

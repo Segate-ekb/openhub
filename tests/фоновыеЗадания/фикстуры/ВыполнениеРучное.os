@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дескриптор выполнения для тестов: контракт os-scheduler (Завершено/ЗавершеноУспешно/
 // ТекстОшибки), завершает его тест. Библиотека дескриптор наружу не отдаёт — двойник здесь.
 

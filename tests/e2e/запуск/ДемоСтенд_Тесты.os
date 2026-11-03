@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Смоук демо-стенда: tools/demo.os --no-run разворачивается в песочнице, и в данных стенда
 // лежит ровно то, что обещает его сценарий.
 

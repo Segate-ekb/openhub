@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ПоследствийЗакрытияПровайдера: обстановку, которую видит администратор,
 // задаёт тест. Настоящая считает её по учёткам, и наборам о правиле это не нужно.
 

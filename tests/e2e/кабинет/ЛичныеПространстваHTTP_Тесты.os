@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Пулы» дома «Хаб» живым хабом: выключение личных пространств через окно с эхом,
 // включение с раздачей, порог админа хаба. Тесты идут по состоянию стенда в порядке, заданном &Порядок.
 // Свой хаб: выключает и сносит личные пространства на весь хаб и сверяет их точное число «4».

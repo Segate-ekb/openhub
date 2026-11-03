@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый SDK и метр телеметрии: помнит заведённые приборы и обратные вызовы, а Снять()
 // проигрывает срез так же, как его проигрывает настоящий метр — своим набором наблюдений
 // на каждую регистрацию. Контракт — в объёме, которым пользуются приборы хаба.

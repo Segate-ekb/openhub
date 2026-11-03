@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-интеграционные тесты административной части JSON API (/api/v1): группы, состав групп,
 // сопоставления групп OIDC, гранты прав доступа, апстримы, квота, видимость и флаги пула, зеркала.
 // Поднимает настоящий хаб на файловой БД, засеянной сидером ЗасеятьКабинет.os, и гоняет

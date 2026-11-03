@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Реестр-образец для проверки чисел хаба: играет сразу за сервис пулов, сервис пакетов,
 // сервис прав, хранилище версий, сервис пользователей, статистику скачиваний, очереди
 // доставок и обходов и издателя событий — все они нужны желудям РазмерыПубличногоРеестра

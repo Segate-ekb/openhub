@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище артефактов, считающее обращения: им проверяют, что экран в хранилище
 // не ходит вовсе. Данных не держит — отвечает пустотой и отмечает, что его спросили.
 

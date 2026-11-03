@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк клиента апстримов: ответ задаётся на базовый URL либо на ресурс базы (list.txt, страница, артефакт),
 // журнал хранит порядок обращений и пути — что и у кого спрашивали.
 

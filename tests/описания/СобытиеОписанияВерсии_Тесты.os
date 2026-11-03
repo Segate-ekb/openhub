@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Событие «описание версии изменено»: его даёт справка, с которой README из репозитория появился
 // или пропал; справка «не найдено» вместо «не спрашивали» его не даёт.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты разбора запроса артефакта (контракт opm): «{name}.ospx» и «{name}-{спец}.ospx»,
 // плюс параметр spec, который старший над версионным слотом имени.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Маршруты хаба в настоящем маршрутизаторе winow без контейнера: контроллеры читаются Рефлектором
 // тем же чтением аннотаций, каким их собирает winow.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты СервисаЗеркал и ВалидатораАдресаАпстрима (реестр): права, пул назначения,
 // SSRF апстрим-URL, уникальность/лимит/фильтр, изоляция чужого пула.
 

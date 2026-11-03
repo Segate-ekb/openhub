@@ -1,4 +1,10 @@
-﻿// Живой смоук S3-бэкенда против MinIO: сквозной SigV4 round-trip и multipart на объекте >20 МБ (части по 5 МиБ).
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Живой смоук S3-бэкенда против MinIO: сквозной SigV4 round-trip и multipart на объекте >20 МБ (части по 5 МиБ).
 // Включается OSHUB_S3_SMOKE; адрес, бакет, регион и ключи — из OSHUB_STORAGE_S3_*.
 
 #Использовать asserts

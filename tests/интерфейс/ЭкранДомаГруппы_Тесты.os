@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разделы «Участники» и «Связка с OIDC» дома «Группа» на механизме «⚙ записи + окно по адресу +
 // подтверждение»: состав таблицей со страницами, окно «Добавить участника» с подбором поиском,
 // «Убрать из группы» подтверждением, сопоставления окном и подтверждением, политика тумблером —

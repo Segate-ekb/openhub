@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Имя пользователя GitHub по логину на собранном контейнере с autumn-cache: GitHub без токена
 // отвечает одному адресу ограниченное число раз в час, поэтому ответ помнится, а неудача — нет.
 

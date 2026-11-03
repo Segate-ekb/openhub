@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Права и дом пула для витрины пустого пула: распоряжается ли смотрящий пулом и адрес раздела дома.
 
 Перем Распоряжается; // Булево — смотрящий администрирует пул

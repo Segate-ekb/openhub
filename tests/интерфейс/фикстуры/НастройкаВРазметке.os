@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Поле настройки в разметке страницы: обёртка поля с плашкой источника по ключу настройки, форма,
 // которую шлёт кнопка сброса у плашки, и тело её отправки — как его отправит браузер без скрипта.
 

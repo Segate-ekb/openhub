@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Разделы «Версии и метки» и «Опасная зона» дома «Пакет» на механизме «⚙ строки + окно по адресу
 // + подтверждение»: отзыв и возврат формой из одной кнопки, тег окном по адресу, снятие тега
 // подтверждением, удаление пакета с эхом имени — настоящим контроллером дома поверх настоящих

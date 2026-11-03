@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисВходящих в памяти, считающий обращения: очередь пула, очередь всего хаба, разрез «сколько
 // ждёт в каждом пуле» для счётчика шапки и снимки манифеста заявок — их счёт отдельный.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Вид и язык» дома «Аккаунт»: выбор печатается по cookie оформления, сегменты уходят
 // сразу, а значение cookie из формы пропускает только то, что кит готов напечатать.
 

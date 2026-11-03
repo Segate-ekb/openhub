@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-тесты раздела «провайдеры входа» на настоящем хабе: запрос собирается из напечатанной
 // разметки (имена полей и адрес действия читаются из HTML, окна — по адресу ?окно=…),
 // вложенных форм на странице нет.

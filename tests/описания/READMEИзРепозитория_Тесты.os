@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // README версии из репозитория пакета на GitHub, когда в пакете его нет: фоном после публикации
 // и ночным обходом, с тега либо из ветки по умолчанию, не чаще раза в сутки; GitHub — фейк
 // сырого содержимого, контейнер ОСени на КоннекторInMemory; отдельный процесс.

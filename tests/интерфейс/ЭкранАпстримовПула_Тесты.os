@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Апстримы» дома «Пул» на механизме «⚙ записи + окно по адресу + подтверждение»:
 // окно нового источника по ?окно=…, отказ пробы у поля адреса, стрелки порядка, тумблер, снятие
 // токена, удаление через подтверждение, тумблер публикации — настоящим контроллером поверх

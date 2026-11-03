@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Одна сессия браузера без базы — на месте службы сессий, куки сессии и защиты CSRF у формы
 // и двери выхода: кука запроса называет сессию, у сессии свой токен, выход её гасит.
 

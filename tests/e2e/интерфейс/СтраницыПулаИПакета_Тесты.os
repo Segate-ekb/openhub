@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Страницы пула и пакета на живом хабе: живут под /pools, служебные имена свободны, прежние адреса —
 // «не найдено», короткая нотация opm работает; страница и машинные двойники — о версии канала по умолчанию.
 // Свой хаб: назначает свой пул основным и выключает описание API на весь хаб.

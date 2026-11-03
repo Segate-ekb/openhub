@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПрав с правами по объектам: администратор хаба (признак Админ) вправе всё,
 // остальным действия выдаются на пул или пакет; право на пул наследует каждый его пакет.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заявки на публикацию — страница кабинета /me/inbox и раздел «Входящие» дома «Пул»: таблица с ⚙
 // в строке, окна одобрения и отклонения по адресу, решение формой окна только с подтверждением,
 // старая вкладка — отказ без решения; настоящими контроллерами поверх настоящего рассмотрения заявок.

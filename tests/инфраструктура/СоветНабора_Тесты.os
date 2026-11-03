@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Самотест СоветНабора: контейнер набора без файла настроек не видит autumn-properties.json проекта,
 // детальки набора сильнее файла, и совет собирается без предупреждений ОСени об устаревших методах.
 

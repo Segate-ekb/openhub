@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Гейт «провайдер закрыт посетителю по стране» на настоящем правиле и определителе над пробной
 // базой: закрытая и неизвестная страна отбиты, сбой чтения правил закрывает вход.
 

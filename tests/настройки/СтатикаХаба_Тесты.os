@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Статика инсталляции: свои файлы и файлы кита под одним плоским пространством публичных имён —
 // файла нет, два файла делят адрес, картинка не отдаётся.
 

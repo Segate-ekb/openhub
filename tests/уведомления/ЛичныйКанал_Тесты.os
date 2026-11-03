@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Личный канал: исход заявки — лентой и письмом, без почты — лентой; отказ почты и ленты
 // рассмотрение не роняет, письмо с одноразовой ссылкой следа в ленте не оставляет.
 

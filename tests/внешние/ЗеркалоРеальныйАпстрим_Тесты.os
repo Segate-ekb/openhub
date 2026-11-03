@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Приёмка пула с апстримом против настоящего hub.oscript.io: хаб с апстримом на живой публичный хаб отдаёт
 // оттуда реальный пакет. Всё, что сети не требует, — в e2e/прокси/ПроксиМаршрутВыдачи_Тесты.
 

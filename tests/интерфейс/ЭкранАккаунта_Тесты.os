@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дом «Аккаунт»: привязки OIDC — отвязка окном по адресу только с подтверждением, последний способ
 // входа не отвязывается, чужая личность не трогается; профиль и пароль — отказ под полем; каждая
 // дверь стережётся гвардом. Настоящими контроллерами поверх настоящих служб входа в контейнере.

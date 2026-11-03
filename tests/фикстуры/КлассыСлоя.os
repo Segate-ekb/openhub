@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: поиск и подключение классов модуля, разложенных по подкаталогам; имена типов глобальны.
 // Подключение класса тянет объявления ключей настроек его модуля (РеестрНастроекХаба.КлассПодключён).
 

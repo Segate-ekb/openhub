@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Домен настроек: реестр, резолвер «конфиг → база → умолчание», аудит правок; «рестарт» — новая
 // поделка ОСени на той же файловой базе, поэтому набор в отдельном процессе.
 

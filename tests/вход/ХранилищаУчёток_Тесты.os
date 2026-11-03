@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилища учётного контура: отборы деривацией реально фильтруют, доменные методы приводят аргументы.
 // Отдельный процесс: второй контейнер ОСени конфликтует с контейнером раннера.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Двери и пороги API без живого хаба: закрытое неотличимо от отсутствующего, нет права — 403,
 // пролог правки останавливается на первом отказе и проходит порог до мутации.
 

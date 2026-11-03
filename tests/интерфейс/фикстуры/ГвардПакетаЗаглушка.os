@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гварда дома «Пакет»: допуск, пул и пакет раздела задаются тестом; учётка — администратор
 // (меню каркаса). Отказ — гвард ответил 403 сам, без тела (страницу отказа печатает настоящий гвард).
 

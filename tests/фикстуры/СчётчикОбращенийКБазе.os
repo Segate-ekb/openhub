@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Наблюдатель источника данных entity, считающий обращения к СУБД и поднятые сущности.
 // Им проверяется цена агрегата: один запрос и ноль поднятых строк вместо выборки таблицы.
 

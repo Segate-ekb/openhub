@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисГрупп в памяти, считающий обращения: групп у человека нет, а состав группы задаётся
 // фикстурой — по нему видна цена раздела «Участники».
 

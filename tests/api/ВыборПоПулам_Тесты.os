@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Выбор версии по всем доступным пулам: круг — читаемые пулы, побеждает старшая, при равных —
 // основной пул, затем первый по имени; пустой итог называет отказ дальше всех прошедшего пула.
 // Список list.txt по всем пулам — имена открытых пулов без повторов.

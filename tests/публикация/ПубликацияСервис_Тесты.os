@@ -1,4 +1,10 @@
-﻿// СервисПубликации на юнит-контейнере с файловым хранилищем во временном каталоге:
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// СервисПубликации на юнит-контейнере с файловым хранилищем во временном каталоге:
 // авторизация, запрет перезаписи, сверка манифеста, порядок шагов приёма, журнал.
 
 #Использовать asserts

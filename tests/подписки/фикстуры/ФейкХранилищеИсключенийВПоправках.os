@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковое хранилище исключений в поправках в памяти: контракт ХранилищаИсключенийВПоправках без
 // базы; считает выборки по пакету — их делает доставка на каждое событие.
 

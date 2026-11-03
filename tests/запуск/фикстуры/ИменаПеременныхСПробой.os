@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: список псевдонимов хаба плюс один пробный, которого загрузка настроек в глаза
 // не видела, — чтобы доказать, что загрузка ходит по списку, а не по своим ключам.
 

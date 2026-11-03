@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каталог пакетов /packages глазами посетителя: выдача карточками, строка поиска, вкладки отборов,
 // плашка пула, пустая выдача и страницы. Отбор и страница живут в адресе: поиск внутри отбора его
 // не сбрасывает, шаги страниц несут и запрос, и отбор; со скриптом поиск и страницы меняют список

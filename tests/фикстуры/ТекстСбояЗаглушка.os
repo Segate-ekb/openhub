@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ТекстСбоя: отдаёт причину как есть и запоминает, что просили перевести
 // человеку. Словаря кита и журнала у неё нет — набору важен сам факт обращения.
 

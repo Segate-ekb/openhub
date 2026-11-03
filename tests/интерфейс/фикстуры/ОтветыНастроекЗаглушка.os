@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ОтветыНастроек: запоминает, каким отказом ответил контроллер, и не рендерит.
 
 Перем ПоследнийОтказ Экспорт;   // "" — отказа не было

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каталоги репозитория для наборов и фикстур: корень, модули продукта, дерево тестов и общие
 // фикстуры. Считаются от этого файла, поэтому набор не зависит от того, в каком подкаталоге лежит.
 

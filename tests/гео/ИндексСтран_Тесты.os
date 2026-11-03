@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Подкаталог гео/страна без хаба: справочник кодов, ключ адреса, двоичный поиск по диапазонам
 // и сборка индекса по CSV — только библиотека ip и платформа.
 

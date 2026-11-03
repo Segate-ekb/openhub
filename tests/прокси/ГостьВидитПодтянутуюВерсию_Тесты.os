@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Гость кэширующего пула видит версию, которую прокси только что подтянул с апстрима, без ожидания
 // срока страницы; отдача уже лежащей версии страницы гостя не сбрасывает. Источник — фейковый
 // клиент апстрима; контейнер ОСени на КоннекторInMemory; отдельный процесс.

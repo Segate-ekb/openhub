@@ -1,4 +1,10 @@
-﻿// Тесты инфраструктуры тестов: выдача портов, жизненный цикл подопытного хаба и линт исходников tests/;
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Тесты инфраструктуры тестов: выдача портов, жизненный цикл подопытного хаба и линт исходников tests/;
 // линт ловит типовые ошибки по тексту, его детекторы проверены приманками на каждую форму.
 
 #Использовать asserts

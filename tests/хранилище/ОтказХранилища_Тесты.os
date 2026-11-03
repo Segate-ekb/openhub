@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отказ хранилища не теряет причину по дороге: хранилище называет отказ машинным кодом, обёртки
 // сохраняют исходную ошибку причиной, выдача и публикация судят по коду, а не по тексту.
 

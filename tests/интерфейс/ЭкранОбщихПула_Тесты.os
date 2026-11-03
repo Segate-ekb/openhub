@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Общие» дома «Пул»: свойства пула словами — видимость той же плашкой, что на странице пула,
 // сырых кодов нет, ссылка в настройки хаба только администратору, владелец по номеру, команда opm
 // с именем пула и узлом хаба; окружение витрины — в памяти.

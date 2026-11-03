@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый OTLP-приёмник: три конечные точки спецификации OTLP/HTTP складывают тело
 // запроса в файл своего сигнала. Разбирать OTLP не нужно — тест ищет в теле подстроку.
 

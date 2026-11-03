@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-интеграционные тесты JSON API v2 (/api/v1/*): поднимает настоящий хаб на файловой БД, засеянной сидером
 // ЗасеятьКабинет.os, и гоняет сценарии по реальному HTTP — чтение, видимость, публикация, теги, аутентификация, ошибки.
 

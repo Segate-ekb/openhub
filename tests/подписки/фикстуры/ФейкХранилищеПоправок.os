@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковое хранилище поправок подписок в памяти: контракт ХранилищаПоправокПодписок без базы.
 
 Перем Счётчик_;  // СчётчикОбращений — обращения и прочитанные строки (цена экранов)

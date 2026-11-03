@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Граф зависимостей одной страницы пакета без базы: служба зависимостей, пакеты, версии, пулы и гвард
 // чтения пула одним объектом. Зависящий пакет заводится версией в своём пуле; пул читается, если тест
 // не закрыл его.

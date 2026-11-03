@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковое хранилище источников пула в памяти: контракт ХранилищаАпстримовПула без autumn-data
 // и базы — для службы СервисАпстримовПула под экраном.
 

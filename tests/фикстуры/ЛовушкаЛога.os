@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Способ вывода logos, накапливающий сообщения в памяти: тест смотрит, что в лог попало
 // (и, главное, что НЕ попало). Подключается через Лог.ДобавитьСпособВывода либо Поставить.
 

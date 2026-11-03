@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты СервисВходаCLI: выдача пары кодов, одобрение и отказ человеком, опрос
 // клиентом, срок жизни заявки, интервал опроса, сгорание по перебору и уникальность кода.
 

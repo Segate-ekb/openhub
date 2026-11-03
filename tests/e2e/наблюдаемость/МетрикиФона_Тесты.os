@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Живой хаб с телеметрией против OTLP-приёмника: фоновая работа — разбор очереди доставок
 // и обход зеркала — уезжает трассами и метриками. Протокол http/json: партия читается текстом.
 

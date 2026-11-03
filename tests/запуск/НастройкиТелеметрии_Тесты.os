@@ -1,4 +1,10 @@
-﻿// Ручки телеметрии, которыми управляет оператор: поставочное умолчание, карточки сигналов
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Ручки телеметрии, которыми управляет оператор: поставочное умолчание, карточки сигналов
 // и запрет на секрет коллектора в файле настроек. Спаны, конвейер и экспорт — дело
 // аннотаций autumn-opentelemetry и SDK, здесь их нет.
 

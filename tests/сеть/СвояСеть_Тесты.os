@@ -1,4 +1,10 @@
-﻿// «Своя сеть» у хаба одна: набор адресов прогоняется через каждую судящую дверь — провайдер входа,
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// «Своя сеть» у хаба одна: набор адресов прогоняется через каждую судящую дверь — провайдер входа,
 // издатель доверенного конвейера — и через саму политику; сверяется значение вердикта.
 
 #Использовать asserts

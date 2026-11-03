@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение главной страницы без базы: гвард онбординга, принципал, обзор хаба, каркас и реестр
 // пулов — цену страницы они не двигают, считаются только хранилища.
 

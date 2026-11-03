@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Живая приёмка агрегатов на PostgreSQL (OSHUB_TEST_PG_DSN): SQL-ветка исполняется только здесь;
 // база общая, набор убирает свои строки и сверяется с прямой выборкой.
 

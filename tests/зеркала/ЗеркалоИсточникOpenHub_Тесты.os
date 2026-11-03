@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Протокол OpenHub сверх общего контракта источника: срез изменений одним запросом, момент отсчёта,
 // продолжение порции тем же срезом, шкала обхода и отказы. Клиент апстрима — фейк.
 

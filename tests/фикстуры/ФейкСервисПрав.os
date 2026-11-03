@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПрав: без набора действий админ вправе всё, остальные — ничего; с набором — показывает,
 // какое право требует служба. Области изменения, пулы в распоряжении и счёт снимков задаются отдельно.
 

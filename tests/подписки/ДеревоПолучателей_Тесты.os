@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дерево получателей подписки хаба и пула и исключения из него, дерево пакетов в поправке пула
 // к подписке хаба — на фейках, без контейнера и базы: событие проходит подписчик, число доставок
 // в очереди — то, что увидит адресат.

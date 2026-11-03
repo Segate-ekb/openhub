@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ХранилищаВерсийПакета: поиск версии по паре (пакет, строка версии) и действующие
 // версии пакета — по ним СервисВерсий пересчитывает отметку последней публикации.
 

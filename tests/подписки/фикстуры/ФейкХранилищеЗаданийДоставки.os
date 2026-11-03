@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеЗаданийДоставки в памяти: переживает пересоздание очереди и отдаёт снимки, а не
 // живые объекты — правка без Сохранить() теряется, как в настоящей базе.
 

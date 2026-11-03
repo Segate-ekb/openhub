@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Подписки сверху на живом хабе: администратор заводит подписку хаба и разрешает её сузить,
 // владелец пула и пакета видит её без адреса и секретов, ставит поправку и не может тронуть
 // саму подписку; подписка без разрешения на адресе поправки отвечает 404. Засев кабинета:

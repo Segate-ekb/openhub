@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дисциплина регулярных выражений: литеральный шаблон якорится «\A…\z», внешний — с явными флагами,
 // каждое место в описи. Детекторы закрыты самотестами.
 

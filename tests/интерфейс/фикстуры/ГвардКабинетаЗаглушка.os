@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гварда приватной части (кабинета или дома настроек): допуск и вошедший
 // пользователь задаются тестом. Отказ — гвард ответил 403 сам, без тела.
 

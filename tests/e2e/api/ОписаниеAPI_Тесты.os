@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Описание API, которое отдаёт winow: спецификация /v3/api-docs и её YAML, страница Swagger UI,
 // разметка адресов под /api/ аннотациями, краткость текстов, в документе — только адреса под /api/
 // и честность описания перед живым хабом.

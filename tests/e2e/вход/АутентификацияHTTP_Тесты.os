@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Аутентификация живым хабом: полный сценарий — на общем хабе группы «мастер» (мастер проходит помощник
 // группы, своя учётка alice); администратор из окружения, лимит, замок и занятый адрес — на втором стенде;
 // замок и лимит запирают адрес, и &Порядок ставит их последними.

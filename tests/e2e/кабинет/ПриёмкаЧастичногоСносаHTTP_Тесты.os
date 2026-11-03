@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Частичный сбой сноса личных пространств на живом хабе: админ видит отказ с двумя числами,
 // включённую настройку и окно предупреждения и повторяет операцию, когда причина устранена.
 // Свой хаб: сносит личные пространства всего хаба и закрывает каталог хранилища на запись.

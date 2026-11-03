@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеУчастниковГрупп в памяти, считающее обращения: членства пользователя —
 // первый запрос КАЖДОГО вопроса о правах, и его цена множится на всю модель.
 

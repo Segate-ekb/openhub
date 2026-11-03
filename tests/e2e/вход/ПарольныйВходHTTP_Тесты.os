@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Выключатель парольного входа на настоящем хабе: предохранитель, подтверждение, закрытый парольный путь,
 // возврат конфигом и тумблером; IdP — фейковый в отдельном процессе, каждый тест сам готовит состояние.
 

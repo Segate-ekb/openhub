@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СервисаПулов и списка источников пула: пул добавляется вместе с признаком «есть апстрим»,
 // источники задаются ЗадатьАпстримы; заведение, назначение основным и удаление пула запоминаются.
 

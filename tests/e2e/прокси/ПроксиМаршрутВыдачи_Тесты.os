@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пулы с апстримом через настоящий маршрут выдачи: запрос идёт по HTTP в выдачу пула и доходит
 // до апстрима — нашего второго хаба на свободном порту. Два пула кэширующего хаба на одной паре хабов.
 

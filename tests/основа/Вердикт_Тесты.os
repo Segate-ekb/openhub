@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Форма ответа «получилось или нет и почему» — основа/Вердикт и права/ВердиктГварда: имена флага
 // и причины, сохранность нагрузки, флаг сильнее нагрузки.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение страницы пакета без базы: гвард, принципал, чтение пула, каркас, отдача страницы,
 // кабинет и реестр пакетов — цену страницы они не двигают, считаются только хранилища.
 

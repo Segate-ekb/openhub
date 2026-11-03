@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Права доступа» домов пула и пакета на механизме «⚙ записи + окно по адресу + подтверждение»:
 // «Выдать роль» в шапке секции и окно выдачи по адресу, отбитая форма в открытом окне, отзыв из меню
 // строки только подтверждённым, дверь раздела под гвардом дома и под правом выдавать, форма старой

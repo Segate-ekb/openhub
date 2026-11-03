@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты цикла приглашения: закрытая учётка с одноразовой ссылкой, пароль по ней, открытие учётки;
 // инвариант «нет способа входа — нет активности», сроки, погашение, отказы и аудит.
 

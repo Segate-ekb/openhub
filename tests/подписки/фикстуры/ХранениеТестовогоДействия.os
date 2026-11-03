@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Тестовое описание хранения типа действия «тест.запись»: настройки {Канал} плюс произвольная
 // {Метка} в JSON-колонке НастройкиДействия — новых колонок сущности такой тип не требует.
 

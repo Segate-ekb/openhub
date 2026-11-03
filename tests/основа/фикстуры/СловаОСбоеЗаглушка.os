@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка контракта СбойХабаСловами: узнаваемые фраза и страница, память о вызовах.
 
 Перем Фразы_;       // Массив из Строка — коды, о которых спрашивали фразу

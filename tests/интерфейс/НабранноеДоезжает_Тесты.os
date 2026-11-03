@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Набранное в форме или увиденное в адресе доезжает до хаба тем же: двери хаба (форма экрана,
 // тело формы API, подсветка раздела) и собранная им ссылка с одним процентным декодированием.
 

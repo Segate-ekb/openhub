@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд витрины раздела «Подписки»: граф панели подписок поверх фейков домена — сервиса подписок,
 // поправок, исключений и предпросмотра — и настоящих рендеров настроек; разметка раздела — внутри
 // дома настроек, как на странице: формы берут адрес и токен у дома. Классы панели подключает набор.

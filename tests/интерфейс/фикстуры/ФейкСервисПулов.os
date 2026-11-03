@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисПулов в памяти для экранов: чтение считает обращения, записи квоты и видимости
 // запоминаются, вердикт по квоте выносит настоящее правило КвотаПула, если его дали.
 

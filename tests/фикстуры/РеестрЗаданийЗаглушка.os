@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Реестр фоновых заданий с управляемым размером: тест задаёт число, которое реестр
 // назовёт следующему спросившему. Контракт РеестрЗаданийПлатформы в объёме приборов хаба.
 

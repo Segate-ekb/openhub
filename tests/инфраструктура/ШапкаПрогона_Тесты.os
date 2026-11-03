@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Шапка и итог прогона scripts/тесты.sh и scripts/смоук.sh на стенде-репозитории с заглушкой
 // oneunit: по ним ревьюер узнаёт, на каком коммите, в каком дереве и какой командой шёл прогон.
 

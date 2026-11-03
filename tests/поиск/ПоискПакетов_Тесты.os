@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Поиск пакетов на контейнере ОСени с КоннекторInMemory: ранжирование по тирам, нечёткий этап,
 // пагинация и видимость пулов; отдельный процесс.
 

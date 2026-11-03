@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Читатель происшествий, у которого лежит база: бросает, как настоящий. Нужен там, где судится
 // поведение экрана и карточки API при недоступной письменной памяти.
 

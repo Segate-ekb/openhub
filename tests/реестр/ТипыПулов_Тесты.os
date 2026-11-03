@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Типы пулов и разделение прав на пул: структурный запрет апстрима у пула `user`, разные права на жизненный цикл и
 // администрирование пула, неудаляемый дефолтный пул, каскад приватности, общее пространство логинов и имён пулов.
 

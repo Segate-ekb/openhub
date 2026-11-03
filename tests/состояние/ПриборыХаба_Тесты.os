@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Числа хаба и приборы, которые их снимают: сорванный подсчёт отдаёт -1, наблюдением
 // не становится и называет причину в журнале; выключенная телеметрия приборов не заводит;
 // работа хаба считается счётчиками на шине событий, и разрез у них один — имя пула.

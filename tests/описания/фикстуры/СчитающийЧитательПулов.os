@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обёртка СервисаПулов, считающая обращения к нему: сами пулы отдаёт настоящая служба,
 // счёт нужен там, где цена обхода росла числом пакетов.
 

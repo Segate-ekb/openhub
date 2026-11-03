@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Журнал фоновых задач: состав объявлен целиком, прогон виден стартом и исходом на отладке, упавшая
 // задача не выдаёт себя за успешную, смерть фонового цикла не пропадает молча.
 

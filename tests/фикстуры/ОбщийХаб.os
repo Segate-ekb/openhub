@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хаб группы живых наборов: внешний, поднятый scripts/тесты.sh на весь прогон, либо свой,
 // поднятый по описанию группы из ГруппыХабов, когда набор запущен поодиночке.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты компонента ТаблицаПрав: таблица из данных карточками, роль и тип субъекта словами,
 // прочерк кита, резолв имени субъекта через СубъектыПрав, обе оси — «субъекты» и «объекты».
 

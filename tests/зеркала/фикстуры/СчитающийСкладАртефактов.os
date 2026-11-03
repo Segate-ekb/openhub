@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Обёртка хранилища артефактов: делегирует настоящему и считает обращения по дверям (на S3 каждое —
 // сетевой запрос); умеет отказать в описи машинным кодом лежащего S3.
 

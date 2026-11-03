@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СервисПользователей в памяти, считающий обращения: «учётка по идентификатору» и разрез по списку.
 
 Перем Учётки;   // Соответствие: идентификатор -> Структура (Идентификатор, Логин)

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пресет темы — решение инсталляции: настройка oshub.ui.preset (умолчание, пресеты кита, чужое значение)
 // и страница посетителя в этом пресете — каркасом кита поверх настоящего оформления хаба и настоящих
 // настроек в контейнере (база — в памяти). Личные тема и акцент ложатся поверх; «Вид и язык» пресета

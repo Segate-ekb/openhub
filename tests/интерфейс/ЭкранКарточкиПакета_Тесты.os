@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Карточка» дома «Пакет»: поля карточки уходят одной формой и пометок не касаются,
 // пометки «устарел» и «скрыт» — тумблерами секции «В каталоге», каждая своей формой на своём
 // адресе. Настоящий контроллер, витрина, пульт и дверь правки карточки над пакетом в памяти.

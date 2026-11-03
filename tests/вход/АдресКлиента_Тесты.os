@@ -1,4 +1,10 @@
-﻿// Канон записи IP-адреса и ведро ограничителя по нему: любая запись одного адреса —
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Канон записи IP-адреса и ведро ограничителя по нему: любая запись одного адреса —
 // один объект и один счёт, адреса одной сети /64 — тоже один.
 
 #Использовать asserts

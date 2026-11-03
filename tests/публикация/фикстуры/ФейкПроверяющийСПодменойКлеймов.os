@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Проверяющий подписи, отдающий заданные тестом клеймы вместо клеймов токена: показывает,
 // что домен решает по проверенным клеймам, а не по нагрузке предъявленного токена.
 

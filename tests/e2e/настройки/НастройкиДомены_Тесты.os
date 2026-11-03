@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пять домов настроек на живом хабе (аккаунт · группа · пул · пакет · хаб): гвард каждого дома, CSRF
 // на мутациях, переезды адресов, статика, работа без JS, поле из конфигурации.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеЛичныхУведомлений в памяти, считающее обращения и прочитанные строки: счёт строк
 // отличает число непрочитанного, взятое счётчиком, от посчитанного по поднятой ленте.
 

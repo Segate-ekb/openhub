@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Накопитель предупреждений: повторяет ту часть контракта лога logos, которой
 // пользуются проверяемые классы — Предупреждение(Шаблон, П1...П3) и Отладка того же вида.
 

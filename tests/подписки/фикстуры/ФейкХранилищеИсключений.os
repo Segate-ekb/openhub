@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковое хранилище исключений подписок в памяти: контракт ХранилищаИсключенийПодписок без базы;
 // считает выборки по узлу — их делает доставка на каждое событие.
 

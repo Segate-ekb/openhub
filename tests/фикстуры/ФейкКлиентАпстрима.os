@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк КлиентаАпстрима без сети: ответ по конкретному пути либо общий ответ на любой путь,
 // журнал запросов (базовый адрес и путь) и счётчик скачиваний.
 

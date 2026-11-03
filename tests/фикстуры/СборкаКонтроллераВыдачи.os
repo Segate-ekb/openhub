@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сборка КонтроллераВыдачиAPI для offline-наборов: части называются именами, а не позициями.
 // Правка конструктора контроллера видна здесь одним местом и не съезжает по набору молча.
 

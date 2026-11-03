@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Одна сессия вошедшего на месте службы сессий и учёток под настоящим стражем запроса: считает
 // чтения сессии — страница вошедшего читает её один раз, стражем, а не ещё раз в шапке.
 

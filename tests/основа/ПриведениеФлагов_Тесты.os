@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пять дверей чтения булева — и то, что словарь одной двери не течёт в соседнюю: «on» настройкой
 // в истину не читается, «yes» настройке незнакомо.
 

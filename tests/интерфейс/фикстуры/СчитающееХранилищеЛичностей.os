@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище внешних личностей в памяти, считающее ОБРАЩЕНИЯ. Считаются обе двери:
 // «личности одного пользователя» — та, через которую растёт N+1, — и «личности списка».
 

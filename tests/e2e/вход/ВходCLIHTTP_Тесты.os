@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-интеграционные тесты входа CLI (RFC 8628) на живом хабе: инициация клиентом,
 // подтверждение человеком в браузере, опрос до выдачи PAT, отказ и защиты потока.
 // Хаб — общий группы «мастер»: мастер проходит помощник группы, человек — своя учётка clihuman;

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гварда дома «Группа»: учётка, группа раздела и право правки задаются тестом; «не впускать» —
 // гвард отказал и сам ответил 403 без тела, дальше запрос не идёт.
 

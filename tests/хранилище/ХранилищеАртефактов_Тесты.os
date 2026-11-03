@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Контракт ХранилищеАртефактов одним набором на обе реализации: файловое хранилище во временном
 // корне и S3Хранилище на ФейкКлиентS3. Параметр теста — имя бэкенда, как его называет Бэкенд().
 

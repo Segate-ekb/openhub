@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты подтверждения адреса и восстановления пароля: письмо со ссылкой, одноразовость и срок
 // ссылки, гейт парольного входа, хаб без почты. Живого SMTP нет — транспорт подменён фейком.
 

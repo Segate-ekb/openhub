@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Смена темы с экрана входа и регистрации возвращает на тот же экран с тем же возвратом:
 // хаб отдаёт наружу no-referrer, и путь возврата несёт сама форма темы.
 

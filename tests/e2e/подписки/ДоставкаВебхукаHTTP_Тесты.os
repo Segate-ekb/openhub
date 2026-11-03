@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Боевая доставка вебхука на живом хабе настоящим HTTP-транспортом: событие версии уходит
 // на приёмник набора с латинским кодом события в X-OpenHub-Event, идентификатором доставки
 // и подписью — все заголовки ASCII, тело несёт тип события как есть.

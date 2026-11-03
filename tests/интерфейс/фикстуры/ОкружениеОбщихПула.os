@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение раздела «Общие» дома пула в памяти: занятое место и квота пула, учётки по номеру,
 // число нескрытых пакетов, администратор хаба и адрес инсталляции — по одному ответу на вопрос.
 

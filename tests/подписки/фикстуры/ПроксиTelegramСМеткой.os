@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ПроксиTelegram для транспорта Bot API: прокси настоящий (локальный слушатель),
 // а вычёркивание секретов оставляет в тексте метку — по ней видно, что его вообще звали.
 

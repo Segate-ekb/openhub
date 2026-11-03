@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты хабового адаптера исходящего HTTP (сеть/КлиентHTTP) и транспорта OIDC над ним.
 // Сеть не дёргается: подставлены ФейкКоннектораHTTP и ФейкТранспортHTTP.
 

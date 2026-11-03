@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Синк зеркала в пул, который знает пакет в другом регистре, на регистрозависимом хранилище: S3 над
 // фейком корзины различает ключи по регистру, как S3 и диск Linux. Источник — фейковый клиент апстрима;
 // контейнер ОСени на КоннекторInMemory; отдельный процесс.

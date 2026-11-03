@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Приёмник среза метрики: запоминает записанное вместе с атрибутами точки данных.
 // Контракт ОтелНаблюдениеМетрики в объёме, которым пользуются приборы хаба.
 

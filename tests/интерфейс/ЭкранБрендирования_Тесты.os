@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Брендирование» дома «Хаб»: образец шапки в пресете с зеркалами полей, значения одной формой,
 // логотип и иконка — слотами со своими адресами загрузки и возврата; настоящим контроллером раздела
 // поверх настоящих служб настроек, картинок оформления и журнала аудита в контейнере (база — в памяти).

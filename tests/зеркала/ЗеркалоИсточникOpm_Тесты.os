@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Легаси-протокол источника сверх общего контракта: версии со страницы пакета, её адрес, фильтр масок,
 // порция и курсор по именам, деградация к latest. Клиент апстрима — фейк.
 

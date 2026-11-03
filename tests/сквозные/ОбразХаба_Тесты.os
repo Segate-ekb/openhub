@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сторож поставки в образе: версия хаба живёт ровно в packagedef, а состояние инсталляции
 // (файл SQLite и журнал аудита) лежит на томах, а не в слое образа.
 

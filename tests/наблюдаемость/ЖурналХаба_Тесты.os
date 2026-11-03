@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Журнал хаба: обезличивание значений, дверь выхода строки в коллектор и консоль, связка уровней
 // корневого лога и компонентов и отбор строки по уровню её лога.
 

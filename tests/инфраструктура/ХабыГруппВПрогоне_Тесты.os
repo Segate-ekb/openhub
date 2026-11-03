@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Общие хабы групп в scripts/тесты.sh на стенде с заглушками oneunit и oscript: два вызова oneunit,
 // подъём и остановка хабов между ними, хвост журнала, отказы инструмента, чужой PID.
 

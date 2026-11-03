@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пакет в 40 МБ через кэширующий пул: хаб привозит его с апстрима в файл, сверяет с ETag
 // и отдаёт байт в байт — и в первый раз, и из своего кэша.
 

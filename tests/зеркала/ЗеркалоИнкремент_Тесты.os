@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Инкрементальный обход зеркала на настоящих желудях и фейковом клиенте апстрима: первый обход полный,
 // второй — с момента вычитки, цена в исходящих запросах, жизнь момента и способ обхода; легаси — всегда полный.
 

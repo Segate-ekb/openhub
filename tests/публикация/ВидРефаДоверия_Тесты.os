@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Словарь видов рефа: синонимы формы и API, отказ на нераспознанном и вид, предлагаемый
 // по значению, выведенному из ссылки. Класс чистый — ни контейнера, ни базы здесь нет.
 

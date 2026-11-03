@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса раздела «Брендирование» дома «Хаб» в настоящем маршрутизаторе winow: литерал раздела
 // перекрывает шаблон дома без отката, поэтому куда уходит каждый адрес — стережёт таблица маршрутов.
 

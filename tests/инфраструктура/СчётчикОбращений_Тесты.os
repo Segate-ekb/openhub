@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Самотест фикстуры СчётчикОбращений: на ней стоят сторожа N+1 двух десятков наборов,
 // и счётчик, который считает не то, делает их зелёными на выпотрошенном продукте.
 

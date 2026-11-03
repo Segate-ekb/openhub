@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Общий хаб группы для scripts/тесты.sh: «поднять <группа>» поднимает хаб по ГруппыХабов, печатает
 // порт, PID и каталог и выходит, хаб живёт дальше; «остановить <pid> [<каталог>]» гасит его и чистит.
 

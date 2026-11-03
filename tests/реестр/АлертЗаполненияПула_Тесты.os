@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Правило частоты алерта о заполнении пула и отбор подписок по их порогам.
 // Классы собираются напрямую: правило чистое, контейнер ОСени ему не нужен.
 

@@ -1,4 +1,10 @@
-﻿// Таблица решений пульта личных пространств: что он делает с настройкой и когда зовёт
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Таблица решений пульта личных пространств: что он делает с настройкой и когда зовёт
 // домен. Домен подменён заглушкой — здесь проверяется РЕШЕНИЕ, а не работа службы.
 
 #Использовать asserts

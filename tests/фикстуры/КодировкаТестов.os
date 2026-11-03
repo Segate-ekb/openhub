@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // base64url для наборов: собрать компактный JWT и прочитать его нагрузку. Внутренние
 // модули библиотек тесты не читают — у наборов свой инструмент.
 

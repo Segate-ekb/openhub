@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СтражаПарольногоВхода: разрешает ли предохранитель выключение, задаёт тест; переход
 // пишет настоящую настройку через службу настроек от имени стража — реестр отдал правку
 // этого ключа ему, обычная запись значения на нём отказывает.

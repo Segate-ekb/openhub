@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ХранилищаСкачиванийАгрегатов: дописывание — чтение, пауза и запись, как у базы без атомарного
 // инкремента; умеет держать дописывания у ворот и отказывать, суммы версий держит кэшем.
 

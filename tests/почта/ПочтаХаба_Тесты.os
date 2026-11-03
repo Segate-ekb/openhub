@@ -1,4 +1,10 @@
-﻿// Почта на фейковом транспорте: признак «почта настроена», защита от подстановки заголовков,
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Почта на фейковом транспорте: признак «почта настроена», защита от подстановки заголовков,
 // отказ сервера кодом причины, а не исключением, и пульт проверки отправки.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Мир раздела подписок для цены экрана: настоящие службы подписок, поправок и исключений поверх
 // хранилищ в памяти, которые считают обращения и прочитанные строки, и витрины раздела над ними
 // (СтендВитриныПодписок). Пул 7 «alpha» с тегом «stable», в нём пакеты 42 и 43; пул 8 «beta».

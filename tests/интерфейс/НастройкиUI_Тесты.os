@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты слоя ПРЕДСТАВЛЕНИЯ настроек: карточки и формы, собранные ВитринойНастроек из РЕАЛЬНОЙ выдачи
 // СервисНастроек.Карточки(). Классы создаются напрямую, база — заглушка в памяти.
 

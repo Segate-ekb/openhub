@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Издатель событий на старте хаба: стартовые рогатки подписываются каждая в своём потоке, пока
 // первые запросы уже публикуют события. Подписка не роняет старт и не теряется.
 

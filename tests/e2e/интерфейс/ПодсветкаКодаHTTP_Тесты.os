@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Блоки кода в README на странице пакета: блок с языком раскрашивает тег подсветки oscript-md,
 // он стоит на странице один раз и только когда такие блоки есть; код чужого README остаётся текстом.
 // Хаб группы «пакеты»: свой пул codes и два пакета заводятся в ПередВсеми; засеянное набор не трогает.

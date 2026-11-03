@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каркас страницы для замера шапки: контекст собирает настоящий каркас кита, а страница, как
 // и у кита, спрашивает обрамление с этим контекстом — меню, которое оно собрало, достаётся замеру.
 

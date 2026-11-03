@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Превью сообщения Telegram: какой адрес карточки уходит в Bot API по телу события и ссылкам
 // текста и в какой форме. Доставка идёт настоящим обработчиком на фейковом транспорте, тело события собирает
 // настоящий сборщик тела доставки над реестром из одного пакета (страница релиза — запуском

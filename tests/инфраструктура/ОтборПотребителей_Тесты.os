@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отбор scripts/тесты.sh на стенде из двух модулей: кто попадает в прогон модуля с потребителями
 // и почему, а кто — нет. По этому отбору разработчик решает, что прогнать перед коммитом.
 

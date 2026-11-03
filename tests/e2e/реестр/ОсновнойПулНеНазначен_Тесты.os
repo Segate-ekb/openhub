@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хаб без основного пула: короткие адреса /download, /dev-channel и /push объясняют отказ, старт
 // предупреждает оператора, раздел «Пулы» говорит «не назначен».
 // Хаб — общий группы «мастер», фаза «чтение»: мастер проходит помощник группы; основного пула на хабе

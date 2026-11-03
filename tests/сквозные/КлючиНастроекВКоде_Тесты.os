@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Ключи настроек в коде всех модулей против реестра: детальки прикладных ключей живут только
 // в объявлениях, каждый ключ, читаемый деталькой или службой настроек, объявлен.
 

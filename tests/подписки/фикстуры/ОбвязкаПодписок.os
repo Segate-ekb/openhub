@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Общее для наборов подписок без контейнера: админ хаба, пул как объект подписки, учётки
 // с признаком Админ, готовность хаба и имена объектов для журнала аудита.
 

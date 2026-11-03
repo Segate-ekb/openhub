@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Волна параллельных запросов к живому хабу с телеметрией: каждый ведёт свою трассу. Плавает:
 // на медленном или нагруженном раннере хаб не держит восемь запросов одновременно, и волна не пересекается.
 

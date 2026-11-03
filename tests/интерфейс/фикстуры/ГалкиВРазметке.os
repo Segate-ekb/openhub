@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Галки дерева в разметке страницы: тег галки узла по её ключу (значению) и тело формы, которое
 // отправит браузер без скрипта, — для сторожей окна «Получатели» и «Пакеты пула», юнитов и живых.
 // Ключ узла — значение галки: «пакет_42», «пул_7».

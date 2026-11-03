@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый ТранспортHTTP для проб источника: ответ с заголовками на адрес, сетевой сбой, журнал
 // обращений; незаданный адрес — сбой «нет ответа».
 

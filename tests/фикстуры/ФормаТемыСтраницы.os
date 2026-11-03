@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Форма смены темы на отданной странице глазами сервера: адрес формы из разметки и путь
 // возврата, который придёт в контроллер темы, раскодированный так же, как его читает winow.
 

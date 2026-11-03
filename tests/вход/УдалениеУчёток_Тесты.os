@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Удаление учётки: что уходит вместе с человеком (сессии, ключи, личности, заявки, членства, гранты,
 // личное пространство), что остаётся жить безымянным и кого удалить нельзя.
 

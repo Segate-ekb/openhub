@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Круг подробностей события: что СобытиеАудита записало в журнал, то ФорматЖурналаАудита
 // оттуда и вернул — теми же полями и теми же типами.
 

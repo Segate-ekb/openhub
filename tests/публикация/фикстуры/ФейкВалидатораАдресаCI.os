@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ВалидатораАдресаАпстрима: вердикт задаётся тестом и может меняться между вызовами —
 // так проверяется, что страж судит адрес заново, а не отдаёт запомненный ответ.
 

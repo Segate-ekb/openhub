@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Готовое представление README версии на собранном контейнере с autumn-cache: повторный показ
 // Markdown не разбирает, а запись описания или справки на диск (в том числе во время сборки и под
 // именем в другом регистре), снятие описания и смена адреса репозитория дают следующему показу

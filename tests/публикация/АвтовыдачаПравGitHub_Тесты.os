@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздача прав на пакеты основного пула по доступу в GitHub: раздача — на контейнере с фейком
 // каталога репозиториев, разбор ответа GitHub — на HTTP-каталоге поверх фейкового транспорта.
 

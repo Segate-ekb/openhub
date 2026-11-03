@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Статистика скачиваний: сброс по порогу и интервалу, витрина до сброса, суточная агрегация,
 // доставка события подписчику, параллельные скачивания и сбросы, сбой записи.
 

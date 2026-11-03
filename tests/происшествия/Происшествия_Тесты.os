@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Ядро происшествий на настоящем контейнере с базой в памяти и ручными часами: свёртка под замком,
 // потолок со сводкой «прочее», срок жизни, обезличивание, прогоны и «летопись наружу не бросает».
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд выдачи без живого хаба: контейнер на КоннекторInMemory, S3 над фейковым клиентом, кэши
 // по деталькам набора. Набор подключает autumn-cache сам: без неё кэши не оборачиваются.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилища пула пакета замера в памяти: пакет замера ни в каком пуле с тегами не состоит —
 // выключений у него нет, пул не находится, тегов пула нет. Считает обращения: снимок каналов
 // пакета ходит сюда на каждом холодном чтении.

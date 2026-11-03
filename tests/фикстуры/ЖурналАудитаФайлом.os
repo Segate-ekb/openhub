@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Чтение журнала аудита из файла в удобной для утверждений форме: «последние N» и
 // «всё по объекту». Поверх ЧитательЖурналаАудита, то есть читает ровно то, что хаб записал.
 

@@ -1,4 +1,10 @@
-﻿// Освобождение метаданных желудей: таблицы рефлексии ОСени отпускаются после готовности, контейнер
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Освобождение метаданных желудей: таблицы рефлексии ОСени отпускаются после готовности, контейнер
 // после этого отдаёт желуди и строит определения заново; чужое устройство ОСени и сбой — предупреждение, не изменение.
 
 #Использовать asserts

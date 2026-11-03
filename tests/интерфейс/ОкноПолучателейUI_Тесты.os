@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окно «Получатели» подписки хаба и пула и получатели в её записи — на настоящих службах подписок
 // поверх хранилищ в памяти (фикстура МирРазделаПодписок): пулы строками с настоящим режимом, три
 // сегмента «Все / Выбранные / Никто» у строки пула (у подписки пула — её пул раскрытой веткой без

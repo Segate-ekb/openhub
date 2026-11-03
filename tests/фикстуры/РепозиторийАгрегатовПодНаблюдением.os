@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: репозиторий агрегатов скачиваний поверх настоящего, у которого витрину
 // спрашивают посреди записи — после того, как строка готова, и до того, как она сохранена.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Крошечная база стран вида DB-IP Lite и её адреса — для офлайн-наборов и живого хаба с подложенной
 // базой; адреса — из публичных диапазонов, документационные сети до базы не доходят.
 

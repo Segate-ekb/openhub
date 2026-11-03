@@ -1,4 +1,10 @@
-﻿// Сторож регистрации классов: каждый файл src/ даёт тип с именем файла, имена и прозвища
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Сторож регистрации классов: каждый файл src/ даёт тип с именем файла, имена и прозвища
 // уникальны, требуемые желуди существуют. Детекторы закрыты самотестами.
 
 #Использовать asserts

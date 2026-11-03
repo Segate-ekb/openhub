@@ -1,4 +1,10 @@
-﻿// Вход в контейнере: учётки, пароли и нормализация логина, сессии и токен CSRF, ключи
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Вход в контейнере: учётки, пароли и нормализация логина, сессии и токен CSRF, ключи
 // доступа, права с группами, лимит попыток, регистрация, онбординг.
 
 #Использовать asserts

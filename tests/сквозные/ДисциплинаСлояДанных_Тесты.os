@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Класс с &ХранилищеСущностей не зовёт свои &МетодЗапроса изнутри — ни голым именем, ни через
 // ЭтотОбъект: перехватчик стоит снаружи, и выборка молча вернёт Неопределено.
 

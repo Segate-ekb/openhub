@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел доверенных конвейеров дома «Пакет»: ссылки, маски, издатель, имя записи и готовый
 // конвейер — на настоящих КороткаяФормаДоверия и ВитринаДоверияCI; окно «Доверить конвейеру»,
 // подтверждение отзыва по адресу и двери раздела — настоящим КонтроллерДоверияCI; записи

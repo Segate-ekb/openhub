@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты сборщика кэша прокси по квоте: LRU-эвикция, отбор пулов с апстримами, провенанс
 // (своя публикация не вытесняется никогда), опись и удаление файлов хранилища.
 

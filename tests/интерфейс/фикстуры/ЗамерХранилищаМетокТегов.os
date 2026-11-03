@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеМетокТегов в памяти, считающее ОБРАЩЕНИЯ и ПРОЧИТАННЫЕ СТРОКИ: строки отдаёт замер,
 // а состав и раскладку по тегам — настоящее хранилище, которому замер подложен табакеркой «Сам».
 

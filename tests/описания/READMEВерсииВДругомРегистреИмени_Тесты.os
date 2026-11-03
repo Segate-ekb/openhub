@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // README версии, присланной с именем пакета в другом регистре, на регистрозависимом хранилище: S3 над
 // фейком корзины различает ключи по регистру, как S3 и диск Linux. Контейнер ОСени на КоннекторInMemory;
 // отдельный процесс.

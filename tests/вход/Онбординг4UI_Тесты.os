@@ -1,4 +1,10 @@
-﻿// Юнит-тесты онбординга публичного UX: ГвардОнбординга и безголовый админ из деталек
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Юнит-тесты онбординга публичного UX: ГвардОнбординга и безголовый админ из деталек
 // oshub.admin.* — значением либо файлом; окружение доезжает до них загрузкой настроек.
 
 #Использовать asserts

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отказы адреса /static — имя вне белого списка и пропавший с диска файл — снимают годовой срок
 // жизни и метку: адрес неизменяем на год, и осевший в общем кэше 404 пережил бы причину.
 

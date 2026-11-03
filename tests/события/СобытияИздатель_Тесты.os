@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты ИздателяСобытий: доставка подписчикам, изоляция падения одного подписчика,
 // полезная нагрузка, no-op без подписчиков. Классы инстанцируются напрямую, без контейнера.
 

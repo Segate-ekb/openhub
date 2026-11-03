@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пробы живого хаба: /health отвечает 200 и JSON с версией из packagedef, растущим аптаймом
 // и состоянием живой базы, /ready — тем же разделом базы, неизвестный путь — 404.
 // Хаб группы «пакеты»; засеянного набор не читает.

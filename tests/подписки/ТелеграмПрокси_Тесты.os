@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Прокси Telegram из настроек хаба: Bot API — через прокси, чужой трафик того же клиента oint —
 // напрямую. Прокси и сосед — локальные TCP-слушатели на выданных портах.
 

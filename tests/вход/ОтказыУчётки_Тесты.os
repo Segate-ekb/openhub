@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты таблицы отказов учётки: причина едет машинным кодом, ответ выбирается
 // по коду, а не по словам в тексте, и подробности наружу отдаются перечисленными полями.
 

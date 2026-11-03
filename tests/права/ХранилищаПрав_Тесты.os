@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилища прав на базе в памяти: гранты, сопоставления и связки групп OIDC, провайдеры входа.
 // Деривованные отборы обязаны отсеять лежащие в таблице чужие строки.
 

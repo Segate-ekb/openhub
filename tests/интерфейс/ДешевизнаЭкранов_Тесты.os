@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дешевизна экранов интерфейса: цена экрана в обращениях к базе и прочитанных строках не растёт
 // с числом строк. Экран собирается на малой и большой фактуре, обращения считают хранилища-фикстуры.
 

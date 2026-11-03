@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // «opm login --browser» на настоящем хабе: аноним по ссылке с кодом входит любой веткой и возвращается
 // на страницу подтверждения с тем же кодом; запрос каждой ветки собирается из выданной разметки.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Шпион на месте табакерки МенеджерКэшей: запоминает, что кэш «артефакты» просили положить, вместо
 // autumn-cache, которого у класса, созданного напрямую, нет.
 

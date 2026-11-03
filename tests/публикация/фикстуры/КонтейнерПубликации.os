@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-контейнер публикации: соседи и таблицы, без которых службы публикации не собираются,
 // и сборка поделки на КоннекторInMemory. Классы публикации и фейки набор называет сам.
 

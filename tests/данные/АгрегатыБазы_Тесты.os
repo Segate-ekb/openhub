@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Агрегаты слоя данных: текст запроса из модели, значения одной дверью, а без SQL и на отказе базы —
 // та же цифра выборкой в памяти. Отдельный процесс: контейнер ОСени спорит с контейнером раннера.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дерево получателей подписки хаба и пула и дерево пакетов пула в его поправке к подписке хаба
 // через API на живом хабе: чтение дерева и режимов пулов, замена отметок (круг GET → PUT без перемен),
 // отказы на чужих именах, права;

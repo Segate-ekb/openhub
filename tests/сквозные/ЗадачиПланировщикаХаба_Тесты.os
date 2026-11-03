@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Состав фоновых задач хаба глазами контейнера: задачи модулей собираются по прозвищу так же,
 // как их собирает планировщик, и при умолчаниях настроек дают прежние регистрации.
 

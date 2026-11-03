@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ХранилищеБрендовыхАктивов в памяти под своим замком: её делят потоки нагрузочного смока,
 // и сбоить в нём вправе только проверяемая служба, а не хранилище.
 

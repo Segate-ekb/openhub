@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-тесты среза изменений пула (/api/v1/pools/{pool}/changes и его соседи по адресу
 // выдачи — /pools/{pool}/changes, /changes): что появилось или
 // изменилось после названного момента, порция имён с курсором, отказ на непонятный момент

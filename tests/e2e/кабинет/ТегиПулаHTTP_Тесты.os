@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Теги пула на живом хабе: владелец пула включает галку и правит набор в разделе «Теги»
 // настроек пула, пакет наследует теги сразу, мейнтейнер правит тег пула у себя копией,
 // снимает копию и выключает тег пула; чужой пул и чужой раздел закрыты. Засев кабинета:

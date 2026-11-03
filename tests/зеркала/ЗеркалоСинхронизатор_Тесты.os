@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // СинхронизаторЗеркал на настоящих желудях и фейковом источнике: инкремент, идемпотентность, недоверенный
 // .ospx, изоляция сбоев, лимиты, адрес, аудит и состав зависимостей обеими ветками индексации.
 

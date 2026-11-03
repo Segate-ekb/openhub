@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Раздел «Зеркала» дома «Пул» на механизме «⚙ записи + окно по адресу + подтверждение»:
 // окно нового зеркала и окно правки по ?окно=…, отказ пробы у поля адреса, маски списком,
 // перенос, правка токена, снятие токена, удаление с эхом, тумблер и заявка на синхронизацию —

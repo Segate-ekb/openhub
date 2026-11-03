@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение проводника первой публикации без базы: пользователь впущен, онбординг пройден, пул
 // с правом записи один, токенов и версий нет, адреса домов — образцы, страница без обрамления.
 

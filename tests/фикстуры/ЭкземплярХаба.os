@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Жизненный цикл тестового хаба в отдельном процессе: порт, окружение, запуск, готовность, остановка;
 // сироты внешнего снятия прогона находятся по метке OSHUB_TEST_RUN.
 

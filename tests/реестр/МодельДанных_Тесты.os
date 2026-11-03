@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты модели данных — таблиц всех модулей: регистрация сущностей, авто-DDL, CRUD и поиск
 // с опциями на чистом entity (КоннекторInMemory), без контейнера ОСени.
 

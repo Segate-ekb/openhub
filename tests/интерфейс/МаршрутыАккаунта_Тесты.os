@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса дома «Аккаунт» в настоящем маршрутизаторе winow: раздел «Привязки OIDC» — литерал
 // /me/settings/oidc своего контроллера рядом с шаблоном /me/settings/{раздел} дома; литерал без своего
 // действия перекрыл бы шаблон, поэтому куда уходит каждый адрес — стережёт таблица маршрутов.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Теги пула через API на живом хабе: галка pool_tags в настройках пула, набор пула
 // под /pools/{pool}/tags, теги пакета с происхождением и выключенными, выключение тега пула
 // у пакета, копия правкой тега пула и отказы. Свой приватный пул и пакет двух версий (1.0.0

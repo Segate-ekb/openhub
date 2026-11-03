@@ -1,4 +1,10 @@
-﻿// Юнит-тесты признака готовности: ГотовностьХаба, КонтроллерГотовности и линт конвенции
+﻿// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
+// Юнит-тесты признака готовности: ГотовностьХаба, КонтроллерГотовности и линт конвенции
 // гейтов готовности в продуктовых фоновых рогатках.
 
 #Использовать asserts

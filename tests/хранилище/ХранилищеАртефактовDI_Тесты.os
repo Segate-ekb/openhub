@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Интеграционный тест DI хранилища артефактов: бэкенд выбирает фабрика по детальке
 // oshub.storage.backend — file по умолчанию, s3 с секретами только из окружения; срок ответа
 // корзины приходит деталькой oshub.storage.s3.timeout.sec.

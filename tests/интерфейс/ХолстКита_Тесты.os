@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Слой элементов кита: экран собирается деревом узлов, разметку печатает кит — порядок на экране,
 // экранирование, признаки для скрипта, отказ формы без CSRF и узла, внутрь которого класть нельзя.
 

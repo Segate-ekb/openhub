@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Главная кабинета «/me» живым хабом: «что у меня происходит», а не «куда пойти».
 // Фактуру задают сидеры группы «кабинет»: ЗасеятьКабинет.os и ЗасеятьСводкуКабинета.os.
 

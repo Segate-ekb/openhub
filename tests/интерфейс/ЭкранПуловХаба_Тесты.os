@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Экран «Пулы» дома «Хаб» — таблица пулов хаба с ⚙ в строке и свёрнутая группа личных пространств,
 // отбор и страницы в адресе,
 // окно нового пула, «Сделать основным» и удаление по адресу: настоящим контроллером поверх настоящих

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Таблица решений пульта пулов: заведение пула окном — суд квоты и её право, отказ домена
 // словами без служебной обёртки и полным отчётом в журнале; форма старой вкладки узнаётся по
 // операции. Юнитом: снаружи гвард раздела отказывает раньше пульта, и эти ветки недостижимы.

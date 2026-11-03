@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Группы общих хабов живых наборов: имя группы в теге «хаб:<имя>» → латинский идентификатор
 // переменной OSHUB_TEST_HUB_<ИДЕНТИФИКАТОР>, префикс временного каталога, окружение и сидер.
 

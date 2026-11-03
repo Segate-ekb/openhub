@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Корзины, сводка, время наборов и карантин scripts/тесты.sh на стенде с заглушкой oneunit: по сводке
 // параллельного прогона ревьюер принимает работу так же, как по выводу одного oneunit.
 

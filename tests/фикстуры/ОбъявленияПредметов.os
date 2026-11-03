@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: объявления предметов (ключи настроек, описания событий, коды происшествий) без
 // контейнера — так, как их собрала бы ОСень: по &Порядок, с желудями и детальками.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Профиль учётки в кабинете подопытного хаба: адрес в форме профиля и кнопка повтора письма;
 // учётка, на которой их проверяют, — администратор стенда, заведённый один раз на набор.
 

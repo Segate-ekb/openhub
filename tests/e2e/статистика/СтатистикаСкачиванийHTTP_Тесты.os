@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // HTTP-интеграция витрины счётчика скачиваний: отдача .ospx → доменное событие → счётчик →
 // страница пакета; HEAD и условный 304 скачивание не засчитывают. Счётчик на странице читает
 // вошедший (seed-user): гостю страница отдаётся из памяти и новые скачивания он видит до 60 с спустя.

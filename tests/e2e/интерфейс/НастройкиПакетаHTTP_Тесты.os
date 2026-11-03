@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Настройки пакета на живом хабе: поле «Репозиторий» карточки — проверка, снятие, приём
 // версии и картинка карточки ссылки; опасная зона — только когда в ней есть что делать.
 // Свой хаб: журнал аудита набор читает файлом из каталога данных своего хаба.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Доверенные конвейеры на собранном контейнере: токены и ключи из файла фикстуры, запись
 // доверия пакету и push точкой маршрута так, как её зовёт winow.
 

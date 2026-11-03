@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ОбъектаМодели entity: имя таблицы и имена колонок задаёт тест. Текст агрегата,
 // собранный из литералов вместо модели, на такой модели разъезжается сразу.
 

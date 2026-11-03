@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПравДоступа: выдачи, отзывы и вопросы о правах запоминаются в Вызовы; выдавать
 // права вправе вошедший, если это разрешено РазрешитьВыдачу.
 

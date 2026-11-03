@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дефекты чужих библиотек — список к разбору, а не сторожа: каждый тест пропущен безусловно, пишется
 // против библиотеки напрямую и позеленеет, когда апстрим починит дефект.
 

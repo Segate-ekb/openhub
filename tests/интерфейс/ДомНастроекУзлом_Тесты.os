@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Дом настроек печатается узлом кита Кит.ДомНастроек через настоящую дверь дома
 // (ОтветыНастроек.ОтдатьДом): разделы по рубрикам с текущим и опасным — колонкой и группой
 // единого меню, крошки и тосты модели, секции витрин — узлами и прежними структурами;

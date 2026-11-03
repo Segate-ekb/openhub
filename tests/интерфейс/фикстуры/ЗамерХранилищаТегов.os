@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеТегов в памяти, считающее ОБРАЩЕНИЯ и ПРОЧИТАННЫЕ СТРОКИ: страница пакета
 // спрашивает теги и на шапке (версия по умолчанию), и на вкладке версий.
 

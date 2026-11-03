@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк резолвера СубъектыПрав: пользователь 17 — «alice», группа 5 — «team-autumn», прочее — «тип#ид».
 // Обращения считаются: цена таблицы прав не должна расти числом строк.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Кэш артефактов на промахе: загрузка стартует фоном, выдача получает растущий файл, готовый файл
 // со сверенной суммой копируется в кэш, временный убирается после паузы не короче таймаута читателя;
 // застывшая загрузка снимается, сбой старта регистрации не оставляет; без запуска в фоне промах

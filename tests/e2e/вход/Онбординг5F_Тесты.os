@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Онбординг живым хабом на пустой базе без администратора из окружения. Мастер необратим:
 // тест, заведший администратора, отмечает базу тронутой, и следующему достаётся свежий хаб.
 // Свои хабы: тесты мастера требуют свежей базы, а хаб группы «мастер» проходит мастер один раз за прогон.

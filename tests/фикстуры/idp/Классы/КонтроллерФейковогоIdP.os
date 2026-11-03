@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый IdP для HTTP-тестов входа через провайдера: discovery, authorize, token,
 // userinfo. Состояния не держит — одноразовость едет внутрь кода авторизации.
 

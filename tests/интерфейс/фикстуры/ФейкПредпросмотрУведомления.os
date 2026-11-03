@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ПредпросмотрУведомления для экрана подписок: предпросмотр есть только у telegram, текст
 // и адрес карточки — заданные, ввод последнего вызова запоминается.
 

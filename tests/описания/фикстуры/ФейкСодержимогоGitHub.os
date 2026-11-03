@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый ТранспортHTTP вместо сырого содержимого GitHub: файлы и переадресации по пути
 // «владелец/репо/реф/файл», 404 на остальное, отказ кодом либо сетью на всё, счёт и адреса
 // обращений, действие на очередном обращении.

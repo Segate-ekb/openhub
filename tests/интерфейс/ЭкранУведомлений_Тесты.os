@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Лента уведомлений /me/notifications: дверь «отметить всё прочитанным» стережёт гвард кабинета —
 // на настоящем КонтроллерУведомлений; лента — фейк.
 

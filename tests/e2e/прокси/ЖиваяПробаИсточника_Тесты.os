@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пробное подключение живьём: хаб с включённой пробой заводит источник формой раздела «Апстримы».
 // Источник — второй хаб на свободном порту, мёртвый адрес — заявленный и никем не слушаемый порт.
 

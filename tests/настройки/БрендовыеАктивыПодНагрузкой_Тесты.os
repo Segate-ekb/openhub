@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Картинки оформления под параллельными запросами: рамка каждой страницы и отдача /brand/{файл}
 // спрашивают одну службу из многих потоков, пока администратор меняет картинки. Хранилище —
 // заглушка в памяти под своим замком: сбоить здесь вправе только сама служба.

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Push на живом хабе: коды и форма ответа opm, `opm push` → `opm install` при наличии opm,
 // карточка пакета, отзыв версии с экрана, квота пула и тёзки в двух пулах.
 // Хаб группы «пакеты»: свои пул pushpool, публикатор pushpub (райтер) и мейнтейнер pushkeeper на нём

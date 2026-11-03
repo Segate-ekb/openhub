@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фоновое задание параллельной выдачи: по кругу берёт пачку временных копий артефакта и освобождает
 // её, запоминая первую жалобу и все выданные пути; судит набор.
 

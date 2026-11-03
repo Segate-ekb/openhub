@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хаб до мастера /setup: онбординг нужен, лендинг, каталог и кабинет уводят на мастер, форма мастера
 // называет требования к паролю, анонимная регистрация закрыта всеми тремя дверями одной причиной. Хаб —
 // общий группы «мастер», фаза «пусто»: набор идёт первым в группе, мастера не проходит и ничего не заводит.

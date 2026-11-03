@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Перечисление версий против живого hub.oscript.io: разбор на настоящей разметке апстрима
 // (тег «внешние» и OSHUB_MIRROR_LIVE).
 

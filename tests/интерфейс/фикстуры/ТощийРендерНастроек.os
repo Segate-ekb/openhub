@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: рендер настроек без половины контракта (нет КлючПодписи) — на нём сторож полноты
 // обязан ронять сборку желудя. Неполон сознательно: дописать метод значит снять проверку.
 

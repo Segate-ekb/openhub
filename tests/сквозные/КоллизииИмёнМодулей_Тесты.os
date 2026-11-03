@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Имя общего модуля библиотеки не присваивается как необъявленная переменная («Property is not
 // writable»): скан src/, tests/, tools/, scripts/ и кода библиотек.
 

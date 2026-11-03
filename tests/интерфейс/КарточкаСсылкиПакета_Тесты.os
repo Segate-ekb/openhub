@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Карточка ссылки на страницу пакета: что увидит мессенджер, получивший ссылку, — заглавие,
 // описание, адрес и картинка; приватный пул карточки не отдаёт, относительных адресов нет.
 

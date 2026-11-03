@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса страниц пула и пакета: одна дверь их строит, и маршруты хаба обслуживают именно её адреса —
 // для имени любого вида; прежние адреса страниц не обслуживаются.
 
