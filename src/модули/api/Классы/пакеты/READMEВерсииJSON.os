@@ -1,4 +1,4 @@
-// README версии пакета в HTML и откуда он; README нет — source равен null.
+// README версии пакета в HTML и откуда он; README нет - source равен null.
 
 &Сериализуемое("version")
 &Заполнено
