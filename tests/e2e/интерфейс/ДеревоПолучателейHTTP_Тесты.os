@@ -73,7 +73,8 @@
 	Ид = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks", "https://hooks.example.com/tree-form");
 
 	Раздел = Страница("/hub/settings/webhooks", КукаRoot);
-	Ожидаем.Что(Раздел, "в меню записи — окно получателей по адресу").Содержит(Код("окно") + "=" + Код("получатели-" + Ид));
+	Ожидаем.Что(Раздел,
+		"в меню записи — окно получателей по адресу").Содержит(Код("окно") + "=" + Код("получатели-" + Ид));
 	Ожидаем.Что(СтрНайти(Раздел, "data-checktree-modes"), "дерева без окна на странице нет").Равно(0);
 
 	Окно = Страница(ОкноПолучателей("/hub/settings/webhooks", Ид), КукаRoot);
@@ -185,7 +186,8 @@
 
 	КукаRoot = Сессия("root", "RootPassw0rd");
 	ПулСДвумяПакетами(КукаRoot, "tree-same", "same-one", "same-two");
-	БезСкрипта = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks", "https://hooks.example.com/tree-nojs");
+	БезСкрипта = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks",
+		"https://hooks.example.com/tree-nojs");
 	СоСкриптом = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks", "https://hooks.example.com/tree-js");
 	Пул = "пул_" + Ид_("tree-same");
 	Один = "пакет_" + ИдПакета("tree-same", "same-one");
@@ -220,7 +222,8 @@
 	// «выбранные» → «Все»: весь пул
 	ПравкиОкнаБезСкрипта(КукаRoot, Раздел, БезСкрипта, "режим:" + Пул + "=все");
 	ПравкиОкна(КукаRoot, Раздел, СоСкриптом, "правки=1&режим=" + Код(Пул + ":все"));
-	Ожидаем.Что(ИсключённоеВПуле(КукаRoot, БезСкрипта, "tree-same"), "режим «все» — пул целиком").Равно("пулы: ; пакеты: ");
+	Ожидаем.Что(ИсключённоеВПуле(КукаRoot, БезСкрипта, "tree-same"),
+		"режим «все» — пул целиком").Равно("пулы: ; пакеты: ");
 	Ожидаем.Что(ИсключённоеВПуле(КукаRoot, СоСкриптом, "tree-same"), "на обоих путях").Равно("пулы: ; пакеты: ");
 
 	// «Никто» → «Выбранные» с отмеченным same-one: только он
@@ -424,7 +427,8 @@
 Процедура ОкноПакетовПулаЧужомуНеОткрывается() Экспорт
 
 	КукаRoot = Сессия("root", "RootPassw0rd");
-	Хаба = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks", "https://hooks.example.com/tree-amend-deny",
+	Хаба = ПодпискаВAPI(КукаRoot, "/api/v1/webhooks", "/hub/settings/webhooks",
+		"https://hooks.example.com/tree-amend-deny",
 		Истина);
 	КукаOwner = Сессия("owner1", "Owner1Passw0rd");
 	Правка = ПравкаВыбранныхБез("public", "alice-pkg");
