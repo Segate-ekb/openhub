@@ -3,8 +3,10 @@
 
 Перем Настройки;      // СервисНастроек (настройки), может быть Неопределено
 Перем СтражИздателей; // СтражИздателейCI, может быть Неопределено
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -60,6 +62,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // aud по RFC 7519 - строка либо массив строк.
 Функция АудиторииИзКлеймов(Знач Клеймы)
@@ -94,6 +98,8 @@
 	Возврат ?(СтражИздателей = Неопределено, "", СтражИздателей.Нормализовать(Значение));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("АудиторияТокенаCI")

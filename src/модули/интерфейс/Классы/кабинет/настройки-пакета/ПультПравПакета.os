@@ -37,6 +37,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Это всё, чем выдача роли на пакет отличается от выдачи роли на пул.
 Функция Раздел(Знач Пакет)
@@ -50,6 +52,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультПравПакета")

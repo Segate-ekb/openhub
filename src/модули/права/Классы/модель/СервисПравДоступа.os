@@ -8,8 +8,10 @@
 Перем ИменаЖурнала;          // ИмяОбъектаАудита (аудит) - вид объекта и субъекта в журнале
 Перем СобытиеЖурнала;        // СобытиеАудита (аудит) - форма нагрузки записи
 Перем Издатель;              // ИздательСобытий (события); опционален
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -239,6 +241,8 @@
 #КонецОбласти
 
 #Область ЗащитаОбъекта
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пул берётся из сущности и затирает пришедший; несуществующий объект - исключение.
 Функция Достоверный(Знач Объект)
@@ -304,9 +308,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Единственная точка записи прав. Веха - выдача человеком; системный грант называет дело, чьё он следствие.
 Функция ЗаписатьГрант(Знач ТипСубъекта, Знач СубъектИд, Знач Объект, Знач Действия, Знач КемВыдано,
@@ -462,6 +470,8 @@
 	Возврат Список;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

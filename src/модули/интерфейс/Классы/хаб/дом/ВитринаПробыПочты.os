@@ -44,6 +44,8 @@
 #КонецОбласти
 
 #Область СодержимоеСекции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПолеОперации()
 	Возврат Кит.СкрытоеПоле(ИмяПоляОперации(), ЗначениеОперации());
@@ -68,6 +70,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПробыПочты")

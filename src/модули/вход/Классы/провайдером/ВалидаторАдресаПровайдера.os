@@ -164,6 +164,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отвергнутый набор - пустой набор точек, а не Неопределено («точки из discovery»).
 Функция ОтказНабора(Знач Сообщение)
@@ -216,6 +218,8 @@
 	Возврат ?(ЗначениеЗаполнено(Роль), Строка(Роль), Тексты.Текст("providers.role.default"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВалидаторАдресаПровайдера")

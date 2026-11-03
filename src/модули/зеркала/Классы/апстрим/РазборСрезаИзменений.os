@@ -35,6 +35,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Маркер среза: момент снятия и массив изменений. Без него срезом читался бы любой
 // JSON-объект - и сайт, отвечающий на /changes «{}», выглядел бы источником, у которого
@@ -156,6 +158,8 @@
 	Возврат ?(Значение = Неопределено, "", СокрЛП(Строка(Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

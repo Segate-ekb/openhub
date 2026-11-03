@@ -4,8 +4,10 @@
 Перем ДоверенныеСети;  // ДоверенныеПрокси (вход)
 Перем Пересылка;       // ЗаписиПересылки (вход)
 Перем Канон;           // КанонIP (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -44,6 +46,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Свои прокси в хвосте цепочки пропускаются; левее первого чужого не читается - это пишет клиент.
 Функция ПервыйСправаНеПрокси(Знач Цепочка, Знач Свои, Знач Соединение)
@@ -84,6 +88,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -45,6 +45,8 @@
 #КонецОбласти
 
 #Область Отбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Экран читает хвост файла: без этой строки пустая выдача читалась бы как «таких операций не было».
 Функция ЧтоПрочитано(Знач Выдача)
@@ -115,9 +117,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с моментом заглавием; поле, которого у записи нет, - прочерком:
 // пустая ячейка читается как поломка экрана. Подробности - разворотом под записью.
@@ -175,9 +181,13 @@
 	Возврат СокрЛП(Строка(?(Значение = Неопределено, "", Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подробности
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Разворот называет запись в доступном имени: двадцать «Подробнее» звучат одинаково.
 // Записи без подробностей разворота нет.
@@ -274,9 +284,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Страницы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сколько страниц у журнала, неизвестно - шаги идут по признаку «есть следующая», отбор едет в адресе
 // каждой страницы. За краем журнала «назад» ведёт вглубь пустоты - из тупика нужен выход в один клик.
@@ -303,6 +317,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаЖурналаАудита")

@@ -88,6 +88,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Хост из URL без схемы, userinfo и порта.
 Функция ХостАдреса(Знач Адрес)
@@ -98,6 +100,8 @@
 	Возврат Строки.Канон(Значение);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ИздателиOAuth2")

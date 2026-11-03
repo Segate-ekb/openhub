@@ -72,6 +72,8 @@
 #КонецОбласти
 
 #Область Галка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тумблер сохраняется сразу; без скрипта его форму отправляет запасная кнопка кита рядом с ним.
 Функция СекцияГалки(Знач Включено)
@@ -91,9 +93,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Набор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СекцияНабора(Знач Пул, Знач АдресРаздела, Знач Состояние)
 
@@ -180,9 +186,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОкноЗаведения(Знач АдресРаздела, Знач Состояние)
 
@@ -258,6 +268,8 @@
 	Возврат КодироватьСтроку(Строка(ИмяТега), СпособКодированияСтроки.КодировкаURL) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаТеговПула")

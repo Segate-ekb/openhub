@@ -86,6 +86,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Метки, провенанс и скачивания всей порции - тремя разрезами, а не вопросом на версию.
 Процедура НаполнитьИзменения(Изменения, Знач Порция)
@@ -198,6 +200,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

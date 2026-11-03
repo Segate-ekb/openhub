@@ -105,6 +105,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Флаги читаются тем же выражением, каким передаются в политику: списки не разойдутся.
 Функция КодыТребований()
@@ -140,6 +142,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

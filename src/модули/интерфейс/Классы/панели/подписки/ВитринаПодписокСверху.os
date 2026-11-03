@@ -81,6 +81,8 @@
 #КонецОбласти
 
 #Область ОкноПакетовПула
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно «Пакеты пула»: какие пакеты своего пула он снимает с подписки хаба.
 Функция ОкноПакетовПула(Знач Параметры, Знач ПодпискиСверху)
@@ -99,9 +101,13 @@
 	Возврат НРег(СокрЛП(Строка(Объект.ТипОбъекта))) = "пул" И НРег(СокрЛП(Строка(Подписка.ТипОбъекта))) = "хаб";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОкноСужения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно «Сузить»: какие события подписки оставить себе и свой отбор по тегам. Флажки - только
 // события самой подписки: поправка сужает, а не добавляет. «Не присылать» едет с окном как есть.
@@ -152,9 +158,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПодпискаОкна(Знач ПодпискиСверху, Знач Состояние)
 
@@ -181,6 +191,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПодписокСверху")

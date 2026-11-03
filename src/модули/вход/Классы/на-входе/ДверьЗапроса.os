@@ -39,6 +39,8 @@
 #КонецОбласти
 
 #Область МашинныеАдреса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адреса целиком; пробы здесь, потому что kubelet не шлёт Accept.
 Функция МашинныеАдреса()
@@ -86,6 +88,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта() Экспорт

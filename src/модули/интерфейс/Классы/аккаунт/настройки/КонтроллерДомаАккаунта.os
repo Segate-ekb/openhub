@@ -102,6 +102,8 @@
 #КонецОбласти
 
 #Область Сохранение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий предохранитель дома: исключение из служб не должно уходить пользователю голой 500-й.
 Процедура Сохранить(Ответ, Знач Вердикт, Знач Ключ, Знач Форма, Знач КукиЗапроса, Знач АдресКлиента)
@@ -242,9 +244,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Раздел «Профиль» с исходом действия - уведомлением, которое принесла операция.
 Процедура ОтдатьПрофиль(Ответ, Знач Вердикт, Знач КукиЗапроса, Знач Сохранено, Знач Статус,
@@ -388,9 +394,13 @@
 	Возврат Кит.Поле(Имя, Метка).Секрет().Ошибка(Окна.Отказ(Отбитое, Имя));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ИменаПолей
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вид состояния раздела «форма вернулась с отказом».
 Функция ВидОтбитойФормы()
@@ -419,6 +429,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/me")

@@ -47,6 +47,8 @@
 #КонецОбласти
 
 #Область СтраницаВерсии
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Заглавие(Знач Пакет, Знач НазваннаяВерсия)
 	Возврат ?(НазваннаяВерсия = Неопределено, Пакет.Имя, Пакет.Имя + " " + НазваннаяВерсия.Версия);
@@ -61,9 +63,13 @@
 	Возврат Страницы.Версии(Пул.Имя, Пакет.Имя, НазваннаяВерсия.Версия);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Картинка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Картинка(Знач База, Знач Пакет, Знач ВерсияКартинки)
 
@@ -122,9 +128,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Без внешнего адреса абсолютного нет: адрес из заголовка Host подделывает любой запрос,
 // а страница публичного пула уходит в общий кэш.
@@ -136,6 +146,8 @@
 	Возврат Новый Структура("Свойство, Содержание", Имя, СокрЛП(Строка(Содержание)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

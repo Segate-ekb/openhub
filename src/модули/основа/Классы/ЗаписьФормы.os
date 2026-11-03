@@ -31,12 +31,16 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Половина пары так, как её набрал человек: «+» это пробел, «%» без пары цифр остаётся собой.
 Функция Набранное(Знач Половина)
 	Возврат КодированиеURL.ДекодироватьПараметрФормы(Половина);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

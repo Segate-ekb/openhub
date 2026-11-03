@@ -57,6 +57,8 @@
 #КонецОбласти
 
 #Область ЗависитОт
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // У пакета без версии по умолчанию «ни от чего не зависит» было бы неправдой.
 Функция ТелоЗависитОт(Знач Пул, Знач ВерсияПоУмолчанию)
@@ -116,9 +118,13 @@
 	Возврат Тексты.Текст("public.package.deps.any");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область КтоЗависит
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СписокКтоЗависит(Знач Зависимости, Знач Принципал)
 
@@ -253,6 +259,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

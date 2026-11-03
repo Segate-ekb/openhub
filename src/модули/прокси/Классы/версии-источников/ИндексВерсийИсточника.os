@@ -15,8 +15,10 @@
 Перем АдресаOpenHub; // АдресПеречняOpenHub (прокси) - где перечень версий у источника-OpenHub
 Перем Сравнитель; // СравнительВерсий (реестр) - что вообще является строкой версии
 Перем Обезличивание; // ОбезличиваниеЖурнала (наблюдаемость)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -101,6 +103,8 @@
 #КонецОбласти
 
 #Область ОпросИсточника
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Протоколы пробуются по порядку; молчание источника прерывает опрос - узел у них один.
 Функция Спросить(Знач Ключ, Знач Апстрим, Знач ИмяПакета)
@@ -306,9 +310,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область КэшПеречня
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отсутствие перечня - не значение, а промах, и лежит оно негативом: имя в ключе спросил
 // клиент, и положительной записью такой ключ оседал бы в памяти навсегда.
@@ -362,6 +370,8 @@
 	Возврат Настройки.Флаг("oshub.proxy.offline", Ложь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -72,6 +72,8 @@
 КонецПроцедуры
 
 #Область Операции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Добавленный пакет пуст: дальше мейнтейнер работает на его странице.
 Процедура Добавить(Ответ, Знач Вердикт, Знач Пул, Знач Форма, Знач КукиЗапроса, Знач Путь)
@@ -121,9 +123,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЗанятостьИмени
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя спрашивают GET-ом с параметром «имя»; без него адрес - прежний приём форм.
 Функция ПроверяемоеИмя(Знач МетодЗапроса, Знач Параметры)
@@ -148,9 +154,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Ответы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОтказПоПраву(Знач Итог)
 	Возврат Итог.Код = 401 ИЛИ Итог.Код = 403;
@@ -175,6 +185,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

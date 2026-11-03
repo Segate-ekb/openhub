@@ -172,6 +172,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Право распоряжаться подписками объекта - тот же предикат, что спрашивает кабинет.
 Функция ТребоватьУправление(Ответ, Знач Пользователь, Знач Объект)
@@ -340,6 +342,8 @@
 	Возврат "";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

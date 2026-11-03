@@ -216,6 +216,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Слова причины - из таблицы ОтказыУчётки, впереди - введённый администратором логин.
 Функция ТекстОтказаЗаведения(Знач ИнфОбОшибке, Знач Логин)
@@ -245,6 +247,8 @@
 		Новый Структура("Причина, Ссылка, Логин", Причина, "", ""));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

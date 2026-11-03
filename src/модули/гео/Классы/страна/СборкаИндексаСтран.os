@@ -40,6 +40,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Прочитать(Итог, Индекс, Знач Хвосты, Знач Путь)
 
@@ -111,6 +113,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач _Порядок = Неопределено)

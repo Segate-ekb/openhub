@@ -213,6 +213,8 @@
 #КонецОбласти
 
 #Область Свёртка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Уникальность ключа держит свёртка, а не база; срез пары читается один раз.
 Процедура Свернуть(Знач Подсистема, Знач Объект, Знач Предмет, Знач Код, Знач Причина,
@@ -315,9 +317,13 @@
 	Возврат СтрШаблон("Прочие причины сверх %1 показанных по этому объекту", Потолок);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОбезличиваниеПричины
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Без названного секрета, обёртки исключения, строки запроса и учётных данных в адресах; обрезана.
 Функция ДляЧеловека(Знач Причина, Знач Секрет)
@@ -365,9 +371,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Убрать(Знач Записи)
 
@@ -399,6 +409,8 @@
 	Возврат ?(Часы = Неопределено, ТекущаяУниверсальнаяДата(), Часы.Сейчас());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -32,6 +32,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустота глазами читателя: пакетов нет, и делать ему здесь нечего.
 Функция Пустота()
@@ -80,6 +82,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПустогоПула")

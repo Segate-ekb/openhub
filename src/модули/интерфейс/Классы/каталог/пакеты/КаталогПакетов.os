@@ -82,6 +82,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПоПоиску(Знач Запрос, Знач Страница, Знач РазмерСтраницы, Знач Принципал)
 
@@ -220,6 +222,8 @@
 	Возврат 20;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

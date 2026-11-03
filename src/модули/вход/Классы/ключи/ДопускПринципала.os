@@ -100,6 +100,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Fail-closed: несобранная зависимость молча отключила бы энфорсмент рамок ключа.
 Функция РамкиКлюча(Знач Принципал, Знач Действие, Знач ПулИдентификатор, Знач ЧтоЗаДело)
@@ -128,6 +130,8 @@
 	Возврат Вердикты.ОтказСКодом(403, ЧтоЗаДело.БезГейта + ": гейт ключа доступа не собран");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

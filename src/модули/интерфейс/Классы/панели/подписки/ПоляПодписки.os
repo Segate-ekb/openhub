@@ -103,6 +103,8 @@
 #КонецОбласти
 
 #Область ВыборКанала
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Набор сегмента - поля только этого типа: на экране остаются поля выбранного, и без скрипта тоже.
 // Обязательность наборов проверяет сервер: спрятанное обязательное поле не пустило бы форму.
@@ -145,9 +147,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область КаналПравки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // У правимой подписки тип известен: обязательное поле объявлено, браузер проверит его сам.
 Функция ПолеПравки(Знач ОписаниеПоля, Знач Состояние, Знач Действующее)
@@ -196,9 +202,13 @@
 	Возврат Тексты.Текст(Строка(КлючТекста));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ТекстУведомления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Многострочные поля типа; у типа без декларации их нет.
 Функция ПоляТекстаТипа(Знач Тип)
@@ -254,9 +264,13 @@
 	Возврат ТекстНеобязательный(ОписаниеПоля.КлючПлейсхолдера);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Однострочное поле канала: длинное пояснение декларации - справкой «?» у подписи.
 Функция ПолеКанала(Знач ОписаниеПоля, Знач Состояние, Знач Действующее)
@@ -295,6 +309,8 @@
 		И НЕ Каталог.Секретное(ОписаниеПоля);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПоляПодписки")

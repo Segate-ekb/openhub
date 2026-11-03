@@ -87,6 +87,8 @@
 КонецПроцедуры
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьСостояниеМастера(Ответ, Знач ХочетHTML, Знач КукиЗапроса)
 
@@ -167,6 +169,8 @@
 	Возврат СтрНайти(НРег(Заголовки.Текст(ЗаголовкиЗапроса, "Accept")), "text/html") > 0;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

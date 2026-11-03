@@ -82,6 +82,8 @@
 КонецПроцедуры
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЗаголовокСтраницы(Знач Отбор)
 
@@ -214,9 +216,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отбор параметрами адреса: пул и «в моём управлении».
 Функция ПарыОтбора(Знач Отбор)
@@ -237,6 +243,8 @@
 	Возврат Макс(1, Цел(Числа.ЧислоИлиДефолт(Значение, 1)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/packages")

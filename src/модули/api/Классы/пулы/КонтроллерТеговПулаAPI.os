@@ -121,6 +121,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ожидаемые отказы - до мутации, каждый своим кодом; нераспознанное доходит до 500.
 Процедура СохранитьТегПула(Ответ, Знач Правка, Знач Тег)
@@ -188,9 +190,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТегПулаJSON(Знач ТегПула)
 
@@ -228,6 +234,8 @@
 	Возврат ?(Правка.Пользователь = Неопределено, "", Строка(Правка.Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

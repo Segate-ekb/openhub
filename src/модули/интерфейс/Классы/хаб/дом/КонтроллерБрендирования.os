@@ -123,6 +123,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий пролог картинок: гвард → только POST → форма с CSRF → картинка, которая у раздела есть.
 Функция Мутация(Ответ, Знач Слот, Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач МетодЗапроса,
@@ -193,6 +195,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер

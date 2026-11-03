@@ -5,8 +5,10 @@
 Перем Коды;     // КодыПроисшествий (происшествия) - сводку переполнения узнают по коду, а не по тексту
 Перем Даты;     // ДатаЧеловеку - одно написание момента на весь интерфейс
 Перем Ошибки;   // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -39,6 +41,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Прочитанное(Знач Снимки)
 
@@ -109,6 +113,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПредставлениеПроисшествийЗеркала")

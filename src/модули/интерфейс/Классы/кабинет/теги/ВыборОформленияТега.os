@@ -24,6 +24,8 @@
 #КонецОбласти
 
 #Область ПоляОформления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Стиль называет смысл канала, а не краску: цвет даёт тема, вид плашки - ОформлениеТега.
 Функция ВыборСтиля(Знач Выбранное)
@@ -47,9 +49,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подписи
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Подписи перечислены поимённо: скан ключей видит литералы, и вычисленный ключ для него дыра.
 Функция ПодписьСтиля(Знач Ключ)
@@ -68,6 +74,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВыборОформленияТега")

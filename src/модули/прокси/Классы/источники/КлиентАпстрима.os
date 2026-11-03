@@ -9,8 +9,10 @@
 Перем Обезличивание; // ОбезличиваниеЖурнала (наблюдаемость)
 Перем ЧтениеЗаголовков;   // ЗаголовкиHTTP (основа) - чтение заголовков ответа апстрима
 Перем Ошибки;      // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем Таймауты;           // ТаймаутыHTTP (сеть)
 Перем Уборка;             // ТихаяУборка (основа) - файл тела у ответа без тела
 
@@ -96,6 +98,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустой путь файла - тело в память, иначе прямо в файл.
 Функция ВыполнитьЗапрос(Знач БазовыйURL, Знач ОтносительныйПуть, Знач УсловныйETag, Знач Токен,
@@ -297,6 +301,8 @@
 	Возврат Настройки.Целое("oshub.proxy.max_redirects", 0);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

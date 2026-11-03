@@ -225,6 +225,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пролог мутации: гвард правки → только POST → форма с принятым токеном → форма не старой вкладки.
 Функция Мутация(Ответ, Знач группа, Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач МетодЗапроса,
@@ -280,6 +282,8 @@
 	Возврат ВитринаСвязки.ЕстьОкно(Запрос.Вердикт.Группа, Окно);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер

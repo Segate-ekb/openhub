@@ -171,6 +171,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Read-modify-write под блокировкой: без неё параллельные публикации теряют инкременты.
 Функция ПодБлокировкой(Знач ПулИдентификатор, Знач ДельтаБайт, Знач ТочноеЗначение)
@@ -220,6 +222,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("УчётОбъёмаПула")

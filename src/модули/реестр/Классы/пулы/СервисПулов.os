@@ -821,6 +821,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Завести(Знач Имя, Знач Тип, Знач Видимость, Знач ВладелецИдентификатор, Знач КвотаМб,
 	Знач СвойЛогин)
@@ -970,6 +972,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

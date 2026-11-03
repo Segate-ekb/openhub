@@ -162,6 +162,8 @@
 #КонецОбласти
 
 #Область ПравкиВДомен
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Правки одной ветки - в правки домена. Режим, равный напечатанному, правкой не считается (плашка
 // записи шлёт режим без поля показанного); «выбранные», начатые массовой отметкой, - основа домена.
@@ -201,9 +203,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Правки кита - со скриптом правками скрипта, без скрипта сравнением с полем показанного; крестик
 // ряда отмеченного приходит правкой сам. Без скрипта «Включить / снять найденные» сервер толкует по
@@ -274,6 +280,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

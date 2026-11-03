@@ -185,6 +185,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Префикс, которым IPv4 завёрнут в IPv6 (NAT64 либо «::a.b.c.d»); им же адрес разворачивается по RFC 6052.
 Функция ОбёрткаIPv4(Знач Адрес)
@@ -201,6 +203,8 @@
 	Возврат СокрЛП(Строка(?(Значение = Неопределено, "", Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

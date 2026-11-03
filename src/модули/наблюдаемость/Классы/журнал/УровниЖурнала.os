@@ -134,6 +134,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ДопустимыеУровни()
 	Возврат "DEFAULT,DEBUG,INFO,WARN,ERROR,CRITICALERROR,DISABLE";
@@ -236,6 +238,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта()

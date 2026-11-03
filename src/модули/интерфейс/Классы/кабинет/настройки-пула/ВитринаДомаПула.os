@@ -103,6 +103,8 @@
 #КонецОбласти
 
 #Область РазделыДругихВитрин
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СекцииПрав(Знач Параметры)
 
@@ -126,9 +128,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Видимость
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Видимость - сегментами одной формы раздела; что значит каждая - строкой под ними.
 Функция СекцияВидимости(Знач Пул)
@@ -147,9 +153,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Квота
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Квота: полоса занятого, откуда действующая квота - строкой; число меняет только администратор
 // хаба - у остальных секция без формы, квота свойством.
@@ -212,9 +222,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОпаснаяЗона
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Удаляет пул администратор хаба, и только пул, который домен не держит: остальным вместо кнопки -
 // причина строкой. Подтверждение с эхом имени приходит по адресу ?окно=удалить.
@@ -294,6 +308,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

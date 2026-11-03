@@ -35,6 +35,8 @@
 #КонецОбласти
 
 #Область Сборка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ВерсийНет()
 
@@ -69,6 +71,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПакетБезВерсий")

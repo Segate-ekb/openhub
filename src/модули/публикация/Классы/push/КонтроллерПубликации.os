@@ -12,8 +12,10 @@
 Перем Ошибки;      // ТекстОшибки (основа)
 Перем ТекстыJSON;        // ТекстJSON (основа) - тело ответа opm
 Перем Числа;             // ПриведениеЧисел (основа) - длина тела из Content-Length
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТочкиМаршрута
 
@@ -172,6 +174,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЭтоПушМетод(Знач МетодЗапроса)
 	М = ВРег(Строка(МетодЗапроса));
@@ -192,6 +196,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

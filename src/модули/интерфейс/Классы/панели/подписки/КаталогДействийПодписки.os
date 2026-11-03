@@ -174,6 +174,8 @@
 #КонецОбласти
 
 #Область СборкаОписаний
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Описания типов с рендером в стабильном порядке (по имени типа): реестр порядка не даёт.
 Функция СобратьОписания()
@@ -273,6 +275,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("КаталогДействийПодписки")

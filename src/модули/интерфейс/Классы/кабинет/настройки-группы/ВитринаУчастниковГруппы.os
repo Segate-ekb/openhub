@@ -93,6 +93,8 @@
 #КонецОбласти
 
 #Область Состав
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с логином заглавием и ⚙ в углу; откуда членство - словами.
 Функция ТаблицаСостава(Знач Участники, Знач Адрес, Знач МожетПравить)
@@ -170,9 +172,13 @@
 	Возврат ?(Момент = Неопределено, Тексты.Текст("settings.group.policy.never"), Даты.ДатаВремя(Момент));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сколько кандидатов показывать за раз: список остаётся пригодным и на сотнях учёток.
 Функция ПределКандидатов()
@@ -291,9 +297,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЭтоИзПровайдера(Знач Источник)
 	Возврат НРег(Строка(Источник)) = "oidc";
@@ -310,6 +320,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаУчастниковГруппы")

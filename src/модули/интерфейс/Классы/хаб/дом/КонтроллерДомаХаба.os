@@ -128,6 +128,8 @@
 #КонецОбласти
 
 #Область Сохранение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Сохранить(Ответ, Знач Вердикт, Знач Ключ, Знач Форма, Знач КукиЗапроса)
 
@@ -244,9 +246,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьРаздел(Ответ, Знач Вердикт, Знач Ключ, Знач Сохранено, Знач Ошибка, Знач КукиЗапроса,
 	Знач Статус = 200, Знач ОткрытоеОкно = Неопределено, Знач ТонкиеРаскрыты = Ложь)
@@ -291,6 +297,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/hub")

@@ -151,6 +151,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ПоказатьЗаявку(Ответ, Знач Заявка, Знач Ошибка, Знач Статус, Знач Принципал, Знач КукиЗапроса)
 
@@ -244,9 +246,13 @@
 	Возврат "Вход CLI";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Путь страницы подтверждения - один литерал на контроллер.
 Функция Путь()
@@ -285,6 +291,8 @@
 	Возврат "Слишком много неверных кодов подряд. Подождите и повторите попытку.";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

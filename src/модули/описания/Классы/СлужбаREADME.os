@@ -94,6 +94,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Представление(Знач Описание, Знач Пакет)
 
@@ -151,6 +153,8 @@
 	Возврат Новый Структура("ЕстьREADME, HTML, ЕстьКодСЯзыком, Источник", Ложь, "", Ложь, Неопределено);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

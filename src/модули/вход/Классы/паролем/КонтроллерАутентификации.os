@@ -198,6 +198,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Статус, текст и подробности отказа - из таблицы ОтказыУчётки по машинному коду причины.
 Процедура ОтдатьОтказРегистрации(Ответ, Знач ИнфОбОшибке)
@@ -222,6 +224,8 @@
 	Ответы.Ошибка(Ответ, 405, "method_not_allowed", СтрШаблон("Разрешён только метод %1", Разрешённый));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

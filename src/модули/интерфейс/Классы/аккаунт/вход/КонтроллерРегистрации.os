@@ -83,6 +83,8 @@
 КонецПроцедуры
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Учётная запись заведена, но до нажатия кнопки в письме вход закрыт.
 Процедура ОтдатьПриглашениеПодтвердить(Ответ, Знач Пользователь, Знач КукиЗапроса, Знач АдресВозврата)
@@ -188,9 +190,13 @@
 	Возврат ВозвратВхода.СВозвратом(Путь(), АдресВозврата);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Причина закрытия формы от службы, кроме первого запуска (его ведёт мастер); "" - форма открыта.
 Функция ПричинаЗакрытойФормы()
@@ -200,6 +206,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

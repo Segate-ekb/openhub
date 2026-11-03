@@ -49,6 +49,8 @@
 КонецПроцедуры
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Первая полоса - строка поиска без карточки и заголовка: имя хаба и дорога «Каталог» уже
 // в шапке. Обычная GET-форма в каталог: работает без скрипта, у каждого запроса свой адрес.
@@ -276,9 +278,13 @@
 	Возврат "<имя-пакета>";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя не «Число»: так называется встроенная функция платформы.
 Функция Показатель(Знач Значение)
@@ -298,6 +304,8 @@
 	Возврат "/";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

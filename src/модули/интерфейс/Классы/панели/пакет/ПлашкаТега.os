@@ -133,6 +133,8 @@
 #КонецОбласти
 
 #Область РядКаналов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Основной канал стоит первым и предел не расходует: с него начинается ответ про opm install.
 Функция Разложить(Знач Теги, Знач Предел)
@@ -203,9 +205,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «По умолчанию» - свойство канала, а не часть имени тега, и внутрь плашки не входит.
 Функция ОтбитаяПометка(Знач Тег)
@@ -249,6 +255,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПлашкаТега")

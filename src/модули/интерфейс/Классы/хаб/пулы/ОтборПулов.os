@@ -266,6 +266,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПагинацияПо(Знач АдресРаздела, Знач Отбор, Знач Страница, Знач Параметр)
 
@@ -323,6 +325,8 @@
 	Возврат СтрРазделить(ВидимостьПубличный() + "," + ВидимостьПриватный(), ",");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

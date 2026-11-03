@@ -56,6 +56,8 @@
 #КонецОбласти
 
 #Область СекцииРаздела
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно подтверждения первой секцией: печатает его витрина того пульта, который задал вопрос.
 Функция ВопросПульта(Знач Параметры)
@@ -173,9 +175,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Куда уйдёт проверочное письмо: получателя называет учётка нажавшего, поля «кому» нет.
 Функция АдресУчётки(Знач Пользователь)
@@ -198,6 +204,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаДомаХаба")

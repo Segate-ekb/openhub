@@ -49,6 +49,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Собрать(Знач Логин, Знач Объект, Знач ТипыСобытий, Знач Момент, Знач СПризнакомПробы)
 
@@ -153,6 +155,8 @@
 	Возврат 85;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОбразецСобытия")

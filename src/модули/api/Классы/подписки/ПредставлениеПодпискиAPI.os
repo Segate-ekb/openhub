@@ -161,6 +161,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ДобавитьСвойства(Структура, Знач Запись)
 
@@ -229,6 +231,8 @@
 	Возврат ?(Пакет = Неопределено, "", Строка(Пакет.Имя));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -78,6 +78,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «Найти или завести» под замком: иначе параллельная правка завела бы на ключ две строки.
 Процедура Записать(Знач Ключ, Знач Страны, Знач Кто, Знач Когда)
@@ -96,6 +98,8 @@
 	Возврат Новый ТаблицаПоКлючу(Сам.Достать());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &ХранилищеСущностей("ГеоПравило")

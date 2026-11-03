@@ -114,6 +114,8 @@
 #КонецОбласти
 
 #Область Приметы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Приметы, встречающиеся только у слоя данных: каждая решает об отказе базы сама.
 Функция ПриметыОтказаБазы()
@@ -186,6 +188,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

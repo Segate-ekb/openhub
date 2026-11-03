@@ -62,6 +62,8 @@
 #КонецОбласти
 
 #Область ОтдельныеЧисла
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Версии()
 	Попытка
@@ -152,9 +154,13 @@
 	КонецПопытки;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Признак -1 и причина в журнал; сбой - параметром: вне обработчика он уже пуст.
 Функция НеПосчитано(Знач Что, Знач Сбой)
@@ -165,6 +171,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ЧислаХаба")

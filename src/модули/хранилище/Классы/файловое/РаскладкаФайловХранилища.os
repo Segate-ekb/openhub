@@ -72,6 +72,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя параметра не «ТекстОшибки»: так зовётся класс основы, и локальное имя отобрало бы
 // его у всего файла.
@@ -84,6 +86,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач КореньХранилища)

@@ -156,6 +156,8 @@
 #КонецОбласти
 
 #Область ЗаводПриборов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Свой обратный вызов прибору не нужен: группа приборов регистрирует общий.
 Функция НаблюдаемыйДатчик(Знач Метр, Знач Имя, Знач Описание, Знач Единица)
@@ -276,9 +278,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЗаписьСреза
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сорванный подсчёт остаётся без наблюдения: разрыв в ряду честнее отрицательного числа.
 Процедура ЗаписатьПосчитанное(Наблюдение, Знач Числа, Знач Значение)
@@ -333,9 +339,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ИменаПриборов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ИмяПрибораПулов()
 	Возврат "oshub.pools";
@@ -426,6 +436,8 @@
 	Возврат "restored";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Имена без повторов и в одном порядке: ряд графика не зависит от порядка желудей.

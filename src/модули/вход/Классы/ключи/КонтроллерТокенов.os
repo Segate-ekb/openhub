@@ -113,6 +113,8 @@
 #КонецОбласти
 
 #Область ДействияТокенов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура СписокТокенов(Ответ, Знач Пользователь, Знач page, Знач pageSize)
 
@@ -188,9 +190,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТокенВJSON(Знач Токен)
 
@@ -232,6 +238,8 @@
 	Ответы.Ошибка(Ответ, 405, "method_not_allowed", СтрШаблон("Разрешены методы: %1", Разрешённый));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

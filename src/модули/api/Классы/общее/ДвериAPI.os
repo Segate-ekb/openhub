@@ -120,6 +120,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Без гварда читаемых пулов у запроса нет ни одного.
 Функция ЧитаемыйПул(Знач ИмяПула, Знач Принципал)
@@ -172,6 +174,8 @@
 	Возврат ?(Принципал = Неопределено, Неопределено, Принципал.Пользователь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

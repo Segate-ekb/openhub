@@ -146,6 +146,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Объявить(Раскладка, Знач Имя, Знач Подкаталог, Знач ТипКонтента)
 	Раскладка.Вставить(Имя,
@@ -180,6 +182,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Верховный

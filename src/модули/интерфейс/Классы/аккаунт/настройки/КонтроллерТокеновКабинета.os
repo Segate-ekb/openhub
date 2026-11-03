@@ -155,6 +155,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Гвард кабинета и гейт «ключ не размножается» - до разбора формы и до CSRF, чтобы отказ
 // назывался своим именем.
@@ -230,9 +232,13 @@
 	Возврат ЧтениеПулов.ЧитаемыеПулы(Запрос.Вердикт.Принципал);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Страница раздела с окном выпущенного токена: секрет показан один раз, здесь.
 Процедура ОтдатьСекрет(Ответ, Знач Запрос, Знач Секрет)
@@ -262,6 +268,8 @@
 	Возврат Дом.АдресРаздела("tokens");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/me/settings")

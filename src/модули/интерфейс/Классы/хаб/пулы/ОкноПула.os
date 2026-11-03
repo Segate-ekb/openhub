@@ -154,6 +154,8 @@
 #КонецОбласти
 
 #Область ПоляОкнаЗаведения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Правило не строже домена: тот же образец, что судит ПравилаИменования.
 Функция ПолеИмени(Знач АдресПроверки, Знач Состояние)
@@ -189,6 +191,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

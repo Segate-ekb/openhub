@@ -80,6 +80,8 @@
 #КонецОбласти
 
 #Область СписокСетей
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Список сетей - один на хаб; диапазоны не пересекаются, порядок не значим.
 Функция СетиПолитики()
@@ -149,9 +151,13 @@
 	Возврат "петля";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ФабрикиВердиктов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция НовыйВердикт(Знач Код, Знач Сеть, Знач ВедётНаУзел, Знач Текст)
 	Возврат Новый Структура("Код, Сеть, Петля, Текст", Код, Сеть, ВедётНаУзел, Текст);
@@ -194,9 +200,13 @@
 	Возврат СтрШаблон("ведёт в свою сеть (%1)", Описание);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область МеханикаАдреса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вложенный IPv4 - отображённый, совместимый и NAT64 - судится как сам IPv4.
 Функция ВердиктАдреса(Знач Адрес)
@@ -248,9 +258,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Дерево «localhost» целиком (RFC 6761 § 6.3); хвостовая точка - корень, а не часть имени.
 Функция ЭтоИмяПетли(Знач Значение)
@@ -270,6 +284,8 @@
 	Возврат НРег(СокрЛП(Строка(?(Хост = Неопределено, "", Хост))));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СвояСеть")

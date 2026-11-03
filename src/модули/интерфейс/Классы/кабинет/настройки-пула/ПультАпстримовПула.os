@@ -307,6 +307,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поле операции слала форма раздела до перевода на окна; новые формы его не шлют.
 Функция ИмяПоляОперации()
@@ -366,6 +368,8 @@
 	Возврат СокрЛП(Строка(РазборФормы.Поле(Форма, Имя)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультАпстримовПула")

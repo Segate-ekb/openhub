@@ -13,8 +13,10 @@
 Перем ЧтениеПолей;          // ЧтениеПолей (основа)
 Перем ЧерезЗапятую;         // СписокЧерезЗапятую (основа)
 Перем Ошибки;               // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -57,6 +59,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Доставлять(Знач Подписка, Знач Событие, ПрочитанноеПоСобытию)
 
@@ -184,6 +188,8 @@
 	КонецЦикла;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОтборДоставкиПодписок")

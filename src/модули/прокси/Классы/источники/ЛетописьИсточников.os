@@ -76,6 +76,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Записать(Знач Адрес, Знач Код, Знач Причина, Знач Токен)
 
@@ -127,6 +129,8 @@
 	Возврат ?(Часы = Неопределено, ТекущаяУниверсальнаяДата(), Часы.Сейчас());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -77,6 +77,8 @@
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ответы домена, общие всем строкам, - одним разрезом на страницу: теги по версиям, ручные теги,
 // доверенные версии и скачивания. Вопрос на строку дал бы N×M.
@@ -152,9 +154,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область МенюСтроки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отзыв обратим и спрашивать его незачем: форма из одной кнопки несёт желаемое состояние, повтор
 // отправки его не переворачивает. Тег ставит окно по адресу; снятие ручного тега - подтверждение
@@ -207,9 +213,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОкнаПоАдресу
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно, названное адресом. Версии или тега нет либо действие им не положено - страница без окна.
 Функция ОткрытоеОкно(Знач СписокВерсий, Знач Разрез, Знач Состояние, Знач Адрес = "")
@@ -288,9 +298,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТегиНаВерсии(Знач Версия, Знач Разрез)
 	Теги = Разрез.ТегиВерсий.Получить(Версия.Идентификатор);
@@ -374,6 +388,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаВерсийПакета")

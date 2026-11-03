@@ -91,6 +91,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Выключенный «свой секрет» означает «выпустить новый», и новый обязан быть показан.
 Функция СекретПравки(Знач Ввод, Знач Подписка)
@@ -121,6 +123,8 @@
 	Возврат ЧтениеПолей.Поле(Данные, Имя, ПоУмолчанию);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ХранениеПодписки")

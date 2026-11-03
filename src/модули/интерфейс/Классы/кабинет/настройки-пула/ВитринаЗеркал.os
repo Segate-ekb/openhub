@@ -78,6 +78,8 @@
 #КонецОбласти
 
 #Область Реестр
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Реестр(Знач Зеркала, Знач АдресРаздела)
 
@@ -161,9 +163,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подробности
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подробности(Знач Зеркало, Знач Прогон, Знач АдресРаздела)
 
@@ -235,9 +241,13 @@
 		Тексты.Текст("settings.pool.mirrors.sync.never"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно «Новое зеркало»: печатается на странице всегда, открытым - по адресу или с отбитой
 // формой. Ошибка пробы подключения приходит к полю адреса.
@@ -391,9 +401,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТокенЗадан(Знач Зеркало)
 	Возврат Секрет.Задан(Секрет.ИзИсточника(Зеркало));
@@ -408,6 +422,8 @@
 	Возврат Ключ(Зеркало) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаЗеркал")

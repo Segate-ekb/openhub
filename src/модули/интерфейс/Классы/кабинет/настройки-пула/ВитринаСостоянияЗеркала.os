@@ -41,6 +41,8 @@
 #КонецОбласти
 
 #Область Прогон
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Справа в шапке - заявка на синхронизацию формой из одной кнопки и «Обновить» ссылкой на экран.
 Функция СекцияПрогона(Знач Параметры)
@@ -107,9 +109,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Счётчики
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Счётчики - колонкой чисел: по правому краю, цифры одной ширины.
 Функция СекцияСчётчиков(Знач Прогон)
@@ -143,9 +149,13 @@
 	Возврат Новый Структура("metric, value", Подпись, Тексты.ЧислоТекстом(Значение));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Причины
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Нечитаемые причины - тоже новость: неизвестность не выдаётся за «всё в порядке».
 Функция ЕстьЧтоОбъяснить(Знач Происшествия)
@@ -219,6 +229,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СамоЗеркало
@@ -259,6 +271,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значение - данные прогона узлом текста; незаполненное печатается прочерком: пустое место
 // читается как «показателя нет».
@@ -275,6 +289,8 @@
 	Возврат Формат(Зеркало.Идентификатор, "ЧГ=0; ЧН=0");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаСостоянияЗеркала")

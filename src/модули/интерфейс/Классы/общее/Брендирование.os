@@ -3,8 +3,10 @@
 
 Перем Настройки; // СервисНастроек (настройки); Неопределено - граф рендера без настроек
 Перем Активы;    // СервисБрендовыхАктивов (настройки); Неопределено - граф без хранилища
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем Ошибки;  // ТекстОшибки (основа) - текст сбоя в журнал
 
 // Знак инсталляции - текст в шапке, в <title> и в подвале.
@@ -112,6 +114,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция КлючЗнака()
 	Возврат ?(Активы = Неопределено, "", Активы.КлючЗнака());
@@ -170,6 +174,8 @@
 	КонецЕсли;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

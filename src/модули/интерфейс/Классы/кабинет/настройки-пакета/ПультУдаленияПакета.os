@@ -111,12 +111,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отказ остаётся в открытом подтверждении на набранном эхе.
 Функция ВОкне(Знач Отказ, Знач Форма)
 	Возврат Исходы.ВОкне(Отказ, "удалить", "", Форма);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультУдаленияПакета")

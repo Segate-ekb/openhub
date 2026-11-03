@@ -58,6 +58,8 @@
 #КонецОбласти
 
 #Область Сопоставления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СекцияСопоставлений(Знач Параметры)
 
@@ -163,9 +165,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Политика
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тумблер сохраняется сразу, без скрипта форму отправляет запасная кнопка кита; без права правки
 // тумблер заблокирован.
@@ -202,9 +208,13 @@
 	Возврат ?(Момент = Неопределено, Тексты.Текст("settings.group.policy.never"), Даты.ДатаВремя(Момент));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Номер(Знач Сопоставление)
 	Возврат Формат(Сопоставление.Идентификатор, "ЧГ=0; ЧН=0");
@@ -221,6 +231,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаСвязкиГруппы")

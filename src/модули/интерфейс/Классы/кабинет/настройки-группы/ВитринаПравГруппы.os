@@ -35,6 +35,8 @@
 #КонецОбласти
 
 #Область Раскладка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ось «объекты»: на что у группы есть права; хвост - ссылка «где править».
 Функция ТаблицаОбъектов(Знач Параметры)
@@ -97,6 +99,8 @@
 	Возврат Кит.Ссылка(Адрес, Кит.Текст(Подпись));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПравГруппы")

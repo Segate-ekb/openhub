@@ -106,6 +106,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Состав считает служба тегов - по той единственной версии, о которой спрашивают.
 Функция ЗаведённыеКаналыВерсии(Знач ПакетИдентификатор, Знач СтрокаВерсии)
@@ -228,6 +230,8 @@
 	Возврат "develop";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

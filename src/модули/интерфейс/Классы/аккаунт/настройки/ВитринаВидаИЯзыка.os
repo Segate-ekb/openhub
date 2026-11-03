@@ -62,6 +62,8 @@
 #КонецОбласти
 
 #Область Выбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «Как в системе» не печатается: кит ставит странице тему только светлую или тёмную.
 Функция ВыборТемы(Знач Оформление)
@@ -111,6 +113,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Значения

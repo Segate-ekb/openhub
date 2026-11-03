@@ -151,6 +151,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Токен наружу не печатается - только признак; адрес - как заведён администратором пула.
 Функция АпстримВJSON(Знач Апстрим, Знач Состояние)
@@ -202,6 +204,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

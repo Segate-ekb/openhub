@@ -101,6 +101,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Возврат по устаревшей ссылке - штатный случай, а не авария: нет сессии - нет значения.
 Функция Значение(Знач Ключ, Знач Имя)
@@ -117,6 +119,8 @@
 	Возврат 600; // 10 минут на завершение входа
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

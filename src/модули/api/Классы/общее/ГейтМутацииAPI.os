@@ -93,6 +93,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пул привязки берётся по имени из адреса, а не из тела; без гейта ключа - отказ.
 Функция КлючВправеМутировать(Ответ, Знач Принципал, Знач ИмяПула)
@@ -124,6 +126,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

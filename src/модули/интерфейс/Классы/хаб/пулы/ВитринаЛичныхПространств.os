@@ -59,6 +59,8 @@
 #КонецОбласти
 
 #Область СодержимоеОкна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПолеОперации()
 	Возврат Кит.СкрытоеПоле(ИмяПоляОперации(), ЗначениеОперации());
@@ -86,6 +88,8 @@
 	Возврат Тексты.ЧислоТекстом(Сводка.Пулов);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаЛичныхПространств")

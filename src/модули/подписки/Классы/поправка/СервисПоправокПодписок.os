@@ -463,6 +463,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ДобавитьСужаемые(Результат, Знач Подписки, Знач Исключившие)
 	Для Каждого Подписка Из Подписки Цикл
@@ -564,9 +566,13 @@
 	Возврат НРег(СокрЛП(Строка(Объект.ТипОбъекта)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ИсключенияПакетов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пакетами сужает подписку хаба только пул: у пакета дерева нет.
 Функция ПодпискаХабаДляПула(Знач Объект, Знач Идентификатор)
@@ -777,6 +783,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СервисПоправокПодписок")

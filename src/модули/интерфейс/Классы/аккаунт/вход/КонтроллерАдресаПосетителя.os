@@ -41,6 +41,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Путь()
 	Возврат "/whoami";
@@ -99,9 +101,13 @@
 	Возврат Тексты.Текст("whoami.page.title");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вердикт той же двери, что у гейта входа. Пока правил нет, определитель не зовётся вовсе.
 Функция ВердиктПоСтране(Знач Посетитель)
@@ -130,6 +136,8 @@
 	Возврат Новый Структура("Исход, Страна, Источник", Определитель.Исходы().Неизвестна, "", "");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

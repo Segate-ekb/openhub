@@ -101,6 +101,8 @@
 #КонецОбласти
 
 #Область Детали
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Детали - вложенным объектом; текст, который объектом не является, ложится его полем.
 Функция ДеталямиОбъектом(Знач Детали)
@@ -142,9 +144,13 @@
 	Возврат "текст";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТекстомJSON(Знач Значение)
 
@@ -499,6 +505,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

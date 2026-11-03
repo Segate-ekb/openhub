@@ -391,6 +391,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция БезопасныйАдресРепозитория(Знач Значение)
 	Возврат ?(Правила.АдресРепозиторияБезопасен(Значение), Значение, "");
@@ -461,6 +463,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

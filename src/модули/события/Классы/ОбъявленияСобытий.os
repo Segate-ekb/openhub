@@ -76,6 +76,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Добавить(Знач Тип, Знач Код, Знач Подпись, Знач Пояснение, Знач ДляПодписки,
 	Знач ПочемуВнутреннее, Знач Параметр)
@@ -117,6 +119,8 @@
 	Возврат Истина;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта()

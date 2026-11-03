@@ -90,6 +90,8 @@
 #КонецОбласти
 
 #Область ГраницаОбъекта
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поля формы - предмет сверки, а не источник данных: подделка обязана дать отказ.
 Функция ОбъектСвой(Знач Форма, Знач Раздел)
@@ -134,9 +136,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поля окна выдачи и подтверждения отзыва: тип субъекта и роль - из белых списков формы (пустое -
 // первое в списке, самое слабое), субъект обязателен. Роль отзыву не нужна, но и не мешает.
@@ -178,9 +184,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Операции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Форма присылает РОЛЬ; потолок («выше собственной нельзя») держит служба доступа.
 Функция Выдать(Знач Пользователь, Знач Раздел, Знач ТипСубъекта, Знач СубъектИд, Знач Роль, Знач Форма)
@@ -219,6 +229,8 @@
 	Возврат Исходы.ВОкне(Отказ, Операция, "", Форма);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультВыдачиРоли")

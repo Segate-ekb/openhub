@@ -1,8 +1,10 @@
 // Маски имён пакетов, которым разрешено приезжать из внешнего источника, - одно правило для
 // апстрима пула и фильтра зеркала. Пустой список пропускает всё, неразбираемый - ничего.
 
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -138,6 +140,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Первая накрывшая имя маска или Неопределено: журнал называет ту, что решила исход.
 Функция ПервоеСовпадение(Знач СписокМасок, Знач Имя)
@@ -152,6 +156,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("АллоулистИмён")

@@ -267,6 +267,8 @@
 #КонецОбласти
 
 #Область ВкладкаОписания
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ВкладкаОписания(Знач Пул, Знач Пакет, Знач ВерсияПоУмолчанию)
 
@@ -324,9 +326,13 @@
 	Возврат Кит.Проза(Html).Очищена();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Витрина пакета не должна падать из-за сбоя stats - при ошибке показываем 0.
 Функция СкачиванийПакета(Знач Пакет)
@@ -371,6 +377,8 @@
 	Возврат АдресаКаталога.Каталог();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

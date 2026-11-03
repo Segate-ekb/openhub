@@ -247,6 +247,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пакет ищется ТОЛЬКО в пуле из адреса, поэтому кросс-пуловая подстановка невозможна.
 Функция ОбъектСДоступом(Ответ, Знач Пул, Знач Принципал, Знач ИмяПакета)
@@ -296,6 +298,8 @@
 	Ответы.JSON(Ответ, 200, Страницы.Перечень(Сборщик.СписокJSON(Гранты), page, pageSize));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

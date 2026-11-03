@@ -39,6 +39,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Это всё, чем раздел прав пула отличается от раздела прав пакета.
 Функция Раздел(Знач Пул, Знач Адрес)
@@ -56,6 +58,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПравПула")

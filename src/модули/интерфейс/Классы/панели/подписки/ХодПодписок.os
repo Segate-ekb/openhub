@@ -454,6 +454,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Исход пульта → ответ: удача - 303 на раздел (секрет - страница с его окном: в адрес он не
 // попадает); отказ - страница с окном этой формы, открытым на набранном и отказах; окна нет
@@ -602,6 +604,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ХодПодписок")

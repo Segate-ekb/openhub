@@ -9,8 +9,10 @@
 Перем БоевойОтказ; // Дата - момент последнего отказа боевого вызова; пустая - отказов нет
 Перем Объявленное; // Структура(Состояние, Момент) - что и когда ушло в летопись
 Перем Часы;        // Объект с методом Сейчас() -> Дата, либо Неопределено (системные часы)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТестовыеШвы
 
@@ -130,6 +132,8 @@
 #КонецОбласти
 
 #Область Память
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Запись присваивается целиком и последней: страж стоит на горячем пути запросов,
 // и гонящийся поток увидит либо прежнее состояние, либо новое, но не полусобранное.
@@ -203,9 +207,13 @@
 	Возврат ?(Часы = Неопределено, ТекущаяУниверсальнаяДата(), Часы.Сейчас());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОбъявлениеЛетописи
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пишется переход, а повтор того же отказа - не чаще раза в срок: страж слышит каждый ответ хранилища.
 Процедура ОбъявитьЛетописи(Знач Новое, Знач Причина, Знач Сейчас)
@@ -252,6 +260,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

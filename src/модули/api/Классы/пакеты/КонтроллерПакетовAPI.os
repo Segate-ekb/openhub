@@ -264,6 +264,8 @@
 #КонецОбласти
 
 #Область ОбщаяЛогикаЧтения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Откуда README: null - README нет, «package» - из пакета, «repository» - с GitHub.
 Функция ИсточникОписания(Знач Представление)
@@ -323,9 +325,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ответ приватного пула в общий кэш не кладётся.
 Функция Публичный(Знач Пул)
@@ -396,6 +402,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

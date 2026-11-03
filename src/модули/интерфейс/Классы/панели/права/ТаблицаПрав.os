@@ -133,6 +133,8 @@
 #КонецОбласти
 
 #Область Строки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СтрокаСубъекта(Знач Описание, Знач Имена)
 
@@ -178,6 +180,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

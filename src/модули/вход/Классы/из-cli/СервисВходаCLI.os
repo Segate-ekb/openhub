@@ -502,6 +502,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Алфавит кода без двусмысленных знаков: ни нуля с буквой O, ни единицы с I и L.
 Функция Алфавит()
@@ -574,6 +576,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

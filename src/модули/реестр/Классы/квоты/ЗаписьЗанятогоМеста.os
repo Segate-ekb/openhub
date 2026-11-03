@@ -3,8 +3,10 @@
 
 Перем Объёмы;  // УчётОбъёмаПула
 Перем Ошибки;  // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 

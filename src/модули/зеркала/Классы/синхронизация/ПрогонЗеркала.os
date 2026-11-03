@@ -326,6 +326,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Запись(Знач Идентификатор)
 	Возврат ХранилищеЗеркал.ПолучитьОдноПоИдентификаторРавно(Числа.ЦелаяЧасть(Идентификатор));
@@ -445,6 +447,8 @@
 	Возврат ?(ЗначениеЗаполнено(Значение), СокрЛП(Строка(Значение)), "");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПрогонЗеркала")

@@ -86,6 +86,8 @@
 #КонецОбласти
 
 #Область ТелоДокумента
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТелоДокумента(Знач КодСбоя, Знач Статус, Знач КодЗапроса)
 
@@ -133,9 +135,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Оформление из кит-умолчаний и куки посетителя, без прикладных настроек из базы.
 Функция ОформлениеПосетителя(Знач КукиЗапроса)
@@ -156,6 +162,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СбойХабаСловами")

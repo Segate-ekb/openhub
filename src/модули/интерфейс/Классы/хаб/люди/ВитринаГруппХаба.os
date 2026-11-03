@@ -74,6 +74,8 @@
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Групп на хабе единицы и десятки: подстрока ищется в имени и описании, без регистра.
 Функция Отобранные(Знач Подстрока)
@@ -168,9 +170,13 @@
 	Возврат Тексты.Текст("settings.hub.groups.empty");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Подтверждение удаления, названное адресом. Группы нет - страница без окна.
 Функция ОткрытоеОкно(Знач Состояние, Знач Отбор, Знач АдресСписка)
@@ -201,6 +207,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаГруппХаба")

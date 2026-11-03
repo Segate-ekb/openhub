@@ -149,6 +149,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Наружный код и HTTP-статус - контракт клиентов; в подробности идут только перечисленные поля.
 Процедура ЗаполнитьТаблицу()
@@ -257,6 +259,8 @@
 		Причина, Код, Статус, Сообщение, Подробности);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

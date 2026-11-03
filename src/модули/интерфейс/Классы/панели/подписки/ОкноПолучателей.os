@@ -102,6 +102,8 @@
 #КонецОбласти
 
 #Область Окно
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно по виду: всё дерево, страница одной ветки или найденное по строке. Без скрипта форма отдаёт
 // правки против того, что дерево показало (ПравкиБезСкрипта кита); отмеченное вручную вне показанного
@@ -259,9 +261,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Узлы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пул - ветка с сегментами своего режима и плашкой режима; у подписки хаба пакеты приезжают
 // страницами при раскрытии. Пул без пакетов - пустая ветка: сегменты режима есть и у него.
@@ -366,9 +372,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Итог
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «Получают 3 пула · 212 пакетов» у подписки хаба, «Получают 198 пакетов из 200» у подписки пула;
 // дальше - попадают ли новые пакеты сами: у подписки пула - по её режиму.
@@ -436,9 +446,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ВидДерева(Знач Параметры)
 
@@ -485,6 +499,8 @@
 	Возврат 20;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноПолучателей")

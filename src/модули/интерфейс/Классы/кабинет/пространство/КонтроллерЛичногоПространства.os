@@ -96,6 +96,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Дела снимаются один раз на запрос и доезжают и до секций кабинета, и до шапки.
 Процедура ОтдатьКабинет(Ответ, Знач Вердикт, Знач КукиЗапроса)
@@ -154,6 +156,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

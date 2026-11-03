@@ -102,6 +102,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Галка(Знач Имя, Знач Отмечена)
 	Возврат Кит.Поле(Имена.ИмяПоляТега(Имя), Имя).ТипЗначения("флажок")
@@ -139,6 +141,8 @@
 	Возврат НРег(СокрЛП(Строка(ТипОбъекта))) = "хаб";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОтборТеговПодписки")

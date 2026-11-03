@@ -169,6 +169,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПакетOpm()
 	Возврат "opm@" + ВерсияOpm();
@@ -184,6 +186,8 @@
 	Возврат "evilbeaver/onescript:latest";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

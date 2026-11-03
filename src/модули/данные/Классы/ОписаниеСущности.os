@@ -59,6 +59,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Чужое поле - это наша несобранная выборка, а не отказ базы, и код говорит именно это.
 Процедура ПроверитьПоле(Знач ИмяПоля)
@@ -77,6 +79,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач ОбъектМодели)

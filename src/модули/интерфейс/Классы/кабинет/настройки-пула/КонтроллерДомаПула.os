@@ -96,6 +96,8 @@
 #КонецОбласти
 
 #Область Сохранение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Два гейта, потом итог раздела: ответ на любую ветвь пишет ОтдатьИтог.
 Процедура Сохранить(Ответ, Знач Вердикт, Знач Ключ, Знач Форма, Знач КукиЗапроса)
@@ -290,9 +292,13 @@
 	Возврат СервисПулов.РассудитьКвоту(РазборФормы.Поле(Форма, "квота_мб"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Удавшаяся мутация уводит редиректом 303, чтобы перезагрузка её не повторила: браузер идёт
 // за ответом GET-ом.
@@ -352,6 +358,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

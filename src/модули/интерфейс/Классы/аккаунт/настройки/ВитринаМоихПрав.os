@@ -44,6 +44,8 @@
 #КонецОбласти
 
 #Область ТаблицаПулов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с именем пула заглавием.
 Функция ТаблицаПулов(Знач Пользователь)
@@ -118,6 +120,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ТаблицаГрупп

@@ -33,6 +33,8 @@
 #КонецОбласти
 
 #Область Образцы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сниппет с выдуманным адресом не заработает ни у кого: секция честно называет нехватку.
 Функция Образцы(Знач Пул, Знач Пакет, Знач АдресХаба, Знач Аудитория)
@@ -66,6 +68,8 @@
 	Возврат Кит.БлокКоманды(YAML).Пояснение(Пояснение).БезКопирования();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ГотовыйКонвейерCI")

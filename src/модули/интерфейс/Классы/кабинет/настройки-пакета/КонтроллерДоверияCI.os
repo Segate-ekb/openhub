@@ -96,6 +96,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Порядок тот же, что у соседних админских разделов: 404 на невидимое, затем 403 по порогу.
 Функция Допустить(Ответ, Знач pool, Знач name, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -138,6 +140,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер

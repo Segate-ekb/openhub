@@ -191,6 +191,8 @@
 #КонецОбласти
 
 #Область ОкружениеПоверхФайла
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Непустая переменная - программной деталькой: у тех приоритет старше файла.
 Процедура ОкружениеПоверхФайла(Детальки)
@@ -207,9 +209,13 @@
 	Возврат ?(Нижний = Ключ, ВРег(Ключ), Нижний);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПсевдонимыКлючей
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Псевдонимы одиночных ключей - по списку; листья узлов собирают сборщики узлов, журнал - устройство.
 Процедура ПсевдонимыКлючей(Детальки)
@@ -309,9 +315,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область УзлыИзЛистьев
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Узлы, которые потребитель читает целиком, а configor из листьев окружения не собирает.
 Функция КлючиУзловИзЛистьев()
@@ -503,9 +513,13 @@
 	Возврат СтрРазделить(ИмяЛиста(КлючУзла, Цель), ".", Ложь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область УзелБазы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Узел базы: листья файлов и окружения, умолчания по листьям, проверка итогового узла.
 Процедура УзелБазы(Детальки)
@@ -752,9 +766,13 @@
 	Возврат ВРег(Строка(ТипКоннектора)) = ВРег("КоннекторInMemory");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область УстройствоХаба
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Факты композиции хаба, а не настройки: ставятся поверх всего прочитанного.
 Процедура УстройствоХаба(Детальки)
@@ -808,9 +826,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область УмолчанияХабаДляЧужихДеталек
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ключи библиотек, чьё умолчание хабу не подходит; ставятся, только когда ключа не знает никто.
 Процедура УмолчанияХабаДляЧужихДеталек(Детальки)
@@ -906,9 +928,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Служебное
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Файлы тем же перечнем форматов и в том же порядке, что получит Поделка (ФайлыКакПрочитаны),
 // без окружения: оно своим слоем. При равном приоритете ключ берётся из первого прочитанного файла.
@@ -1039,6 +1065,8 @@
 	КонецЕсли;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Параметры:

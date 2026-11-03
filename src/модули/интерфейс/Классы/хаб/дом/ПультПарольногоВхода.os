@@ -60,6 +60,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тумблер всегда присылает значение, поэтому «поля нет» означает «настройка не печаталась».
 Функция ПоТумблеру(Знач Форма, Знач Кто)
@@ -157,6 +159,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультПарольногоВхода")

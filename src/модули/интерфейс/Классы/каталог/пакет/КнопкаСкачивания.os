@@ -79,6 +79,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значок без видимой надписи: подпись читает скринридер, подсказку - курсор.
 Функция Кнопка(Знач Адрес, Знач ИмяФайла, Знач Подсказка)
@@ -101,6 +103,8 @@
 	Возврат СтрШаблон("%1-%2.ospx", ИмяПакета, Версия.Версия);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

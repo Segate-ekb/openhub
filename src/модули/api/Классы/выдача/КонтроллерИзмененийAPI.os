@@ -108,6 +108,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Один срез на все адреса: у адресов - только способ назвать пул.
 Процедура ВыдатьСрез(Ответ, Знач ИмяПула, Знач ЗаголовкиЗапроса, Знач КукиЗапроса,
@@ -183,6 +185,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

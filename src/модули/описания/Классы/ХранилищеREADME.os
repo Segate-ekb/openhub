@@ -9,8 +9,10 @@
 Перем Ошибки;      // ТекстОшибки (основа)
 Перем Память;      // ПамятьПредставленийREADME, необязательно
 Перем Издатель;    // ИздательСобытий (события), необязательно
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -199,6 +201,8 @@
 #КонецОбласти
 
 #Область Файлы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Без издателя молчит.
 Процедура ОбъявитьИзменение(Знач ИмяПула, Знач ИмяПакета, Знач Версия)
@@ -321,9 +325,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Справка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СправкаТекстом(Знач Справка)
 
@@ -372,6 +380,8 @@
 	Возврат ?(Значение = Неопределено, "", СокрЛП(Строка(Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

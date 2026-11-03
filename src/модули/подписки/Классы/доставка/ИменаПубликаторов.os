@@ -5,8 +5,10 @@
 Перем Запуски;   // СервисЗапусковКонвейеров (реестр), может быть Неопределено - кто запустил конвейер
 Перем Тела;      // ТелоСобытия (подписки) - форма тела доставки
 Перем Ошибки;    // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -36,6 +38,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТелоСИменемИлиПрежнее(Знач Задание)
 
@@ -77,6 +81,8 @@
 	Возврат ?(Значение = Неопределено, "", СокрЛП(Строка(Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

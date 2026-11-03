@@ -267,6 +267,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Хост без скобок литерала IPv6 - их снимает сам разбор ссылки.
 Функция ХостБезЛитеральныхСкобок(Знач Разобранный)
@@ -295,6 +297,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

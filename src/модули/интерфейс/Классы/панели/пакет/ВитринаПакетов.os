@@ -205,6 +205,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Провенанс и резервы спрашиваются ОДИН раз на список: вопрос на карточку делал бы страницу N+1.
 Функция Модели(Знач Элементы, Знач Управляемые, Знач Пользователь)
@@ -338,6 +340,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

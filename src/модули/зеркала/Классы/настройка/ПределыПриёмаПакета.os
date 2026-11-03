@@ -48,6 +48,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Контейнер без модуля настроек берёт умолчание кода: нечитаемая настройка не вправе
 // обнулить предел.
@@ -55,6 +57,8 @@
 	Возврат ?(Настройки = Неопределено, Дефолт, Настройки.Целое(Ключ, Дефолт, 1));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПределыПриёмаПакета")

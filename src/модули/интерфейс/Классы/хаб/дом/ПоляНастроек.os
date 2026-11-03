@@ -239,6 +239,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значение занятого поля для показа: булево - словами, пустая строка - «не задано».
 Функция ЗначениеТекстом(Знач Карточка)
@@ -445,6 +447,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

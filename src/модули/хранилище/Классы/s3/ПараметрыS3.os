@@ -103,6 +103,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустая строка - не задано; Ложь из файла настроек - задано.
 Функция Сырое(Знач Настройки, Знач Имя)
@@ -121,6 +123,8 @@
 	Возврат ?(Значение = Неопределено, ПоУмолчанию, СокрЛП(Строка(Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Параметры:

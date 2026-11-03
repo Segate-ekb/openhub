@@ -82,6 +82,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Эхо повторяет имя пула с точностью до регистра - так его и печатает экран.
 Функция Удалить(Знач Пользователь, Знач Пул, Знач Форма)
@@ -121,6 +123,8 @@
 	Возврат "удалить";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультУдаленияПула")

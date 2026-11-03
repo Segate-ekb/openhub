@@ -11,8 +11,10 @@
 Перем Замок;       // БлокировкаРесурса - одна перестройка за раз
 Перем Прочтений_;  // сколько раз файл базы был прочитан за жизнь процесса
 Перем Часы;        // объект с методом Сейчас() -> Дата, либо Неопределено (системные часы)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТестовыеШвы
 
@@ -196,6 +198,8 @@
 #КонецОбласти
 
 #Область Перестройка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Единственное место замка перестройки; отпускается при любом исходе. Возвращает причину срыва или "".
 Функция Пересобрать()
@@ -325,9 +329,13 @@
 	Возврат Новый Структура("Страны, КлючСтран", Страны, Ключ);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Почему индекса нет - словами для администратора.
 Функция ПочемуМолчит(Знач Заказ, Знач Снимок)
@@ -398,6 +406,8 @@
 	КонецЕсли;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

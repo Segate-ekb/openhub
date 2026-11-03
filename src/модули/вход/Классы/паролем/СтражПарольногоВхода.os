@@ -109,6 +109,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Реестр отдал правку этого ключа стражу: обычная запись значения на нём отказывает.
 Процедура Записать(Знач Значение, Знач Кто, Знач АдресIP)
@@ -157,6 +159,8 @@
 	Возврат Новый Структура("Админов, Провайдеров", Админов, Провайдеров);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

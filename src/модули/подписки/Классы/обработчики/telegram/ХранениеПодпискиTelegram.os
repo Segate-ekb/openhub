@@ -100,6 +100,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустое поле - «оставить прежний»; проверку введённого делает ПодготовитьНастройки.
 Функция ТокенПравки(Знач Ввод, Знач Подписка)
@@ -207,6 +209,8 @@
 	Возврат ЧтениеПолей.Поле(Данные, Имя, ПоУмолчанию);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ХранениеПодписки")

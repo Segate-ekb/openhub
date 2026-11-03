@@ -12,8 +12,10 @@
 Перем Ошибки;      // ТекстОшибки (основа)
 Перем Часы;        // объект с методом Сейчас() -> Дата, либо Неопределено
 Перем Потолок;     // байт на тело ответа и на распакованное
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТестовыеШвы
 
@@ -113,6 +115,8 @@
 #КонецОбласти
 
 #Область ЗаходОбновления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Заход()
 
@@ -297,9 +301,13 @@
 	Возврат 120;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Происшествия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Причины пишутся разом; снятие - только когда причин нет.
 Процедура Отчитаться(Знач Сбой)
@@ -342,6 +350,8 @@
 	Возврат Новый Структура("Код, Текст", Код, Текст);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

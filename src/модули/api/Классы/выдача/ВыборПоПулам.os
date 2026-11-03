@@ -143,6 +143,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Строго старшая побеждает; равная - только если она из основного пула.
 Функция Лучше(Знач Кандидат, Знач Текущий, Знач Основной)
@@ -185,6 +187,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

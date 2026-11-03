@@ -52,6 +52,8 @@
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Колонка меню стоит, только если на странице есть что настраивать: гостю и постороннему
 // таблица прежняя.
@@ -153,9 +155,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пулы, которые посетитель вправе настраивать, - правилом дома пула, по одному снимку прав
 // на страницу: идентификатор пула -> Истина. Гостю настраивать нечего.
@@ -247,6 +253,8 @@
 	Возврат 20;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

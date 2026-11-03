@@ -71,6 +71,8 @@
 #КонецОбласти
 
 #Область КорневаяПричина
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Корневая причина из диагностики транспорта. 1connector дописывает её в хвост блоба
 // строками «caused by:», и последняя из них - самая глубокая; там, где их нет, остаётся
@@ -162,9 +164,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Написан ли текст для человека: корень, в котором не осталось ни обёртки платформы,
 // ни имени типа исключения, объяснять второй раз незачем.
@@ -240,6 +246,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПричинаМолчания")

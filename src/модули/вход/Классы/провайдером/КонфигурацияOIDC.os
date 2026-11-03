@@ -192,6 +192,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общая точка сборки для env-пути, программного пути и строк базы: иначе умолчания разъедутся.
 Функция СыроеОписание(Знач Данные)
@@ -322,6 +324,8 @@
 	Возврат ЧтениеПолей.Поле(Данные, Имя, ПоУмолчанию);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

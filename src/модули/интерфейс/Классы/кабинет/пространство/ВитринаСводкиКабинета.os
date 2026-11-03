@@ -40,6 +40,8 @@
 #КонецОбласти
 
 #Область СекцииСводки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Заявок нет - секции нет вовсе: блок с нулём означал бы, что рядом что-то происходит.
 Функция ЗаявкиНаРешение(Знач Дела)
@@ -84,6 +86,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаСводкиКабинета")

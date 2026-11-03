@@ -78,6 +78,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Приведённое(Знач Значение)
 	Возврат НРег(СокрЛП(?(Значение = Неопределено, "", Строка(Значение))));
@@ -119,6 +121,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

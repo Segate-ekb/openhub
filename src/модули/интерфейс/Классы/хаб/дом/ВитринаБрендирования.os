@@ -108,6 +108,8 @@
 #КонецОбласти
 
 #Область Значения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Где править нечего (всё задано конфигурацией), формы нет: слать ей нечего, и кнопка солгала бы.
 Функция СекцияЗначений(Знач Состояние)
@@ -263,9 +265,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Образец
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Мини-шапка, ряд акцента и подвал так, как их увидит посетитель, в цветах пресета: название,
 // подпись, пресет и акцент - зеркала полей формы; без скрипта образец показывает то, что
@@ -345,9 +351,13 @@
 	Возврат ?(ЗначениеЗаполнено(Свой), Свой, Фирменные.АдресЗнака());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Картинки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Каждый слот - своя форма: файл уходит при выборе, отказ встаёт под тем слотом, который его получил.
 Функция СекцияКартинок(Знач Состояние)
@@ -435,9 +445,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Карточки()
 
@@ -536,6 +550,8 @@
 	Объявления.Добавить(Новый Структура("Имя, Ключ, Вид, ПоУмолчанию", Имя, Ключ, Вид, ПоУмолчанию));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаБрендирования")

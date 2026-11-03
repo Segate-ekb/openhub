@@ -3,8 +3,10 @@
 
 Перем Настройки;  // СервисНастроек (настройки)
 Перем Ошибки;     // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -74,6 +76,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тихое «включено» на нечитаемой настройке открывает дверь, которую администратор закрыл.
 Процедура ПредупредитьОбОткрытойДвери(Знач Ошибка)
@@ -87,6 +91,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

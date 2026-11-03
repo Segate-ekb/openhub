@@ -5,8 +5,10 @@
 Перем Лента;          // ЛентаУведомлений (уведомления)
 Перем Почта;          // СлужбаПочты (почта)
 Перем АдресХаба;      // АдресИнстанса (настройки) - относительная ссылка в письме бесполезна
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем Ошибки;      // ТекстОшибки (основа)
 Перем Вердикты;    // Вердикт (основа) - форма ответа
 
@@ -149,6 +151,8 @@
 #КонецОбласти
 
 #Область ГраницыКанала
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Единственное место, где канал решает, что обращаться не к кому: обе двери отвечают одним кодом.
 Функция АдресатаНет(Знач Пользователь, Знач Повод)
@@ -195,9 +199,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ссылка ленты относительна: без внешнего адреса инсталляции в письме её не зовут вовсе.
 Функция ТелоПисьма(Знач Текст, Знач Ссылка)
@@ -218,6 +226,8 @@
 	Возврат Ошибки.Однострочно(ОписаниеОшибки());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СлужбаЛичныхУведомлений")

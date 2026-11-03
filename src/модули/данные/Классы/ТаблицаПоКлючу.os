@@ -65,12 +65,16 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Одно правило канона на чтение и на запись: «  Logo  » и «logo» - одна строка.
 Функция Канон(Знач Ключ)
 	Возврат Строки.Канон(Ключ);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач _Хранилище)

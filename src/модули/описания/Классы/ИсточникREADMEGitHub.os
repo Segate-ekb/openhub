@@ -44,6 +44,8 @@
 #КонецОбласти
 
 #Область Адреса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тег без «v» - вторая запись того же номера; номер, уже начатый с «v», второй записи не даёт.
 Функция Рефы(Знач Версия)
@@ -81,9 +83,13 @@
 	Возврат КодироватьСтроку(Значение, СпособКодированияСтроки.КодировкаURL);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Отклик
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «Файла нет» - 404 и переадресация: по Location поиск не идёт, адрес он строит сам. Тело
 // ложится во временный файл, а не в память: в память читается только то, что не больше предела.
@@ -155,6 +161,8 @@
 	Возврат Новый Структура("Исход, Текст, Вид, Реф, Ссылка, Причина", Какой, "", "", "", "", Причина);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -6,6 +6,8 @@
 Перем Строки;   // КанонСтроки (основа)
 
 #Область КонстантыРанжирования
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ВесТочного()    Возврат 300; КонецФункции
 Функция ВесПрефикса()   Возврат 200; КонецФункции
@@ -16,6 +18,8 @@
 // Обрывок в два-три символа нечётко совпадает почти со всем, поэтому вариантами не размывается.
 Функция ДлинаЗапросаДляОпечатки() Возврат 4; КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПубличныйИнтерфейс
@@ -142,6 +146,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Первое подошедшее поле и определяет оценку: важное поле весомее следующего.
 Функция ОценкаПоПолям(Знач Элемент, Знач q, Знач СписокПолей)
@@ -240,6 +246,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

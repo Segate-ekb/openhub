@@ -477,6 +477,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Режим нормализует словарь: опечатка получает 422, а не молчаливое умолчание.
 Процедура СохранитьТег(Ответ, Знач Правка, Знач Тег)
@@ -590,9 +592,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отказ распознаётся до мутации: иначе клиент не узнает, чем именно имя занято.
 Функция ИмяДляНовогоТегаЗанято(Ответ, Знач ПакетИдентификатор, Знач Тег)
@@ -639,6 +645,8 @@
 	Возврат ?(Правка.Пользователь = Неопределено, "", Строка(Правка.Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

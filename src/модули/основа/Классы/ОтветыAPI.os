@@ -6,8 +6,10 @@
 Перем ЗаписьТела;    // ЗаписьФормы (основа) - разбор записи x-www-form-urlencoded
 Перем Тексты;        // ТекстJSON (основа) - одно написание JSON
 Перем Ошибки;        // ТекстОшибки (основа) - причина строкой журнала и полный отчёт
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 // Отправляет JSON-ответ, выставляя Content-Type и Content-Length.
 //

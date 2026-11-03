@@ -119,6 +119,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Шапка пула: «Добавить пакет» мейнтейнеру, «Настройки пула» тому, кого пустит дом настроек.
 Функция Шапка(Знач Пул, Знач ВсегоПакетов, Знач Пользователь, Знач Токен)
@@ -218,6 +220,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

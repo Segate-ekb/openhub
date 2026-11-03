@@ -64,6 +64,8 @@
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Меню строки - тому, кто вправе отзывать; остальным таблица без колонки действий.
 Функция ТаблицаРолей(Знач Раздел, Знач Гранты, Знач Имена, Знач МожетВыдавать)
@@ -105,9 +107,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Подтверждение отзыва, названное адресом. Роли у субъекта нет - страница без окна.
 Функция ОткрытыйОтзыв(Знач Гранты, Знач Имена, Знач МожетВыдавать, Знач Состояние, Знач АдресРаздела)
@@ -146,6 +152,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаВыдачиРоли")

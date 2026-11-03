@@ -252,6 +252,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно вернулось с формой: есть набранное, отказ у поля или отказ окна.
 Функция Отбито(Знач Состояние)
@@ -265,6 +267,8 @@
 	Ответ.УстановитьСостояние(303);
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноРаздела")

@@ -233,6 +233,8 @@
 #КонецОбласти
 
 #Область СборкаЧастей
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Мейнтейнеры - права уровня пакета; в логины резолвятся только субъекты-пользователи.
 Функция MaintainersJSON(Знач Пакет)
@@ -273,6 +275,8 @@
 	Возврат Действия;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

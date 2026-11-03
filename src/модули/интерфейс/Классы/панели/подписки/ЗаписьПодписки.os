@@ -142,6 +142,8 @@
 #КонецОбласти
 
 #Область Своя
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Способ доставки, а у подписки с названием - ещё и адрес: без названия адрес уже стоит именем.
 Функция ПодписьСвоей(Знач Подписка, Знач Тип, Знач Свойства)
@@ -244,9 +246,13 @@
 	Возврат ЧерезЗапятую.Разобрать(Подписка.ТипыСобытий).Количество();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Сверху
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПодробностиСверху(Знач Подписка, Знач Тип, Знач Поправка, Знач Оставленные, Знач Срез)
 
@@ -331,9 +337,13 @@
 	Возврат "inherited/" + ИменаПодписок.Ключ(Подписка) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отбор по тегам: «все версии» или имена тегов; выпавшие из отбора - предупреждением.
 Функция СвойствоТегов(Знач Запись, Знач Отбор)
@@ -364,6 +374,8 @@
 	Возврат НРег(СокрЛП(Строка(Подписка.ТипОбъекта))) = "пакет";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ЗаписьПодписки")

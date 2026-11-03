@@ -55,6 +55,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СнятьПакет(Знач Пакет, Знач ИмяПула)
 
@@ -175,6 +177,8 @@
 	Возврат ?(Пул = Неопределено, "", Строка(Пул.Имя));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

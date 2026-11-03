@@ -36,6 +36,8 @@
 #КонецОбласти
 
 #Область ОтборКлючей
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Две недели - столько, чтобы успеть выпустить новый ключ и переставить его в CI.
 Функция ПорогДней()
@@ -83,9 +85,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разметка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с именем ключа заглавием; срок и состояние - плашкой цвета,
 // как в разделе «Токены доступа».
@@ -116,6 +122,8 @@
 	Возврат Кит.Плашка(Тексты.Текст("office.home.keys.state.soon")).Вид("warn");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаСрокаТокенов")

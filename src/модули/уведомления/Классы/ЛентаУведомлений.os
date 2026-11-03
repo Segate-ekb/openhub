@@ -3,8 +3,10 @@
 
 Перем Хранилище; // ХранилищеЛичныхУведомлений (уведомления)
 Перем Снятие;    // СнятиеСтрок (данные) - снятие пачки строк со счётом
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -145,12 +147,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отбором, а не перебором ленты: счётчик рисуется на каждой приватной странице.
 Функция Непрочитанные(Знач Пользователь)
 	Возврат Хранилище.Непрочитанные(Цел(Пользователь.Идентификатор));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

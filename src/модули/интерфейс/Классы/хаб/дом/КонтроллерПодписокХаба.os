@@ -278,6 +278,8 @@
 #КонецОбласти
 
 #Область ОбщаяЛогика
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подготовить(Ответ, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
 	Вердикт = ГвардХаб.Проверить(Ответ, ЗаголовкиЗапроса, КукиЗапроса);
@@ -293,9 +295,13 @@
 	Возврат Дом.АдресРаздела("webhooks");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустой показ: ход уже ответил сам - отбил форму, не нашёл подписку либо увёл редиректом.
 // Отбитая - форма «Настроек доставки», вернувшаяся с отказом значения.
@@ -323,6 +329,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/hub/settings")

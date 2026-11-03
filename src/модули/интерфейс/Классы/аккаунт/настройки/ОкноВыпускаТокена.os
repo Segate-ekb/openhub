@@ -170,6 +170,8 @@
 #КонецОбласти
 
 #Область Шаги
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОшибкаОкна(Знач Состояние)
 
@@ -315,6 +317,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

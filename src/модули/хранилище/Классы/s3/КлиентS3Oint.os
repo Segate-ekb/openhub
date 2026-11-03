@@ -279,6 +279,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Наименьшая часть multipart, которую принимает S3: меньше - отказ сервера.
 Функция РазмерЧасти()
@@ -414,4 +416,6 @@
 	КонецПопытки;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

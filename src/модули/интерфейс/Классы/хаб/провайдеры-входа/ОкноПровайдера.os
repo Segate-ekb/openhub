@@ -152,6 +152,8 @@
 #КонецОбласти
 
 #Область ШагПровайдер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Набор сегмента - поля, которые нужны только этому пресету: адрес своей инсталляции GitLab,
 // области (их не задают у GitHub), протокол, точки, подпись и значок своего провайдера.
@@ -346,6 +348,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ШагУчёткиИГруппы
@@ -380,6 +384,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адрес точки провайдера: https, как его принимает домен.
 Функция ПолеАдреса(Знач Состояние, Знач Имя, Знач Метка, Знач Действующее = "")
@@ -420,6 +426,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноПровайдера")

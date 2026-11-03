@@ -139,6 +139,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЗначенияПоСтаршинству(Знач Ключ)
 
@@ -159,6 +161,8 @@
 	Возврат Значение <> Неопределено И НЕ (ТипЗнч(Значение) = Тип("Строка") И ПустаяСтрока(Значение));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Дерево файлов настроек без окружения, плоская карта провайдера окружения, программные детальки.

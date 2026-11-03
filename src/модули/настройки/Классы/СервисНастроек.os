@@ -14,8 +14,10 @@
 Перем ЗамокКэша;   // БлокировкаРесурса - сериализация доступа к Кэш и Сказанному
 Перем Ошибки;      // ТекстОшибки (основа)
 Перем Строки;      // КанонСтроки (основа) - тот же канон ключа, что и у таблицы настроек
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -241,6 +243,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция КарточкаПоСнимку(Знач Ключ, Знач Снимок)
 
@@ -598,6 +602,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

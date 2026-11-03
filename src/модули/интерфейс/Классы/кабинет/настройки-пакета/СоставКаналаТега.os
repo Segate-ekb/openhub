@@ -41,6 +41,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отозванные в канал попадают, но установка их не выбирает: канал из одних отозванных - предупреждение.
 Функция СоставКанала(Знач ИмяТега, Знач Итог)
@@ -95,6 +97,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СоставКаналаТега")

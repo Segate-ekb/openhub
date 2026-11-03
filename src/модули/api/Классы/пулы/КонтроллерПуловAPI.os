@@ -186,6 +186,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Карточка(Ответ, Знач ИмяПула, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
 
@@ -304,9 +306,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Числа уборки: чего именно не стало вместе с пулом.
 Функция УборкаВJSON(Знач Итог)
@@ -323,6 +329,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

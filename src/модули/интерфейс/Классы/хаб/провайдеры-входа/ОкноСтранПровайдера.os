@@ -38,6 +38,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустой список снимает правило: провайдер открыт всем.
 Функция ПолеСтран(Знач Состояние, Знач Страны)
@@ -56,6 +58,8 @@
 	Возврат "provaider-strany";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноСтранПровайдера")

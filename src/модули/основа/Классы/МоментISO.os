@@ -18,12 +18,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Суффикс зоны по ISO 8601: хаб хранит моменты универсальной датой, других зон у него нет.
 Функция Зона()
 	Возврат "Z";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("МоментISO")

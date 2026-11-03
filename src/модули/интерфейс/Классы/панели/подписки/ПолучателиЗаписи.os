@@ -110,6 +110,8 @@
 #КонецОбласти
 
 #Область Плашки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Плашка отметки - правка кита одним крестиком: «режим=пул_N:все» у пула «Никто», «снять=пакет_N»
 // у выбранного пакета.
@@ -158,6 +160,8 @@
 	Возврат 6;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

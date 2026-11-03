@@ -92,6 +92,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Синонимы(Знач Вид)
 	Возврат ?(Вид = Тег(), СтрРазделить("тег,теги,tag,tags", ","),
@@ -146,6 +148,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВидРефаДоверия")

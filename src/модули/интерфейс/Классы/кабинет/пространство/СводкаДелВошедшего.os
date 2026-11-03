@@ -29,6 +29,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Число ждущих решения - длина той же очереди: второй запрос не нужен.
 Функция Снимок(Знач Непрочитано, Знач Свежие, Знач Заявки)
@@ -38,6 +40,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

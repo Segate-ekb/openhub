@@ -14,8 +14,10 @@
 Перем Вердикты;      // Вердикт (основа) - форма ответа
 Перем Геоправило;    // ГеоправилоПровайдера (вход); Неопределено - fail-closed для правил
 Перем Значки;        // ЗначокПровайдераВхода (вход) - значок строки базы именем бренда кита
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -339,6 +341,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Записать(Запись, Знач Разбор, Знач Принципал)
 
@@ -566,6 +570,8 @@
 	Возврат ПоУмолчанию;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СервисПровайдеровВхода")

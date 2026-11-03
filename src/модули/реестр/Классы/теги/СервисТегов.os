@@ -988,6 +988,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Легаси-алиас «dev» ищет строку prerelease, но только когда своего тега «dev» у пакета нет.
 Функция КаналПакета(Знач Теги, Знач ИмяТега)
@@ -1448,6 +1450,8 @@
 	Возврат "prerelease";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

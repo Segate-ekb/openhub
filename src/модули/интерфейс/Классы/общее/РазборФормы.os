@@ -201,6 +201,8 @@
 КонецФункции
 
 #Область СоставнаяФорма
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Частей(Знач ДанныеФормы)
 	Попытка
@@ -256,6 +258,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Именованные пары urlencoded-тела: безымянная пара полем формы не считается.

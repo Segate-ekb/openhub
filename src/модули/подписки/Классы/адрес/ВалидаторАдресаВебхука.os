@@ -54,12 +54,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Настройка спрашивается лениво: контейнер без модуля настроек живёт с https-адресами.
 Функция HTTPРазрешён()
 	Возврат Настройки.Флаг("oshub.webhooks.allow_insecure", Ложь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВалидаторАдресаВебхука")

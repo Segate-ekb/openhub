@@ -175,6 +175,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Отказ(Знач Причина)
 	Возврат Кит.Надпись(Кит.Текст(Причина)).Признак("sub-result", "err");
@@ -213,6 +215,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПроверкаПодпискиДоСохранения")

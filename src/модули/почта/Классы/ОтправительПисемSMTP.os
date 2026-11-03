@@ -28,6 +28,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Шифрование выбирает библиотека (SecureSocketOptions.Auto), поэтому настройки «шифрование» нет.
 Функция Профиль()
@@ -69,6 +71,8 @@
 	КонецПопытки;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОтправительПисем")

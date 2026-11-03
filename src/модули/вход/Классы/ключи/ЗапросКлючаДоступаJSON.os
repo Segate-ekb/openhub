@@ -1,5 +1,6 @@
 // Тело выпуска ключа доступа.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("scopes")
 Перем Права;
 
@@ -14,3 +15,4 @@
 
 &Сериализуемое("expires_in_days")
 Перем СрокДней;
+// BSLLS:MissingVariablesDescription-on

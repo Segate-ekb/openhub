@@ -16,8 +16,10 @@
 Перем Моменты;       // МоментISO (основа) - одно написание времени в ответе
 Перем Причины;       // ПричиныЗеркала (зеркала) - почему обход не привёз версии
 Перем Ошибки;        // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТочкиМаршрута
 
@@ -171,6 +173,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Список(Ответ, Знач ИмяПула, Знач ЗаголовкиЗапроса, Знач КукиЗапроса,
 	Знач page, Знач pageSize)
@@ -357,9 +361,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пролог мутации зеркала: администрирование пула и само зеркало этого пула.
 Функция НачатьМутациюЗеркала(Ответ, Знач ИмяПула, Знач Ид, Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач ТелоЗапроса)
@@ -543,6 +551,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

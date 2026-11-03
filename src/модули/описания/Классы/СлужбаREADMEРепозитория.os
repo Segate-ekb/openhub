@@ -6,8 +6,10 @@
 Перем Репозитории;        // РепозиторийGitHub (основа)
 Перем Настройки;          // СервисНастроек (настройки)
 Перем Ошибки;             // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -41,6 +43,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ДополнитьИзРепозитория(Знач Пул, Знач Пакет, Знач Версия)
 
@@ -122,6 +126,8 @@
 	Возврат 86400;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

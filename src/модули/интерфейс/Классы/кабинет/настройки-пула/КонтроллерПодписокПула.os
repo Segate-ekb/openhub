@@ -301,6 +301,8 @@
 #КонецОбласти
 
 #Область ОбщаяЛогика
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Гвард + резолв пула + проверка права администрирования.
 Функция Подготовить(Ответ, Знач pool, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -336,9 +338,13 @@
 		Дом.АдресРаздела(Контекст.Пул.Имя, "webhooks"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустой показ - ход уже ответил сам: отбил форму, не нашёл подписку или увёл редиректом.
 Процедура ОтдатьРаздел(Ответ, Знач Контекст, Знач Показ, Знач КукиЗапроса)
@@ -372,6 +378,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

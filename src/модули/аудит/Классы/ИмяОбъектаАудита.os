@@ -376,6 +376,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Адресуемый(Знач Префикс, Знач Значение)
 	Возврат СтрШаблон("%1/%2", Префикс, Сегмент(Значение));
@@ -529,6 +531,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -96,6 +96,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Исход пульта → ответ: удача - 303 на список с тем же отбором; отказ - страница с окном этой
 // формы, открытым на набранном и отказах; окна нет (группу уже удалили) - тостом над разделом.
@@ -116,9 +118,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьРаздел(Ответ, Знач Запрос, Знач Статус, Знач Окно, Знач Сохранено, Знач Ошибка = "")
 
@@ -151,6 +157,8 @@
 	Возврат ?(Вердикт.Пользователь = Неопределено, "", Строка(Вердикт.Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/hub/settings")

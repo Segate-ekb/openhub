@@ -91,12 +91,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя пакета реестр сравнивает без регистра, версию - точно.
 Функция КлючВерсии(Знач ИмяПакета, Знач Версия)
 	Возврат НРег(СокрЛП(Строка(ИмяПакета))) + "@" + СокрЛП(Строка(Версия));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 // Опись приходит готовой картой: её снимают раз на обход и делят между порциями.

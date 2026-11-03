@@ -115,6 +115,8 @@
 #КонецОбласти
 
 #Область Годность
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Гость: ни куки сессии, ни ключа доступа - без них перехватчик пользователя не найдёт.
 Функция ЗапросГостяНаЧтение(Знач Запрос)
@@ -270,9 +272,13 @@
 	Возврат "oshub.cache.guest_pages";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область КлючИОбразец
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Всё, от чего у гостя зависит разметка страницы, кроме состояния хаба: путь, параметры адреса
 // в порядке имён, узел команд opm и оформление.
@@ -432,9 +438,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Хранение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Предел и срок жизни у кэша свои (cache.страницыАнонима.*): страницы не вытесняют доменные кэши.
 Функция Кэш()
@@ -519,9 +529,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Пересборка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Одна пересборка на ключ и не больше ПределПересборок разом: гость получает устаревшую страницу
 // сразу, новая ложится из фона. Сверх предела устаревшая отдаётся без пересборки - всплеск адресов
@@ -585,9 +599,13 @@
 	Возврат Копия;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Начало
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Страницы каталога, одинаковые для всех гостей, и параметры адреса, которые читают их контроллеры;
 // кабинет, настройки, вход и API сюда не входят.
@@ -699,4 +717,6 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

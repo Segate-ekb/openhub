@@ -38,6 +38,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Издатель попадает в имя только там, где он НЕ выводится из типа репозитория.
 Функция УточнениеИздателя(Знач Провайдер, Знач Издатель)
@@ -53,6 +55,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ИмяЗаписиДоверия")

@@ -51,6 +51,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Природа пула читается одинаково обеими ручками: тип и видимость.
 Процедура ДобавитьПрироду(Структура, Знач Пул)
@@ -58,6 +60,8 @@
 	Структура.Вставить("visibility", Строка(Пул.Видимость));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

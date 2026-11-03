@@ -61,6 +61,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Поле(Знач Имя, Знач ИмяПоля, Знач КлючПодписи, Знач КлючПодсказки,
 	Знач КлючПлейсхолдера, Знач Обязательное, Знач Секретное, Знач Многострочное,
@@ -81,6 +83,8 @@
 	Возврат Описание;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("РендерНастроекПодписки")

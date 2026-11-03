@@ -10,8 +10,10 @@
 Перем ЧислаДоставки;  // ЧислаДоставки (подписки) - таймаут одной доставки
 Перем Каталог;        // КаталогСобытий (подписки) - латинский код события для заголовка
 Перем Вердикты;       // Вердикт (основа) - форма ответа
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область КонтрактОбработчикаДоставки
 
@@ -108,6 +110,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Один POST: и боевая доставка, и проба ходят одной дорогой - иначе проверки разъехались бы.
 Функция Отправить(Знач Задание)
@@ -141,6 +145,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПубличныйИнтерфейс

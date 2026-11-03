@@ -180,6 +180,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Единственное место, где признак активности попадает в базу, поэтому инвариант живёт здесь.
 Функция Записать(Знач Пользователь, Знач Активность)
@@ -213,6 +215,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

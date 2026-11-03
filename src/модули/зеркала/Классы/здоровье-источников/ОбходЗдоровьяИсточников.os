@@ -7,8 +7,10 @@
 Перем Пробник;       // ПробникИсточника (прокси)
 Перем Страж;         // СтражАпстримов (прокси)
 Перем Секрет;        // СекретИсточника (прокси) - токен записи источника
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -49,6 +51,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ПроверитьОдин(Знач Источник, Итог)
 
@@ -104,6 +108,8 @@
 	Возврат Новый Структура("Адрес, Токен", Строка(Адрес), Секрет.ИзИсточника(Запись));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

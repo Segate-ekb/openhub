@@ -8,8 +8,10 @@
 Перем Объёмы;              // УчётОбъёмаПула (реестр) - занятое пулом место
 Перем Хранилище;           // ХранилищеАртефактов (хранилище)
 Перем Ошибки;              // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -58,6 +60,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СобратьПул(Знач Пул, Знач КвотаБайт)
 
@@ -202,6 +206,8 @@
 	Возврат СервисПулов.ЭффективнаяКвотаБайт(Пул);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

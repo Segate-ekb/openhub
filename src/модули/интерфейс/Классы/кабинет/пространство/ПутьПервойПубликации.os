@@ -71,6 +71,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Кнопка шага ведёт туда, куда пустят: в настройки пула - управляющего им, райтера - на страницу пула.
 Функция ШагПула(Знач Пользователь, Знач Пул)
@@ -188,6 +190,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

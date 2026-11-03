@@ -44,12 +44,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ширина по обычаю раздачи адресов провайдерами: клиенту достаётся /64 целиком.
 Функция ШиринаСетиIPv6()
 	Возврат 64;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

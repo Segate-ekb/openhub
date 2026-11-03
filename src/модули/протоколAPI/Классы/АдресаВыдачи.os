@@ -49,6 +49,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция АдресАртефакта(Знач ИмяПула, Знач ИмяПакета, Знач Координата)
 
@@ -69,6 +71,8 @@
 	Возврат КодироватьСтроку(Строка(Значение), СпособКодированияСтроки.КодировкаURL);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

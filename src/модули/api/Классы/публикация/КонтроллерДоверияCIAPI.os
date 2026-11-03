@@ -211,6 +211,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пролог мутации: аутентификация и гейт способа, видимость пула и пакета, порог мейнтейнера.
 Функция НачатьМутацию(Ответ, Знач ИмяПула, Знач ИмяПакета, Знач ЗаголовкиЗапроса,
@@ -289,6 +291,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

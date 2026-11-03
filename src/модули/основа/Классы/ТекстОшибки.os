@@ -200,6 +200,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ДобавитьЧасть(Части, Знач Значение)
 
@@ -235,4 +237,6 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

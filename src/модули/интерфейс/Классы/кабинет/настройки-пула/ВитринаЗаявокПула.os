@@ -141,6 +141,8 @@
 #КонецОбласти
 
 #Область СписокЗаявок
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с пакетом заглавием и ⚙ в углу; сведения манифеста - разворотом
 // во всю ширину: в колонке описание ломалось бы по слову.
@@ -220,9 +222,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОкнаРешения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно, названное адресом. Заявки нет среди показанных - страница без окна.
 Функция ОкноРешения(Знач Строки, Знач Состояние, Знач Адрес)
@@ -345,9 +351,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область МанифестЗаявки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Под строкой заявки: описание одной строкой, сводка и раскрывашка с подробностями;
 // заявка без сведений разворота не получает.
@@ -480,6 +490,8 @@
 	Возврат "-";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СекцияКабинета

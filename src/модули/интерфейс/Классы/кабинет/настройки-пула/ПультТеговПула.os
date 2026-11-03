@@ -189,6 +189,8 @@
 #КонецОбласти
 
 #Область Запись
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вид и оформление - ключи закрытых списков: подделанное значение отбивается над полями,
 // выражение - под своим полем.
@@ -225,6 +227,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Исход

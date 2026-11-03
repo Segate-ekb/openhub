@@ -116,6 +116,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустое множество - ключ на весь хаб; одиночная привязка читается наравне с набором.
 Функция ПулыКлюча(Знач Принципал)
@@ -135,6 +137,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

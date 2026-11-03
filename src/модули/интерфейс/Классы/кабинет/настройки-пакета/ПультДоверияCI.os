@@ -72,6 +72,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тип репозитория - из сегментов окна, как пришёл: незнакомый отбивает домен, а не подменяет
 // экран. Поле конвейера читается только из набора пришедшего типа.
@@ -161,6 +163,8 @@
 	Возврат Исходы.ВОкне(Отказ, Поля.ВидОкна(), "", Набранное);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультДоверияCI")

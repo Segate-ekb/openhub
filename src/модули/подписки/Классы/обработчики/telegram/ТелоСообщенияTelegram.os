@@ -30,6 +30,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Без адреса превью выключается явно: иначе Telegram построил бы карточку первой ссылки текста.
 Функция Превью(Знач АдресПревью)
@@ -76,6 +78,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ТелоСообщенияTelegram")

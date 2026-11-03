@@ -44,6 +44,8 @@
 #КонецОбласти
 
 #Область Сборка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Формат имени браузер проверяет до отправки; последнее слово за сервером.
 Функция ПолеИмени(Знач Пул, Знач Набранное)
@@ -61,6 +63,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ДобавлениеПакета")

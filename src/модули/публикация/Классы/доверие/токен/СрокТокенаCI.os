@@ -37,6 +37,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Минуты, а не часы: id-token живёт минутами, и суточный допуск принимал бы вчерашний токен.
 Функция ДопускРасхожденияЧасовСекунд()
@@ -56,6 +58,8 @@
 	Возврат Числа.ЦелаяЧасть(Значение);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СрокТокенаCI")

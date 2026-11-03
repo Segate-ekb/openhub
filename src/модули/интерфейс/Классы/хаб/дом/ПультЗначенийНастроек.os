@@ -106,6 +106,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Текст отказа называет фактическое состояние настройки.
 Функция ОтказСоСписком(Знач Настройка, Знач ИмяПоля, Знач Инфо, Знач Применённые)
@@ -144,6 +146,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

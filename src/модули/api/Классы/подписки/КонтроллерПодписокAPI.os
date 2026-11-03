@@ -540,6 +540,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Набор(Ответ, Знач Объект, Знач ИмяПула, Знач ЗаголовкиЗапроса, Знач КукиЗапроса,
 	Знач ТелоЗапроса, Знач МетодЗапроса, Знач page, Знач pageSize)
@@ -702,6 +704,8 @@
 	Возврат HTTP.ЭтоМетод(МетодЗапроса, "GET");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

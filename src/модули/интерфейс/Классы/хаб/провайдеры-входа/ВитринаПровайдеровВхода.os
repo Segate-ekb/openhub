@@ -81,6 +81,8 @@
 #КонецОбласти
 
 #Область Реестр
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Реестр(Знач Карточки, Знач АдресРаздела)
 
@@ -178,9 +180,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подробности
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подробности(Знач Карточка, Знач Правило)
 
@@ -232,9 +238,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОкнаПоАдресу
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно записи, названное адресом. Записи с таким именем нет - страница без окна.
 Функция ОткрытоеОкно(Знач Карточки, Знач Состояние, Знач Посетитель, Знач АдресРаздела)
@@ -295,9 +305,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адрес формы записи относительно раздела: «<имя>/<действие>».
 Функция Хвост(Знач Карточка, Знач Действие)
@@ -312,6 +326,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПровайдеровВхода")

@@ -199,6 +199,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Регистрации всех задач в порядке имён - не в порядке, в каком их собрал контейнер.
 Функция РегистрацииЗадач()
@@ -232,6 +234,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Рогатка(ЗапускатьВФоне = Истина, ОжидатьЗавершения = Ложь)

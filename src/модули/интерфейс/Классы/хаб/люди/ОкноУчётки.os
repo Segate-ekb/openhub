@@ -191,6 +191,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Умолчание - обычный пользователь: роль администратора выдают осознанно.
 Функция ВыборРоли(Знач Состояние)
@@ -214,6 +216,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноУчётки")

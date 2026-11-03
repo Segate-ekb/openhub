@@ -102,6 +102,8 @@
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с провайдером заглавием и ⚙ в углу; адреса почты нет - прочерк.
 Функция ТаблицаЛичностей(Знач Личности, Знач Провайдеры, Знач Адрес)
@@ -182,9 +184,13 @@
 			Тексты.Текст("settings.account.oidc.unlink")).Опасная().Иконка("закрыть"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окно
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Последний способ входа отвязать нельзя: учётка осталась бы без входа. Окно называет причину
 // и ведёт задать пароль; формы отвязки в нём нет.
@@ -236,9 +242,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Привязка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Кнопки привязки провайдеров, открытых посетителю; без провайдеров - строка: «не настроены»
 // либо отказ по стране, если закрыты все.
@@ -270,6 +280,8 @@
 		.Адрес(АдресРаздела + "/link/" + КодироватьСтроку(Провайдер.Имя, СпособКодированияСтроки.КодировкаURL));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

@@ -58,6 +58,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя своё, и рядом со своими лежат привезённые версии - только их перечень источника и меняет.
 Функция ВыборЗависитОтИсточников(Знач Пакет)
@@ -76,6 +78,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

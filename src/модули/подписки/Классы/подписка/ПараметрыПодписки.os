@@ -155,6 +155,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вне границ и неразобранное приводятся к умолчанию каталога: параметр не может отсутствовать.
 Функция ВГраницах(Знач Сырое, Знач Описание)
@@ -226,6 +228,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПараметрыПодписки")

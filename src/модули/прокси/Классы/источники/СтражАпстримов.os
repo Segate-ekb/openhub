@@ -11,8 +11,10 @@
 Перем Письмо;      // ЛетописьИсточников (прокси) - письменный двойник памяти; Неопределено
                    // означает «память живёт только до перезапуска»
 Перем Правка;      // ПравкаКартыКопией (прокси) - карты правят и обход здоровья, и потоки выдачи
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -186,6 +188,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЖивостьПоАдресу(Знач Адрес)
 
@@ -268,6 +272,8 @@
 	Возврат Настройки.Целое("oshub.proxy.upstream.recheck.ttl.sec", 0);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

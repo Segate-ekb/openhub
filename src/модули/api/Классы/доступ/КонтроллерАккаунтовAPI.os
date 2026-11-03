@@ -56,6 +56,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Статус, текст и подробности отказа - из таблицы отказов, одной на все двери регистрации.
 Процедура ОтдатьОшибкуРегистрации(Ответ, Знач ИнфОбОшибке)
@@ -72,6 +74,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

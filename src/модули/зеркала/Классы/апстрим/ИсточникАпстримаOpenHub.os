@@ -97,6 +97,8 @@
 #КонецОбласти
 
 #Область Порция
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура НаполнитьПорцию(Ответ, Знач Зеркало, Знач Срез, Знач Отметка)
 
@@ -156,9 +158,13 @@
 	Возврат КодированиеURL.КодироватьСегментПути(Строка(Значение));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПоляЗаписиЗеркала
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Незаполненный момент означает «отсчитывать не от чего» - обход идёт полным.
 Функция ЗаведомоВычитаноДо(Знач Зеркало)
@@ -175,6 +181,8 @@
 	Возврат ДатаИлиПусто(Зеркало.ПрогонМоментСреза);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

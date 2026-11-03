@@ -3,8 +3,10 @@
 
 #Использовать ospx-tools
 
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 Перем СервисПулов;    // СервисПулов (реестр)
 Перем СервисПакетов;  // СервисПакетов (реестр)
@@ -103,6 +105,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Push, как он пришёл: куда, что и от кого; пул, файл тела и его размер ложатся по ходу суда.
 Функция ПушНаПриёме(Знач ИмяПула, Знач ИмяФайла, Знач Канал, Знач Пользователь, Знач Токен,
@@ -791,6 +795,8 @@
 		.УстановитьМаксимальнуюТранзиторнуюЗапись(ОбщийРазмер);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

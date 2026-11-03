@@ -10,11 +10,15 @@
 Перем РазмерСтраницыПоУмолчанию;
 
 #Область НастройкиОтбора
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПоляРанжирования()   Возврат "Имя,КлючевыеСлова,Описание"; КонецФункции
 // Нечёткий этап только по имени: подпоследовательность в длинном описании совпадает со всем.
 Функция ПоляНечёткогоЭтапа() Возврат "Имя"; КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПубличныйИнтерфейс
@@ -71,6 +75,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Оба этапа отбора работают уже над видимой запросу выборкой.
 Функция ОтобратьИРанжировать(Знач НормЗапрос, Знач Принципал)
@@ -206,6 +212,8 @@
 	Возврат ?(Всего = Неопределено, 0, Всего);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СлужбаПоиска")

@@ -46,6 +46,8 @@
 #КонецОбласти
 
 #Область СодержимоеСекции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Полоса - только у хранилища с потолком, которое отвечает: пустая соврала бы про запас,
 // а счётчики хаба у лежачего хранилища нечем сверить с диском.
@@ -91,9 +93,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СостояниеХранилища
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СостояниеСловами(Знач Отметка)
 
@@ -150,9 +156,13 @@
 	Возврат Настройки.Целое("oshub.jobs.storage_health_interval_sec", 60, 1);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЗначенияСостояния
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Бэкенд - названием, а не значением ключа.
 Функция НазваниеБэкенда()
@@ -216,9 +226,13 @@
 	Возврат Цел(Настройки.Значение(Ключ));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Незаполненное значение честно называет себя пустым, а не оставляет строку немой; значение -
 // узлом текста: путь или корзина - данные, а не слово кита.
@@ -229,6 +243,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -185,6 +185,8 @@
 #КонецОбласти
 
 #Область Исход
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Исход операции: Успех, Код (статус ответа отказа), Сообщение (причина словами у любого отказа),
 // Отказы (имя поля -> отказ под полем), Применено (что из формы уже записано - у отказа поля).
@@ -211,9 +213,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПорядокЗаписи()
 
@@ -253,6 +259,8 @@
 	Возврат НРег(СокрЛП(РазборФормы.Поле(Форма, Поля.ИмяПоляОперации())));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультБрендирования")

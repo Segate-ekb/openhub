@@ -37,6 +37,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Безымянное действие принадлежит хабу: запись с пустым принципалом читается как потерянная.
 Функция Принципал(Знач Кто)
@@ -48,6 +50,8 @@
 	Возврат JSON.СПереносами(?(Детали = Неопределено, Новый Структура(), Детали));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -11,8 +11,10 @@
 Перем Каталог;                // КаталогРепозиториевGitHub (публикация)
 Перем Настройки;              // СервисНастроек (настройки); опционален
 Перем Ошибки;                 // ТекстОшибки (основа) - маска секрета одна на хаб
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 // Ставит раздачу прав в фон и возвращается немедленно: ни GitHub, ни выдача прав
 // вызывающего не задерживают. Реализация контракта АвтовыдачаПравGitHub.
@@ -54,6 +56,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура РаздатьПоРепозиториям(Знач ПользовательИдентификатор, Знач ЛогинGitHub, Знач Токен)
 
@@ -195,6 +199,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("АвтовыдачаПравGitHub")

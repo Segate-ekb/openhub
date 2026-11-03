@@ -92,6 +92,8 @@
 #КонецОбласти
 
 #Область СодержимоеСекции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПричинаБезПисьма(Знач Причина)
 	Возврат Кит.Секция(Тексты.Текст("confirm.page.title"))
@@ -120,6 +122,8 @@
 		И Причина = Подтверждение.ПочемуНельзяВыслать(Пользователь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

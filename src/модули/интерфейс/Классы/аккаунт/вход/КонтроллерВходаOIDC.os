@@ -253,6 +253,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьСтраницуВхода(Ответ, Знач Ошибка, Знач Статус, Знач КукиЗапроса,
 	Знач АдресВозврата = "", Знач Посетитель = Неопределено)
@@ -394,9 +396,13 @@
 	Возврат "Вход";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура УстановитьОсновнуюКуку(Ответ, Знач ИдСессии)
 	КукаСессии.Установить(Ответ, ИдСессии);
@@ -417,6 +423,8 @@
 	КукаСессии.Сбросить(Ответ);
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

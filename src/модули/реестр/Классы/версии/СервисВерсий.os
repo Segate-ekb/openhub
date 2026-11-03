@@ -586,6 +586,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // SNAPSHOT - единственная версия вне semver, которую принимает манифест .ospx.
 Функция РазобратьДляПубликации(Знач СтрокаВерсии)
@@ -775,6 +777,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -113,6 +113,8 @@
 #КонецОбласти
 
 #Область Значения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Версия библиотеки - как её называет packagedef хаба; значением - узлом текста, как и прочие данные файла.
 Функция Библиотека(Знач Подпись, Знач ИмяПакета)
@@ -139,6 +141,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаСведенийХаба")

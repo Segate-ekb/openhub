@@ -174,6 +174,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Исход пульта → ответ: удача - на страницу пула; отказ - страница с окном этой формы, открытым
 // на набранном и отказах; окна нет (зеркало уже удалили, переключение) - уведомлением над списком.
@@ -195,9 +197,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОбщаяЛогика
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Гвард + резолв пула + проверка права администрирования.
 Функция Подготовить(Ответ, Знач pool, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -297,6 +303,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/office")

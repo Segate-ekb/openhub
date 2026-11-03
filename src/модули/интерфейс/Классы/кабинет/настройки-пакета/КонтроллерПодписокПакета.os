@@ -259,6 +259,8 @@
 #КонецОбласти
 
 #Область ОбщаяЛогика
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подготовить(Ответ, Знач pool, Знач name, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
 	Вердикт = ГвардПакета.Проверить(Ответ, ЗаголовкиЗапроса, КукиЗапроса, pool, name);
@@ -271,9 +273,13 @@
 		Дом.АдресРаздела(Контекст.Пул.Имя, Контекст.Пакет.Имя, "webhooks"));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустой показ - ход уже ответил сам: отбил форму, не нашёл подписку или увёл редиректом.
 Процедура ОтдатьРаздел(Ответ, Знач Контекст, Знач Показ, Знач КукиЗапроса)
@@ -309,6 +315,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

@@ -155,6 +155,8 @@
 #КонецОбласти
 
 #Область Поля
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Запись по ссылке НЕ создаётся: разобранное встаёт в поля окна и сверяется глазами.
 Функция ПолеСсылки(Знач Состояние)
@@ -269,6 +271,8 @@
 	Возврат Провайдер = СервисДоверия.ПровайдерGitLab();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ФормаДоверияCI")

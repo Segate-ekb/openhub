@@ -80,6 +80,8 @@
 #КонецОбласти
 
 #Область Реестр
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Порядок обхода значим: реестр нумерованный, первый опрашивается первым.
 Функция Реестр(Знач Показания, Знач АдресРаздела)
@@ -190,9 +192,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подробности
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подробности(Знач Показание)
 
@@ -271,9 +277,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно «Новый апстрим»: печатается на странице всегда, открытым - по адресу или с отбитой
 // формой. Ошибка пробы подключения приходит к полю адреса.
@@ -391,9 +401,13 @@
 	Возврат "apstrim-novyi";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Публикация
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Публикация - свойство пула, а не источника: чистый прокси-кэш только раздаёт взятое
 // с апстримов. Тумблер сохраняется сразу.
@@ -411,9 +425,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Источники пула с состоянием, прочитанным на весь список разом; без модуля прокси - без состояний.
 Функция Показания(Знач Пул)
@@ -450,6 +468,8 @@
 	Возврат Ключ(Источник) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаАпстримов")

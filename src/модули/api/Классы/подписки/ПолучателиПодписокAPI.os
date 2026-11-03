@@ -132,6 +132,8 @@
 #КонецОбласти
 
 #Область Представление
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьДеревоПоправки(Ответ, Знач Пользователь, Знач Объект, Знач Ид)
 
@@ -218,9 +220,13 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область РазборТела
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имена из тела - в узлы дерева; имя, которого в хабе нет, - отказ с названным именем.
 Функция УзлыИзТела(Знач Пользователь, Знач Объект, Знач Тело)
@@ -344,6 +350,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

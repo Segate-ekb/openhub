@@ -17,8 +17,10 @@
 Перем СервисМеток;      // СервисМетокВерсий (реестр) - метки версий
 Перем HTTP;             // МетодыHTTP (основа)
 Перем Числа;            // ПриведениеЧисел (основа) - длина тела из Content-Length
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТочкиМаршрута
 
@@ -157,6 +159,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура СписокВерсий(Ответ, Знач Пул, Знач Имя, Знач ЗаголовкиЗапроса, Знач КукиЗапроса,
 	Знач page, Знач pageSize)
@@ -226,9 +230,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Машинный код структурированной ошибки библиотеки полем `error.details.error_code`;
 // у обычного исключения кода нет, и поля details в ответе не будет.
@@ -284,6 +292,8 @@
 	Возврат "publish_error";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

@@ -69,6 +69,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Моменты окна, из которых выпали устаревшие. Зовётся под блокировкой.
 Функция Свежие(Знач Ключ, Знач Сейчас)
@@ -113,6 +115,8 @@
 	Возврат Строки.Канон(Ключ);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОграничительПроб")

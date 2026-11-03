@@ -13,8 +13,10 @@
 Перем ИменаЖурнала;   // ИмяОбъектаАудита (аудит) - вид объекта в журнале
 Перем СобытиеЖурнала; // СобытиеАудита (аудит) - форма нагрузки записи
 Перем Определитель;   // ОпределительСтраны (гео) - кому заказывать наблюдаемые страны
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 Перем Снимок;         // Соответствие: ключ правила -> Строка стран; Неопределено - не читан
 Перем ВерсияПравил;   // Число - растёт на каждой записи; снимок, начатый до неё, не публикуется
@@ -220,6 +222,8 @@
 #КонецОбласти
 
 #Область Предохранитель
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Последнюю дверь при выключенном парольном входе закрыть нельзя: это весь вход в хаб.
 Функция ПроверитьПотерюДвери(Знач Имя)
@@ -247,9 +251,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Канон списка: верхний регистр, по возрастанию, без дублей; неизвестный код назван в отказе.
 Функция РазобратьСтраны(Знач СтраныТекстом)
@@ -300,9 +308,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Снимок
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Снимок публикуется подменой ссылки; читатель, начавший до чужой записи, свой не публикует.
 Функция Правила()
@@ -367,9 +379,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ключ канона «функция:объект»: вторая функция под геоправилом второй таблицы не потребует.
 Функция Ключ(Знач Имя)
@@ -422,6 +438,8 @@
 	Возврат Вердикты.ОтказСКодом(Код, Причина, Новый Структура("Страны", ""));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

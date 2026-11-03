@@ -123,6 +123,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адрес страницы подтверждения - её отдаёт КонтроллерПодтвержденияCLI (интерфейс).
 Функция ПутьПодтверждения()
@@ -172,6 +174,8 @@
 	ОшибкаПотока(Ответ, "invalid_request", СтрШаблон("Разрешены методы: %1", Разрешённый), 405);
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

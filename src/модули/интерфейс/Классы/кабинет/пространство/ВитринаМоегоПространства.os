@@ -36,6 +36,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя логина может носить и чужой пул: такой личным пространством не считается.
 Функция ЛичныйПул(Знач Пользователь)
@@ -85,6 +87,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаМоегоПространства")

@@ -6,8 +6,10 @@
 Перем Страж;    // СтражИздателейCI
 Перем Кэши;     // КэшиКлючейCI
 Перем Вердикты; // Вердикт (основа) - форма ответа
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 // Проверяет подпись предъявленного id-token'а; см. контракт ПроверяющийПодписиCI.
 //
@@ -31,6 +33,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Проверить(Знач Токен, Знач Издатель)
 
@@ -84,6 +88,8 @@
 	Возврат Вердикты.ОтказСловами(Сообщение, Нагрузка());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПроверяющийПодписиCI")

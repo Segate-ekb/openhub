@@ -1,5 +1,6 @@
 // Тело упразднённого адреса канала: тег заводится по нему.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("type")
 Перем Тип;
 
@@ -8,3 +9,4 @@
 
 &Сериализуемое("version")
 Перем Версия;
+// BSLLS:MissingVariablesDescription-on

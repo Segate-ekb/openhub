@@ -145,6 +145,8 @@
 #КонецОбласти
 
 #Область Сохранение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Сохранить(Ответ, Знач Вердикт, Знач Ключ, Знач Форма, Знач КукиЗапроса)
 
@@ -225,6 +227,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер

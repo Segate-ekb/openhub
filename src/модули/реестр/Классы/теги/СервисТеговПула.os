@@ -285,6 +285,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Каналы визарда без перезаписи набора: имя, которое уже есть, не трогается.
 Процедура Заполнить(Знач ПулИдентификатор, Итог, Знач Кем)
@@ -397,6 +399,8 @@
 	Возврат Значение;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

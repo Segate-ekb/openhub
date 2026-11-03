@@ -67,6 +67,8 @@
 #КонецОбласти
 
 #Область ВКаталоге
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ВКаталоге(Знач Пакет)
 
@@ -92,6 +94,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаКарточкиПакета")

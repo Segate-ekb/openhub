@@ -328,6 +328,8 @@
 #КонецОбласти
 
 #Область Дерево
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПулыДерева(Знач Подписка)
 
@@ -398,9 +400,13 @@
 		Цел(ПакетИдентификатор));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Режимы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пулы правки режимов, которые есть в дереве подписки: у подписки пула - только её пул.
 Функция ПулыВДереве(Знач Подписка, Знач Режимы)
@@ -680,9 +686,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Пакеты
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Галки пакетов - выбор в пуле «выбранные». Галка, которая меняет пул «все» (снятая) или «никакие»
 // (поставленная), сначала переводит его в «выбранные» с тем, что пулу доставалось; не меняющая - ничего
@@ -785,9 +795,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Строки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // У пары «подписка - узел» строка в хранилище одна: повтор находит прежнюю.
 Процедура ДобавитьСтроку(Знач Хранилище, Знач Подписка, Знач Тип, Знач ОбъектИдентификатор,
@@ -838,9 +852,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Подписка сверху под адресом своего объекта и подписка пакета дерева не имеют.
 Функция ПодпискаСДеревом(Знач Объект, Знач Идентификатор)
@@ -872,6 +890,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СервисИсключенийПодписок")

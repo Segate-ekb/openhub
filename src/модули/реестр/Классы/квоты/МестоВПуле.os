@@ -56,6 +56,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Размер заменяемого артефакта, мусор - ноль: замена встаёт на его место и в зачёт квоты не идёт.
 Функция РазмерЗаписи(Знач Заменяемая)
@@ -75,6 +77,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач _СервисПулов)

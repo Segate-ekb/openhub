@@ -83,6 +83,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ИмяПоляПрежнегоПодтверждения()
 	Возврат "подтверждение";
@@ -109,6 +111,8 @@
 	Возврат ?(ТипЗнч(Код) = Тип("Число") И Код >= 400, Код, 400);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультЗаявок")

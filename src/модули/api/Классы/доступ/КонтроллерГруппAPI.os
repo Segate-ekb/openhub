@@ -189,6 +189,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура СписокГрупп(Ответ, Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач page, Знач pageSize, Знач query)
 
@@ -310,9 +312,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Группа, доступная субъекту на чтение; Неопределено - ответ уже записан.
 Функция ЧитаемаяГруппа(Ответ, Знач ИмяГруппы, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -342,6 +348,8 @@
 	Возврат Структура;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

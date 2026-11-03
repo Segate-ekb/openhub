@@ -93,6 +93,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «1 участник останется», «2 участника останутся», «5 участников останутся».
 Функция ОстаютсяВХабе(Знач Число_)
@@ -126,6 +128,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноГруппы")

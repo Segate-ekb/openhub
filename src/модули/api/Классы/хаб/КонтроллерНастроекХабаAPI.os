@@ -12,8 +12,10 @@
 Перем Разделы;      // РазделыНастроекХаба (настройки) - раздел ключа
 Перем HTTP;         // МетодыHTTP (основа)
 Перем Ошибки;       // ТекстОшибки (основа) - доменный отказ одной строкой
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТочкиМаршрута
 
@@ -217,6 +219,8 @@
 #КонецОбласти
 
 #Область ДопускИОтказы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Право читать настройки хаба то же, что и править их: чужих ручек здесь не показывают.
 Функция ДопущенКНастройкам(Ответ, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -283,9 +287,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтдатьНастройку(Ответ, Знач Карточка)
 	Ответы.JSON(Ответ, 200, Новый Структура("setting", НастройкаВJSON(Карточка)));
@@ -332,6 +340,8 @@
 	Возврат СокрЛП(Строка(Правка.Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

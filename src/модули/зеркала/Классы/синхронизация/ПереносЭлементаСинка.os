@@ -19,8 +19,10 @@
 Перем Желуди;          // ВнедрённыеЖелуди (основа) - три формы внедрения необязательной зависимости
 Перем Уборка;          // ТихаяУборка (основа) - файл скачанного .ospx
 Перем Числа;           // ПриведениеЧисел (основа) - терпимое чтение размера записи
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -91,6 +93,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Известная версия, чей артефакт уже лежит, повторно не качается: индекс при
 // необходимости добирается, и элемент считается пройденным. Заменяемый слот - исключение,
@@ -402,9 +406,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПричиныПропуска
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адрес апстрима перепроверяется перед каждым скачиванием: между перечислением
 // и скачиванием его могли переписать.
@@ -518,6 +526,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПереносЭлементаСинка")

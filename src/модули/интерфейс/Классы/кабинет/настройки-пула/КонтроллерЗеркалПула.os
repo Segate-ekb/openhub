@@ -220,6 +220,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий пролог мутирующих точек: гвард → только POST → форма с CSRF.
 Функция Мутация(Ответ, Знач pool, Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач МетодЗапроса,
@@ -264,6 +266,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер

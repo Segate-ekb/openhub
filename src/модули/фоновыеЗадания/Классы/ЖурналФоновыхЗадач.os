@@ -1,8 +1,10 @@
 // Как фоновые задачи хаба выглядят оператору в журнале: состав при старте, старт и исход
 // каждого прогона. Сбой пишется ОШИБКОЙ всегда, прогоны - ОТЛАДКОЙ всегда.
 
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -72,12 +74,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Уровень ОТЛАДКА: прогоны задач с коротким интервалом - самый шумный поток журнала.
 Процедура ЗаписатьПрогон(Знач Сообщение)
 	Лог.Отладка(Сообщение);
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

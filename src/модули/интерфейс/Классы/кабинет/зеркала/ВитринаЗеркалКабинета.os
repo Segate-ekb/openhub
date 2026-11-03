@@ -94,6 +94,8 @@
 #КонецОбласти
 
 #Область ОбзорПулов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пул - ссылкой на его зеркала; ни одного пула - пустое состояние со словами, а не пустая таблица.
 Функция ТаблицаПулов(Знач Пулы)
@@ -114,9 +116,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Итог нажатой «синхронизации» приезжает адресом и печатается над содержимым.
 Функция Уведомления(Знач Баннеры)
@@ -205,9 +211,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно «Новое зеркало»: на странице всегда, открытым - по адресу или с отбитой формой; ошибка
 // пробы подключения приходит к полю адреса.
@@ -285,9 +295,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Ключ(Знач Зеркало)
 	Возврат Формат(Зеркало.Идентификатор, "ЧГ=0; ЧН=0");
@@ -298,6 +312,8 @@
 	Возврат Адрес + "/" + Ключ(Зеркало) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаЗеркалКабинета")

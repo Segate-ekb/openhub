@@ -42,6 +42,8 @@
 КонецФункции
 
 #Область ДваВидаСбоя
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сбой на руках объектом: цепочка причин видна целиком, и отказ базы узнаётся по ней.
 Функция СбойОбъектом(Знач Запрос, Знач Инфо)
@@ -66,9 +68,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОтказСобранныйWinow
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отказ, собранный самим winow (код и модель его стандартного шаблона), а не контроллером хаба.
 Функция ЭтоОтказСобранныйWinow(Знач Ответ, Знач Код)
@@ -98,9 +104,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СборкаОтвета
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОтветСоСбоем(Знач Запрос, Знач Собранный, Знач Причина)
 
@@ -144,9 +154,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Одна строка ОШИБКА на сбой: по коду запроса оператор находит её, не переспрашивая.
 Процедура Записать(Знач Запрос, Знач Причина, Знач Пояснение)
@@ -184,6 +198,8 @@
 	Возврат СокрЛП(Строка(Запрос.Идентификатор));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач ОбёрнутыйОбработчик, Знач ПричиныСбоя, Знач ОтветыМашиннойДвери,

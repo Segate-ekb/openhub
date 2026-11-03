@@ -83,6 +83,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Код, объявленный двумя подсистемами, роняет сборку: у причины один признак «пройдёт само».
 Процедура Объявить(Знач Код, Знач ПройдётСамо, Знач ИсходНеясен)
@@ -102,6 +104,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -38,6 +38,8 @@
 КонецПроцедуры
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Страница(Знач Вердикт, Знач КукиЗапроса, Знач ПутьЭкрана)
 
@@ -84,6 +86,8 @@
 		Кит.Примечание(Тексты.Текст("office.start.opm.command.hint")));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

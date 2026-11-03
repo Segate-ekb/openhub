@@ -11,8 +11,10 @@
 Перем Летопись;       // ЛетописьУчёток (вход) - исход письма в журнал аудита
 Перем Обезличивание;  // ОбезличиваниеЖурнала (наблюдаемость) - адрес клиента без хозяина
 Перем Ошибки;         // ТекстОшибки (основа) - набранное человеком в одну строку
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -106,6 +108,8 @@
 #КонецОбласти
 
 #Область ХодЗапроса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Порядок проверок: состояние хаба, затем учётка.
 Функция Отработать(Знач Названное, Знач Сейчас, Знач Источник)
@@ -149,9 +153,13 @@
 	Возврат Новый Структура("Причина, Пользователь", Причина, Пользователь);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Журнал
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Одна строка на запрос: исход, логин и обезличенный адрес; значения ссылки здесь нет.
 Процедура НазватьИсход(Знач Исход, Знач Источник)
@@ -191,6 +199,8 @@
 	Возврат ?(Пользователь = Неопределено, "-", Строка(Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

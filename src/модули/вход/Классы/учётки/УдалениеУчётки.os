@@ -9,8 +9,10 @@
 Перем СервисВерсий;       // СервисВерсий (реестр)
 Перем Летопись;           // ЛетописьУчёток (вход)
 Перем Вердикты;           // Вердикт (основа) - форма ответа
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -132,6 +134,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Личное пространство уходит целиком: его имя равно логину, и без хозяина оно не живёт.
 Функция СнестиЛичныеПулы(Знач Идентификатор)
@@ -187,6 +191,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

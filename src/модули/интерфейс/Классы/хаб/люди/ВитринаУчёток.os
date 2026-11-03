@@ -85,6 +85,8 @@
 #КонецОбласти
 
 #Область Отбор
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // GET-форма: отбор живёт в адресе, со скриптом уходит без перезагрузки по мере набора; на телефоне
 // поля встают каждое во всю строку.
@@ -147,9 +149,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с логином заглавием и ⚙ в углу.
 // Пустое значение (учётка без адреса почты) - прочерком, а не пустой ячейкой.
@@ -265,9 +271,13 @@
 	Возврат Тексты.Текст("settings.hub.users.empty");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно записи, названное адресом. Учётки нет или это сам смотрящий - страница без окна.
 Функция ОткрытоеОкно(Знач Смотрящий, Знач Состояние, Знач Отбор, Знач АдресСписка)
@@ -316,9 +326,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЭтоСмотрящий(Знач Пользователь, Знач Смотрящий)
 	Возврат Смотрящий <> Неопределено
@@ -330,6 +344,8 @@
 	Возврат КодироватьСтроку(Строка(Логин), СпособКодированияСтроки.КодировкаURL) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаУчёток")

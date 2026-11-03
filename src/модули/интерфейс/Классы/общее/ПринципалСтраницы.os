@@ -31,6 +31,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пользователь вместо принципала - ошибка сборки двери: молча она отдала бы гостевую страницу.
 Функция ПолеСтруктуры(Знач Принципал, Знач Имя)
@@ -50,6 +52,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -53,6 +53,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значение поля - имя значка кита: прежний ключ значка (github, key) домен вход приводит сам
 // (ЗначокПровайдераВхода), здесь незнакомое имя - не задано.
@@ -132,6 +134,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

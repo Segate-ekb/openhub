@@ -175,6 +175,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отвечает первый источник, которому есть что сказать; иначе причина - отказ старшего.
 Функция ПоИсточникам(Знач Адрес, Знач КодОтПрокси)
@@ -263,6 +265,8 @@
 	Возврат "прокси-база";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

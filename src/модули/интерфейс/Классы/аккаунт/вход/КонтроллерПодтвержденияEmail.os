@@ -79,6 +79,8 @@
 #КонецОбласти
 
 #Область Операции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Письмо уходит только на адрес учётки запросившего: рассылку этой кнопкой не устроить.
 Процедура ВыслатьЗаново(Ответ, Знач Принципал, Знач Форма, Знач КукиЗапроса, Знач АдресIP)
@@ -137,9 +139,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Страница без токена рассказывает состояние адреса; с токеном - предлагает кнопку.
 Процедура ОтдатьОбзор(Ответ, Знач Принципал, Знач Значение, Знач КукиЗапроса)
@@ -255,6 +261,8 @@
 	Возврат Тексты.Текст("confirm.page.title");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

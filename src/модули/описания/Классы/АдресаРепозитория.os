@@ -113,6 +113,8 @@
 #КонецОбласти
 
 #Область ВебАдрес
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адрес клона и веб-адрес - к одному виду; адрес с данными пользователя - чей-то вход, не берётся.
 Функция ВебАдрес(Знач Адрес)
@@ -201,9 +203,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ВидХостинга
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Публичные хостинги отдают страницы только по https - http из адреса до них не доживает.
 Функция ЭтоПубличныйХостинг(Знач Хост)
@@ -244,9 +250,13 @@
 	Возврат Сегмент = "branch" ИЛИ Сегмент = "tag" ИЛИ Сегмент = "commit";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПутьРепозитория
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «владелец/имя[/<дерево>/<реф>/<каталог>]»; прочий хвост у незнакомого хостинга неоднозначен.
 Функция ПутьВладельцаИИмени(Знач Сегменты, Знач ВидыДерева, Знач ТолькоДерево)
@@ -408,9 +418,13 @@
 	Возврат РаскодироватьСтроку(Сегмент, СпособКодированияСтроки.КодировкаURL);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область АдресФайла
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Реф и путь кодируются посегментно: «+» в теге и кириллица в имени файла остаются одним сегментом.
 Функция АдресПоШаблону(Знач Шаблон, Знач Репозиторий, Знач Реф, Знач Путь)
@@ -453,6 +467,8 @@
 	Возврат Новый Структура("Страница, Сырой", Страница, Сырой);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

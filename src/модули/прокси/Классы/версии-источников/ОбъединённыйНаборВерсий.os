@@ -6,8 +6,10 @@
 Перем Индекс;               // ИндексВерсийИсточника (прокси)
 Перем СервисВерсий;         // СервисВерсий (реестр)
 Перем Обезличивание;        // ОбезличиваниеЖурнала (наблюдаемость)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -66,6 +68,8 @@
 #КонецОбласти
 
 #Область СборНабора
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Выбрать(Знач Пул, Знач Источники, Знач Пакет, Знач ИмяПакета, Знач Условие,
 	Знач ЭтоИмяТега, Знач СвояВерсия, Знач ВерсияДвижка)
@@ -185,6 +189,8 @@
 	Возврат НРег(СокрЛП(Строка(СтрокаВерсии)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

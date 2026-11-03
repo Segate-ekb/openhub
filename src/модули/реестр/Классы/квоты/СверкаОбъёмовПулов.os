@@ -5,8 +5,10 @@
 Перем Объёмы;       // УчётОбъёмаПула
 Перем Хранилище;    // ХранилищеАртефактов (хранилище) - источник истины о занятом
 Перем Ошибки;       // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -61,6 +63,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Неудавшийся замер обязан оставить строку в журнале: иначе дрейф счётчиков копился бы молча.
 Функция СнятьОбъёмы()
@@ -88,6 +92,8 @@
 	Возврат ?(Значение = Неопределено, 0, Значение);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -231,12 +231,16 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Инициатор заявки называется логином: субъект в хабе - логин, а не число.
 Функция ЛогинЗаявителя(Знач Пользователь)
 	Возврат ?(Пользователь = Неопределено, "", СокрЛП(Строка(Пользователь.Логин)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультЗеркал")

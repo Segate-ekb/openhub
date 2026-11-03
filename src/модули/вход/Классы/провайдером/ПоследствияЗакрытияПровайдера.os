@@ -46,6 +46,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Издатель выключенного провайдера берётся из его строки в базе.
 Функция ИздательПровайдера(Знач ИмяПровайдера)
@@ -140,6 +142,8 @@
 	Возврат НРег(СокрЛП(Строка(?(Значение = Неопределено, "", Значение))));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

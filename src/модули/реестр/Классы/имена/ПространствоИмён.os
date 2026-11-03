@@ -80,6 +80,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Спросить некому - исключение: без ответа учёток «не занято» было бы неправдой.
 Функция ЗанятоЛогином(Знач Имя)
@@ -103,6 +105,8 @@
 	Возврат Строки.Канон(Значение);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

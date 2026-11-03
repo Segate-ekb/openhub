@@ -62,6 +62,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура Показать(Ответ, Знач ИмяПула, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
 
@@ -131,9 +133,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция НичегоНеПрислано(Знач Публикация, Знач ТегиДляПакетов, Знач СыраяКвота, Знач Видимость)
 	Возврат Публикация = Неопределено И ТегиДляПакетов = Неопределено И СыраяКвота = Неопределено
@@ -170,6 +176,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

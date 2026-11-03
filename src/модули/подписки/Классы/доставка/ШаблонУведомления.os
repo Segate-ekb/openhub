@@ -132,6 +132,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Известные()
 	Результат = Новый Соответствие();
@@ -279,6 +281,8 @@
 	Возврат СокрЛП(Строка(ЧтениеПолей.Поле(Данные, Имя, "")));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ШаблонУведомления")

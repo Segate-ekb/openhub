@@ -132,6 +132,8 @@
 #КонецОбласти
 
 #Область ШагПравила
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ШагПравила(Знач Исходное, Знач Состояние, Знач Опции, Знач ПолеИмени)
 
@@ -290,9 +292,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ШагОформления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поля стиля и значка - в студии рядом с образцом плашки, который зеркалит их выбор.
 Функция ШагОформления(Знач Исходное, Знач Состояние)
@@ -311,9 +317,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отказ, который не относится к одному полю, - над шагами.
 Функция ОшибкаОкна(Знач Состояние)
@@ -357,6 +367,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноТега")

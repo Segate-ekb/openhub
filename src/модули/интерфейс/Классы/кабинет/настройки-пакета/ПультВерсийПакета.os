@@ -126,6 +126,8 @@
 #КонецОбласти
 
 #Область Операции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Событие отзыва и возврата публикует сам СервисВерсий - одна точка на оба пути отзыва.
 Функция Отозвать(Знач Пакет, Знач Версия, Знач Отозвана, Знач Кто)
@@ -181,9 +183,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сервер судит сам: ставить и снимать можно только ручной тег пакета.
 Функция ЭтоРучнойТег(Знач Пакет, Знач ИмяТега)
@@ -212,6 +218,8 @@
 	Возврат Исходы.Отбито(Тексты.Шаблон("settings.package.versions.error.save", Сбои.Человеку(Информация)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультВерсийПакета")

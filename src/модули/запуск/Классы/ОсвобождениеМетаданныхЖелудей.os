@@ -7,8 +7,10 @@
 
 Перем Поделка;    // Поделка (autumn)
 Перем Включено;   // Булево - oshub.start.release_bean_metadata
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 

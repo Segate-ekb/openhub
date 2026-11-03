@@ -468,6 +468,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отмеченные флажки событий - то, что объект оставляет себе из событий подписки.
 Функция СужениеИзФормы(Знач Форма)
@@ -530,6 +532,8 @@
 	Возврат Результат;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультПодписок")

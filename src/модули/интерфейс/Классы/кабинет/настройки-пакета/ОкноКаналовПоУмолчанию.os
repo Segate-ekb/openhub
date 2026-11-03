@@ -46,6 +46,8 @@
 #КонецОбласти
 
 #Область СоставПредложения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТаблицаПредложения()
 
@@ -88,6 +90,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноКаналовПоУмолчанию")

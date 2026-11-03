@@ -33,6 +33,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Провайдер(Знач Ид)
 
@@ -80,6 +82,8 @@
 	Возврат ?(ЗначениеЗаполнено(Значение), СокрЛП(Строка(Значение)), ПоУмолчанию);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПровайдерыИзНастроек")

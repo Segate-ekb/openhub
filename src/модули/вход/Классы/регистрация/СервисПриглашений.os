@@ -298,6 +298,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПоводДопустим(Знач Повод)
 	Возврат Повод = ПоводПриглашение() ИЛИ Повод = ПоводСброс()
@@ -342,6 +344,8 @@
 	Возврат ?(Удалось, Вердикты.Успех(Поля), Вердикты.Отказ(Причина, Поля));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

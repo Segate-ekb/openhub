@@ -76,6 +76,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПрефиксAPI()
 	Возврат "/api/v1/";
@@ -129,6 +131,8 @@
 	Возврат ?(ТипЗнч(Объект) = Тип("Соответствие"), Объект.Получить(Имя), Неопределено);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

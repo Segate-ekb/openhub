@@ -63,6 +63,8 @@
 КонецФункции
 
 #Область Пояснения
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Адресной форме нужен клиент, который её понимает, короткой - хаб, который клиент знает.
 Функция ПояснениеКоманды(Знач Пул)
@@ -77,9 +79,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СоставКарточки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ПропискаПулаВКонфиге(Знач Пул, Знач Узел)
 
@@ -106,6 +112,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

@@ -7,8 +7,10 @@
 Перем Объекты;    // ОбъектыПроисшествий (происшествия)
 Перем Адреса;     // АдресаИсточников (прокси) - где у записи её адрес
 Перем Ошибки;     // ТекстОшибки (основа) - причина сбоя строкой журнала
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область СловарьСостояний
 
@@ -117,6 +119,8 @@
 #КонецОбласти
 
 #Область СкладываниеПамяти
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Состояние(Знач Источник, Знач Написанное)
 
@@ -178,9 +182,13 @@
 	Возврат Новый Структура("Есть, Код, Причина, Когда", Ложь, "", "", '00010101000000');
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Письменная память обо всех источниках списка - одним обращением к таблице происшествий.
 // Лежащая база отнимает у экрана прошлые неудачи, но не вердикт: именно на лежащей базе
@@ -213,6 +221,8 @@
 	Возврат Объекты.Источник(Адреса.Источника(Источник));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

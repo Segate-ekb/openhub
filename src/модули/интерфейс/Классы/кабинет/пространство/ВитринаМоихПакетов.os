@@ -40,6 +40,8 @@
 #КонецОбласти
 
 #Область ПорядокИМетрики
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сводка, а не каталог: остальное живёт в каталоге с отбором «мои», и хвост туда уводит.
 Функция Предел()
@@ -135,9 +137,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разметка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Все пакеты секции в управлении смотрящего: шестерёнка у каждой карточки, модели - разом на горстку.
 Функция СеткаКарточек(Знач Записи)
@@ -200,6 +206,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаМоихПакетов")

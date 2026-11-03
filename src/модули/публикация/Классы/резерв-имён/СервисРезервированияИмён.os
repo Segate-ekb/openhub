@@ -226,6 +226,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий пролог обеих операций; доступ даёт только последняя строка.
 Функция Допустить(Знач Принципал, Знач Пул, Знач Действие)
@@ -271,6 +273,8 @@
 	Возврат Допуски.Дело("Резервирование имени недоступно", "Резервирование имени запрещено");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

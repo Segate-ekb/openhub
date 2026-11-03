@@ -170,6 +170,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Порядок проверок один на оба решения: метод, гейт, видимость пула, право, заявка, домен.
 Процедура Решить(Ответ, Знач ИмяПула, Знач НомерИзАдреса, Знач ЗаголовкиЗапроса,
@@ -313,6 +315,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/api/v1")

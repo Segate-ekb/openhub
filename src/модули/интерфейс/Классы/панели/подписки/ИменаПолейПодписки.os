@@ -269,6 +269,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Префикс имён флажков событий: служебной считается вся группа, а не отдельный индекс.
 Функция ПрефиксСобытия()
@@ -290,6 +292,8 @@
 	Возврат "-свой";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ИменаПолейПодписки")

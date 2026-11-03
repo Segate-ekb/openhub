@@ -7,8 +7,10 @@
 Перем Адреса;       // РазборАдреса (основа)
 Перем ЧтениеПолей;  // ЧтениеПолей (основа)
 Перем Ошибки;       // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -48,6 +50,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция АдресСобытия(Знач Данные, Знач Ссылки)
 
@@ -228,6 +232,8 @@
 	КонецПопытки;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

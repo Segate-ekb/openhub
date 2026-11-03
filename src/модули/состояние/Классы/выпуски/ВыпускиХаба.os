@@ -7,8 +7,10 @@
 Перем Настройки;   // СервисНастроек (настройки)
 Перем Приложение;  // ОписаниеПриложения (настройки) - своя версия хаба
 Перем Издатель;    // ИздательСобытий (события)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -80,6 +82,8 @@
 #КонецОбласти
 
 #Область Проверка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отметка пишется до события: сорвись рассылка или процесс сразу после неё, о той же версии
 // хаб второй раз не сообщит.
@@ -128,6 +132,8 @@
 	Возврат Настройки.Текстом(КлючИсточника(), ИсточникПоУмолчанию());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

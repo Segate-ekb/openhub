@@ -10,8 +10,10 @@
 Перем Занятое;             // ЗаписьЗанятогоМеста
 Перем Запуски;             // СервисЗапусковКонвейеров - запуск конвейера, принявшего версию
 Перем Дополнение;          // ДополнениеОписаний - README из репозитория, необязательно
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -212,6 +214,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ОтклонитьНомерЗанятыйТегом(Знач Пул, Знач Пакет, Знач ВерсияСтрока)
 
@@ -339,6 +343,8 @@
 	Возврат Новый Структура("Пакет, Версия", Пакет, Версия);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

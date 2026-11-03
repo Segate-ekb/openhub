@@ -128,6 +128,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Строгое чтение целого; СоЗнаком признаёт ведущий минус частью числа.
 Функция Строгое(Знач Значение, Знач ПоУмолчанию, Знач СоЗнаком)
@@ -157,4 +159,6 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

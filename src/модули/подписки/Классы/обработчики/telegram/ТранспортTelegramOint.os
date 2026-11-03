@@ -39,6 +39,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Прокси ставится пообъектно: общие настройки вызова увели бы чужой одновременный запрос.
 Функция ОтветBotAPI(Знач Токен, Знач ЧатИд, Знач Текст, Знач АдресПревью)
@@ -91,6 +93,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ТранспортTelegram")

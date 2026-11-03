@@ -111,6 +111,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЧитаемыйПул(Знач Пользователь, Знач ПулИдентификатор, Знач Принципал)
 
@@ -217,6 +219,8 @@
 	Возврат Новый Структура("Виден, Тип, Пул, Пакет", Видно, Тип, Пул, Пакет);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

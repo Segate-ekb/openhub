@@ -35,6 +35,8 @@
 #КонецОбласти
 
 #Область ОтборЗеркал
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Порог «мейнтейнер и выше» - договор службы кабинета, а не правило этого экрана.
 Функция ЗеркалаПулов(Знач Пользователь)
@@ -54,9 +56,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разметка
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с пулом заглавием; неудача прогона объясняется словами прямо
 // здесь: иначе про сломанную репликацию узнают, зайдя внутрь.
@@ -109,6 +115,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаЗеркалМоихПулов")

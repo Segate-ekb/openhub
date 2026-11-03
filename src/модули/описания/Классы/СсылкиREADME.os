@@ -58,6 +58,8 @@
 #КонецОбласти
 
 #Область Основа
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // README из репозитория - в корне на рефе находки; из пакета - по адресу карточки (тег версии без сети не проверить).
 Функция ОсноваАдресов(Знач Репозиторий, Знач Источник)
@@ -78,9 +80,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Разрешение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Схема, «//хост», «#якорь» и «?запрос» - не путь в репозитории. Схему санитайзер уже проверил.
 Функция ЭтоОтносительный(Знач Адрес)
@@ -169,9 +175,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СсылкаБезАдреса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ссылка без адреса - текст: тег снимается с ближайшим закрывающим (ссылки не вкладываются).
 Функция БезСсылокБезАдреса(Знач HTML)
@@ -214,9 +224,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЗначениеАтрибута
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ближайший « href="…"»/« src="…"»: санитайзер пишет кавычку сущностью, вне тегов такой записи нет.
 Функция СледующийАдрес(Знач HTML, Знач С)
@@ -273,6 +287,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

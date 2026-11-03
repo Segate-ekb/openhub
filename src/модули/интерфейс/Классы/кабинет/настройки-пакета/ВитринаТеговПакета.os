@@ -94,6 +94,8 @@
 #КонецОбласти
 
 #Область ТаблицаКаналов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Выключенные у пакета теги пула стоят в той же таблице последними: их возвращают отсюда же.
 Функция ТаблицаКаналов(Знач Раскладка, Знач Параметры, Знач АдресТеговПула)
@@ -173,9 +175,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ДействияСтроки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Правка тега пула заводит копию, возврат снимает копию, выключенный тег только включается.
 Функция МенюКанала(Знач Тег, Знач Происхождение, Знач АдресРаздела, Знач АдресТеговПула)
@@ -228,9 +234,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОкноЗаведения(Знач Параметры)
 
@@ -374,6 +384,8 @@
 	Возврат КодироватьСтроку(Строка(ИмяТега), СпособКодированияСтроки.КодировкаURL) + "/" + Действие;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаТеговПакета")

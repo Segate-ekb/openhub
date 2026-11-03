@@ -290,6 +290,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Номера(Знач Идентификаторы)
 
@@ -306,6 +308,8 @@
 	Возврат ?(НРег(СокрЛП(Строка(Значение))) = ИсточникАпстрим(), ИсточникАпстрим(), ИсточникСвой());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

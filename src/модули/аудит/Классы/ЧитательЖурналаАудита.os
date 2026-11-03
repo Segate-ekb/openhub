@@ -62,6 +62,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Верхняя граница чтения: журнал не ротируется, целиком его грузить нельзя.
 Функция РазмерХвостаБайт()
@@ -193,6 +195,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ИсточникЖурналаАудита")

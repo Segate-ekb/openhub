@@ -249,6 +249,8 @@
 #КонецОбласти
 
 #Область Исход
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция НетЗеркала()
 	Возврат Отказ(Тексты.Текст("settings.pool.mirrors.error.missing"), 404);
@@ -285,6 +287,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультЗеркалПула")

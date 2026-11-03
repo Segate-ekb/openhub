@@ -72,6 +72,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Включён ли вход по паролю; нечитаемая политика - не обещаем, но и не падаем.
 Функция ПарольДействует()
@@ -98,6 +100,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОтказПоСтране")

@@ -57,6 +57,8 @@
 #КонецОбласти
 
 #Область Реестр
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Реестр(Знач Записи, Знач АдресРаздела)
 
@@ -191,9 +193,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Секрет приходит только ответом на выпуск - по адресу это окно не открыть.
 Функция ОкноСекрета(Знач Параметры)
@@ -226,6 +232,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

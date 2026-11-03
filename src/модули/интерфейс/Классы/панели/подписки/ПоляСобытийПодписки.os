@@ -58,6 +58,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // У новой подписки отмечено всё, кроме событий самого хаба: весть о новой версии хаба в чат релизов
 // без спроса не уходит; у правимой - её набор.
@@ -124,6 +126,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПоляСобытийПодписки")

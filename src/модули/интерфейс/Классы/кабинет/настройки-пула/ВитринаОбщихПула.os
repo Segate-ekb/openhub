@@ -45,6 +45,8 @@
 #КонецОбласти
 
 #Область Свойства
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя входит в адреса пакетов и не меняется: его копируют, а не правят.
 Функция СвойствоИмени(Знач Пул)
@@ -145,6 +147,8 @@
 	Возврат Кит.Текст(" · ");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаОбщихПула")

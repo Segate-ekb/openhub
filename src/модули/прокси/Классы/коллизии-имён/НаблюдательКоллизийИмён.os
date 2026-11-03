@@ -12,8 +12,10 @@
 Перем ИменаЖурнала;   // ИмяОбъектаАудита (аудит) - вид объекта в журнале
 Перем СобытиеЖурнала; // СобытиеАудита (аудит) - форма нагрузки записи
 Перем Ошибки;         // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем ЧтениеПолей;   // ЧтениеПолей (основа)
 
 #Область КонтрактПодписчикаСобытий
@@ -50,6 +52,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ПроверитьКоллизию(Знач Данные)
 
@@ -148,6 +152,8 @@
 	Возврат ЧтениеПолей.Поле(Данные, Имя, ПоУмолчанию);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Рогатка

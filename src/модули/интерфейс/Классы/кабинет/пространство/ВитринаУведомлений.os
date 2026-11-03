@@ -63,6 +63,8 @@
 #КонецОбласти
 
 #Область СекцияЛенты
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отметка - обратимое по смыслу действие без окна: форма из одной кнопки в шапке секции, на адрес
 // ленты. Отмечать нечего - кнопки нет: кнопка без работы выглядит сломанной.
@@ -103,9 +105,13 @@
 	Возврат Кит.Плашка(Тексты.Текст("office.notifications.new")).Вид("accent");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Событие
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Событие одинаково в ленте и в кабинете: заголовок (ссылкой, когда ему есть куда вести)
 // и подробности припиской. Тексты событий пишет хаб из данных заявок - узлами текста.
@@ -125,6 +131,8 @@
 	Возврат Даты.ДатаВремя(Запись.Создано);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СекцияКабинета

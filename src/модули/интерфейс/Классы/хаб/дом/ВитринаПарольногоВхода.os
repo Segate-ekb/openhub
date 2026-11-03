@@ -112,6 +112,8 @@
 #КонецОбласти
 
 #Область Тумблер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тумблер сохраняется сразу; без скрипта форму шлёт запасная кнопка кита. Настройка, занятая
 // конфигурацией, показана той же ручкой, но не переключается.
@@ -125,9 +127,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Подтверждение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно печатается, только когда его назвал адрес и выключать есть что: при выключенном входе
 // или сработавшем предохранителе подтверждать нечего - вместо окна сказана причина.
@@ -158,6 +164,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПарольногоВхода")

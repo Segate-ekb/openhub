@@ -6,8 +6,10 @@
 Перем Превью;      // ПревьюTelegram (подписки) - адрес карточки превью
 Перем Ошибки;      // ТекстОшибки (основа) - маскирование токена в диагностике
 Перем Вердикты;    // Вердикт (основа) - форма ответа
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область КонтрактОбработчикаДоставки
 
@@ -145,6 +147,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сбой транспорта наружу не выпускается: исключение чужой библиотеки несёт токен в адресе Bot API.
 Функция Отправить(Знач Токен, Знач Задание)
@@ -185,6 +189,8 @@
 	Возврат "";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОбработчикДоставкиПодписки")

@@ -64,6 +64,8 @@
 #КонецОбласти
 
 #Область Реестр
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Реестр(Знач Строки, Знач АдресРаздела)
 
@@ -152,9 +154,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПодтверждениеОтзыва
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отзыв доверия называет запись так, чтобы её нельзя было спутать с соседней: репозиторий,
 // конвейер и реф, у своей инсталляции - и издатель. Эха нет: запись заводится снова.
@@ -203,6 +209,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

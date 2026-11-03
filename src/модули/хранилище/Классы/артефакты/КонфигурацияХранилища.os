@@ -76,6 +76,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Фабрика, собранная руками (тест, скрипт), живёт без стража - хранилище идёт как есть.
 Функция ПодСтражем(Знач Хранилище)
@@ -98,4 +100,6 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

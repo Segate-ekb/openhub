@@ -294,6 +294,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Каталог workflow-файлов GitHub Actions один и подкаталогов не допускает.
 Функция КаталогGitHub()
@@ -577,6 +579,8 @@
 	Возврат ОбразецДоверия;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("КороткаяФормаДоверия")

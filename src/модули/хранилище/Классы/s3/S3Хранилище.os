@@ -470,6 +470,8 @@
 КонецПроцедуры
 
 #Область ОтветПробы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Отвечает()
 	Возврат Вердикты.УспехСловами(Новый Структура("ОтказДоступа", Ложь));
@@ -494,9 +496,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область РеестрВыданныхКопий
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура ВзятьНаУчёт(Знач Путь)
 
@@ -530,9 +536,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ОбъёмПрефикса(Знач Префикс)
 
@@ -584,4 +594,6 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

@@ -44,6 +44,8 @@
 #КонецОбласти
 
 #Область Подтверждение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Удаление начинается, только когда человек своей рукой повторил имя пакета. Окно стоит на
 // странице всегда: открытым - по адресу или с отбитым эхом. Удача уводит со страницы пакета,
@@ -77,6 +79,8 @@
 	Возврат "удалить";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаОпаснойЗоныПакета")

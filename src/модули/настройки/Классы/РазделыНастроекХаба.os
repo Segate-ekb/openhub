@@ -30,6 +30,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Подходит(Знач Норм, Знач Правило)
 	Если Правило.Точно Тогда
@@ -78,6 +80,8 @@
 	Правила.Добавить(Новый ФиксированнаяСтруктура("Образец, Точно, Раздел", Ключ, Истина, Раздел));
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

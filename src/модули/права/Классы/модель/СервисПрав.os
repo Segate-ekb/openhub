@@ -762,6 +762,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // owner → мейнтейнер, а не владелец: старый пресет никогда не давал удаления пула.
 Функция НормализоватьРоль(Знач Роль)
@@ -1044,6 +1046,8 @@
 	КонецЕсли;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

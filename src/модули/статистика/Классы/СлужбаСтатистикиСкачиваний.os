@@ -13,8 +13,10 @@
 Перем ПаузаДо;             // Дата (UTC), Неопределено - после сорвавшегося сброса порог молчит до неё
 Перем Разрез;              // ФиксированнаяСтруктура - снимок прочитанной части из БД, см. НовыйРазрез
 Перем Ошибки;              // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область КонтрактПодписчикаСобытий
 
@@ -302,6 +304,8 @@
 #КонецОбласти
 
 #Область РазрезИзБазы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Часть из базы у всех дверей одна и живёт неизменяемым снимком: дочитанное публикуется новым
 // снимком одним присваиванием, а разрез забывается со сменой поколения таблицы агрегатов в этом
@@ -472,9 +476,13 @@
 	Возврат Список;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СбросВБазу
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура УложитьНакопленное(Знач Сейчас)
 
@@ -559,6 +567,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

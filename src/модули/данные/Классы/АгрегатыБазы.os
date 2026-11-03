@@ -11,8 +11,10 @@
 Перем НазванныеОтказы;  // Соответствие: «таблица/агрегат/вид отказа» → Истина
 Перем ОписанияСущностей;  // Соответствие: имя таблицы → ОписаниеСущности
 Перем Замок;            // БлокировкаРесурса - желудь-одиночка живёт под потоками winow
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -196,6 +198,8 @@
 #КонецОбласти
 
 #Область ОбщийПрологАгрегата
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий пролог агрегатов: неверный вызов отвергается; Неопределено - отбору заведомо не отвечает ни одна строка.
 Функция СущностьЕслиЕстьЧтоСчитать(Знач Хранилище, Знач Опции, Знач ИмяПоляСуммы = "")
@@ -246,9 +250,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПутьБазы
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Бэкенд без SQL - штатная работа, а не сбой: вердикт пробы уходит в журнал информацией.
 Функция ПробаУдалась(Знач Хранилище)
@@ -310,9 +318,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЖурналОтказов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Несобранный хабом запрос и отказ базы называются разными словами: первый база не видела вовсе.
 Процедура НазватьОтказ(Знач Сущность, Знач ВидАгрегата, Знач Инфо)
@@ -338,9 +350,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ПутьПамяти
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пустые значения пропускаются, как их пропускает SUM в SQL.
 Функция СуммаВПамяти(Знач Хранилище, Знач Сущность, Знач ИмяПоля, Знач Опции)
@@ -401,9 +417,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ОбщееСостояниеЖелудя
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Под замком: желудь-одиночка живёт под потоками winow, а проба одна на процесс.
 Функция ВердиктПробыПодЗамком(Знач Хранилище)
@@ -460,6 +480,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

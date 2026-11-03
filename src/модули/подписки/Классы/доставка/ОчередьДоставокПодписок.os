@@ -9,8 +9,10 @@
 Перем РазмерОчереди;     // Число, Неопределено - кэш размера; Неопределено, пока не считан из базы
 Перем Числа;       // ПриведениеЧисел (основа)
 Перем JSON;        // ТекстJSON (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -169,6 +171,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Потолок спрашивается на каждой постановке: правка настройки действует без перезапуска.
 Функция МаксОчередь()
@@ -270,6 +274,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОчередьДоставокПодписок")

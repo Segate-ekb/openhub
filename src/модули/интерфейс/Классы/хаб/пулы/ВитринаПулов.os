@@ -83,6 +83,8 @@
 #КонецОбласти
 
 #Область ПулыХаба
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция СекцияПулов(Знач Страница, Знач Данные, Знач Адрес, Знач АдресСписка, Знач Отбор, Знач Состояние)
 
@@ -117,9 +119,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЛичныеПространства
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Личных пространств столько же, сколько учёток: развёрнутый список прятал бы рабочие пулы, поэтому
 // они собраны свёрнутой группой со счётчиком. Группа открыта, когда человек в ней искал или листал.
@@ -156,9 +162,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Порядок
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пулы хаба: основной первым, за ним по имени.
 Функция ОтобранныеПулыХаба(Знач Пулы, Знач Отбор)
@@ -198,9 +208,13 @@
 	Возврат Число;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Таблица
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // На узком экране - карточки с именем пула заглавием и ⚙ в углу. Владельца нет у системного
 // пула - прочерк таблицы.
@@ -317,9 +331,13 @@
 	Возврат Тексты.Текст("settings.hub.pools.empty");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Окна
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Окно записи, названное адресом. Пула нет или действие ему не положено - страница без окна.
 Функция ОткрытоеОкно(Знач Состояние, Знач Отбор, Знач АдресСписка)
@@ -373,9 +391,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция МожноСделатьОсновным(Знач Пул)
 	Возврат НЕ Пул.ЭтоДефолтный() И НЕ Пул.ЭтоЛичный()
@@ -440,6 +462,8 @@
 	Возврат ?(Значение = Неопределено, 0, Значение);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВитринаПулов")

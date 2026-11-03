@@ -268,6 +268,8 @@
 #КонецОбласти
 
 #Область Секции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значения раздела - одна форма и одна панель сохранения; где править нечего, формы нет:
 // слать ей нечего, и кнопка солгала бы.
@@ -343,6 +345,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

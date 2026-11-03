@@ -9,8 +9,10 @@
 Перем Дополнение;    // ДополнениеОписаний - README из репозитория, необязательно
 Перем Перечень;      // ПереченьИсточников (контракт) - перечни источников своих имён, необязательно
 Перем Ошибки;        // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -59,6 +61,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ложь - обеспечить не удалось: пул пропал, канал пуст либо артефакт недоступен; это ожидаемо.
 Функция ОписаниеОбеспечено(Знач Пакет, Знач Пул)
@@ -81,6 +85,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

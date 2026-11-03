@@ -269,6 +269,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Отказ формы окна заведения (участника, сопоставления) остаётся в этом окне на набранном.
 Функция ВОкне(Знач Отказ, Знач Форма)
@@ -290,6 +292,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультДомаГруппы")

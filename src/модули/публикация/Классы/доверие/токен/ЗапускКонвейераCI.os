@@ -79,6 +79,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тег - всё после «refs/tags/»; реф ветки тегом не бывает.
 Функция ТегИзРефа(Знач Реф)
@@ -125,6 +127,8 @@
 	Возврат Истина;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ЗапускКонвейераCI")

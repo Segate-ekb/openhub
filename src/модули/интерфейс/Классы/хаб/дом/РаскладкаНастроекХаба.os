@@ -80,6 +80,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Устойчивая сортировка по ярусу: равные ярусы сохраняют порядок, в котором пришли.
 Функция Упорядочить(Знач Карточки)
@@ -116,6 +118,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

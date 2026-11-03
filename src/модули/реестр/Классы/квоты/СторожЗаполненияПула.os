@@ -54,6 +54,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имя не «Сообщить»: так называется глобальная процедура платформы, и вызов ушёл бы в неё.
 Процедура ОпубликоватьРост(Знач Пул, Знач Занято, Знач КвотаБайт, Знач ПроцентДо, Знач ПроцентПосле)
@@ -80,6 +82,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СторожЗаполненияПула")

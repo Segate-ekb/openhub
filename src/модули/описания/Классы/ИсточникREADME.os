@@ -5,8 +5,10 @@
 
 Перем ХранилищеАртефактов;   // ХранилищеАртефактов
 Перем Ошибки;                // ТекстОшибки (основа) - причина сбоя строкой журнала
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -58,6 +60,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Прочитанное(Знач Текст)
 	Возврат Новый Структура("Разобран, Текст", Истина, Текст);
@@ -68,6 +72,8 @@
 	Возврат Новый Структура("Разобран, Текст", Ложь, "");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

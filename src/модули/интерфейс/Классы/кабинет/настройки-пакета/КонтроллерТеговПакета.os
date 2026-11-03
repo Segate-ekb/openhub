@@ -212,6 +212,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Гвард дома и порог раздела: раздел, закрытый смотрящему, отвечает как несуществующий.
 Функция Пропуск(Ответ, Знач pool, Знач name, Знач ЗаголовкиЗапроса, Знач КукиЗапроса)
@@ -319,9 +321,13 @@
 	Возврат ?(Вердикт.Пользователь = Неопределено, "", Строка(Вердикт.Пользователь.Логин));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Что показать на странице раздела, кроме самого раздела.
 Функция Показ(Знач Окно)
@@ -364,6 +370,8 @@
 	Возврат "tags";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

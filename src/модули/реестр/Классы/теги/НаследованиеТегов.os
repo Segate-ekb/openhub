@@ -149,6 +149,8 @@
 #КонецОбласти
 
 #Область Слияние
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Свои теги идут первыми в своём порядке, унаследованные - за ними в порядке пула. Основной
 // тег пула основной у пакета, пока у пакета нет своего основного, - по имени: своя копия
@@ -231,9 +233,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Галка выключена - пакет теги пула не наследует, хотя набор пула хранится.
 Функция ТегиПулаПакета(Знач ПакетИдентификатор)
@@ -249,6 +255,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

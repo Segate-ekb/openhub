@@ -5,8 +5,10 @@
 Перем Определитель;  // ОпределительСтраны (гео) - из какой страны пришёл запрос
 Перем Обезличивание; // ОбезличиваниеЖурнала (наблюдаемость) - адрес в журнале без хозяина
 Перем Ошибки;        // ТекстОшибки (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 Перем Отказов_;      // Число - сколько посетителей отбито за жизнь процесса
 Перем Обращений_;    // Число - сколько раз спрашивали страну
@@ -100,6 +102,8 @@
 #КонецОбласти
 
 #Область Решение
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Решение(Знач ИмяПровайдера, Знач Посетитель)
 
@@ -165,9 +169,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Первый отказ провайдера - предупреждение, следующие - отладка, раз в окно - сводка с числами.
 Функция Отбить(Знач ИмяПровайдера, Знач Посетитель, Знач Вердикт)
@@ -298,6 +306,8 @@
 		Закрыт, Строка(Код), Строка(Исход), Строка(Причина));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ГейтВходаПоСтране")

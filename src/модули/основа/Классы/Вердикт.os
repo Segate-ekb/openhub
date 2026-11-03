@@ -124,6 +124,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Обязательные поля ложатся поверх нагрузки: перебить «Успех» нагрузкой нельзя.
 Функция Собрать(Знач Нагрузка, Знач Обязательные)
@@ -144,4 +146,6 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

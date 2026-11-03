@@ -136,6 +136,8 @@
 #КонецОбласти
 
 #Область Ввод
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поля окна → доменный ввод. Сегмент «Свой» пресета - провайдер без пресета.
 Функция Ввод(Знач Форма)
@@ -218,9 +220,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Исход
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ИсходДомена(Знач Исход)
 
@@ -254,9 +260,13 @@
 	Возврат ?(ЗначениеЗаполнено(Код) И Код >= 400, Код, 400);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Свой адрес возврата судит то же правило, что домен при записи, - но до неё, чтобы отказ встал
 // у поля; пустое поле - адрес хаба, его не судят.
@@ -279,6 +289,8 @@
 	Возврат РазборФормы.Флажок(Форма, Имя, Поля.ЗначениеОтмечено());
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультПровайдеровВхода")

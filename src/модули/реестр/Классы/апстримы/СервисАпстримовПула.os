@@ -7,8 +7,10 @@
 Перем Allowlist;        // АллоулистИмён - маски имён у источника
 Перем Нумерация;        // ПорядокАпстримов - поиск по адресу и плотная нумерация
 Перем Обезличивание;    // ОбезличиваниеЖурнала (наблюдаемость) - адрес источника в строке вехи
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ЧтениеСписка
 
@@ -302,6 +304,8 @@
 #КонецОбласти
 
 #Область Журнал
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пул называется номером: правка списка знает только его. Сервис, собранный руками без лога,
 // вех не пишет.
@@ -344,9 +348,13 @@
 	Возврат ?(Пользователь = Неопределено, 0, Пользователь.Идентификатор);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Запрет висит на ТИПЕ пула, а не на настройке и не на праве: отключить его нечем.
 Процедура ПроверитьТипДопускаетАпстримы(Знач Пул)
@@ -394,6 +402,8 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

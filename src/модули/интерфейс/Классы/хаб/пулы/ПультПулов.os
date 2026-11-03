@@ -235,6 +235,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Вердикт выносит СервисПулов: третьего источника этого правила в хабе нет.
 Функция ПроблемаКвоты(Знач Вердикт)
@@ -255,6 +257,8 @@
 	Возврат СокрЛП(РазборФормы.Поле(Форма, Имя));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ПультПулов")

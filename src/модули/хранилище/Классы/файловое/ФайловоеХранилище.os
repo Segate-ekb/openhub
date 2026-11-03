@@ -438,6 +438,8 @@
 КонецПроцедуры
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // «Не пустило» у файлового бэкенда не бывает: без записи право на неё не спрашивается,
 // а отказ доступа приходит уже боевым сбоем.
@@ -565,4 +567,6 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти

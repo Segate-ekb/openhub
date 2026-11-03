@@ -82,6 +82,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Двух указателей мало: расти бывает обязана РАННЯЯ звезда («**x*y» против «x/ab/xcy»).
 Функция СовпадаетГлоб(Знач Токены, Знач Знаки)
@@ -189,6 +191,8 @@
 	Возврат СокрЛП(Строка(?(Значение = Неопределено, "", Значение)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("МаскаРефа")

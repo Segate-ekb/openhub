@@ -144,6 +144,8 @@
 #КонецОбласти
 
 #Область ШагТекста
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Текст уведомления, его предпросмотр и проба - последним шагом: открыт сам, когда окно вернулось
 // с итогом пробы или сообщением предпросмотра.
@@ -196,9 +198,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Состояние окна - только своё: отбитая форма другого окна в это не возвращается.
 Функция СвоёСостояние(Знач Параметры, Знач Вид, Знач Ключ)
@@ -245,6 +251,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ОкноПодписки")

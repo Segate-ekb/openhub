@@ -164,6 +164,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Срок проверяется здесь, а не только службой: отказ должен встать под полем срока.
 Функция ОтказыЗаявки(Знач Заявка)
@@ -227,6 +229,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

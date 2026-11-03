@@ -61,6 +61,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Тихая форма POST /logout с одной кнопкой «Выйти» - узлом в подвал единого меню. Несёт токен
 // сессии: дверь выхода без него сессию не гасит. Без сессии выходить не из чего - форма без
@@ -116,9 +118,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Справа от дорог гостю - вход; вошедший открывает свою учётку кнопкой единого меню.
 // Модель кнопки, а не узел: в панели меню кит растягивает её во всю ширину.
@@ -134,9 +140,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЕдиноеМеню
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Одно меню на все страницы: учётка, дела, настройки, дороги хаба и выход; гостю - только дороги.
 Функция ЕдиноеМеню(Знач Контекст)
@@ -307,9 +317,13 @@
 	Возврат ?(Рассмотрение = Неопределено, 0, Цел(Рассмотрение.СколькоЖдётРешения(Человек)));
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область КонтекстЗапроса
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Форма темы несёт адрес этой страницы: Referer наружу не уходит, и вернуть иначе некуда.
 Функция Адреса(Знач Контекст)
@@ -375,6 +389,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Верховный

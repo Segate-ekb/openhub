@@ -59,6 +59,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Пакеты всех пулов дерева одним разрезом, разложенные по пулам.
 Функция ПакетыПулов(Знач Пулы)
@@ -121,6 +123,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ВеткиДереваПолучателей")

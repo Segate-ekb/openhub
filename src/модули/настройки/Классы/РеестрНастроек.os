@@ -107,6 +107,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Норм(Знач Ключ)
 	Возврат Строки.Канон(Ключ);
@@ -138,6 +140,8 @@
 	Механизмы.Вставить(Норм(Ключ), Механизм);
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

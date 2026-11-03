@@ -78,6 +78,8 @@
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Негодная ссылка не показывает формы вовсе: заполнять её было бы напрасным трудом.
 Процедура ПоказатьФорму(Ответ, Знач Значение, Знач Ошибка, Знач Статус, Знач КукиЗапроса,
@@ -149,9 +151,13 @@
 	Возврат "повтор";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Нераспознанный код получает общий текст, а не текст соседней причины.
 Функция ТекстОтказа(Знач Причина, Знач Требования)
@@ -203,6 +209,8 @@
 	Возврат "ссылка-пароля";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")

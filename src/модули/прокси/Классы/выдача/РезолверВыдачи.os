@@ -13,8 +13,10 @@
 Перем Набор;                // ОбъединённыйНаборВерсий (прокси) - свои версии и версии источников
 Перем КэшАртефактов;        // КэшАртефактов (хранилище) - содержимое часто скачиваемых версий
 Перем Обезличивание;        // ОбезличиваниеЖурнала (наблюдаемость)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -188,6 +190,8 @@
 #КонецОбласти
 
 #Область РезолвФайла
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 Функция РазрешитьЕдинымПутём(Знач Пул, Знач ИмяКанала, Знач ИмяПакета, Знач ЗапросФайла)
 
 	Пакет = СервисПакетов.ПакетДляЧтения(Пул.Идентификатор, ИмяПакета);
@@ -448,9 +452,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СписокПакетов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Процедура СобратьИмена(Знач Пул, Знач Аккумулятор)
 
@@ -497,6 +505,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

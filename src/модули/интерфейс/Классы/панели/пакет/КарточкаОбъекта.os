@@ -54,6 +54,8 @@
 КонецФункции
 
 #Область СоставКарточки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Шапка карточки: имя пакета, его признаки и действия над ним - в одну строку.
 Функция ШапкаКарточки(Знач Модель, Знач Имя)
@@ -179,6 +181,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции

@@ -8,8 +8,10 @@
 Перем Ошибки;            // ТекстОшибки (основа)
 Перем Замок;             // БлокировкаРесурса - желудь-одиночка живёт под потоками winow
 Перем БазаОтвечала;      // Булево, Неопределено - вердикт прошлой пробы; Неопределено - не пробовали
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ПубличныйИнтерфейс
 
@@ -59,6 +61,8 @@
 #КонецОбласти
 
 #Область Замер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Снимок читается до запроса и по нему решается, делать ли запрос вообще.
 Функция СнимокПула()
@@ -102,9 +106,13 @@
 	Настройки.ПрочитатьСтрокуИзБазы();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ФормаОтвета
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция РазделБазы(Знач Снимок, Знач Отказ)
 
@@ -146,9 +154,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЖурналСмены
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // В журнал - смена вердикта, а не каждая проба: пробу зовут раз в несколько секунд.
 Процедура ЗаписатьСменуВердикта(Знач Отказ, Знач ОтказЖурналу)
@@ -184,6 +196,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

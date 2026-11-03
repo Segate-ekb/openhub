@@ -38,6 +38,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Страница собирается слоем представления. Не собралась - наружу уходит фраза текстом.
 Процедура ОтдатьСтраницу(Ответ, Знач Запрос)
@@ -89,6 +91,8 @@
 	Возврат "not_found";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 Процедура ПриСозданииОбъекта(Знач ОтветыМашиннойДвери, Знач ДверьЗапроса, Знач ЖелудиХаба,

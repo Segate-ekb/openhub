@@ -4,8 +4,10 @@
 Перем Клиент;  // КлиентHTTP (сеть)
 Перем Страж;   // СтражИздателейCI
 Перем ЧтениеЗаголовков;   // ЗаголовкиHTTP (основа)
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 Перем Таймауты;   // ТаймаутыHTTP (сеть)
 
 // Выполняет GET по адресу JWKS или discovery. Контракт транспорта jwt-verify.
@@ -46,6 +48,8 @@
 КонецФункции
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТаймаутСек()
 	Возврат Таймауты.ТаймаутСлужебногоЗапроса();
@@ -84,6 +88,8 @@
 	Возврат ПолучитьСтрокуИзДвоичныхДанных(Данные, "UTF-8");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("ТранспортJWKSCI")

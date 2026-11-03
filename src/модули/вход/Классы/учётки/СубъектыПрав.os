@@ -93,6 +93,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Ключ субъекта в соответствии имён; наружу не выдаётся - снимок читает только Имя(...).
 Функция Ключ(Знач ТипСубъекта, Знач СубъектИд)
@@ -141,6 +143,8 @@
 	Возврат Формат(?(Значение = Неопределено, 0, Значение), "ЧН=0; ЧГ=0");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

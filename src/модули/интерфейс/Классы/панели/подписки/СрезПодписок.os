@@ -133,6 +133,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция Пустой()
 	Возврат Новый Структура("Поправки, Исключено, ИсключённыеПакеты, Пулы, Пакеты, ТегиОбъектов, Сводки",
@@ -183,6 +185,8 @@
 	КонецЕсли;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СрезПодписок")

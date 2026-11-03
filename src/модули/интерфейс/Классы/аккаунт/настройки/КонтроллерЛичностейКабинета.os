@@ -193,6 +193,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ЛичностиСмотрящего(Знач Вердикт)
 	Возврат СервисЛичностей.ЛичностиПользователя(Вердикт.Пользователь.Идентификатор);
@@ -214,6 +216,8 @@
 	Возврат Дом.АдресРаздела("oidc");
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/me/settings")

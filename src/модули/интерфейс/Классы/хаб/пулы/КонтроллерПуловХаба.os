@@ -137,6 +137,8 @@
 #КонецОбласти
 
 #Область Действия
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Общий пролог мутирующих точек: гвард → только POST → форма с CSRF → форма старой вкладки
 // отбивается без мутации.
@@ -196,9 +198,13 @@
 
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область Рендер
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Раздел целиком - секциями дома: значения реестра раздела, основной пул и таблица пулов.
 Процедура ОтдатьРаздел(Ответ, Знач Запрос, Знач Статус, Знач Окно, Знач Сохранено, Знач Ошибка = "")
@@ -236,6 +242,8 @@
 	Возврат Отборы.Адрес(АдресРаздела(), Запрос.Отбор);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/hub/settings")

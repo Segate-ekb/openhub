@@ -145,6 +145,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Значение колонки КвотаМб «без ограничения».
 Функция БезОграничения()
@@ -177,6 +179,8 @@
 	Возврат Новый Структура("Квота", Квота);
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("КвотаПула")

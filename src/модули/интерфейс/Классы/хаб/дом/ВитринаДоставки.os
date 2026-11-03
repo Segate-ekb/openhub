@@ -87,6 +87,8 @@
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Поле правимой настройки, а у занятой конфигурацией - её значение с объяснением вместо ввода.
 Функция Поле(Знач Карточка, Знач Отбитая)
@@ -129,6 +131,8 @@
 	Возврат "oshub.webhooks.delivery_enabled";
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

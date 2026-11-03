@@ -57,6 +57,8 @@
 #КонецОбласти
 
 #Область Представления
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция НетВерсий()
 
@@ -98,9 +100,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ТаблицаКаналов
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 Функция ТаблицаКаналов(Знач Пул, Знач Пакет, Знач Каналы, Знач Узел, Знач Происхождение)
 
@@ -214,9 +220,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ТаблицаВерсий
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Скачивания стоят только в строке версии: канал меняет состав, и сумма по нему ничего не значит.
 Функция ТаблицаВерсий(Знач Пул, Знач Пакет, Знач СписокВерсий, Знач Узел, Знач Происхождение)
@@ -342,9 +352,13 @@
 	КонецПопытки;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область ЭлементыВкладки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Номер и ключ одной строкой; номер - название строки и не переносится.
 Функция НомерСКлючом(Знач Версия, Знач Происхождение)
@@ -379,9 +393,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Канал показывает версию, которую по нему отдаёт выдача: каналы собираются из того же
 // круга версий, из которого выбирает хаб.
@@ -429,6 +447,8 @@
 	Возврат 12;
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Желудь

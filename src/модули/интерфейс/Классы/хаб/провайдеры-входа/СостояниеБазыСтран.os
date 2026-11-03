@@ -103,6 +103,8 @@
 #КонецОбласти
 
 #Область Строки
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Что хаб различает сейчас: страны индекса либо «индекс пуст».
 Функция Индекс(Знач Снимок)
@@ -131,9 +133,13 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Экран не падает из-за геобазы: Неопределено - состояние неизвестно, правило закрывает всех.
 Функция Снимок()
@@ -161,6 +167,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Прозвище("СостояниеБазыСтран")

@@ -17,8 +17,10 @@
 Перем Совместимость;    // СовместимостьСДвижком (реестр) - годна ли версия OneScript из запроса
 Перем Допуск;           // ДопускAPI (api) - принципал запроса для выбора по пулам
 Перем ВыборПоПулам;     // ВыборПоПулам (api) - версия по всем доступным пулам
+// BSLLS:MissingVariablesDescription-off
 &Лог
 Перем Лог;
+// BSLLS:MissingVariablesDescription-on
 
 #Область ТочкиМаршрута
 
@@ -358,6 +360,8 @@
 #КонецОбласти
 
 #Область ОбщаяЛогикаОтдачи
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Имена пакетов пула, по одному на строку. Для proxy и group имена собирает резолвер.
 Процедура ВыдатьСписок(Ответ, Знач ИмяПула, Знач МетодЗапроса, Знач ЗаголовкиЗапроса,
@@ -669,9 +673,13 @@
 	КонецПопытки;
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 #Область СлужебныеПроцедурыИФункции
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 
 // Сессионную куку winow уже положил - её место занимает пустая коллекция.
 Процедура БезСессионнойКуки(Ответ)
@@ -858,6 +866,8 @@
 	Возврат ПолучитьДвоичныеДанныеИзСтроки(Строка).Размер();
 КонецФункции
 
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 #КонецОбласти
 
 &Контроллер("/")
