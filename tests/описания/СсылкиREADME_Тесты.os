@@ -19,7 +19,8 @@
 	РеестрФикстур.Подключить("КлассыСлоя");
 	Поиск = Новый КлассыСлоя();
 	КаталогМодулей = КаталогиПроекта.Модули();
-	Для Каждого Имя Из СтрРазделить("КонтрольСимволов,РазборАдреса,РендерерREADME,АдресаРепозитория,СсылкиREADME", ",") Цикл
+	Для Каждого Имя Из СтрРазделить("КонтрольСимволов,РазборАдреса,РендерерREADME,АдресаРепозитория,СсылкиREADME",
+		",") Цикл
 		Поиск.Подключить(КаталогМодулей, Имя);
 	КонецЦикла;
 
@@ -84,11 +85,14 @@
 Процедура СхемаСвоегоДоменаСохраняется() Экспорт
 
 	ПроверитьРазбор("http://gitea.local:3000/acme/lib", "gitea", "http://gitea.local:3000/acme/lib", "HEAD", "branch", "");
-	ПроверитьРазбор("http://gitlab.example.ru/team/lib", "gitlab", "http://gitlab.example.ru/team/lib", "HEAD", "branch", "");
-	ПроверитьРазбор("http://gitlab.example.ru:80/team/lib", "gitlab", "http://gitlab.example.ru/team/lib", "HEAD", "branch", "");
+	ПроверитьРазбор("http://gitlab.example.ru/team/lib", "gitlab", "http://gitlab.example.ru/team/lib", "HEAD", "branch",
+		"");
+	ПроверитьРазбор("http://gitlab.example.ru:80/team/lib", "gitlab", "http://gitlab.example.ru/team/lib", "HEAD",
+		"branch", "");
 	ПроверитьРазбор("http://codeberg.org/acme/lib", "gitea", "https://codeberg.org/acme/lib", "HEAD", "branch", "");
 	ПроверитьРазбор("http://gitlab.com/team/lib", "gitlab", "https://gitlab.com/team/lib", "HEAD", "branch", "");
-	ПроверитьРазбор("ssh://git@gitea.local:2222/acme/lib.git", "gitea", "https://gitea.local/acme/lib", "HEAD", "branch", "");
+	ПроверитьРазбор("ssh://git@gitea.local:2222/acme/lib.git", "gitea", "https://gitea.local/acme/lib", "HEAD", "branch",
+		"");
 
 	Ожидаем.Что(Картинка(Разрешённый("![к](a.png)", "http://gitea.local:3000/acme/lib"), "к"))
 		.Равно("http://gitea.local:3000/acme/lib/raw/branch/HEAD/a.png");
