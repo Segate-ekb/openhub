@@ -804,6 +804,12 @@
 
 	Словарь.Добавить("settings.key.oshub-jobs-enabled.label", "Фоновые задачи");
 	Словарь.Добавить("settings.key.oshub-jobs-enabled.hint", "Планировщик обслуживания хаба.");
+	Словарь.Добавить("settings.key.oshub-start-ready-wait-sec.label", "Ожидание готовности");
+	Словарь.Добавить("settings.key.oshub-start-ready-wait-sec.hint",
+		"Сколько секунд задачи после старта ждут готовности хаба; не дождались - не исполняются.");
+	Словарь.Добавить("settings.key.oshub-start-release-bean-metadata.label", "Освобождение метаданных");
+	Словарь.Добавить("settings.key.oshub-start-release-bean-metadata.hint",
+		"После готовности хаб отпускает таблицы рефлексии контейнера, и память процесса падает.");
 	Словарь.Добавить("settings.key.otel-enabled.label", "Телеметрия");
 	Словарь.Добавить("settings.key.otel-enabled.hint", "Экспорт метрик и трасс OpenTelemetry.");
 	Словарь.Добавить("settings.key.otel-exporter-otlp-endpoint.label", "Адрес коллектора");
