@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура пакета для тестов web-ui: собирает валидный .ospx (opm-metadata.xml + content.zip
 // с README.md) для сквозной проверки пути README — артефакт, извлечение, рендер, санитизация.
 

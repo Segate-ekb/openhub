@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура ЗапускВФоне: обработчик запоминается и исполняется по команде набора — чтобы смотреть
 // на состояние, пока работа не сделана.
 
@@ -71,7 +77,7 @@
 // Сколько работ ждёт своей очереди.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Отложено() Экспорт
 	Возврат Отложенные.Количество();

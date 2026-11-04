@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк-подписчик доменных событий: считает события и запоминает последнее; по флагу Падать
 // бросает исключение — для проверки изоляции подписчиков в издателе.
 
@@ -28,7 +34,7 @@
 // Число принятых событий.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Количество() Экспорт
 	Возврат ПолученоСобытий;

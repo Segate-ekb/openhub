@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса разделов «Участники» и «Связка с OIDC» дома «Группа» в настоящем маршрутизаторе winow:
 // литералы members и oidc перекрывают шаблон раздела дома на том же уровне, поэтому куда уходит
 // каждый адрес — стережёт таблица маршрутов, а не вызов метода контроллера.

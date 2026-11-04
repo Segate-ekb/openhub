@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ГвардаДоступаКПулу для маршрутов выдачи: вердикт чтения пула задаёт тест.
 
 Перем Разрешено_;
@@ -13,10 +19,6 @@
 //  Структура - Разрешено (Булево).
 //
 Функция Проверить(Знач ЗаголовкиЗапроса, Знач КукиЗапроса, Знач ИмяПула) Экспорт
-
-	ЗаголовкиЗапроса = ЗаголовкиЗапроса;
-	КукиЗапроса = КукиЗапроса;
-	ИмяПула = ИмяПула;
 
 	Возврат Новый Структура("Разрешено", Разрешено_);
 

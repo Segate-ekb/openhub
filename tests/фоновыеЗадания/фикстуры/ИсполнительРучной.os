@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Ручной исполнитель os-scheduler: возвращает незавершённый дескриптор — тест завершает его сам.
 
 Перем Выполнения_;
@@ -16,6 +22,7 @@
 	Попытка
 		Обработчик.Исполнить();
 	Исключение
+		// сбой обработчика ручной исполнитель не пробрасывает, как и фоновый
 	КонецПопытки;
 	Выполнение = Новый ВыполнениеРучное();
 	Выполнения_.Добавить(Выполнение);
@@ -25,7 +32,7 @@
 // Число вызовов Запустить.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция ВызововЗапуска() Экспорт
 	Возврат ВызововЗапуска_;

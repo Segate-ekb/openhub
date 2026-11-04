@@ -1,5 +1,6 @@
 // Тело заведения и правки подписки; поля вида доставки называет справочник подписок.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("kind")
 &ОдинИз("вебхук", "telegram")
 Перем Вид;
@@ -36,3 +37,4 @@
 
 &Сериализуемое("enabled")
 Перем Включена;
+// BSLLS:MissingVariablesDescription-on

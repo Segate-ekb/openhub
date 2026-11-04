@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Каркас формы внешнего адреса: первым называется один и тот же вопрос, в какой бы двери хаба
 // адрес ни проверялся.
 
@@ -114,7 +120,7 @@
 Процедура НаборСхемЧитаетсяБезУчётаРегистраИПробелов() Экспорт
 
 	Ожидаем.Что(Форма.Разобрать("HTTP://хаб.example", " http , https ").Код,
-		"схема адреса опускается в нижний регистр, набор — тоже").Равно(Коды.Ок);
+		"схема адреса опускается в нижний регистр, набор - тоже").Равно(Коды.Ок);
 
 КонецПроцедуры
 

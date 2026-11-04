@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Смена темы с экрана входа и регистрации возвращает на тот же экран с тем же возвратом:
 // хаб отдаёт наружу no-referrer, и путь возврата несёт сама форма темы.
 
@@ -49,7 +55,7 @@
 
 	Ожидаем.Что(Форма.ПутьВозврата(Страница), "вход с тем же возвратом")
 		.Равно(Новый ВозвратПослеВхода().АдресВхода("/pools/corp?page=2"));
-	Ожидаем.Что(Форма.ПутьВозврата(Вход("")), "вход без возврата — просто вход")
+	Ожидаем.Что(Форма.ПутьВозврата(Вход("")), "вход без возврата - просто вход")
 		.Равно(Новый ВозвратПослеВхода().ПутьВхода());
 
 КонецПроцедуры

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: хранилище происшествий, у которого падает любое обращение. Так ведёт себя база,
 // упавшая ровно в тот момент, когда хаб собрался объяснить неудачу.
 

@@ -1,5 +1,6 @@
 // Группа пользователей.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -19,3 +20,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Создана;
+// BSLLS:MissingVariablesDescription-on

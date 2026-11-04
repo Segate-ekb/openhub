@@ -1,5 +1,6 @@
 // Карточка пула в ответах API.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -36,3 +37,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Создан;
+// BSLLS:MissingVariablesDescription-on

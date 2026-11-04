@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Смоук матрицы бэкендов entity: один сквозной сценарий (авто-DDL + CRUD через репозитории) на
 // InMemory, JSON, SQLite (нужна нативная SQLite.Interop) и PostgreSQL (нужен OSHUB_TEST_PG_DSN).
 
@@ -116,7 +122,7 @@
 	Тег = ХранилищеТегов.СоздатьЭлемент();
 	Тег.ПакетИдентификатор = Пакет.Идентификатор;
 	Тег.Имя = "latest";
-	Тег.Обновлён = ТекущаяУниверсальнаяДата();
+	Тег.Обновлен = ТекущаяУниверсальнаяДата();
 	Тег.Сохранить();
 
 	НайденныйПул = ХранилищеПулов.ПолучитьОдноПоИмяРавно("смок-" + Суффикс);

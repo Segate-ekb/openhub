@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Стенд подписок на события хаба, пула и пакета: строкой в хранилище либо службой СервисПодписок;
 // автор — параметр: подписку уровня хаба без автора-админа хаб не доставляет.
 
@@ -42,7 +48,7 @@
 	Запись.Активен = Активен;
 	Запись.СозданКем = ПомощникиСтендов.Идентификатор(Автор);
 	Запись.Создан = ТекущаяУниверсальнаяДата();
-	Запись.Обновлён = Запись.Создан;
+	Запись.Обновлен = Запись.Создан;
 	Запись.Сохранить();
 
 	Возврат Запись;

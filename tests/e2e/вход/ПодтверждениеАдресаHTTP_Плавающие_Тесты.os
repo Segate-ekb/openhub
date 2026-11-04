@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адрес учётки в форме профиля кабинета и кнопка повтора письма на настоящем хабе без почты.
 // Набор отдельный: под нагрузкой форма профиля отвечает 400 на запись адреса.
 

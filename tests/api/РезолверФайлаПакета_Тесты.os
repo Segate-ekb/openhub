@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты разбора запроса артефакта (контракт opm): «{name}.ospx» и «{name}-{спец}.ospx»,
 // плюс параметр spec, который старший над версионным слотом имени.
 
@@ -122,7 +128,7 @@
 	Разбор = Резолвер.РазобратьЗапросФайла("winow", "winow.ospx", "^1.2");
 
 	Ожидаем.Что(Разбор).Существует();
-	Ожидаем.Что(Разбор.БезСпецификации, "спецификация названа — запрос уже не безверсионный").ЭтоЛожь();
+	Ожидаем.Что(Разбор.БезСпецификации, "спецификация названа - запрос уже не безверсионный").ЭтоЛожь();
 	Ожидаем.Что(Разбор.Спецификация).Равно("^1.2");
 
 КонецПроцедуры

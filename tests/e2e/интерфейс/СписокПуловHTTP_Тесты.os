@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Список пулов /pools на живом хабе глазами гостя, участника приватных пулов и постороннего;
 // засев кабинета: public — публичный, owned и secret — приватные пулы owner1.
 

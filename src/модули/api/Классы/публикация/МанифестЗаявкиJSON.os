@@ -1,5 +1,6 @@
 // Что пакет из заявки сказал о себе в packagedef.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("description")
 &Заполнено
 &Тип("Строка")
@@ -26,3 +27,4 @@
 &ДляКаждого("Значение")
 &Тип("ЗависимостьЗаявкиJSON")
 Перем Зависимости;
+// BSLLS:MissingVariablesDescription-on

@@ -1,5 +1,6 @@
 // Прошлая неудача источника: причина и когда.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("reason")
 &Заполнено
 &Тип("Строка")
@@ -9,3 +10,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Когда;
+// BSLLS:MissingVariablesDescription-on

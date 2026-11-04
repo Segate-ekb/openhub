@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // След картинок оформления в журнале аудита — кто, что и чем заменил — на настоящем хранилище
 // в памяти; заглушки у издателя событий и резолвера настроек.
 

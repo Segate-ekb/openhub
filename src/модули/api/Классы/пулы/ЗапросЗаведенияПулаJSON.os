@@ -1,5 +1,6 @@
 // Тело заведения пула.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 Перем Имя;
@@ -14,3 +15,4 @@
 
 &Сериализуемое("quota_mb")
 Перем КвотаМб;
+// BSLLS:MissingVariablesDescription-on

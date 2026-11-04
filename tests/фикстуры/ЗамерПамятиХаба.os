@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Память процесса поднятого хаба по ps: RSS сейчас и пик по ходу передачи — опросом без пауз
 // в отдельном sh до файла-стопа. ps есть и на macOS, и на Linux раннера.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Живой стенд страны посетителя: пробная база стран для хаба, провайдер входа и правило
 // «закрыт в странах», заведённые формами администратора.
 
@@ -76,7 +82,7 @@
 //  HTML - Строка - разметка страницы.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция ЕстьАтрибуция(Знач HTML) Экспорт
 	Возврат СтрНайти(HTML, "IP Geolocation by DB-IP") > 0

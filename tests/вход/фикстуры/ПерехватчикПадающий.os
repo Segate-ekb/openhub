@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка перехватчика аутентификации, у которого определение состояния токена падает:
 // так выглядит недоступное хранилище токенов для того, кто спрашивает о токене.
 
@@ -12,7 +18,7 @@
 // Возвращаемое значение:
 //  Строка - не возвращается никогда.
 //
-Функция ПроблемаТокена(Знач ЗаголовкиЗапроса, Знач Момент = Неопределено) Экспорт // BSLLS:UnusedParameters-off
+Функция ПроблемаТокена(Знач ЗаголовкиЗапроса, Знач Момент = Неопределено) Экспорт
 	ВызватьИсключение Причина;
 КонецФункции
 

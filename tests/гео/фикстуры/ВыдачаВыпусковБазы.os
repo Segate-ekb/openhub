@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура ТранспортHTTP для обновления базы стран: на каждый адрес свой ответ с двоичным телом
 // (выпуск приезжает gzip-ом).
 
@@ -31,7 +37,7 @@
 // Адреса всех запросов по порядку.
 //
 // Возвращаемое значение:
-//  Массив из Строка.
+//  Массив из Строка
 //
 Функция Спрошенное() Экспорт
 	Возврат Спрошено;
@@ -40,7 +46,7 @@
 // Сколько раз транспорт спрашивали вообще.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция ВсегоЗапросов() Экспорт
 	Возврат Спрошено.Количество();

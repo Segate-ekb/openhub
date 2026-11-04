@@ -1,5 +1,6 @@
 // Тело заведения апстрима и его снятия по адресу.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("url")
 &Заполнено
 Перем Адрес;
@@ -15,3 +16,4 @@
 
 &Сериализуемое("token_remove")
 Перем СнятьТокен;
+// BSLLS:MissingVariablesDescription-on

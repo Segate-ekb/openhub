@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Управляемые часы для тестов планировщика: контракт os-scheduler (Сейчас() -> Дата),
 // момент двигает тест. Библиотека своих часов наружу не отдаёт — двойник живёт здесь.
 
@@ -12,7 +18,7 @@
 // Текущий момент управляемых часов.
 //
 // Возвращаемое значение:
-//  Дата.
+//  Дата
 //
 Функция Сейчас() Экспорт
 	Возврат Момент_;

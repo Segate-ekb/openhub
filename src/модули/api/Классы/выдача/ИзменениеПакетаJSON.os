@@ -1,5 +1,6 @@
 // Изменённая версия пакета в срезе.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("package")
 &Заполнено
 &Тип("Строка")
@@ -9,3 +10,4 @@
 &Заполнено
 &Тип("ВерсияПакетаJSON")
 Перем Версия;
+// BSLLS:MissingVariablesDescription-on

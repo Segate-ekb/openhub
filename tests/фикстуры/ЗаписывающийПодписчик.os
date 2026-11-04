@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: подписчик доменных событий, складывающий всё пришедшее — тест утверждает,
 // какое событие опубликовано и с какой полезной нагрузкой.
 
@@ -37,7 +43,7 @@
 //  Тип - Строка - тип события; пусто — считать все (необязательный, по умолчанию "").
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Количество(Знач Тип = "") Экспорт
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Подставной SMTP-сервер для живых стендов: свой порт до старта хаба, текст письма тесту.
 // AUTH не понимает — стенд с OSHUB_MAIL_SMTP_USER об неё сломается.
 
@@ -315,8 +321,7 @@
 
 	Для Позиция = 1 По СтрДлина(Текст) Цикл
 		Символ = Сред(Текст, Позиция, 1);
-		Если Символ = " " ИЛИ Символ = Символы.ПС ИЛИ Символ = Символы.ВК
-			ИЛИ Символ = Символы.Таб Тогда
+		Если СтрНайти(" " + Символы.ПС + Символы.ВК + Символы.Таб, Символ) > 0 Тогда
 			Возврат Лев(Текст, Позиция - 1);
 		КонецЕсли;
 	КонецЦикла;

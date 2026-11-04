@@ -1,5 +1,6 @@
 // Ключ доступа, выданный устройству после подтверждения входа.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("access_token")
 &Заполнено
 &Тип("Строка")
@@ -21,3 +22,4 @@
 &Заполнено
 &Тип("Число")
 Перем ИдКлюча;
+// BSLLS:MissingVariablesDescription-on

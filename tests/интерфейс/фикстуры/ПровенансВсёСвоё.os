@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк СервисаПроисхождения: всё опубликовано в этом хабе, плашки апстрима на карточках нет.
 
 // Есть ли у пакета собственные версии; фейк всегда отвечает «да».
@@ -9,7 +15,6 @@
 //  Булево - всегда Истина.
 //
 Функция ЕстьСобственныеВерсии(Знач ПакетИдентификатор) Экспорт
-	ПакетИдентификатор = ПакетИдентификатор;
 	Возврат Истина;
 КонецФункции
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка обработчика запросов winow: отдаёт заранее собранный ответ либо падает.
 
 Перем Ответ Экспорт;
@@ -11,7 +17,7 @@
 // Возвращаемое значение:
 //  Произвольный - заданный конструктором ответ.
 //
-Функция СформироватьОтвет(Запрос) Экспорт // BSLLS:UnusedParameters-off
+Функция СформироватьОтвет(Запрос) Экспорт
 
 	Если ЗначениеЗаполнено(Сбой_) Тогда
 		ВызватьИсключение Сбой_;

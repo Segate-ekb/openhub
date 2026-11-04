@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Регистрация фикстур в системе типов процесса: файл ищется по имени во всех каталогах
 // «фикстуры» дерева тестов — общем и модульных, — повторная регистрация молчит.
 
@@ -106,7 +112,6 @@
 Функция ТипЗарегистрирован(Знач Имя)
 	Попытка
 		Проба = Тип(Имя);
-		Проба = Проба;
 		Возврат Истина;
 	Исключение
 		Возврат Ложь;

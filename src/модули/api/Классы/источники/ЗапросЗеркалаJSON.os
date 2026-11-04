@@ -1,5 +1,6 @@
 // Тело заведения зеркала.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("url")
 &Заполнено
 Перем Адрес;
@@ -15,3 +16,4 @@
 
 &Сериализуемое("migrate")
 Перем Перенос;
+// BSLLS:MissingVariablesDescription-on

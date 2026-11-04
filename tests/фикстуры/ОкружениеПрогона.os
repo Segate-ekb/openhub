@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Окружение процесса набора, каким оно было до фикстур: снято один раз при загрузке библиотеки фикстур.
 
 Перем Снимок; // Соответствие: имя переменной → значение на загрузке библиотеки

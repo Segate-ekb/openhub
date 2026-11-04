@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилища прав на базе в памяти: гранты, сопоставления и связки групп OIDC, провайдеры входа.
 // Деривованные отборы обязаны отсеять лежащие в таблице чужие строки.
 
@@ -327,7 +333,7 @@
 	Запись.ВидПротокола = "oidc";
 	Запись.ИдентификаторКлиента = "cid-" + Имя;
 	Запись.ИмяКлеймаГрупп = "groups-" + Имя;
-	Запись.Включён = Истина;
+	Запись.Включен = Истина;
 	Хранилище.Записать(Запись, "root", ТекущаяУниверсальнаяДата());
 
 КонецПроцедуры

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка словаря текстов: позволяет положить под ключом пустое значение.
 
 Перем Тексты;
@@ -27,7 +33,7 @@
 // Все ключи словаря.
 //
 // Возвращаемое значение:
-//  Массив из Строка.
+//  Массив из Строка
 //
 Функция Ключи() Экспорт
 	Результат = Новый Массив();

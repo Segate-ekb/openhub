@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк контракта ОпознаниеGitHub для доставки: имена по логину задаёт тест, «GitHub не ответил»
 // включается флагом; считает вопросы об имени.
 
@@ -23,7 +29,7 @@
 // Сколько раз фейк спросили об имени.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Вопросов() Экспорт
 	Возврат Вопросов_;

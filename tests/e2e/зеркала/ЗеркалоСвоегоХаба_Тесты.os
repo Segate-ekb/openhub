@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Выбор протокола живьём: зеркало заводится одним адресом выдачи пула того же хаба, без указания
 // протокола, и привозит в пул назначения все версии источника.
 

@@ -1,5 +1,6 @@
 // Поле настройки вида доставки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -14,3 +15,4 @@
 &Заполнено
 &Тип("Булево")
 Перем Секрет;
+// BSLLS:MissingVariablesDescription-on

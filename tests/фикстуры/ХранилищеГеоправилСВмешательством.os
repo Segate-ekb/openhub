@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище геоправил, которое один раз пишет посреди чужого чтения: гонка «прочитал до записи,
 // опубликовал после» без настоящих потоков.
 
@@ -77,7 +83,7 @@
 // Сколько раз читали таблицу — так видно, ходил ли владелец в базу повторно.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Чтений() Экспорт
 	Возврат Чтений;

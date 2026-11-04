@@ -1,5 +1,6 @@
 // Заявка на публикацию во входящих пула.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("id")
 &Заполнено
 &Тип("Число")
@@ -64,3 +65,4 @@
 &Сериализуемое("manifest")
 &Тип("МанифестЗаявкиJSON")
 Перем Манифест;
+// BSLLS:MissingVariablesDescription-on

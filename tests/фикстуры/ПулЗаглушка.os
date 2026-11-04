@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка сущности «Пул» для тестов, которым не нужен контейнер с БД.
 // АпстримыДопустимы намеренно повторяет правило сущности.
 
@@ -21,7 +27,7 @@
 // Дефолтный ли это пул хаба.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция ЭтоДефолтный() Экспорт
 	Возврат НРег(СокрЛП(Строка(Тип))) = "default";

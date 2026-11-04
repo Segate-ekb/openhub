@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Точка входа фейкового OTLP-коллектора: winow с единственным контроллером-приёмником.
 // Порт и путь дампов приходят окружением FAKE_OTLP_*.
 

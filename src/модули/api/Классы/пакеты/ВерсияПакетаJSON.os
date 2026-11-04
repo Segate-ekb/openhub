@@ -1,5 +1,6 @@
 // Версия пакета: файл, разбор номера, метки и скачивания.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("version")
 &Заполнено
 &Тип("Строка")
@@ -51,3 +52,4 @@
 &Заполнено
 &Тип("Число")
 Перем Скачивания;
+// BSLLS:MissingVariablesDescription-on

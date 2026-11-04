@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Отметка живости, которая только считает шаги: ею меряется, отмечается ли перечисление
 // порции внутри цикла.
 
@@ -17,7 +23,7 @@
 // Сколько раз перечисление отметилось.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Шагов() Экспорт
 	Возврат Шагов_;
@@ -26,7 +32,7 @@
 // Имена, на которых перечисление отмечалось.
 //
 // Возвращаемое значение:
-//  Массив из Строка.
+//  Массив из Строка
 //
 Функция Имена() Экспорт
 	Возврат Имена_;

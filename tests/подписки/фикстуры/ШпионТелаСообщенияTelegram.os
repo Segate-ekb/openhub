@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Шпион ТелоСообщенияTelegram для настоящего транспорта: запоминает, что транспорт отдал
 // сборщику тела, собирает тело настоящим сборщиком и обрывает отправку до сети.
 

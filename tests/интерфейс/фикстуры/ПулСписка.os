@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пул для списка пулов: имя, тип, видимость и признаки основного и личного пространства —
 // то, по чему список пулов называет пул словами.
 
@@ -9,7 +15,7 @@
 // Основной ли это пул хаба.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция ЭтоДефолтный() Экспорт
 	Возврат Тип = "default";
@@ -18,7 +24,7 @@
 // Личное ли это пространство пользователя.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция ЭтоЛичный() Экспорт
 	Возврат Тип = "user";

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковая запись источника пула: колонки сущности «АпстримПула», Сохранить() и Удалить()
 // поверх фейкового хранилища.
 
@@ -10,7 +16,7 @@
 Перем ТокенДоступа Экспорт;
 Перем ВремяЖизниСек Экспорт;
 Перем СписокРазрешенийJSON Экспорт;
-Перем Включён Экспорт;
+Перем Включен Экспорт;
 Перем ПоследняяСинхронизация Экспорт;
 
 // Контракт autumn-data: сохраняет запись в фейковом хранилище.
@@ -29,5 +35,5 @@
 	Порядок = 0;
 	ТокенДоступа = "";
 	СписокРазрешенийJSON = "";
-	Включён = Ложь;
+	Включен = Ложь;
 КонецПроцедуры

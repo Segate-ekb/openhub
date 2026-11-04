@@ -1,5 +1,6 @@
 // Принята ли синхронизация, в каком она состоянии и длина очереди.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("accepted")
 &Заполнено
 &Тип("Булево")
@@ -15,3 +16,4 @@
 &Заполнено
 &Тип("Число")
 Перем ВОчереди;
+// BSLLS:MissingVariablesDescription-on

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище прикладных настроек, которое при чтении оговорённого ключа пускает к сервису второй поток
 // с тем же вопросом и ждёт его ответа; значения хранит соседняя заглушка.
 

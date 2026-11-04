@@ -1,9 +1,11 @@
-// Сессия 1connector для библиотек, которые ходят в сеть сами (oidc-client). Класс — шов:
+// Сессия 1connector для библиотек, которые ходят в сеть сами (oidc-client). Класс - шов:
 // в тестах его прозвище занимает двойник.
 
 #Использовать 1connector
 
+// BSLLS:MissingVariablesDescription-off
 Перем СессияКоннектора;
+// BSLLS:MissingVariablesDescription-on
 
 // Выполняет HTTP-запрос по контракту сессии 1connector.
 //

@@ -1,5 +1,6 @@
 // Страница зеркал пула.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("items")
 &Заполнено
 &Тип("Массив")
@@ -25,4 +26,5 @@
 &Сериализуемое("has_more")
 &Заполнено
 &Тип("Булево")
-Перем ЕстьЕщё;
+Перем ЕстьЕще;
+// BSLLS:MissingVariablesDescription-on

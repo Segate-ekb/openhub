@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Пул фейка СервисаПулов: имя, видимость и признак личного пространства — сводка лендинга
 // считает личные пространства отдельно, право чтения спрашивают только у закрытого пула.
 
@@ -9,7 +15,7 @@
 // Личное ли это пространство пользователя (тип user).
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция ЭтоЛичный() Экспорт
 	Возврат Личный = Истина;

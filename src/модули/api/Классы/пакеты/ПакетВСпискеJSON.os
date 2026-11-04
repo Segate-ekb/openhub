@@ -1,5 +1,6 @@
 // Пакет в списке пула и в выдаче поиска.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("name")
 &Заполнено
 &Тип("Строка")
@@ -19,3 +20,4 @@
 &Заполнено
 &Тип("Булево")
 Перем Устарел;
+// BSLLS:MissingVariablesDescription-on

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // МенеджерКэшей autumn-cache в объёме, которым пользуются приборы хаба: кэш по имени отдаёт
 // заданную статистику и помнит, о каких кэшах спрашивали.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Служба описаний для обхода актуализатора: запоминает, описание какой версии пакета
 // обход положил бы на диск.
 
@@ -14,7 +20,6 @@
 //  Булево - Истина, если версия есть.
 //
 Функция ОбеспечитьОписаниеНаДиске(Знач Пул, Знач Пакет, Знач Версия) Экспорт
-	Пул = Пул;
 	Если Версия = Неопределено Тогда
 		Возврат Ложь;
 	КонецЕсли;

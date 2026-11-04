@@ -1,5 +1,6 @@
 // Тело регистрации и заведения учётки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("login")
 &Заполнено
 Перем Логин;
@@ -9,3 +10,4 @@
 
 &Сериализуемое("password")
 Перем Пароль;
+// BSLLS:MissingVariablesDescription-on

@@ -19,6 +19,8 @@
 	Прогрев.Прогреть();
 КонецПроцедуры
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // Хаб сначала поднимается и отвечает, потом спрашивает наружу.
 Функция ЗадержкаСек()
 	Возврат 5;
@@ -29,3 +31,5 @@
 Процедура ПриСозданииОбъекта(&Пластилин(Значение = "ПрогревПеречнейИсточников") _Прогрев)
 	Прогрев = _Прогрев;
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

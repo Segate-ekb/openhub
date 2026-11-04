@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ПроксиTelegram для транспорта Bot API: прокси настоящий (локальный слушатель),
 // а вычёркивание секретов оставляет в тексте метку — по ней видно, что его вообще звали.
 
@@ -34,7 +40,7 @@
 // Метка, которую заглушка приписывает к тексту.
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция МеткаВычёркивания() Экспорт
 	Возврат Метка;

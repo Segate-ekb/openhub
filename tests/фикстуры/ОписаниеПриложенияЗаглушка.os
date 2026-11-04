@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ОписаниеПриложения: своя версия хаба задаётся тестом, а не читается из packagedef.
 
 Перем Версия_;
@@ -5,7 +11,7 @@
 // Имя приложения.
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция Имя() Экспорт
 	Возврат "openhub";
@@ -14,7 +20,7 @@
 // Версия приложения — та, что задал тест.
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция Версия() Экспорт
 	Возврат Версия_;

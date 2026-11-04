@@ -13,7 +13,9 @@
 
 КонецПроцедуры
 
-// Колонки таблицы прав одни на все экраны; тип субъекта и роль — словами.
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// Колонки таблицы прав одни на все экраны; тип субъекта и роль - словами.
 Процедура КлючиТаблицы(Словарь)
 
 	Словарь.Добавить("access.grants.col.subject", "Кому");
@@ -56,6 +58,8 @@
 		+ " пропадёт сразу. Выдать роль снова можно в любой момент.");
 
 КонецПроцедуры
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on
 
 &Прозвище("ЧастьСловаряТекстов")
 &Порядок(70)

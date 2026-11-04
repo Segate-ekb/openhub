@@ -1,5 +1,6 @@
 // Тело правки настроек пула: присланное меняется, прочее остаётся.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("publish_allowed")
 Перем ПубликацияРазрешена;
 
@@ -12,3 +13,4 @@
 &Сериализуемое("visibility")
 &ОдинИз("public", "private")
 Перем Видимость;
+// BSLLS:MissingVariablesDescription-on

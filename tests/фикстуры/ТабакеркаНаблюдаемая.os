@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Табакерка с подложенным содержимым: считает доставания и умеет сорваться на доставании.
 // Подкладывает желудь под ленивую зависимость: SDK телеметрии, хранилище с Табакеркой «Сам».
 

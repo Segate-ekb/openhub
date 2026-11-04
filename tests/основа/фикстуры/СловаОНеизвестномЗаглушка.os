@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка контракта НеизвестныйАдресСловами: узнаваемые фраза и страница, память о вызовах.
 
 Перем Страницы_;    // Массив из Структура (Заголовки, Куки, Путь)
@@ -7,7 +13,7 @@
 // Фраза посетителю.
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция Фраза() Экспорт
 	Возврат "фраза[неизвестный адрес]";

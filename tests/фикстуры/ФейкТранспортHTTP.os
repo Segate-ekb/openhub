@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковый ТранспортHTTP: заданный ответ без сети, эмуляция offline, журнал вызовов.
 
 Перем КодОтвета;
@@ -188,7 +194,8 @@
 // Возвращаемое значение:
 //  Структура - Код, Заголовки, Данные.
 //
-Функция Отправить(Знач URL, Знач Тело, Знач Заголовки = Неопределено, Знач ТаймаутСек = 20, Знач ПроверятьSSL = Истина) Экспорт
+Функция Отправить(Знач URL, Знач Тело, Знач Заголовки = Неопределено, Знач ТаймаутСек = 20,
+	Знач ПроверятьSSL = Истина) Экспорт
 	СчётчикВызовов = СчётчикВызовов + 1;
 	ПоследнийURL = URL;
 	ВсеURL_.Добавить(Строка(URL));

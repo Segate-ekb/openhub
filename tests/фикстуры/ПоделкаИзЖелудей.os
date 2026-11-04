@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Поделка ОСени, отдающая ровно положенные набором желуди, — для напильников, ищущих желудь по имени.
 
 Перем Желуди;  // Соответствие: имя -> желудь

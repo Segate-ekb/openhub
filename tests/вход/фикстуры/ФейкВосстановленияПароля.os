@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ВосстановленияПароля: работает ли на хабе путь «забыли пароль», задаёт тест.
 // Настоящее восстановление тянет почту и личный канал — вопрос же к нему один.
 
@@ -6,7 +12,7 @@
 // Контракт ВосстановленияПароля: работает ли путь восстановления на этой инсталляции.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция Доступно() Экспорт
 	Возврат Состояние;

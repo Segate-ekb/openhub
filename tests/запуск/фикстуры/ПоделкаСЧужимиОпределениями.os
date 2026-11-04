@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Поделка с определениями желудей не того устройства, что ждёт освобождение метаданных:
 // структура вместо ОпределениеЖелудя либо исключение на запросе определений.
 

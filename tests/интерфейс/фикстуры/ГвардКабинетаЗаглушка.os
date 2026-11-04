@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка гварда приватной части (кабинета или дома настроек): допуск и вошедший
 // пользователь задаются тестом. Отказ — гвард ответил 403 сам, без тела.
 
@@ -20,8 +26,6 @@
 	Если НЕ Разрешено_ Тогда
 		Ответ.Код = 403;
 	КонецЕсли;
-	ЗаголовкиЗапроса = ЗаголовкиЗапроса;
-	КукиЗапроса = КукиЗапроса;
 
 	Пользователь = ?(ЗначениеЗаполнено(Логин_),
 		Новый Структура("Логин, Админ", Логин_, Админ_), Неопределено);

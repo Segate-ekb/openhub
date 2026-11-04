@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СлужбыКабинета для порога «управляет пакетом»: ответ задаёт тест.
 
 Перем Управляет;   // Булево — ответ МожетУправлять
@@ -10,7 +16,7 @@
 //  Пакет - Структура - пакет.
 //
 // Возвращаемое значение:
-//  Булево.
+//  Булево
 //
 Функция МожетУправлять(Знач Пользователь, Знач Пул, Знач Пакет) Экспорт
 	Возврат Управляет;

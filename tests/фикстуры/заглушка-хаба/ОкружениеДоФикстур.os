@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сценарий сторожа ОкружениеПрогона: переменная OSHUB_TEST_STUB_OUTER задана процессу до фикстур, сосед её
 // переставляет, а затем стирает остановкой — журналы заглушек печатаются с метками «при соседе» и «после соседа».
 

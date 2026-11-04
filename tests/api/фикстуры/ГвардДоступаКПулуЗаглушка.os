@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ГвардаДоступаКПулу: пулы и то, какие двери в них открыты, задаёт тест; вопросы
 // к гварду считаются.
 
@@ -63,7 +69,7 @@
 // Сколько раз гварда спросили о пуле.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Вопросов() Экспорт
 	Возврат Вопросов;

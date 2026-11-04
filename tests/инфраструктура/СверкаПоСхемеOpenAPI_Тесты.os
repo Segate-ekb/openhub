@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сверка ответа со схемой описания API: ловит лишнее и недостающее поле, чужой тип, null там, где его
 // не обещали, значение не из перечня — иначе живой сторож схем позеленел бы вслепую.
 

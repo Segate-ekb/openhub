@@ -1,5 +1,6 @@
 // Эксплуатационные числа хаба; непосчитанное число равно -1.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("status")
 &Заполнено
 &Тип("Строка")
@@ -35,3 +36,4 @@
 &Заполнено
 &Тип("Число")
 Перем ЗанятоБайт;
+// BSLLS:MissingVariablesDescription-on

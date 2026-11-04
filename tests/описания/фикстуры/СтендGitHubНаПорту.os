@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Сырое содержимое GitHub на своём порту для живого хаба: файлы по пути «владелец/репо/реф/файл»,
 // 404 на остальное. Набор однопоточный, поэтому стенд отвечает, только когда его просят обслужить.
 

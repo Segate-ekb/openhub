@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка актуализатора описаний: считает ночные обходы.
 
 Перем Обходов_;
@@ -15,7 +21,7 @@
 // Сколько раз звали Актуализировать().
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Обходов() Экспорт
 	Возврат Обходов_;

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фикстура: пространство имён, у которого лежит хранилище пулов. Ни занятости, ни свободы
 // оно не знает — оно просто не отвечает, и это сбой, а не занятое имя.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка СервисаНастроек для стража издателей: отдаёт одно значение по ключу.
 
 Перем Значения;
@@ -32,7 +38,7 @@
 //  Дефолт - Строка - что вернуть, когда значения нет (необязательный, по умолчанию пустая).
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция Текстом(Знач Ключ, Знач Дефолт = "") Экспорт
 	Найдено = Значение(Ключ);

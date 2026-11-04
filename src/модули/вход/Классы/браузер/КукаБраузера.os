@@ -1,4 +1,4 @@
-// Кука хаба в браузере: атрибуты выдачи и гашения — одни на все куки входа, чтобы
+// Кука хаба в браузере: атрибуты выдачи и гашения - одни на все куки входа, чтобы
 // сессионная кука и кука транзакции провайдера не разъехались.
 
 // Выдаёт браузеру куку.
@@ -41,6 +41,8 @@
 
 КонецФункции
 
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
 // HttpOnly, SameSite=Lax, Path=/.
 Функция Выданная(Ответ, Знач Имя, Знач Значение)
 
@@ -51,3 +53,5 @@
 	Возврат Кука;
 
 КонецФункции
+// BSLLS:MissingParameterDescription-on
+// BSLLS:MissingReturnedValueDescription-on

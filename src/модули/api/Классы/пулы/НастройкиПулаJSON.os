@@ -1,5 +1,6 @@
 // Настройки пула: то, чем распоряжается его администратор.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("pool")
 &Заполнено
 &Тип("Строка")
@@ -36,3 +37,4 @@
 &Заполнено
 &Тип("Булево")
 Перем ТегиПула;
+// BSLLS:MissingVariablesDescription-on

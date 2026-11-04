@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хранилище-заглушка с единственным методом, который спрашивает ИмяОбъектаАудита.
 
 Перем ПоИдентификатору;
@@ -17,7 +23,7 @@
 //  Идентификатор - Число - искомый идентификатор.
 //
 // Возвращаемое значение:
-//  ФейкСущностьАудита, Неопределено.
+//  ФейкСущностьАудита, Неопределено
 //
 Функция ПолучитьОдноПоИдентификаторРавно(Знач Идентификатор) Экспорт
 	Возврат ПоИдентификатору.Получить(Цел(Идентификатор));

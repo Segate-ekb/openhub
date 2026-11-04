@@ -1,5 +1,6 @@
 // Вид доставки подписки и поля его настройки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("kind")
 &Заполнено
 &Тип("Строка")
@@ -21,3 +22,4 @@
 &ДляКаждого("Значение")
 &Тип("ПолеВидаПодпискиJSON")
 Перем Поля;
+// BSLLS:MissingVariablesDescription-on

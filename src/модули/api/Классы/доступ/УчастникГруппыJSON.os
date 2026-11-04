@@ -1,5 +1,6 @@
 // Участник группы и откуда его членство.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("user_id")
 &Заполнено
 &Тип("Число")
@@ -15,3 +16,4 @@
 &Тип("Строка")
 &ОдинИз("local", "oidc")
 Перем Источник;
+// BSLLS:MissingVariablesDescription-on

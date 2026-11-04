@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейковая запись вебхука: колонки сущности «Вебхук» + Сохранить() в фейковое хранилище.
 
 Перем Хранилище_;
@@ -17,7 +23,7 @@
 Перем Активен Экспорт;
 Перем СозданКем Экспорт;
 Перем Создан Экспорт;
-Перем Обновлён Экспорт;
+Перем Обновлен Экспорт;
 
 // Передаёт запись фейковому хранилищу (контракт autumn-data).
 //

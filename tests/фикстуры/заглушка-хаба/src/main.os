@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка хаба для самотестов ЭкземплярХаба: порт OSHUB_PORT открывается, когда есть файл OSHUB_TEST_STUB_GATE
 // (пусто — сразу); 200 на любой запрос, в журнал — непустые OSHUB_* «окружение ИМЯ=значение» и строка конца старта.
 

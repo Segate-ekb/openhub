@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Прогон зеркала со сломанной записью итога: захват удаётся, а Завершить падает, как при обрыве
 // связи с базой в конце цикла; запись остаётся «идёт», пока её не подберут.
 

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Засев пулов, пакетов и версий: строкой в хранилище — для фона сценария, службами хаба — когда
 // набор потом судит продуктовую логику; имена свободны по таблице.
 

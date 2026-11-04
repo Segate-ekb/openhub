@@ -1,5 +1,6 @@
 // Номер версии по semver; номер вне semver даёт нули и пустые строки.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("major")
 &Заполнено
 &Тип("Число")
@@ -24,3 +25,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Сборка;
+// BSLLS:MissingVariablesDescription-on

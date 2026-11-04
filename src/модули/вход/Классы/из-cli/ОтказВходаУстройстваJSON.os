@@ -1,5 +1,6 @@
 // Отказ входа с устройства в форме RFC 8628.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("error")
 &Заполнено
 &Тип("Строка")
@@ -10,3 +11,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Описание;
+// BSLLS:MissingVariablesDescription-on

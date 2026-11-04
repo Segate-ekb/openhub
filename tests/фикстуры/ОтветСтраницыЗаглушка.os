@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ответа winow для экранов: код состояния, заголовки, тело, редирект и куки.
 // Куки приходят отдельным объектом, чтобы фикстуры не зависели друг от друга по типу.
 

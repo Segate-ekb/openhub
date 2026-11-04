@@ -1,5 +1,6 @@
-// README версии пакета в HTML и откуда он; README нет — source равен null.
+// README версии пакета в HTML и откуда он; README нет - source равен null.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("version")
 &Заполнено
 &Тип("Строка")
@@ -18,3 +19,4 @@
 &Сериализуемое("source", Обязательное = Истина)
 &Тип("ИсточникREADMEJSON")
 Перем Источник;
+// BSLLS:MissingVariablesDescription-on

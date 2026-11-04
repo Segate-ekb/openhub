@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка сборщика кэша прокси: считает вызовы Собрать(). Не входит в состав приложения.
 
 Перем ПроходовВызвано_;
@@ -15,7 +21,7 @@
 // Сколько раз планировщик позвал Собрать().
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция ПроходовВызвано() Экспорт
 	Возврат ПроходовВызвано_;

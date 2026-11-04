@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Контракт деталек: переменные OSHUB_* превращаются провайдером ENV configor в oshub.*.
 // Что ключ реестра настроек получает свою детальку, сверяет НастройкиРеестр_Тесты значением.
 

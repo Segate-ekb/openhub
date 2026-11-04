@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса раздела «Подписки на события» трёх домов в настоящем маршрутизаторе winow: литерал webhooks
 // побеждает шаблон раздела дома, двери записи и раздела уходят своим точкам, соседний раздел дома
 // остаётся у своего контроллера.

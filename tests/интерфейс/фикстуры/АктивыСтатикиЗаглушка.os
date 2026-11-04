@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка белого списка статики: объявленное имя отдаётся с типом, меткой и путём; позволяет
 // собрать расхождение «в списке есть, на диске нет», недостижимое на живом хабе.
 

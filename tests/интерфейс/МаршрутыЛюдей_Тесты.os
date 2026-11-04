@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Адреса разделов «Люди» и «Группы» дома «Хаб» в настоящем маршрутизаторе winow: литерал без своего
 // действия перекрывает шаблон на том же уровне без отката, поэтому куда уходит каждый адрес —
 // стережёт таблица маршрутов, а не вызов метода контроллера.

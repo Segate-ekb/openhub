@@ -1,5 +1,6 @@
 // Право субъекта на объект: роль и действия.
 
+// BSLLS:MissingVariablesDescription-off
 &Сериализуемое("subject_type")
 &Заполнено
 &Тип("Строка")
@@ -52,3 +53,4 @@
 &Заполнено
 &Тип("Строка")
 Перем Выдано;
+// BSLLS:MissingVariablesDescription-on

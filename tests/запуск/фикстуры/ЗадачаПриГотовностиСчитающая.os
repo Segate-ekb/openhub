@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Задача при готовности для тестов: считает прогоны.
 
 Перем Вызовов_;
@@ -5,7 +11,7 @@
 // Число прогонов.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Вызовов() Экспорт
 	Возврат Вызовов_;

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хаб на S3 отдаёт пакет в 40 МБ из кэша выдачи байт в байт, и попадание не поднимает его в память:
 // пик RSS хаба по ходу скачивания из кэша выше исходного меньше чем на половину размера пакета.
 // Включается OSHUB_S3_SMOKE; адрес, бакет, регион и ключи — из OSHUB_STORAGE_S3_*.

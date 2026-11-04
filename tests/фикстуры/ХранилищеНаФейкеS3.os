@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фабрика (&Дуб) хранилища артефактов для контейнера набора: S3Хранилище над фейковым
 // клиентом — удалённое хранилище без сети, чьи обращения тест пересчитывает у клиента.
 

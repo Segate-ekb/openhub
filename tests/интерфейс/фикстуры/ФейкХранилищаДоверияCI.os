@@ -1,10 +1,16 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Фейк ХранилищаДоверияCI: отдаёт только образец со словарём провайдеров — столько от
 // хранилища и нужно КороткойФормеДоверия, а базы в тестах представления нет.
 
 // Несохраняемый образец записи доверия.
 //
 // Возвращаемое значение:
-//  ОбразецДоверияCI.
+//  ОбразецДоверияCI
 //
 Функция СоздатьЭлемент() Экспорт
 	Возврат Новый ОбразецДоверияCI();

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // ХранилищеПулов в памяти со счётчиком занятого места: им проверяют, откуда экран
 // берёт занятый объём. Пул здесь — носитель двух полей, домена в нём нет.
 

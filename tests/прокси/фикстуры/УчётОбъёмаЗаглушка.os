@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка УчётаОбъёмаПула: копит дельты занятого по имени пула, чтобы тест мог
 // проверить, что записавший или удаливший байты сообщил о них.
 
@@ -43,7 +49,7 @@
 // Сколько пулов упоминалось в сообщениях об изменении занятого.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция ЧислоПулов() Экспорт
 	Возврат Дельты_.Количество();

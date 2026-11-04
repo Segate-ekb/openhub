@@ -1,10 +1,16 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Словарь провайдеров без сущности и без базы: ровно то, что спрашивает у образца
 // КороткаяФормаДоверия в тестах представления.
 
 // Провайдер «GitHub Actions».
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция ПровайдерGitHub() Экспорт
 	Возврат "github";
@@ -13,7 +19,7 @@
 // Провайдер «GitLab CI».
 //
 // Возвращаемое значение:
-//  Строка.
+//  Строка
 //
 Функция ПровайдерGitLab() Экспорт
 	Возврат "gitlab";
@@ -22,7 +28,7 @@
 // Поддерживаемые провайдеры.
 //
 // Возвращаемое значение:
-//  Массив из Строка.
+//  Массив из Строка
 //
 Функция ДопустимыеПровайдеры() Экспорт
 	Список = Новый Массив();

@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Летопись журнала-заглушка: помнит, что записали, и сколько раз.
 
 Перем Записи;
@@ -21,7 +27,7 @@
 // Сколько строк записано.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Количество() Экспорт
 	Возврат Записи.Количество();

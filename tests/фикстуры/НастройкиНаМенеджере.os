@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Таблица прикладных настроек над менеджером сущностей — для пробы без контейнера.
 
 #Использовать entity
@@ -10,7 +16,7 @@
 //  Количество - Число - максимум строк.
 //
 // Возвращаемое значение:
-//  Массив из ПрикладнаяНастройка.
+//  Массив из ПрикладнаяНастройка
 //
 Функция ПолучитьПервые(Количество) Экспорт
 	Возврат Менеджер_.Получить(Тип("ПрикладнаяНастройка"), Новый ОпцииПоиска().Первые(Количество));

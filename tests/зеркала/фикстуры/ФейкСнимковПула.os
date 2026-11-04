@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Снимки пула в объёме рабочего очереди: считает, сколько раз опись забывали.
 
 Перем Забыто_;
@@ -12,12 +18,12 @@
 
 #КонецОбласти
 
-#Область Счётчики
+#Область Счетчики
 
 // Сколько раз опись забывали.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Забыто() Экспорт
 	Возврат Забыто_;

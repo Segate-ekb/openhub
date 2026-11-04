@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Реестр из одного пакета в одном пуле на четыре двери, которыми доставка дочитывает автора
 // версии, адрес репозитория, страницу релиза и запустившего конвейер, а предпросмотр — образец:
 // СервисПакетов, СервисВерсий, СервисЗапусковКонвейеров и СервисПулов. Считает обращения к ним.
@@ -36,7 +42,7 @@
 // Сколько раз реестр спросили о пакете или версии.
 //
 // Возвращаемое значение:
-//  Число.
+//  Число
 //
 Функция Обращений() Экспорт
 	Возврат Обращений_;

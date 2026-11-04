@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Хаб без основного пула: короткие адреса /download, /dev-channel и /push объясняют отказ, старт
 // предупреждает оператора, раздел «Пулы» говорит «не назначен».
 // Хаб — общий группы «мастер», фаза «чтение»: мастер проходит помощник группы; основного пула на хабе
@@ -52,7 +58,7 @@
 		Ожидаем.Что(Пул["default"], СтрШаблон("пул ""%1"" основным не числится", Пул["name"]))
 			.ЭтоЛожь();
 		Ожидаем.Что(Пул["type"], СтрШаблон(
-			"пул ""%1"" — личное пространство: основным его не назначить даже руками", Пул["name"]))
+			"пул ""%1"" - личное пространство: основным его не назначить даже руками", Пул["name"]))
 			.Равно("user");
 	КонецЦикла;
 

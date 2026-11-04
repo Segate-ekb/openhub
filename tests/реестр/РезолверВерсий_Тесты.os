@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Юнит-тесты РезолверВерсий (реестр): точная версия, максимум по диапазону, каналы
 // (semver | regex | pin, stable/dev), «последняя», смешанные semver+legacy, мусорные входы.
 
@@ -242,7 +248,7 @@
 	Ожидаем.Что(Резолвер().МаксимальнаяПоРегулярному(Список, "-RC\."),
 		"под выражение попал только пререлиз в том же регистре").Равно("1.0.0-RC.2");
 	Ожидаем.Что(Резолвер().МаксимальнаяПоРегулярному(Версии("1.0.0-rc.1"), "-RC\."),
-		"чужой регистр — не совпадение").Равно(Неопределено);
+		"чужой регистр - не совпадение").Равно(Неопределено);
 
 КонецПроцедуры
 

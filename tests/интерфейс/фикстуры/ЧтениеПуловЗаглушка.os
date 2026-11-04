@@ -1,3 +1,9 @@
+// BSLLS:MissingVariablesDescription-off
+// BSLLS:MissingParameterDescription-off
+// BSLLS:MissingReturnedValueDescription-off
+// BSLLS:PublicMethodsDescription-off
+// BSLLS:InvalidCharacterInFile-off
+// BSLLS:YoLetterUsage-off
 // Заглушка ГвардаДоступаКПулу для экранов кабинета: какие пулы смотрящему видны,
 // задаёт тест.
 
@@ -12,7 +18,6 @@
 //  Массив - заданные тестом пулы.
 //
 Функция ЧитаемыеПулы(Знач Принципал) Экспорт
-	Принципал = Принципал;
 	Возврат Видимые;
 КонецФункции
 
